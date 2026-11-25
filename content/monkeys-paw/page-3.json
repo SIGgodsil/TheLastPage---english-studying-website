@@ -1,0 +1,153 @@
+{
+  "storyId": "monkeys-paw",
+  "page": 3,
+  "title": "Two Hundred Pounds",
+  "titleVi": "Hai trăm bảng",
+  "level": "A2",
+  "chatTitle": "The Whites 🏠",
+  "characters": {
+    "mrWhite": { "name": "Mr. White", "emoji": "👨" },
+    "mrsWhite": { "name": "Mrs. White", "emoji": "👩" }
+  },
+  "vocab": {
+    "accident": { "en": "something bad that happens suddenly; people may get hurt", "vi": "tai nạn", "ipa": "/ˈæksədənt/" },
+    "alive": { "en": "living; not dead", "vi": "còn sống", "ipa": "/əˈlaɪv/" }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "message",
+      "from": "mrWhite",
+      "text": "I am sorry to write this. I cannot speak on the phone.",
+      "vi": "Bác xin lỗi vì phải nhắn điều này. Bác không thể nói qua điện thoại."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "mrWhite",
+      "text": "A man came from Herbert's factory today."
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "mrWhite",
+      "text": "There was an [[accident]]. Herbert was caught in the [[machine]].",
+      "vi": "Đã có một tai nạn. Herbert bị cuốn vào máy."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn trả lời ông White thế nào?",
+      "hint": "Hãy hỏi xem Herbert có sao không.",
+      "options": [
+        { "text": "Is he okay? Is he still [[alive]]?", "vi": "Cậu ấy có sao không? Cậu ấy còn sống chứ?", "next": "c1a" },
+        { "text": "No… Please tell me he's okay.", "vi": "Không… Bác nói là cậu ấy không sao đi.", "next": "c1b" }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "mrWhite",
+      "text": "No, he is not. Our boy is dead.",
+      "vi": "Không, nó không còn nữa. Con trai bác mất rồi.",
+      "next": "n4"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "mrWhite",
+      "text": "He is not okay. Our boy is dead.",
+      "vi": "Nó không ổn đâu. Con trai bác mất rồi."
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "mrWhite",
+      "text": "My wife screamed. Now she does not speak at all."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "mrWhite",
+      "text": "The company is very sorry. They gave us some money."
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "mrWhite",
+      "text": "Two hundred pounds.",
+      "vi": "Hai trăm bảng."
+    },
+    {
+      "id": "n7",
+      "type": "narration",
+      "text": "They bury Herbert two miles from the house.",
+      "vi": "Họ chôn Herbert cách nhà hai dặm."
+    },
+    {
+      "id": "n8",
+      "type": "narration",
+      "text": "Ten days later. The middle of the night.",
+      "vi": "Mười ngày sau. Giữa đêm."
+    },
+    {
+      "id": "n9",
+      "type": "message",
+      "from": "mrsWhite",
+      "text": "Are you awake? I just remembered the [[paw]]!",
+      "vi": "Cháu còn thức không? Bác vừa nhớ ra cái bàn chân khỉ!"
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "mrsWhite",
+      "text": "We have two more [[wishes|wish]]!",
+      "vi": "Chúng ta còn hai điều ước nữa!"
+    },
+    {
+      "id": "n10",
+      "type": "message",
+      "from": "mrsWhite",
+      "text": "[[Wish|wish]] our boy back! I want him [[alive]]! 😭",
+      "vi": "Ông ước cho con mình trở về đi! Tôi muốn nó sống lại! 😭"
+    },
+    {
+      "id": "n11",
+      "type": "message",
+      "from": "mrWhite",
+      "text": "He was in the [[machine]], dear. You do not want to see him.",
+      "vi": "Nó đã bị cuốn vào máy, bà à. Bà không muốn nhìn thấy nó đâu."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nói gì với bà White?",
+      "hint": "Bạn có thể khuyên bà đợi đến sáng, hoặc nói rằng bạn hiểu nỗi đau của bà.",
+      "options": [
+        { "text": "Please wait until the morning.", "vi": "Bác đợi đến sáng đã nhé.", "next": "c2a" },
+        { "text": "I understand. You miss him so much.", "vi": "Cháu hiểu. Bác nhớ cậu ấy nhiều lắm.", "next": "c2b" }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "mrsWhite",
+      "text": "I can't wait! [[Wish|wish]] him back now!",
+      "vi": "Bác không đợi được! Ước cho nó trở về ngay đi!",
+      "next": "end"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "mrsWhite",
+      "text": "He's my son! [[Wish|wish]] him back!",
+      "vi": "Nó là con tôi! Ước cho nó trở về đi!"
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "With shaking hands, Mr. White holds up the [[paw]].",
+      "vi": "Đôi tay run rẩy, ông White giơ bàn chân khỉ lên."
+    }
+  ]
+}

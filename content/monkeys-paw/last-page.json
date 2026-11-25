@@ -1,0 +1,46 @@
+{
+  "storyId": "monkeys-paw",
+  "promptVi": "Điều ước thứ ba của ông White là gì? Khi cánh cửa mở ra, chuyện gì xảy ra?",
+  "pattern": "If I had the last wish, I would wish…",
+  "moods": [
+    { "id": "happy", "hintVi": "Điều ước cuối cùng mang lại bình yên cho gia đình White." },
+    { "id": "sad", "hintVi": "Điều ước cuối cùng khiến gia đình mất thêm một điều quý giá." },
+    { "id": "twist", "hintVi": "Người đứng sau cánh cửa không phải là người họ nghĩ." }
+  ],
+  "starters": [
+    "Mr. White held the paw and said, “I wish…”",
+    "Slowly, the door opened, and…",
+    "If I had the last wish, I would wish…",
+    "Mrs. White looked outside. She saw…",
+    "Suddenly, the knocking stopped. Then…",
+    "The next morning, the Whites…"
+  ],
+  "wordBank": [
+    { "word": "knock", "vi": "gõ (cửa); tiếng gõ cửa" },
+    { "word": "paw", "vi": "bàn chân (của thú)" },
+    { "word": "wish", "vi": "điều ước; ước" },
+    { "word": "spell", "vi": "bùa phép" },
+    { "word": "careful", "vi": "cẩn thận" },
+    { "word": "accident", "vi": "tai nạn" },
+    { "word": "machine", "vi": "máy móc; cỗ máy" },
+    { "word": "alive", "vi": "còn sống" },
+    { "word": "candle", "vi": "cây nến" },
+    { "word": "lock", "vi": "ổ khóa; khóa" },
+    { "word": "suddenly", "vi": "bỗng nhiên" },
+    { "word": "quiet", "vi": "yên lặng" },
+    { "word": "voice", "vi": "giọng nói" },
+    { "word": "hug", "vi": "ôm" },
+    { "word": "peace", "vi": "sự bình yên" }
+  ],
+  "modelEndings": [
+    {
+      "level": "A2",
+      "text": "Mr. White held the paw tightly. “I wish for my wife to smile again,” he said. The knocking stopped. Mrs. White opened the door. A little brown cat sat there. It was wet and cold. Mrs. White picked it up and smiled for the first time in ten days. “Herbert loved cats,” she said. That night, they lit a candle for their son. Then Mr. White put the paw in the fire. This time, nobody pulled it out."
+    },
+    {
+      "level": "B1",
+      "text": "As the top lock clicked, Mr. White closed his eyes. He knew that if he did nothing, his wife would open the door to something terrible. “I wish my wife could hear our son's voice one last time,” he whispered. At once, the knocking stopped. Mrs. White pulled the door open, but only the cold wind and the rain came in. Then, very softly, they both heard Herbert's laugh. “Don't cry, Mum. I've had a happy life with you,” the voice said. Mrs. White sat down on the step and cried, but this time her tears felt warm. In Mr. White's hand, the monkey's paw turned to dust, and the wind carried it away into the night."
+    }
+  ],
+  "authorNote": "Ông White ước điều thứ ba. Tiếng gõ cửa dừng lại. Bà White mở cửa, nhưng con đường vắng tanh."
+}

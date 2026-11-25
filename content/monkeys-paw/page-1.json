@@ -1,0 +1,140 @@
+{
+  "storyId": "monkeys-paw",
+  "page": 1,
+  "title": "A Visitor in the Rain",
+  "titleVi": "Vị khách trong mưa",
+  "level": "A2",
+  "chatTitle": "Herbert",
+  "characters": {
+    "herbert": { "name": "Herbert", "emoji": "😄" },
+    "morris": { "name": "Sergeant-Major Morris", "emoji": "🎖️" }
+  },
+  "vocab": {
+    "knock": { "en": "to hit a door so someone opens it", "vi": "gõ (cửa); tiếng gõ cửa", "ipa": "/nɑːk/" },
+    "paw": { "en": "the foot of an animal, like a cat or monkey", "vi": "bàn chân (của thú)", "ipa": "/pɑː/", "ipaCheck": true },
+    "spell": { "en": "magic words that make strange things happen", "vi": "bùa phép", "ipa": "/spel/" },
+    "wish": { "en": "something you want very much to happen", "vi": "điều ước; ước", "ipa": "/wɪʃ/" },
+    "careful": { "en": "thinking about what you do, so nothing bad happens", "vi": "cẩn thận", "ipa": "/ˈkerfəl/" }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "A cold, rainy night. Someone [[knocks|knock]] at the Whites' door.",
+      "vi": "Một đêm mưa lạnh. Có ai đó gõ cửa nhà White."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "herbert",
+      "text": "Hey, are you awake? Someone just [[knocked|knock]] at our door 👀",
+      "vi": "Này, cậu còn thức không? Vừa có người gõ cửa nhà mình 👀"
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "herbert",
+      "text": "It's Sergeant-Major Morris, Dad's old friend. He's back from India! ✈️"
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn trả lời Herbert thế nào?",
+      "hint": "Bạn có thể hỏi về ông Morris, hoặc hỏi xem mọi chuyện có ổn không.",
+      "options": [
+        { "text": "Cool! Does he have any good stories?", "vi": "Hay quá! Ông ấy có chuyện gì hay không?", "next": "c1a" },
+        { "text": "It's so late. Is everything okay?", "vi": "Muộn thế rồi. Mọi chuyện ổn chứ?", "next": "c1b" }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "herbert",
+      "text": "Yes! He tells strange stories about India 🤩",
+      "next": "n4"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "herbert",
+      "text": "All good 😄 He's telling us strange stories about India."
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "herbert",
+      "text": "Now he's taking something small out of his pocket…"
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "herbert",
+      "text": "It's a dry, brown [[paw]] 😬 Listen, I'm recording him 🎙️",
+      "vi": "Đó là một bàn chân khô, màu nâu 😬 Nghe này, mình đang ghi âm ông ấy 🎙️"
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "morris",
+      "voice": true,
+      "text": "This is a monkey's [[paw]]. An old man put a [[spell]] on it.",
+      "vi": "Đây là bàn chân khỉ. Một ông già đã yểm bùa lên nó."
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "morris",
+      "voice": true,
+      "text": "Three people can have three [[wishes|wish]].",
+      "vi": "Ba người có thể có ba điều ước."
+    },
+    {
+      "id": "n8",
+      "type": "message",
+      "from": "herbert",
+      "text": "I asked, “Did you make your [[wishes|wish]]?” He said yes, very quietly.",
+      "vi": "Mình hỏi: “Ông đã ước chưa?” Ông ấy khẽ đáp: rồi."
+    },
+    {
+      "id": "n9",
+      "type": "narration",
+      "text": "Morris's face is white. Suddenly, he throws the [[paw]] into the fire.",
+      "vi": "Mặt ông Morris trắng bệch. Bỗng ông ném bàn chân khỉ vào lửa."
+    },
+    {
+      "id": "n10",
+      "type": "message",
+      "from": "herbert",
+      "text": "WHAT?! 😱 Dad pulled it out fast!"
+    },
+    {
+      "id": "n11",
+      "type": "message",
+      "from": "morris",
+      "voice": true,
+      "text": "Throw it away."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "morris",
+      "voice": true,
+      "text": "If you [[wish]], be [[careful]] what you [[wish]] for.",
+      "vi": "Nếu ước, hãy cẩn thận với điều mình ước."
+    },
+    {
+      "id": "n12",
+      "type": "message",
+      "from": "herbert",
+      "text": "Morris left. Dad is holding the [[paw]] now 🤔",
+      "vi": "Ông Morris về rồi. Giờ bố mình đang cầm cái bàn chân khỉ 🤔"
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "from": "herbert",
+      "text": "And he's… smiling. 😳",
+      "vi": "Và bố mình đang… mỉm cười. 😳"
+    }
+  ]
+}

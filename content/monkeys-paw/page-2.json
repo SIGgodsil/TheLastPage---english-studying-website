@@ -1,0 +1,149 @@
+{
+  "storyId": "monkeys-paw",
+  "page": 2,
+  "title": "The First Wish",
+  "titleVi": "Điều ước đầu tiên",
+  "level": "A2",
+  "chatTitle": "The Whites 🏠",
+  "characters": {
+    "herbert": { "name": "Herbert", "emoji": "😄" },
+    "mrWhite": { "name": "Mr. White", "emoji": "👨" },
+    "mrsWhite": { "name": "Mrs. White", "emoji": "👩" }
+  },
+  "vocab": {
+    "machine": { "en": "a big thing with moving parts that does work", "vi": "máy móc; cỗ máy", "ipa": "/məˈʃiːn/" }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "message",
+      "from": "herbert",
+      "text": "I added you to our family chat 😄 Dad wants to make a [[wish]]!",
+      "vi": "Mình thêm cậu vào nhóm chat gia đình rồi 😄 Bố mình muốn ước một điều!"
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "herbert",
+      "text": "[[Wish|wish]] for money, Dad! Two hundred pounds! 💰",
+      "vi": "Ước có tiền đi bố! Hai trăm bảng! 💰"
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "mrWhite",
+      "text": "Very well. I [[wish]] for two hundred pounds.",
+      "vi": "Được thôi. Tôi ước có hai trăm bảng."
+    },
+    {
+      "id": "n4",
+      "type": "narration",
+      "text": "Mr. White cries out and drops the [[paw]].",
+      "vi": "Ông White kêu lên và đánh rơi bàn chân khỉ."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "mrWhite",
+      "text": "It moved in my hand like a snake!",
+      "vi": "Nó cựa quậy trong tay tôi như một con rắn!"
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "herbert",
+      "text": "The [[paw]] isn't moving, Dad. And there's no money 🤨"
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "herbert",
+      "text": "See? It's just a story 😂",
+      "vi": "Thấy chưa? Chỉ là chuyện kể thôi 😂"
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nghĩ gì về bàn chân khỉ?",
+      "hint": "Bạn tin vào phép thuật, hay thấy chuyện này buồn cười?",
+      "options": [
+        { "text": "Maybe the money comes later.", "vi": "Có khi tiền sẽ đến sau.", "next": "c1a" },
+        { "text": "Haha, nice try, Mr. White!", "vi": "Haha, thử hay đấy bác White!", "next": "c1b" }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "mrWhite",
+      "text": "Perhaps. We will wait and see.",
+      "next": "n7"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "mrsWhite",
+      "text": "Time for bed, everyone ❤️"
+    },
+    {
+      "id": "n7",
+      "type": "narration",
+      "text": "Midnight. Herbert sits alone by the fire."
+    },
+    {
+      "id": "n8",
+      "type": "message",
+      "from": "herbert",
+      "text": "This is weird. I see a face in the fire 😨",
+      "vi": "Lạ thật. Mình thấy một khuôn mặt trong ngọn lửa 😨"
+    },
+    {
+      "id": "n9",
+      "type": "message",
+      "from": "herbert",
+      "text": "A horrible monkey face. And it's looking at me!",
+      "vi": "Một khuôn mặt khỉ ghê rợn. Và nó đang nhìn mình!"
+    },
+    {
+      "id": "n10",
+      "type": "narration",
+      "text": "Morning. The sun is bright, and everything feels normal.",
+      "vi": "Buổi sáng. Nắng rực rỡ, mọi thứ có vẻ bình thường."
+    },
+    {
+      "id": "n11",
+      "type": "message",
+      "from": "herbert",
+      "text": "Off to work at the factory 🏭 Me and the big [[machine]] again 😅",
+      "vi": "Đi làm ở nhà máy đây 🏭 Lại là mình với cái máy to đùng 😅"
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì cho Herbert trước khi cậu ấy đi làm?",
+      "hint": "Một lời chúc, hoặc một lời dặn dò.",
+      "options": [
+        { "text": "Be [[careful]] with that [[machine]]!", "vi": "Cẩn thận với cái máy đó nhé!", "next": "c2a" },
+        { "text": "Have a good day at work!", "vi": "Chúc cậu một ngày làm việc vui vẻ!", "next": "c2b" }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "herbert",
+      "text": "Always! 😎 See you tonight.",
+      "next": "end"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "herbert",
+      "text": "Thanks! See you tonight 👋"
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "In the afternoon, a man in a dark suit stops at the gate.",
+      "vi": "Buổi chiều, một người đàn ông mặc vest đen dừng lại trước cổng."
+    }
+  ]
+}

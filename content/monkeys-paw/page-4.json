@@ -1,0 +1,143 @@
+{
+  "storyId": "monkeys-paw",
+  "page": 4,
+  "title": "Knock, Knock",
+  "titleVi": "Cốc, cốc",
+  "level": "A2",
+  "chatTitle": "The Whites 🏠",
+  "characters": {
+    "mrWhite": { "name": "Mr. White", "emoji": "👨" },
+    "mrsWhite": { "name": "Mrs. White", "emoji": "👩" }
+  },
+  "vocab": {
+    "candle": { "en": "a white stick that burns to give light", "vi": "cây nến", "ipa": "/ˈkændəl/" },
+    "lock": { "en": "a thing on a door that keeps it closed", "vi": "ổ khóa; khóa", "ipa": "/lɑːk/" }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "message",
+      "from": "mrsWhite",
+      "text": "He said it! “I [[wish]] my son was [[alive]] again.”",
+      "vi": "Ông ấy nói rồi! “Tôi ước con trai tôi sống lại.”"
+    },
+    {
+      "id": "n2",
+      "type": "narration",
+      "text": "They wait. Nothing happens."
+    },
+    {
+      "id": "n3",
+      "type": "narration",
+      "text": "The [[candle]] goes out. The house is dark and very cold.",
+      "vi": "Ngọn nến tắt. Căn nhà tối om và lạnh buốt."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì cho hai bác lúc này?",
+      "hint": "Hỏi thăm hai bác, hoặc nói điều bạn nghĩ về điều ước.",
+      "options": [
+        { "text": "Are you both okay? I'm scared 😨", "vi": "Hai bác có ổn không? Cháu sợ quá 😨", "next": "c1a" },
+        { "text": "Maybe the [[wish]] didn't work.", "vi": "Có lẽ điều ước không linh nghiệm.", "next": "c1b" }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "mrsWhite",
+      "text": "It's so dark here. I'm scared too.",
+      "next": "n4"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "mrWhite",
+      "text": "Good. Perhaps that is better."
+    },
+    {
+      "id": "n4",
+      "type": "narration",
+      "text": "Then they hear it. A soft [[knock]] at the front door.",
+      "vi": "Rồi họ nghe thấy. Một tiếng gõ khẽ ở cửa trước."
+    },
+    {
+      "id": "n5",
+      "type": "narration",
+      "text": "[[Knock|knock]]. [[Knock|knock]]."
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "mrsWhite",
+      "text": "It's Herbert! It's my boy! ❤️",
+      "vi": "Là Herbert! Là con trai tôi! ❤️"
+    },
+    {
+      "id": "n7",
+      "type": "narration",
+      "text": "Mrs. White runs down the stairs."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "mrWhite",
+      "text": "Wait! Don't open the door!",
+      "vi": "Khoan đã! Đừng mở cửa!"
+    },
+    {
+      "id": "n8",
+      "type": "narration",
+      "text": "The [[knocking|knock]] gets louder and louder.",
+      "vi": "Tiếng gõ cửa mỗi lúc một to hơn."
+    },
+    {
+      "id": "n9",
+      "type": "message",
+      "from": "mrsWhite",
+      "text": "I can't reach the top [[lock]]! I need a chair.",
+      "vi": "Tôi không với tới cái khóa trên cùng! Tôi cần một cái ghế."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nói gì với ông White?",
+      "hint": "Ông White nên làm gì trước: tìm bàn chân khỉ, hay ngăn bà White lại?",
+      "options": [
+        { "text": "Find the [[paw]]! Quickly!", "vi": "Bác tìm bàn chân khỉ đi! Nhanh lên!", "next": "c2a" },
+        { "text": "Stop her! Go downstairs!", "vi": "Bác ngăn bác gái lại! Xuống nhà đi!", "next": "c2b" }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "mrWhite",
+      "text": "Yes. I am on the floor, looking in the dark.",
+      "next": "n10"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "mrWhite",
+      "text": "No. First I must find the [[paw]]."
+    },
+    {
+      "id": "n10",
+      "type": "narration",
+      "text": "[[Knock|knock]]! [[Knock|knock]]! [[KNOCK|knock]]!"
+    },
+    {
+      "id": "n11",
+      "type": "message",
+      "from": "mrWhite",
+      "text": "My fingers touched something small and dry. The [[paw]].",
+      "vi": "Ngón tay bác chạm vào một thứ nhỏ và khô. Bàn chân khỉ."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "Then he hears the top [[lock]] open…",
+      "vi": "Rồi ông nghe thấy chiếc khóa trên cùng bật mở…"
+    }
+  ]
+}
