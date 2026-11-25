@@ -26,7 +26,8 @@ async function getChat(storyId: string, rawPage: string) {
   const page = pages?.find((p) => p.page === pageNumber);
   if (!story || !pages || !page) return null;
   // Words from this page and earlier ones: a word is defined where it first appears.
-  return { story, page, glossary: buildGlossary(pages, pageNumber) };
+  const nextTitle = pages.find((p) => p.page === pageNumber + 1)?.title;
+  return { story, page, nextTitle, glossary: buildGlossary(pages, pageNumber) };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -59,6 +60,7 @@ async function Chat({ params }: Pick<Props, "params">) {
         page={chat.page}
         totalPages={chat.story.pages}
         glossary={chat.glossary}
+        nextTitle={chat.nextTitle}
       />
     </>
   );

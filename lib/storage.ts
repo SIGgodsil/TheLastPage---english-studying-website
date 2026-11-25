@@ -35,16 +35,38 @@ export type Progress = z.infer<typeof ProgressSchema>;
 const emptyProgress = (): Progress => ({ version: 1, stories: {} });
 const emptyStory = (): StoryProgress => ({ completedPages: [] });
 
-/** The saved progress, or empty progress if there is none or it cannot be read. */
-export function readProgress(): Progress {
+/** The saved progress as stored (a string, so it is cheap to compare), or null. */
+export function readProgressRaw(): string | null {
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (!raw) return emptyProgress();
+    return window.localStorage.getItem(STORAGE_KEY);
+  } catch {
+    return null;
+  }
+}
+
+/** Parse stored progress; anything missing or invalid becomes empty progress. */
+export function parseProgress(raw: string | null): Progress {
+  if (!raw) return emptyProgress();
+  try {
     const result = ProgressSchema.safeParse(JSON.parse(raw));
     return result.success ? result.data : emptyProgress();
   } catch {
     return emptyProgress();
   }
+}
+
+/** The saved progress, or empty progress if there is none or it cannot be read. */
+export function readProgress(): Progress {
+  return parseProgress(readProgressRaw());
+}
+
+/** Call `onChange` when progress changes in another tab. Returns an unsubscribe function. */
+export function subscribeProgress(onChange: () => void): () => void {
+  const listener = (e: StorageEvent) => {
+    if (e.key === null || e.key === STORAGE_KEY) onChange();
+  };
+  window.addEventListener("storage", listener);
+  return () => window.removeEventListener("storage", listener);
 }
 
 /** Save progress. Returns false if storage is unavailable; the app keeps working without it. */

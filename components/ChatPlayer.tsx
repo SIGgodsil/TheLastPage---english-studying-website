@@ -29,6 +29,8 @@ type Props = {
   totalPages: number;
   /** Vocab from this page and earlier ones, for tap-to-understand. */
   glossary: Glossary;
+  /** Title of the next page, for the end-of-page teaser. */
+  nextTitle?: string;
 };
 
 const noSubscribe = () => () => {};
@@ -69,7 +71,7 @@ function typingDelay(text: string): number {
   return Math.min(1500, 450 + text.length * 15);
 }
 
-function ChatSession({ storyId, page, totalPages, glossary }: Props) {
+function ChatSession({ storyId, page, totalPages, glossary, nextTitle }: Props) {
   const [play, setPlay] = useState(() => initialState(storyId, page));
   const [typing, setTyping] = useState(false);
   const timer = useRef<number | null>(null);
@@ -140,7 +142,7 @@ function ChatSession({ storyId, page, totalPages, glossary }: Props) {
         {!typing && isAwaitingChoice(page, play) && node.type === "choice" ? (
           <ChoiceButtons key={node.id} node={node} onChoose={(i) => goTo(choose(page, play, i))} />
         ) : !typing && isPageEnd(page, play) ? (
-          <PageEnd storyId={storyId} pageNumber={page.page} totalPages={totalPages} />
+          <PageEnd storyId={storyId} pageNumber={page.page} totalPages={totalPages} nextTitle={nextTitle} />
         ) : (
           <button
             type="button"

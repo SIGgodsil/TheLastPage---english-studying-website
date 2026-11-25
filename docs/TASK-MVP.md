@@ -20,8 +20,10 @@ The MVP is built in **phases**. Each phase ends with `npm run lint` and `npm run
 - [x] **4. Choices and tap-to-understand.** Choice buttons (the pick is sent as the learner's message), tiered hints (hint → Vietnamese of each option), and a `WordPopover` for `[[vocab]]` words (English definition, Vietnamese, IPA). Optional `vi` translation toggle on bubbles.
   - The popover is a bottom sheet (`WordSheet`, a native `<dialog>`: Esc, backdrop tap and focus handling for free). It shows the base form, IPA, the shown form if different ("Trong câu: knocked"), Vietnamese, the English definition, and "Bạn đã gặp từ này ở trang N" for words from earlier pages. The route builds the glossary from this page and earlier ones.
   - Choice hints: "💡 Gợi ý" shows `hint`, then "Dịch các câu trả lời" shows each option's `vi`. Every line with `vi` (bubbles and narration) gets a "Dịch" toggle.
-- [ ] **5. Page flow and home.** Cliffhanger → "Trang tiếp theo" screen; the last page of a story → placeholder for The Last Page. Home goes straight into the story (resume from saved progress). Check the full story on a 360px screen, then tick the MVP box in `docs/PRODUCT.md`.
+- [x] **5. Page flow and home.** Cliffhanger → "Trang tiếp theo" screen; the last page of a story → placeholder for The Last Page. Home goes straight into the story (resume from saved progress). Check the full story on a 360px screen, then tick the MVP box in `docs/PRODUCT.md`.
+  - End of page: progress dots, a teaser with the next page's title, "Đọc trang N: …" and "Để sau, về trang chủ". After the last chat page: "Lật sang The Last Page", a placeholder route (`/story/[storyId]/last-page`) showing the writing question and pattern.
+  - Home lists all 10 stories, grouped by themed pair, with origin, fear level and progress. A "Bắt đầu từ đây / Đọc tiếp" card on top opens the last unfinished story at the right page. Progress is read with `useSyncExternalStore` (`components/useProgress.ts`), so the server renders the "new learner" view and the browser fills in progress.
 
-## Open question
+## Decisions
 
-Whether the home screen lists all 10 stories (the engine is generic, so they would all play) or only *The Monkey's Paw*. Decide before phase 5.
+- The home screen lists all 10 stories (decided before phase 5): the engine is generic, so they all play.
