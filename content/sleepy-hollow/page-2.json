@@ -1,0 +1,181 @@
+{
+  "storyId": "sleepy-hollow",
+  "page": 2,
+  "title": "The Party",
+  "titleVi": "Bữa tiệc",
+  "level": "A2",
+  "chatTitle": "Ichabod 📚",
+  "characters": {
+    "ichabod": {
+      "name": "Ichabod Crane",
+      "emoji": "📚"
+    },
+    "brom": {
+      "name": "Brom Bones",
+      "emoji": "💪"
+    }
+  },
+  "vocab": {
+    "bridge": {
+      "en": "a road that goes over a river",
+      "vi": "cây cầu",
+      "ipa": "/brɪdʒ/"
+    },
+    "cross": {
+      "en": "to go from one side to the other",
+      "vi": "băng qua; đi qua",
+      "ipa": "/krɑːs/",
+      "ipaCheck": true
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "message",
+      "from": "ichabod",
+      "text": "The party is wonderful! Music, dancing and so much food 🥧"
+    },
+    {
+      "id": "n2",
+      "type": "narration",
+      "text": "Late at night, people tell ghost stories by the fire.",
+      "vi": "Đêm khuya, mọi người kể chuyện ma bên đống lửa."
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "ichabod",
+      "text": "Now Brom is telling a story. Listen 🙄"
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "brom",
+      "voice": true,
+      "text": "I saw the [[Headless|headless]] Horseman! I raced him to the old [[bridge]].",
+      "vi": "Tôi đã thấy Kỵ sĩ không đầu! Tôi đua với hắn đến cây cầu cũ."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "brom",
+      "voice": true,
+      "text": "Ghosts can't [[cross]] that [[bridge]].",
+      "vi": "Ma không thể đi qua cây cầu đó."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "brom",
+      "voice": true,
+      "text": "So he disappeared in a ball of fire! 🔥",
+      "vi": "Thế là hắn biến mất trong một quả cầu lửa! 🔥"
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "ichabod",
+      "text": "Everyone laughed. But I feel cold 🥶"
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì cho Ichabod?",
+      "hint": "Bạn có thể trấn an Ichabod, hoặc dặn anh nhớ cây cầu.",
+      "options": [
+        {
+          "text": "It's just Brom's silly story.",
+          "vi": "Chỉ là chuyện vớ vẩn của Brom thôi.",
+          "next": "c1a"
+        },
+        {
+          "text": "Remember that [[bridge]]. Just in case!",
+          "vi": "Nhớ cây cầu đó nhé. Phòng khi cần!",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "ichabod",
+      "text": "You're right. Brom just wants to scare me.",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "ichabod",
+      "text": "Ha! I will. Just in case 😅"
+    },
+    {
+      "id": "j1",
+      "type": "message",
+      "from": "ichabod",
+      "text": "Now I'm going to talk to Katrina. Wish me luck! 🤞"
+    },
+    {
+      "id": "n7",
+      "type": "narration",
+      "text": "Later, Ichabod asks Katrina to marry him. She says no.",
+      "vi": "Sau đó, Ichabod cầu hôn Katrina. Nàng từ chối."
+    },
+    {
+      "id": "n8",
+      "type": "message",
+      "from": "ichabod",
+      "text": "She said no 💔 I'm going home."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nói gì với Ichabod?",
+      "hint": "Bạn có thể an ủi anh, hoặc khuyên anh ở lại qua đêm.",
+      "options": [
+        {
+          "text": "I'm so sorry. Ride home safely.",
+          "vi": "Mình rất tiếc. Về nhà cẩn thận nhé.",
+          "next": "c2a"
+        },
+        {
+          "text": "It's late! Stay there tonight!",
+          "vi": "Muộn rồi! Ở lại đó đêm nay đi!",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "ichabod",
+      "text": "Thank you. Gunpowder and I will be fine.",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "ichabod",
+      "text": "I can't stay here now. Gunpowder will take me home."
+    },
+    {
+      "id": "j2",
+      "type": "narration",
+      "text": "Midnight. Ichabod rides home alone on his old horse, Gunpowder.",
+      "vi": "Nửa đêm. Ichabod cưỡi con ngựa già Gunpowder về nhà một mình."
+    },
+    {
+      "id": "n9",
+      "type": "message",
+      "from": "ichabod",
+      "text": "The road is dark and empty. The trees look like monsters 😨",
+      "vi": "Con đường tối và vắng tanh. Mấy cái cây trông như quái vật 😨"
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "from": "ichabod",
+      "text": "Wait. I can hear another horse behind me…",
+      "vi": "Khoan. Mình nghe thấy tiếng một con ngựa khác phía sau…"
+    }
+  ]
+}

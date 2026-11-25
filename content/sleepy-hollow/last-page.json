@@ -1,0 +1,100 @@
+{
+  "storyId": "sleepy-hollow",
+  "promptVi": "Chuyện gì xảy ra với Ichabod? Kỵ sĩ không đầu thật ra là ai?",
+  "pattern": "If I were Ichabod, I would…",
+  "moods": [
+    {
+      "id": "happy",
+      "hintVi": "Ichabod thoát nạn và tìm ra sự thật về kỵ sĩ."
+    },
+    {
+      "id": "sad",
+      "hintVi": "Ichabod mất tất cả: tình yêu, công việc, và cả ngôi làng."
+    },
+    {
+      "id": "twist",
+      "hintVi": "Kỵ sĩ không đầu hóa ra là một người quen."
+    }
+  ],
+  "starters": [
+    "The round thing hit Ichabod, and…",
+    "If I were Ichabod, I would…",
+    "In the morning, the villagers found…",
+    "Ichabod looked at the thing on the ground. It was…",
+    "Brom Bones laughed and said, “…”",
+    "Years later, people in the valley…"
+  ],
+  "wordBank": [
+    {
+      "word": "valley",
+      "vi": "thung lũng"
+    },
+    {
+      "word": "headless",
+      "vi": "không đầu"
+    },
+    {
+      "word": "soldier",
+      "vi": "người lính"
+    },
+    {
+      "word": "rider",
+      "vi": "người cưỡi ngựa; kỵ sĩ"
+    },
+    {
+      "word": "afraid",
+      "vi": "sợ hãi"
+    },
+    {
+      "word": "invite",
+      "vi": "mời"
+    },
+    {
+      "word": "bridge",
+      "vi": "cây cầu"
+    },
+    {
+      "word": "cross",
+      "vi": "băng qua; đi qua"
+    },
+    {
+      "word": "saddle",
+      "vi": "yên ngựa"
+    },
+    {
+      "word": "throw",
+      "vi": "ném"
+    },
+    {
+      "word": "pumpkin",
+      "vi": "quả bí ngô"
+    },
+    {
+      "word": "horse",
+      "vi": "con ngựa"
+    },
+    {
+      "word": "laugh",
+      "vi": "cười"
+    },
+    {
+      "word": "brave",
+      "vi": "dũng cảm"
+    },
+    {
+      "word": "trick",
+      "vi": "trò lừa"
+    }
+  ],
+  "modelEndings": [
+    {
+      "level": "A2",
+      "text": "Ichabod closed his eyes. The round thing hit the bridge and broke. It was not a head. It was a big orange pumpkin! Ichabod looked at the rider again. Then he saw big, strong hands. “Brom Bones!” he shouted. Brom laughed and rode away into the dark. The next day, Ichabod told the whole village. Everyone laughed at Brom. And Katrina? She invited Ichabod to dinner."
+    },
+    {
+      "level": "B1",
+      "text": "Ichabod did not move, but he did not close his eyes either. The flying thing hit his shoulder and fell to the ground, where it broke into orange pieces. It was a pumpkin. For a moment he was too surprised to be afraid. Then he noticed something strange: under the rider's black coat, there was a head after all, hidden by a tall collar. “If you were a real ghost,” Ichabod said, “you would not need a pumpkin.” The rider stopped laughing and rode away into the valley without a word. The next morning, Ichabod went to school as usual. He never told anyone the story, but from that day, Brom Bones always crossed the street when he saw him."
+    }
+  ],
+  "authorNote": "Sáng hôm sau, ngựa Gunpowder về một mình. Người ta tìm thấy mũ của Ichabod bên đường, cạnh một quả bí ngô vỡ. Ichabod biến mất mãi mãi. Brom cưới Katrina, và hễ ai nhắc đến quả bí ngô là anh ta cười rất to. Kết gốc vốn bỏ ngỏ nên rất hợp để viết lại."
+}

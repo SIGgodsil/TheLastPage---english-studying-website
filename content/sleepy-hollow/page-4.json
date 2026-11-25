@@ -1,0 +1,154 @@
+{
+  "storyId": "sleepy-hollow",
+  "page": 4,
+  "title": "The Bridge",
+  "titleVi": "Cây cầu",
+  "level": "A2",
+  "chatTitle": "Ichabod 📚",
+  "characters": {
+    "ichabod": {
+      "name": "Ichabod Crane",
+      "emoji": "📚"
+    }
+  },
+  "vocab": {
+    "throw": {
+      "en": "to send something through the air with your hand",
+      "vi": "ném",
+      "ipa": "/θroʊ/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "Ichabod stops on the other side of the [[bridge]]. He breathes hard.",
+      "vi": "Ichabod dừng lại ở bên kia cầu, thở hồng hộc."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "ichabod",
+      "text": "I'm safe. I'm safe! 😅"
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn trả lời thế nào?",
+      "hint": "Bạn có thể giục anh về nhà, hoặc bảo anh nhìn lại cho chắc.",
+      "options": [
+        {
+          "text": "Phew! Go home now!",
+          "vi": "Phù! Về nhà ngay đi!",
+          "next": "c1a"
+        },
+        {
+          "text": "Wait. Is he gone? Look again!",
+          "vi": "Khoan. Hắn đi chưa? Nhìn lại xem!",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "ichabod",
+      "text": "Wait… something is wrong.",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "ichabod",
+      "text": "I'm looking… Oh no."
+    },
+    {
+      "id": "j1",
+      "type": "narration",
+      "text": "But the [[headless]] [[rider]] does not disappear.",
+      "vi": "Nhưng kỵ sĩ không đầu không biến mất."
+    },
+    {
+      "id": "n3",
+      "type": "narration",
+      "text": "He stops at the end of the [[bridge]].",
+      "vi": "Hắn dừng lại ở đầu cầu."
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "ichabod",
+      "text": "His black horse is kicking the ground. Fire is coming out of its nose! 🔥",
+      "vi": "Con ngựa đen đang giậm chân. Lửa phụt ra từ mũi nó! 🔥"
+    },
+    {
+      "id": "n5",
+      "type": "narration",
+      "text": "Slowly, the [[rider]] stands up in the [[saddle]].",
+      "vi": "Từ từ, kỵ sĩ đứng thẳng lên trên yên ngựa."
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "ichabod",
+      "text": "He's holding his head high in the air…"
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "ichabod",
+      "text": "No… please… don't do it.",
+      "vi": "Không… làm ơn… đừng mà."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì cho Ichabod?",
+      "hint": "Bạn có thể bảo anh chạy, hoặc tìm chỗ nấp.",
+      "options": [
+        {
+          "text": "Run, Ichabod! RUN!",
+          "vi": "Chạy đi Ichabod! CHẠY!",
+          "next": "c2a"
+        },
+        {
+          "text": "Hide behind the trees!",
+          "vi": "Nấp sau mấy cái cây!",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "ichabod",
+      "text": "I can't! Gunpowder won't move!",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "ichabod",
+      "text": "There's no time!"
+    },
+    {
+      "id": "j2",
+      "type": "narration",
+      "text": "The [[rider]] [[throws|throw]] his head, hard, straight at Ichabod.",
+      "vi": "Kỵ sĩ ném mạnh cái đầu thẳng về phía Ichabod."
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "ichabod",
+      "text": "Something big and round is flying at me!",
+      "vi": "Có thứ gì to và tròn đang bay về phía mình!"
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "He cannot move…",
+      "vi": "Anh không thể nhúc nhích…"
+    }
+  ]
+}

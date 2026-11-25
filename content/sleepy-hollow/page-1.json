@@ -1,0 +1,164 @@
+{
+  "storyId": "sleepy-hollow",
+  "page": 1,
+  "title": "The Headless Horseman",
+  "titleVi": "Kỵ sĩ không đầu",
+  "level": "A2",
+  "chatTitle": "Ichabod 📚",
+  "characters": {
+    "ichabod": {
+      "name": "Ichabod Crane",
+      "emoji": "📚"
+    }
+  },
+  "vocab": {
+    "valley": {
+      "en": "low land between hills or mountains",
+      "vi": "thung lũng",
+      "ipa": "/ˈvæli/"
+    },
+    "headless": {
+      "en": "with no head",
+      "vi": "không đầu",
+      "ipa": "/ˈhedləs/"
+    },
+    "soldier": {
+      "en": "a person who fights in an army",
+      "vi": "người lính",
+      "ipa": "/ˈsoʊldʒɚ/"
+    },
+    "rider": {
+      "en": "a person who rides a horse",
+      "vi": "người cưỡi ngựa; kỵ sĩ",
+      "ipa": "/ˈraɪdɚ/"
+    },
+    "afraid": {
+      "en": "feeling fear; scared",
+      "vi": "sợ hãi",
+      "ipa": "/əˈfreɪd/"
+    },
+    "invite": {
+      "en": "to ask someone to come to a party",
+      "vi": "mời",
+      "ipa": "/ɪnˈvaɪt/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "Sleepy Hollow, long ago. A quiet village in a deep [[valley]].",
+      "vi": "Sleepy Hollow, ngày xưa. Một ngôi làng yên tĩnh trong thung lũng sâu."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "ichabod",
+      "text": "Greetings, my friend! I'm the new teacher here 📚"
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "ichabod",
+      "text": "People in this [[valley]] love ghost stories. So do I! 👻",
+      "vi": "Người dân thung lũng này mê chuyện ma. Mình cũng vậy! 👻"
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "ichabod",
+      "text": "The most famous one is about the [[Headless|headless]] Horseman.",
+      "vi": "Chuyện nổi tiếng nhất là về Kỵ sĩ không đầu."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "ichabod",
+      "text": "He was a [[soldier]]. He lost his head in a war.",
+      "vi": "Hắn từng là một người lính. Hắn mất đầu trong chiến tranh."
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "ichabod",
+      "text": "Every night, the [[headless]] [[rider]] rides through the [[valley]].",
+      "vi": "Đêm nào, kỵ sĩ không đầu cũng phi ngựa qua thung lũng."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "ichabod",
+      "text": "He is looking for his head.",
+      "vi": "Hắn đang đi tìm cái đầu của mình."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn trả lời Ichabod thế nào?",
+      "hint": "Bạn có thể hỏi anh có tin không, hoặc hỏi anh có sợ không.",
+      "options": [
+        {
+          "text": "Cool story! Do you believe it?",
+          "vi": "Chuyện hay đấy! Anh có tin không?",
+          "next": "c1a"
+        },
+        {
+          "text": "Aren't you [[afraid]]?",
+          "vi": "Anh không sợ sao?",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "ichabod",
+      "text": "Of course not! Well… a little 😅",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "ichabod",
+      "text": "Me? Never! Well… only of the dark 😅"
+    },
+    {
+      "id": "j1",
+      "type": "narration",
+      "text": "He loves ghost stories, but he is [[afraid]] of the dark.",
+      "vi": "Ichabod mê chuyện ma, nhưng lại sợ bóng tối."
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "ichabod",
+      "text": "Also… I'm in love! Her name is Katrina 😍"
+    },
+    {
+      "id": "n8",
+      "type": "message",
+      "from": "ichabod",
+      "text": "She is beautiful, and her father is very rich."
+    },
+    {
+      "id": "n9",
+      "type": "message",
+      "from": "ichabod",
+      "text": "But Brom Bones loves her too. He always laughs at me 😤",
+      "vi": "Nhưng Brom Bones cũng yêu nàng. Hắn lúc nào cũng cười nhạo mình 😤"
+    },
+    {
+      "id": "n10",
+      "type": "message",
+      "from": "ichabod",
+      "text": "Great news! A letter came today ✉️"
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "from": "ichabod",
+      "text": "Katrina's family [[invited|invite]] me to a big party! 🎉",
+      "vi": "Gia đình Katrina mời mình đến một bữa tiệc lớn! 🎉"
+    }
+  ]
+}
