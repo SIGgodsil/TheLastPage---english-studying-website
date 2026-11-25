@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* Design tokens (see CLAUDE.md). The app is always light: paper and ink. */
+@theme {
+  --color-paper: #f7f3ea;
+  --color-ink: #2b2420;
+  --color-wine: #8b2e2e;
+  --color-muted: #7a6f66;
+  --color-line: #e4dccd;
+  --font-serif: var(--font-lora), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
