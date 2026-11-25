@@ -1,0 +1,191 @@
+{
+  "storyId": "mosquito",
+  "page": 2,
+  "title": "Three Drops of Blood",
+  "titleVi": "Ba giọt máu",
+  "level": "A2",
+  "chatTitle": "Ngoc Tam 🌾",
+  "characters": {
+    "ngocTam": {
+      "name": "Ngoc Tam",
+      "emoji": "🌾"
+    },
+    "oldMan": {
+      "name": "The old man"
+    }
+  },
+  "vocab": {
+    "finger": {
+      "en": "one of the five long parts of your hand",
+      "vi": "ngón tay",
+      "ipa": "/ˈfɪŋɡɚ/"
+    },
+    "drop": {
+      "en": "a very small bit of water or blood",
+      "vi": "giọt",
+      "ipa": "/drɑːp/"
+    },
+    "blood": {
+      "en": "the red stuff that moves inside your body",
+      "vi": "máu",
+      "ipa": "/blʌd/"
+    },
+    "market": {
+      "en": "a place where people buy and sell food",
+      "vi": "chợ",
+      "ipa": "/ˈmɑːrkɪt/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "I told him, “Please. I will do anything.”"
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "oldMan",
+      "voice": true,
+      "text": "Cut your [[finger]].",
+      "vi": "Hãy cắt ngón tay con."
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "oldMan",
+      "voice": true,
+      "text": "Let three [[drops|drop]] of [[blood]] fall on her.",
+      "vi": "Để ba giọt máu rơi lên người nàng."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì cho Ngọc Tâm?",
+      "hint": "Bạn có thể lo lắng cho anh, hoặc động viên anh.",
+      "options": [
+        {
+          "text": "Wait! Is this safe?",
+          "vi": "Khoan! Làm vậy có an toàn không?",
+          "next": "c1a"
+        },
+        {
+          "text": "Do it, Ngoc Tam. For her.",
+          "vi": "Làm đi Ngọc Tâm. Vì chị ấy.",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "I don't care. I'm doing it.",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "Yes. For her. I'm doing it."
+    },
+    {
+      "id": "j1",
+      "type": "narration",
+      "text": "Ngoc Tam cuts his [[finger]]. One [[drop]]. Two [[drops|drop]]. Three [[drops|drop]].",
+      "vi": "Ngọc Tâm cắt ngón tay. Một giọt. Hai giọt. Ba giọt."
+    },
+    {
+      "id": "n4",
+      "type": "narration",
+      "text": "Slowly, Nhan Diep opens her eyes. Her cheeks turn pink.",
+      "vi": "Từ từ, Nhan Diệp mở mắt. Má nàng hồng hào trở lại."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "She's sitting up! She's smiling! 😭❤️",
+      "vi": "Cô ấy ngồi dậy rồi! Cô ấy đang cười! 😭❤️"
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "oldMan",
+      "voice": true,
+      "text": "Be careful, my son."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "oldMan",
+      "voice": true,
+      "text": "She does not love you like you love her.",
+      "vi": "Nàng không yêu con như con yêu nàng."
+    },
+    {
+      "id": "n7",
+      "type": "narration",
+      "text": "Ngoc Tam does not listen. On the way home, they stop at a [[market]].",
+      "vi": "Ngọc Tâm không nghe. Trên đường về, họ dừng lại ở một khu chợ."
+    },
+    {
+      "id": "n8",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "There's a big boat next to ours. It belongs to a rich merchant."
+    },
+    {
+      "id": "n9",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "The merchant is smiling at my wife 😠",
+      "vi": "Gã lái buôn đang cười với vợ mình 😠"
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn khuyên Ngọc Tâm thế nào?",
+      "hint": "Bạn có thể bảo anh ở lại với vợ, hoặc bảo anh đừng lo.",
+      "options": [
+        {
+          "text": "Stay with your wife!",
+          "vi": "Ở bên vợ anh đi!",
+          "next": "c2a"
+        },
+        {
+          "text": "Don't worry. Go and buy food.",
+          "vi": "Đừng lo. Đi mua đồ ăn đi.",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "I need to buy food. I'll be quick.",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "You're right. I'll be back soon."
+    },
+    {
+      "id": "j2",
+      "type": "narration",
+      "text": "Ngoc Tam goes to buy food at the [[market]].",
+      "vi": "Ngọc Tâm đi mua đồ ăn trong chợ."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "from": "ngocTam",
+      "text": "I'm back… My wife and the big boat are gone!",
+      "vi": "Mình quay lại rồi… Vợ mình và con thuyền lớn biến mất rồi!"
+    }
+  ]
+}

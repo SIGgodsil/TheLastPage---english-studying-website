@@ -1,0 +1,150 @@
+{
+  "storyId": "mosquito",
+  "page": 4,
+  "title": "The Last Drop",
+  "titleVi": "Giọt máu cuối cùng",
+  "level": "A2",
+  "chatTitle": "Ngoc Tam 🌾",
+  "characters": {
+    "ngocTam": {
+      "name": "Ngoc Tam",
+      "emoji": "🌾"
+    },
+    "nhanDiep": {
+      "name": "Nhan Diep",
+      "emoji": "💎"
+    }
+  },
+  "vocab": {},
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "message",
+      "from": "nhanDiep",
+      "voice": true,
+      "text": "Is that all? Fine.",
+      "vi": "Chỉ thế thôi à? Được thôi."
+    },
+    {
+      "id": "n2",
+      "type": "narration",
+      "text": "She takes a small knife from the table. She cuts her [[finger]].",
+      "vi": "Nàng cầm con dao nhỏ trên bàn. Nàng cắt ngón tay."
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "One [[drop]] falls to the floor.",
+      "vi": "Một giọt rơi xuống sàn."
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "Her face is turning white.",
+      "vi": "Mặt cô ấy đang trắng bệch đi."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì?",
+      "hint": "Bạn có thể hỏi chuyện gì đang xảy ra, hoặc bảo Ngọc Tâm ngăn cô ấy lại.",
+      "options": [
+        {
+          "text": "Ngoc Tam, what's happening?!",
+          "vi": "Ngọc Tâm, chuyện gì đang xảy ra vậy?!",
+          "next": "c1a"
+        },
+        {
+          "text": "Stop her! Something is wrong!",
+          "vi": "Ngăn chị ấy lại! Có gì đó không ổn!",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "I don't know. I'm just watching.",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "I can't stop it now. Nobody can."
+    },
+    {
+      "id": "j1",
+      "type": "narration",
+      "text": "Two [[drops|drop]]. Her hands begin to shake.",
+      "vi": "Hai giọt. Tay nàng bắt đầu run."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "nhanDiep",
+      "voice": true,
+      "text": "What… what is happening?",
+      "vi": "Chuyện… chuyện gì thế này?"
+    },
+    {
+      "id": "n5",
+      "type": "narration",
+      "text": "Ngoc Tam does not answer. He only watches."
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "nhanDiep",
+      "voice": true,
+      "text": "Please help me! I'm [[sorry]]!",
+      "vi": "Làm ơn cứu tôi! Tôi hối hận rồi!"
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì cho Ngọc Tâm?",
+      "hint": "Bạn có thể xin anh giúp cô ấy, hoặc để mọi chuyện xảy ra.",
+      "options": [
+        {
+          "text": "Ngoc Tam, help her! Please!",
+          "vi": "Ngọc Tâm, cứu chị ấy đi! Làm ơn!",
+          "next": "c2a"
+        },
+        {
+          "text": "It's her choice. Don't move.",
+          "vi": "Đó là lựa chọn của chị ấy. Đừng làm gì cả.",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "I can't. It's the old man's magic.",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "I'm not moving. I'm just watching."
+    },
+    {
+      "id": "j2",
+      "type": "narration",
+      "text": "She holds her [[finger]] tight, but the [[blood]] doesn't stop.",
+      "vi": "Nàng siết chặt ngón tay, nhưng máu không ngừng chảy."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "The third [[drop]] slowly grows at the end of her [[finger]]…",
+      "vi": "Giọt thứ ba từ từ lớn dần nơi đầu ngón tay nàng…"
+    }
+  ]
+}

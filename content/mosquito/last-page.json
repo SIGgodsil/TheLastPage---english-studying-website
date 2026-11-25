@@ -1,0 +1,100 @@
+{
+  "storyId": "mosquito",
+  "promptVi": "Khi giọt máu thứ ba rơi xuống, chuyện gì xảy ra?",
+  "pattern": "If I were Ngoc Tam, I would…",
+  "moods": [
+    {
+      "id": "happy",
+      "hintVi": "Ngọc Tâm tha thứ, và cả hai tìm được bình yên."
+    },
+    {
+      "id": "sad",
+      "hintVi": "Giọt máu cuối cùng mang đi một điều không thể lấy lại."
+    },
+    {
+      "id": "twist",
+      "hintVi": "Nhan Diệp, hoặc Ngọc Tâm, biến thành một thứ không ai ngờ tới."
+    }
+  ],
+  "starters": [
+    "The third drop fell, and…",
+    "If I were Ngoc Tam, I would…",
+    "Ngoc Tam took her hand and said, “…”",
+    "Nhan Diep looked at her finger. It…",
+    "The old man appeared at the door and…",
+    "Since that day, on summer nights,…"
+  ],
+  "wordBank": [
+    {
+      "word": "farmer",
+      "vi": "nông dân"
+    },
+    {
+      "word": "field",
+      "vi": "cánh đồng; ruộng"
+    },
+    {
+      "word": "sorry",
+      "vi": "hối hận; xin lỗi"
+    },
+    {
+      "word": "bury",
+      "vi": "chôn cất"
+    },
+    {
+      "word": "sail",
+      "vi": "đi thuyền; giong buồm"
+    },
+    {
+      "word": "finger",
+      "vi": "ngón tay"
+    },
+    {
+      "word": "drop",
+      "vi": "giọt"
+    },
+    {
+      "word": "blood",
+      "vi": "máu"
+    },
+    {
+      "word": "market",
+      "vi": "chợ"
+    },
+    {
+      "word": "silk",
+      "vi": "lụa"
+    },
+    {
+      "word": "mosquito",
+      "vi": "con muỗi"
+    },
+    {
+      "word": "forgive",
+      "vi": "tha thứ"
+    },
+    {
+      "word": "heart",
+      "vi": "trái tim"
+    },
+    {
+      "word": "magic",
+      "vi": "phép thuật"
+    },
+    {
+      "word": "buzz",
+      "vi": "tiếng vo ve"
+    }
+  ],
+  "modelEndings": [
+    {
+      "level": "A2",
+      "text": "Before the third drop fell, Ngoc Tam held her finger. “Stop,” he said. “Keep it. I don't want it.” The blood stopped. Nhan Diep cried. “Why are you helping me?” she asked. “Because I loved you,” he said. Then he walked out of the rich man's house, and he never looked back. He bought a new field by the river and became a happy farmer again."
+    },
+    {
+      "level": "B1",
+      "text": "Just before the third drop fell, Ngoc Tam looked at his own hands. They were the hands of a farmer, not the hands of a cruel man. “If I took this drop, I would become as cold as you,” he said. He pressed his finger against hers, and the bleeding stopped at once. Nhan Diep stared at him. For the first time, she understood what love really cost. She took off her silk clothes and her gold rings and left them on the merchant's table. The next spring, people saw a man and a woman working side by side in a small field by the river. Nobody knew if they were married again, but they always shared their food."
+    }
+  ],
+  "authorNote": "Giọt thứ ba rơi xuống, Nhan Diệp ngã xuống và chết. Hồn nàng không cam lòng, hóa thành con muỗi, ngày đêm đi hút máu người để đòi lại ba giọt máu đã mất."
+}

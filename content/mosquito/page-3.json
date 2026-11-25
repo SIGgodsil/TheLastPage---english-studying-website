@@ -1,0 +1,164 @@
+{
+  "storyId": "mosquito",
+  "page": 3,
+  "title": "The Rich Man's House",
+  "titleVi": "Ngôi nhà của gã nhà giàu",
+  "level": "A2",
+  "chatTitle": "Ngoc Tam 🌾",
+  "characters": {
+    "ngocTam": {
+      "name": "Ngoc Tam",
+      "emoji": "🌾"
+    },
+    "nhanDiep": {
+      "name": "Nhan Diep",
+      "emoji": "💎"
+    }
+  },
+  "vocab": {
+    "silk": {
+      "en": "soft, shiny, expensive cloth",
+      "vi": "lụa",
+      "ipa": "/sɪlk/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "I looked for her everywhere. Town after town, for months."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "At last, I found her. She lives in the merchant's big house."
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "She wears [[silk]] clothes and gold rings 💍",
+      "vi": "Cô ấy mặc áo lụa và đeo nhẫn vàng 💍"
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nói gì với Ngọc Tâm?",
+      "hint": "Bạn có thể khuyên anh nói chuyện với vợ, hoặc quên cô ấy đi.",
+      "options": [
+        {
+          "text": "Talk to her. Maybe she will come home.",
+          "vi": "Nói chuyện với chị ấy đi. Biết đâu chị ấy sẽ về.",
+          "next": "c1a"
+        },
+        {
+          "text": "Forget her. She left you!",
+          "vi": "Quên chị ấy đi. Chị ấy bỏ anh mà!",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "I will try. I'm going to talk to her now.",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "I can't. I have to talk to her."
+    },
+    {
+      "id": "j1",
+      "type": "narration",
+      "text": "Ngoc Tam stands in front of his wife.",
+      "vi": "Ngọc Tâm đứng trước mặt vợ."
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "I said, “Nhan Diep, please come home with me.”"
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "nhanDiep",
+      "voice": true,
+      "text": "Home? To your poor little house?",
+      "vi": "Về nhà ư? Về căn nhà nghèo nàn của anh à?"
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "nhanDiep",
+      "voice": true,
+      "text": "No. I like this life.",
+      "vi": "Không. Tôi thích cuộc sống này."
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "I told her, “I gave you my [[blood]]. I gave you everything.”",
+      "vi": "Mình nói: “Ta đã cho nàng máu của ta. Ta đã cho nàng tất cả.”"
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "nhanDiep",
+      "voice": true,
+      "text": "I didn't ask for it.",
+      "vi": "Tôi đâu có xin."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì cho Ngọc Tâm?",
+      "hint": "Bạn có thể an ủi anh, hoặc khuyên anh buông tay.",
+      "options": [
+        {
+          "text": "I'm so [[sorry]]. Come home, my friend.",
+          "vi": "Mình rất tiếc. Về nhà đi, bạn ơi.",
+          "next": "c2a"
+        },
+        {
+          "text": "She doesn't love you. Let her go.",
+          "vi": "Chị ấy không yêu anh. Buông tay đi.",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "Not yet. I want one more thing from her.",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "I will. But first, I want something back."
+    },
+    {
+      "id": "j2",
+      "type": "narration",
+      "text": "Ngoc Tam looks at her for a long time. His heart is cold now.",
+      "vi": "Ngọc Tâm nhìn nàng thật lâu. Lòng anh giờ đã lạnh."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "from": "ngocTam",
+      "text": "“Then give me back my three [[drops|drop]] of [[blood]].”",
+      "vi": "“Vậy thì trả lại ta ba giọt máu.”"
+    }
+  ]
+}

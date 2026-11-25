@@ -1,0 +1,195 @@
+{
+  "storyId": "mosquito",
+  "page": 1,
+  "title": "The Coffin on the Boat",
+  "titleVi": "Cỗ quan tài trên thuyền",
+  "level": "A2",
+  "chatTitle": "Ngoc Tam 🌾",
+  "characters": {
+    "ngocTam": {
+      "name": "Ngoc Tam",
+      "emoji": "🌾"
+    },
+    "oldMan": {
+      "name": "The old man"
+    }
+  },
+  "vocab": {
+    "farmer": {
+      "en": "a person who grows food on the land",
+      "vi": "nông dân",
+      "ipa": "/ˈfɑːrmɚ/"
+    },
+    "field": {
+      "en": "an area of land where farmers grow food",
+      "vi": "cánh đồng; ruộng",
+      "ipa": "/fiːld/"
+    },
+    "sorry": {
+      "en": "feeling sad about something you did",
+      "vi": "hối hận; xin lỗi",
+      "ipa": "/ˈsɑːri/",
+      "ipaCheck": true
+    },
+    "bury": {
+      "en": "to put a dead body in the ground",
+      "vi": "chôn cất",
+      "ipa": "/ˈberi/"
+    },
+    "sail": {
+      "en": "to travel on water in a boat",
+      "vi": "đi thuyền; giong buồm",
+      "ipa": "/seɪl/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "Long ago. A poor [[farmer]] works in the [[fields|field]] every day.",
+      "vi": "Ngày xưa. Một chàng nông dân nghèo ngày nào cũng làm việc ngoài đồng."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "Another long day in the [[fields|field]] 🌾 I'm so tired."
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "My wife, Nhan Diep, is very beautiful."
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "But she doesn't like to work. She wants nice clothes and good food."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn trả lời Ngọc Tâm thế nào?",
+      "hint": "Bạn có thể nói điều bạn nghĩ về Nhan Diệp, hoặc hỏi về tình cảm của Ngọc Tâm.",
+      "options": [
+        {
+          "text": "You work so hard. She should help you!",
+          "vi": "Anh làm việc vất vả quá. Chị ấy nên giúp anh chứ!",
+          "next": "c1a"
+        },
+        {
+          "text": "You really love her, don't you?",
+          "vi": "Anh yêu chị ấy lắm, phải không?",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "It's okay. I love her very much.",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "More than anything in the world ❤️"
+    },
+    {
+      "id": "j1",
+      "type": "narration",
+      "text": "One day, Nhan Diep suddenly gets sick and dies.",
+      "vi": "Một ngày, Nhan Diệp bỗng đổ bệnh rồi qua đời."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "She's gone. I can't stop crying 😢"
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nói gì với Ngọc Tâm?",
+      "hint": "Bạn có thể chia buồn, hoặc hỏi anh có cần giúp không.",
+      "options": [
+        {
+          "text": "I'm so [[sorry]], Ngoc Tam.",
+          "vi": "Mình rất tiếc, Ngọc Tâm.",
+          "next": "c2a"
+        },
+        {
+          "text": "Do you need help with anything?",
+          "vi": "Anh có cần mình giúp gì không?",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "Thank you. But I can't [[bury]] her yet.",
+      "vi": "Cảm ơn bạn. Nhưng mình chưa thể chôn cô ấy.",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "No. I just can't [[bury]] her.",
+      "vi": "Không. Mình chỉ là không thể chôn cô ấy."
+    },
+    {
+      "id": "j2",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "I sold my house and my [[fields|field]]. I bought a small boat.",
+      "vi": "Mình đã bán nhà và ruộng. Mình mua một chiếc thuyền nhỏ."
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "Her coffin is on the boat with me."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "ngocTam",
+      "text": "I will find a way to bring you back.",
+      "vi": "Ta sẽ tìm cách đưa nàng trở về."
+    },
+    {
+      "id": "n7",
+      "type": "narration",
+      "text": "He [[sails|sail]] for weeks. Then he finds a green mountain by the sea.",
+      "vi": "Anh đi thuyền nhiều tuần liền. Rồi anh tìm thấy một ngọn núi xanh bên biển."
+    },
+    {
+      "id": "n8",
+      "type": "message",
+      "from": "ngocTam",
+      "text": "An old man with a white beard is waiting!"
+    },
+    {
+      "id": "n9",
+      "type": "message",
+      "from": "oldMan",
+      "voice": true,
+      "text": "I can bring your wife back.",
+      "vi": "Ta có thể đưa vợ con trở lại."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "from": "oldMan",
+      "voice": true,
+      "text": "But you may be [[sorry]].",
+      "vi": "Nhưng con có thể sẽ hối hận."
+    }
+  ]
+}
