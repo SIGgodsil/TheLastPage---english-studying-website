@@ -72,7 +72,7 @@ An array, one entry per story:
 ```
 
 - Character ids are camelCase (`mrsWhite`). The learner is never a character: the learner's lines come from `choice` options.
-- **Vocab entries:** `en` (simple definition, max 10 words), `vi` (natural Vietnamese), `ipa` (American IPA between slashes, Cambridge US style: `/e/` in *spell*, `ː` for long vowels). Add `"ipaCheck": true` when a human should verify the IPA.
+- **Vocab entries:** `en` (simple definition, max 10 words), `vi` (natural Vietnamese), `ipa` (American IPA between slashes, Cambridge US style: `/e/` in *spell*, `ː` for long vowels, `/ɚ/` for unstressed *-er* as in *river* `/ˈrɪvɚ/`, `/ɝː/` for stressed *er* as in *burn* `/bɝːn/`). Add `"ipaCheck": true` when a human should verify the IPA.
 - A word is defined only on the page where it first appears. Later pages still mark it; the app looks the definition up from earlier pages.
 
 ### 6.3 Nodes
@@ -116,5 +116,5 @@ Per page: 12–15 `message` + `narration` nodes in total, 1–2 `choice` nodes w
 - [ ] Shadowing with pronunciation feedback via the Web Speech API
 - [ ] **The Last Page** screen: write an ending, get feedback, share it by link
 - [ ] Daily streaks and in-app waiting messages
-- [ ] Content: 10 A2 ghost stories converted to chat JSON (done so far: `monkeys-paw`)
+- [x] Content: 10 A2 ghost stories converted to chat JSON, plus `content/stories.json`
 - [ ] Community page to read and vote on endings
