@@ -18,6 +18,9 @@ interface Recognition {
   onresult: ((event: RecognitionEvent) => void) | null;
   onerror: ((event: RecognitionErrorEvent) => void) | null;
   onend: (() => void) | null;
+  onaudiostart: (() => void) | null;
+  onsoundstart: (() => void) | null;
+  onspeechstart: (() => void) | null;
   start(): void;
   stop(): void;
   abort(): void;
@@ -48,10 +51,15 @@ export type RecognitionFailure =
   | "unsupported" // no SpeechRecognition (Firefox)
   | "denied" // microphone permission refused
   | "no-mic" // no microphone found
-  | "no-speech" // nothing was heard
+  | "no-audio" // the microphone never started recording
+  | "quiet" // recording, but no sound reached the microphone
+  | "unclear" // sound was heard, but no words were recognised
   | "network" // the browser's speech service could not be reached
   | "aborted" // stopped by the app
   | "error"; // anything else
+
+/** How far listening got: used to explain why nothing was recognised. */
+export type ListenStage = "starting" | "recording" | "sound";
 
 export type RecognitionOutcome =
   | { ok: true; alternatives: string[] }
@@ -71,19 +79,20 @@ type ListenOptions = {
   maxSeconds?: number;
   /** Called with the words heard so far, while the learner speaks. */
   onInterim?: (text: string) => void;
+  /** Called when the microphone starts recording, and when it first picks up sound. */
+  onStage?: (stage: ListenStage) => void;
 };
 
 const ERROR_REASONS: Record<string, RecognitionFailure> = {
   "not-allowed": "denied",
   "service-not-allowed": "denied",
   "audio-capture": "no-mic",
-  "no-speech": "no-speech",
   network: "network",
   aborted: "aborted",
 };
 
 /** Listen for one utterance. Resolves with up to 5 alternatives (best first), or a reason. */
-export function listen({ lang = "en-US", maxSeconds = 8, onInterim }: ListenOptions = {}): RecognitionSession {
+export function listen({ lang = "en-US", maxSeconds = 8, onInterim, onStage }: ListenOptions = {}): RecognitionSession {
   const Ctor = recognitionConstructor();
   if (!Ctor) {
     return { stop() {}, cancel() {}, result: Promise.resolve({ ok: false, reason: "unsupported" }) };
@@ -104,6 +113,7 @@ export function listen({ lang = "en-US", maxSeconds = 8, onInterim }: ListenOpti
   /** Everything heard so far, final or not: used if the service never finalises. */
   let heard = "";
   let failure: RecognitionFailure | null = null;
+  let stage: ListenStage = "starting";
   let settled = false;
   let timer: ReturnType<typeof setTimeout> | undefined;
   let grace: ReturnType<typeof setTimeout> | undefined;
@@ -126,7 +136,8 @@ export function listen({ lang = "en-US", maxSeconds = 8, onInterim }: ListenOpti
     ).filter(Boolean);
     if (alternatives.length > 0) return { ok: true, alternatives: [...new Set(alternatives)] };
     if (heard) return { ok: true, alternatives: [heard] };
-    return { ok: false, reason: failure ?? "no-speech" };
+    if (failure) return { ok: false, reason: failure };
+    return { ok: false, reason: stage === "starting" ? "no-audio" : stage === "recording" ? "quiet" : "unclear" };
   };
 
   recognition.onresult = (event) => {
@@ -136,8 +147,17 @@ export function listen({ lang = "en-US", maxSeconds = 8, onInterim }: ListenOpti
     onInterim?.(heard);
   };
   recognition.onerror = (event) => {
-    failure = ERROR_REASONS[event.error] ?? "error";
+    // "no-speech" is explained by how far listening got (see outcomeSoFar).
+    if (event.error !== "no-speech") failure = ERROR_REASONS[event.error] ?? "error";
   };
+  const reach = (next: ListenStage) => {
+    if (stage === "sound" || stage === next) return;
+    stage = next;
+    onStage?.(next);
+  };
+  recognition.onaudiostart = () => reach("recording");
+  recognition.onsoundstart = () => reach("sound");
+  recognition.onspeechstart = () => reach("sound");
   recognition.onend = () => settle(outcomeSoFar());
 
   const abort = () => {
@@ -182,7 +202,7 @@ export function listen({ lang = "en-US", maxSeconds = 8, onInterim }: ListenOpti
 }
 
 /** How long stop() waits for the browser's final result before giving up on it. */
-const STOP_GRACE_MS = 2000;
+const STOP_GRACE_MS = 4000;
 
 /** An English voice, preferring American and on-device voices. */
 function englishVoice(lang: string): SpeechSynthesisVoice | undefined {

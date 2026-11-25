@@ -40,11 +40,17 @@ export function tipMessage(kind: TipKind, word: string, gentle: boolean): ReactN
   }
 }
 
-/** Why listening did not work, said kindly. `no-speech` is shown like a silent result. */
-export const FAILURE: Record<Exclude<RecognitionFailure, "aborted" | "no-speech">, string> = {
+/** Why listening did not work, said kindly. */
+export const FAILURE: Record<Exclude<RecognitionFailure, "aborted">, string> = {
   unsupported: "Trình duyệt này chưa hỗ trợ ghi âm. Bạn có thể bỏ qua hoặc mở bằng Chrome.",
   denied: "Bạn chưa cho phép dùng micro. Hãy bật quyền micro cho trang này trong cài đặt trình duyệt, rồi thử lại nhé.",
   "no-mic": "Không tìm thấy micro. Bạn kiểm tra lại micro rồi thử lại nhé.",
+  "no-audio":
+    "Micro chưa bật lên được. Bạn xem trình duyệt đã được phép dùng micro chưa (biểu tượng 🎙️ trên thanh địa chỉ), rồi thử lại nhé.",
+  quiet:
+    "Micro đã bật nhưng chưa thu được tiếng nào. Có thể trình duyệt đang dùng nhầm micro: bấm biểu tượng 🎙️ trên thanh địa chỉ để chọn đúng micro, hoặc kiểm tra micro trong cài đặt của máy nhé.",
+  unclear:
+    "Mình nghe thấy tiếng bạn nhưng chưa nhận ra từ nào. Bạn thử nói chậm, rõ và gần micro hơn nhé. Trình duyệt cần mạng để nhận giọng nói, nên bạn kiểm tra cả kết nối mạng nữa.",
   network: "Chưa kết nối được dịch vụ nhận giọng nói của trình duyệt. Bạn kiểm tra mạng rồi thử lại nhé.",
   error: "Có chút trục trặc khi ghi âm. Bạn thử lại nhé.",
 };

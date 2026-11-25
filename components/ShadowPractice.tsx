@@ -9,6 +9,7 @@ import {
   listen,
   speak,
   stopSpeaking,
+  type ListenStage,
   type RecognitionSession,
 } from "@/lib/speech";
 import { saveShadow, shadowKey } from "@/lib/storage";
@@ -71,7 +72,7 @@ export default function ShadowPractice({ storyId, page, nodeId, variant = "chip"
 
 type Phase =
   | { kind: "ready" }
-  | { kind: "listening"; interim: string }
+  | { kind: "listening"; interim: string; stage: ListenStage }
   | { kind: "result"; result: ShadowResult }
   | { kind: "failed"; reason: keyof typeof FAILURE };
 
@@ -102,15 +103,19 @@ function ShadowPanel({
 
   const play = async (speed: Speed) => {
     setSpeaking(speed);
-    await speak(line, { rate: speed === "slow" ? 0.65 : 0.9 });
+    await speak(line, { rate: speed === "slow" ? 0.5 : 0.9 });
     setSpeaking((current) => (current === speed ? null : current));
   };
 
   const record = async () => {
     stopSpeaking();
     setSpeaking(null);
-    setPhase({ kind: "listening", interim: "" });
-    const current = listen({ onInterim: (interim) => setPhase({ kind: "listening", interim }) });
+    setPhase({ kind: "listening", interim: "", stage: "starting" });
+    const current = listen({
+      onInterim: (interim) =>
+        setPhase((p) => (p.kind === "listening" ? { ...p, interim, stage: "sound" } : p)),
+      onStage: (stage) => setPhase((p) => (p.kind === "listening" ? { ...p, stage } : p)),
+    });
     session.current = current;
     const outcome = await current.result;
     if (session.current !== current) return; // cancelled or replaced
@@ -120,7 +125,6 @@ function ShadowPanel({
       onResult(result);
       setPhase({ kind: "result", result });
     }
-    else if (outcome.reason === "no-speech") setPhase({ kind: "result", result: checkShadow(text, [], names) });
     else if (outcome.reason === "aborted") setPhase({ kind: "ready" });
     else setPhase({ kind: "failed", reason: outcome.reason });
   };
@@ -156,7 +160,7 @@ function ShadowPanel({
         ) : phase.kind === "ready" ? (
           <MicButton onClick={record} label="Bấm rồi đọc to câu trên" />
         ) : phase.kind === "listening" ? (
-          <Listening interim={phase.interim} onStop={() => session.current?.stop()} />
+          <Listening interim={phase.interim} stage={phase.stage} onStop={() => session.current?.stop()} />
         ) : phase.kind === "failed" ? (
           <Message>{FAILURE[phase.reason]}</Message>
         ) : (
@@ -255,7 +259,13 @@ function MicButton({ onClick, label }: { onClick: () => void; label: string }) {
   );
 }
 
-function Listening({ interim, onStop }: { interim: string; onStop: () => void }) {
+const STAGE_LABEL: Record<ListenStage, string> = {
+  starting: "Đang bật micro…",
+  recording: "Micro đang bật, chưa nghe thấy tiếng",
+  sound: "Đã nghe thấy tiếng bạn",
+};
+
+function Listening({ interim, stage, onStop }: { interim: string; stage: ListenStage; onStop: () => void }) {
   const [stopping, setStopping] = useState(false);
   return (
     <div className="flex flex-col items-center gap-3 text-center">
@@ -266,6 +276,13 @@ function Listening({ interim, onStop }: { interim: string; onStop: () => void })
         </span>
       </span>
       <p className="font-medium">{stopping ? "Đang chấm câu bạn vừa đọc…" : "Đang nghe… Bạn đọc to câu trên nhé."}</p>
+      <p className="flex items-center gap-1.5 text-xs text-muted">
+        <span
+          aria-hidden
+          className={`size-2 rounded-full ${stage === "sound" ? "bg-wine" : stage === "recording" ? "bg-wine/40" : "bg-line"}`}
+        />
+        {STAGE_LABEL[stage]}
+      </p>
       <p lang="en" className="min-h-6 text-muted italic">
         {interim}
       </p>
