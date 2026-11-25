@@ -256,6 +256,7 @@ function MicButton({ onClick, label }: { onClick: () => void; label: string }) {
 }
 
 function Listening({ interim, onStop }: { interim: string; onStop: () => void }) {
+  const [stopping, setStopping] = useState(false);
   return (
     <div className="flex flex-col items-center gap-3 text-center">
       <span className="relative flex size-20 items-center justify-center">
@@ -264,16 +265,20 @@ function Listening({ interim, onStop }: { interim: string; onStop: () => void })
           🎙️
         </span>
       </span>
-      <p className="font-medium">Đang nghe… Bạn đọc to câu trên nhé.</p>
+      <p className="font-medium">{stopping ? "Đang chấm câu bạn vừa đọc…" : "Đang nghe… Bạn đọc to câu trên nhé."}</p>
       <p lang="en" className="min-h-6 text-muted italic">
         {interim}
       </p>
       <button
         type="button"
-        onClick={onStop}
-        className="rounded-full border border-line px-5 py-2 text-sm font-medium transition active:scale-[0.98]"
+        onClick={() => {
+          setStopping(true);
+          onStop();
+        }}
+        disabled={stopping}
+        className="rounded-full border border-line px-5 py-2 text-sm font-medium transition active:scale-[0.98] disabled:opacity-50"
       >
-        Xong, dừng lại
+        {stopping ? "Đang dừng…" : "Xong, dừng lại"}
       </button>
     </div>
   );

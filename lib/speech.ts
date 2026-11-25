@@ -101,48 +101,88 @@ export function listen({ lang = "en-US", maxSeconds = 8, onInterim }: ListenOpti
   recognition.maxAlternatives = 5;
 
   let finals: RecognitionResult[] = [];
+  /** Everything heard so far, final or not: used if the service never finalises. */
+  let heard = "";
   let failure: RecognitionFailure | null = null;
-  let cancelled = false;
+  let settled = false;
   let timer: ReturnType<typeof setTimeout> | undefined;
+  let grace: ReturnType<typeof setTimeout> | undefined;
+  let resolveResult: (outcome: RecognitionOutcome) => void = () => {};
+  const result = new Promise<RecognitionOutcome>((resolve) => (resolveResult = resolve));
 
-  const result = new Promise<RecognitionOutcome>((resolve) => {
-    recognition.onresult = (event) => {
-      const results = Array.from({ length: event.results.length }, (_, i) => event.results[i]);
-      finals = results.filter((r) => r.isFinal);
-      onInterim?.(results.map((r) => r[0]?.transcript ?? "").join(" ").trim());
-    };
-    recognition.onerror = (event) => {
-      failure = ERROR_REASONS[event.error] ?? "error";
-    };
-    recognition.onend = () => {
-      clearTimeout(timer);
-      if (cancelled) return resolve({ ok: false, reason: "aborted" });
-      // Build each alternative across all final results ("first part" + "second part").
-      const count = Math.max(0, ...finals.map((r) => r.length));
-      const alternatives = Array.from({ length: count }, (_, i) =>
-        finals.map((r) => (r[i] ?? r[0])?.transcript ?? "").join(" ").trim(),
-      ).filter(Boolean);
-      if (alternatives.length > 0) return resolve({ ok: true, alternatives: [...new Set(alternatives)] });
-      resolve({ ok: false, reason: failure ?? "no-speech" });
-    };
-  });
+  const settle = (outcome: RecognitionOutcome) => {
+    if (settled) return;
+    settled = true;
+    clearTimeout(timer);
+    clearTimeout(grace);
+    resolveResult(outcome);
+  };
+
+  const outcomeSoFar = (): RecognitionOutcome => {
+    // Build each alternative across all final results ("first part" + "second part").
+    const count = Math.max(0, ...finals.map((r) => r.length));
+    const alternatives = Array.from({ length: count }, (_, i) =>
+      finals.map((r) => (r[i] ?? r[0])?.transcript ?? "").join(" ").trim(),
+    ).filter(Boolean);
+    if (alternatives.length > 0) return { ok: true, alternatives: [...new Set(alternatives)] };
+    if (heard) return { ok: true, alternatives: [heard] };
+    return { ok: false, reason: failure ?? "no-speech" };
+  };
+
+  recognition.onresult = (event) => {
+    const results = Array.from({ length: event.results.length }, (_, i) => event.results[i]);
+    finals = results.filter((r) => r.isFinal);
+    heard = results.map((r) => r[0]?.transcript ?? "").join(" ").trim();
+    onInterim?.(heard);
+  };
+  recognition.onerror = (event) => {
+    failure = ERROR_REASONS[event.error] ?? "error";
+  };
+  recognition.onend = () => settle(outcomeSoFar());
+
+  const abort = () => {
+    try {
+      recognition.abort();
+    } catch {
+      // Already stopped.
+    }
+  };
+
+  // Chrome's stop() waits for its online service to send the final words.
+  // When that is slow, or nothing was heard, "end" can come late or never,
+  // so after a short grace period use what was heard so far.
+  const stop = () => {
+    if (settled || grace !== undefined) return;
+    try {
+      recognition.stop();
+    } catch {
+      // Already stopped.
+    }
+    grace = setTimeout(() => {
+      settle(outcomeSoFar());
+      abort();
+    }, STOP_GRACE_MS);
+  };
 
   try {
     recognition.start();
-    timer = setTimeout(() => recognition.stop(), maxSeconds * 1000);
+    timer = setTimeout(stop, maxSeconds * 1000);
   } catch {
     return { stop() {}, cancel() {}, result: Promise.resolve({ ok: false, reason: "error" }) };
   }
 
   return {
-    stop: () => recognition.stop(),
+    stop,
     cancel: () => {
-      cancelled = true;
-      recognition.abort();
+      settle({ ok: false, reason: "aborted" });
+      abort();
     },
     result,
   };
 }
+
+/** How long stop() waits for the browser's final result before giving up on it. */
+const STOP_GRACE_MS = 2000;
 
 /** An English voice, preferring American and on-device voices. */
 function englishVoice(lang: string): SpeechSynthesisVoice | undefined {
