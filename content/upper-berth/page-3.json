@@ -1,0 +1,174 @@
+{
+  "storyId": "upper-berth",
+  "page": 3,
+  "title": "The Cold Hand",
+  "titleVi": "Bàn tay lạnh",
+  "level": "A2",
+  "chatTitle": "Brisbane 🎩",
+  "characters": {
+    "brisbane": {
+      "name": "Brisbane",
+      "emoji": "🎩"
+    },
+    "captain": {
+      "name": "The captain",
+      "emoji": "⚓"
+    }
+  },
+  "vocab": {
+    "shape": {
+      "en": "the outside form of a thing",
+      "vi": "hình dáng; cái bóng",
+      "ipa": "/ʃeɪp/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "Brisbane stands up. He puts his hand into the [[upper]] bed.",
+      "vi": "Brisbane đứng dậy, thò tay vào giường trên."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "brisbane",
+      "text": "I touched something. It was an arm.",
+      "vi": "Mình chạm vào một thứ. Đó là một cánh tay."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "brisbane",
+      "text": "It was [[wet]], cold and soft.",
+      "vi": "Nó ướt, lạnh và mềm."
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "brisbane",
+      "text": "Like a dead man's arm 😰"
+    },
+    {
+      "id": "n4",
+      "type": "narration",
+      "text": "The thing pushes him hard. Brisbane falls to the floor."
+    },
+    {
+      "id": "n5",
+      "type": "narration",
+      "text": "A dark [[shape]] runs out of the [[cabin]].",
+      "vi": "Một bóng đen chạy vụt ra khỏi buồng."
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "brisbane",
+      "text": "I ran after the [[shape]], but it was gone.",
+      "vi": "Mình đuổi theo cái bóng, nhưng nó biến mất rồi."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn hỏi Brisbane điều gì?",
+      "hint": "Bạn có thể hỏi anh có bị thương không, hoặc hỏi về cái bóng.",
+      "options": [
+        {
+          "text": "Are you hurt?",
+          "vi": "Cậu có bị thương không?",
+          "next": "c1a"
+        },
+        {
+          "text": "What was that [[shape]]?",
+          "vi": "Cái bóng đó là gì vậy?",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "brisbane",
+      "text": "Not badly. But my hand is still cold.",
+      "next": "n7"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "brisbane",
+      "text": "I don't know. It wasn't a man, I think."
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "brisbane",
+      "text": "I went back and touched the [[upper]] bed."
+    },
+    {
+      "id": "n8",
+      "type": "message",
+      "from": "brisbane",
+      "text": "It was [[wet]] with sea water.",
+      "vi": "Nó ướt đẫm nước biển."
+    },
+    {
+      "id": "n9",
+      "type": "narration",
+      "text": "In the morning, Brisbane tells the [[captain]] everything."
+    },
+    {
+      "id": "n10",
+      "type": "message",
+      "from": "brisbane",
+      "text": "This time, the [[captain]] didn't laugh.",
+      "vi": "Lần này, thuyền trưởng không cười."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn khuyên Brisbane thế nào?",
+      "hint": "Bạn có thể bảo anh rời tàu, hoặc nhờ thuyền trưởng giúp.",
+      "options": [
+        {
+          "text": "Leave the [[ship]] at the next port!",
+          "vi": "Rời tàu ở cảng tới đi!",
+          "next": "c2a"
+        },
+        {
+          "text": "Ask the [[captain]] for help.",
+          "vi": "Nhờ thuyền trưởng giúp đi.",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "brisbane",
+      "text": "I can't. We're in the middle of the ocean.",
+      "next": "n11"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "brisbane",
+      "text": "I did. And he has a plan."
+    },
+    {
+      "id": "n11",
+      "type": "message",
+      "from": "captain",
+      "voice": true,
+      "text": "I want to see it.",
+      "vi": "Tôi muốn tận mắt thấy nó."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "from": "captain",
+      "voice": true,
+      "text": "Tonight, we will wait in 105 together.",
+      "vi": "Đêm nay, chúng ta sẽ cùng chờ trong buồng 105."
+    }
+  ]
+}

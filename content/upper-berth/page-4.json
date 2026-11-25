@@ -1,0 +1,170 @@
+{
+  "storyId": "upper-berth",
+  "page": 4,
+  "title": "The Thing in the Upper Bed",
+  "titleVi": "Thứ trên giường tầng trên",
+  "level": "A2",
+  "chatTitle": "Brisbane 🎩",
+  "characters": {
+    "brisbane": {
+      "name": "Brisbane",
+      "emoji": "🎩"
+    },
+    "captain": {
+      "name": "The captain",
+      "emoji": "⚓"
+    }
+  },
+  "vocab": {
+    "grab": {
+      "en": "to take something quickly and strongly",
+      "vi": "chộp lấy; túm lấy",
+      "ipa": "/ɡræb/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "Night. Brisbane and the [[captain]] wait in the dark [[cabin]].",
+      "vi": "Đêm. Brisbane và thuyền trưởng chờ trong căn buồng tối."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "brisbane",
+      "text": "The [[captain]] is holding a lamp. We're waiting."
+    },
+    {
+      "id": "n3",
+      "type": "narration",
+      "text": "Two o'clock. The room gets very cold.",
+      "vi": "Hai giờ sáng. Căn phòng bỗng lạnh buốt."
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "brisbane",
+      "text": "I can [[smell]] the sea again 😨"
+    },
+    {
+      "id": "n5",
+      "type": "narration",
+      "text": "Slowly, the round window opens by itself.",
+      "vi": "Từ từ, ô cửa tròn tự mở ra."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì cho Brisbane?",
+      "hint": "Bạn có thể bảo anh nhìn giường trên, hoặc đóng cửa sổ lại.",
+      "options": [
+        {
+          "text": "Look at the [[upper]] bed!",
+          "vi": "Nhìn giường trên kìa!",
+          "next": "c1a"
+        },
+        {
+          "text": "Close the window! Quickly!",
+          "vi": "Đóng cửa sổ lại! Nhanh lên!",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "brisbane",
+      "text": "Something is moving there.",
+      "next": "n6"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "brisbane",
+      "text": "Too late. Something is moving in the [[upper]] bed."
+    },
+    {
+      "id": "n6",
+      "type": "narration",
+      "text": "The [[captain]] holds up the lamp."
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "brisbane",
+      "text": "There's a face in the [[upper]] bed. White and [[wet]].",
+      "vi": "Có một khuôn mặt ở giường trên. Trắng bệch và ướt sũng."
+    },
+    {
+      "id": "n8",
+      "type": "message",
+      "from": "brisbane",
+      "text": "Its eyes are open, but they don't move.",
+      "vi": "Mắt nó mở, nhưng không hề động đậy."
+    },
+    {
+      "id": "n9",
+      "type": "narration",
+      "text": "Brisbane jumps up and [[grabs|grab]] it.",
+      "vi": "Brisbane bật dậy và chộp lấy nó."
+    },
+    {
+      "id": "n10",
+      "type": "message",
+      "from": "brisbane",
+      "text": "It's so strong and so cold!"
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "brisbane",
+      "text": "Help me! It's pulling me to the window!",
+      "vi": "Cứu tôi với! Nó đang kéo tôi ra cửa sổ!"
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì?",
+      "hint": "Bạn có thể bảo Brisbane bám chặt, hoặc gọi thuyền trưởng.",
+      "options": [
+        {
+          "text": "[[Grab|grab]] the bed! Hold on!",
+          "vi": "Bám lấy giường! Giữ chặt vào!",
+          "next": "c2a"
+        },
+        {
+          "text": "[[Captain|captain]], help him!",
+          "vi": "Thuyền trưởng ơi, giúp anh ấy!",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "brisbane",
+      "text": "I'm trying! It's too strong!",
+      "next": "n11"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "captain",
+      "voice": true,
+      "text": "I'm coming! Hold on!"
+    },
+    {
+      "id": "n11",
+      "type": "narration",
+      "text": "The [[captain]] runs toward them.",
+      "vi": "Thuyền trưởng lao về phía họ."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "Then the lamp falls to the floor, and everything goes black…",
+      "vi": "Rồi chiếc đèn rơi xuống sàn, và mọi thứ tối đen…"
+    }
+  ]
+}

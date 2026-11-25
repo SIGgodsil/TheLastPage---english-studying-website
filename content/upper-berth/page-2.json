@@ -1,0 +1,186 @@
+{
+  "storyId": "upper-berth",
+  "page": 2,
+  "title": "The Window",
+  "titleVi": "Ô cửa sổ",
+  "level": "A2",
+  "chatTitle": "Brisbane 🎩",
+  "characters": {
+    "brisbane": {
+      "name": "Brisbane",
+      "emoji": "🎩"
+    },
+    "captain": {
+      "name": "The captain",
+      "emoji": "⚓"
+    },
+    "steward": {
+      "name": "The steward",
+      "emoji": "🛎️"
+    }
+  },
+  "vocab": {
+    "captain": {
+      "en": "the person who is the boss of a ship",
+      "vi": "thuyền trưởng",
+      "ipa": "/ˈkæptən/"
+    },
+    "disappear": {
+      "en": "to suddenly go away and not be seen",
+      "vi": "biến mất; mất tích",
+      "ipa": "/ˌdɪsəˈpɪr/"
+    },
+    "wet": {
+      "en": "covered with water; not dry",
+      "vi": "ướt",
+      "ipa": "/wet/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "message",
+      "from": "brisbane",
+      "text": "I went to the [[captain]]. He looked serious.",
+      "vi": "Mình đến gặp thuyền trưởng. Trông ông ấy rất nghiêm trọng."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "captain",
+      "voice": true,
+      "text": "[[Cabin|cabin]] 105 again.",
+      "vi": "Lại là buồng 105."
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "captain",
+      "voice": true,
+      "text": "On my last three trips, someone [[disappeared|disappear]] at sea.",
+      "vi": "Ba chuyến gần đây của tôi, đều có người mất tích trên biển."
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "captain",
+      "voice": true,
+      "text": "Always from that [[cabin]].",
+      "vi": "Lần nào cũng từ buồng đó."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "brisbane",
+      "text": "I'm not afraid. I will stay there.",
+      "vi": "Tôi không sợ. Tôi sẽ ở lại đó."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn khuyên Brisbane thế nào?",
+      "hint": "Bạn có thể khuyên anh đổi buồng, hoặc khen anh dũng cảm.",
+      "options": [
+        {
+          "text": "Please change your [[cabin]]! I'm worried.",
+          "vi": "Đổi buồng đi! Mình lo lắm.",
+          "next": "c1a"
+        },
+        {
+          "text": "You're brave! But be careful.",
+          "vi": "Cậu gan thật! Nhưng cẩn thận nhé.",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "brisbane",
+      "text": "Don't worry, my friend. It's just a story 😄",
+      "next": "n5"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "brisbane",
+      "text": "I'm always careful 😎"
+    },
+    {
+      "id": "n5",
+      "type": "narration",
+      "text": "The [[steward]] closes the round window. He screws it shut, very tight.",
+      "vi": "Anh tiếp viên đóng ô cửa tròn và vặn ốc thật chặt."
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "steward",
+      "voice": true,
+      "text": "Now no one can open it, sir."
+    },
+    {
+      "id": "n7",
+      "type": "narration",
+      "text": "That night, Brisbane lies in his bed."
+    },
+    {
+      "id": "n8",
+      "type": "message",
+      "from": "brisbane",
+      "text": "The air is cold and [[wet]]. I can [[smell]] the sea again.",
+      "vi": "Không khí lạnh và ẩm ướt. Mình lại ngửi thấy mùi biển."
+    },
+    {
+      "id": "n9",
+      "type": "message",
+      "from": "brisbane",
+      "text": "I'm looking at the window now…"
+    },
+    {
+      "id": "n10",
+      "type": "message",
+      "from": "brisbane",
+      "text": "It's open. IT'S OPEN. 😨",
+      "vi": "Nó mở. NÓ ĐANG MỞ. 😨"
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì cho Brisbane?",
+      "hint": "Bạn có thể bảo anh chạy ra ngoài, hoặc tìm một lời giải thích.",
+      "options": [
+        {
+          "text": "Get out of there now!",
+          "vi": "Ra khỏi đó ngay!",
+          "next": "c2a"
+        },
+        {
+          "text": "Maybe the [[steward]] opened it?",
+          "vi": "Có khi anh tiếp viên mở nó?",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "brisbane",
+      "text": "Wait. I can hear something.",
+      "next": "end"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "brisbane",
+      "text": "No, nobody came in. I'm sure."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "from": "brisbane",
+      "text": "Something is moving in the [[upper]] bed above me…",
+      "vi": "Có thứ gì đang cử động ở giường trên, ngay phía trên mình…"
+    }
+  ]
+}

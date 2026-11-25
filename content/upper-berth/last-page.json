@@ -1,0 +1,100 @@
+{
+  "storyId": "upper-berth",
+  "promptVi": "Thứ nằm trên giường tầng trên là gì? Brisbane và thuyền trưởng thoát ra bằng cách nào?",
+  "pattern": "If I were Brisbane, I would…",
+  "moods": [
+    {
+      "id": "happy",
+      "hintVi": "Brisbane và thuyền trưởng thoát nạn, và bí ẩn của buồng 105 được giải."
+    },
+    {
+      "id": "sad",
+      "hintVi": "Thứ đó mang theo một người ra biển."
+    },
+    {
+      "id": "twist",
+      "hintVi": "Thứ trên giường hóa ra là ai đó bạn không ngờ, hoặc nó muốn một điều gì đó."
+    }
+  ],
+  "starters": [
+    "When the lamp fell, Brisbane…",
+    "If I were Brisbane, I would…",
+    "The captain found the lamp and…",
+    "The cold hand pulled harder, but…",
+    "Suddenly, the window closed, and…",
+    "The next morning, cabin 105…"
+  ],
+  "wordBank": [
+    {
+      "word": "ship",
+      "vi": "con tàu"
+    },
+    {
+      "word": "steward",
+      "vi": "tiếp viên (trên tàu)"
+    },
+    {
+      "word": "cabin",
+      "vi": "buồng (trên tàu)"
+    },
+    {
+      "word": "upper",
+      "vi": "ở trên; tầng trên"
+    },
+    {
+      "word": "smell",
+      "vi": "ngửi thấy; có mùi"
+    },
+    {
+      "word": "captain",
+      "vi": "thuyền trưởng"
+    },
+    {
+      "word": "disappear",
+      "vi": "biến mất; mất tích"
+    },
+    {
+      "word": "wet",
+      "vi": "ướt"
+    },
+    {
+      "word": "shape",
+      "vi": "hình dáng; cái bóng"
+    },
+    {
+      "word": "grab",
+      "vi": "chộp lấy; túm lấy"
+    },
+    {
+      "word": "escape",
+      "vi": "trốn thoát"
+    },
+    {
+      "word": "fight",
+      "vi": "vật lộn; chiến đấu"
+    },
+    {
+      "word": "window",
+      "vi": "cửa sổ"
+    },
+    {
+      "word": "ocean",
+      "vi": "đại dương"
+    },
+    {
+      "word": "afraid",
+      "vi": "sợ hãi"
+    }
+  ],
+  "modelEndings": [
+    {
+      "level": "A2",
+      "text": "Brisbane held the bed with one hand. With the other hand, he grabbed the cold arm. “Who are you?” he shouted. The thing stopped. In the dark, a sad voice said, “I fell from this ship. Nobody looked for me.” The captain lit the lamp again. The upper bed was empty and wet. The next day, the captain read the names of the lost men. After that, cabin 105 was never cold again."
+    },
+    {
+      "level": "B1",
+      "text": "When everything went black, Brisbane did not let go. He knew that if he let go, the thing would take someone else on the next trip. He pulled the cold arm away from the window with all his strength. The captain found the lamp, and for a second they saw the thing clearly: a young sailor in an old uniform, with sea water running from his hair. “Close the window forever,” the sailor whispered, “and I will finally rest.” Then the shape broke into water and splashed onto the floor. The next morning, the captain ordered his men to cover the window with iron. Since that night, nobody has disappeared from cabin 105."
+    }
+  ],
+  "authorNote": "Brisbane vật lộn với thứ đó và bị thương, còn nó biến mất. Sau chuyến đi, Brisbane không bao giờ đi con tàu đó nữa."
+}

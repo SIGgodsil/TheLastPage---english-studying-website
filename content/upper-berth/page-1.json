@@ -1,0 +1,166 @@
+{
+  "storyId": "upper-berth",
+  "page": 1,
+  "title": "Cabin 105",
+  "titleVi": "Buồng 105",
+  "level": "A2",
+  "chatTitle": "Brisbane 🎩",
+  "characters": {
+    "brisbane": {
+      "name": "Brisbane",
+      "emoji": "🎩"
+    }
+  },
+  "vocab": {
+    "ship": {
+      "en": "a big boat that travels across the sea",
+      "vi": "con tàu",
+      "ipa": "/ʃɪp/"
+    },
+    "steward": {
+      "en": "a man who helps people traveling on a ship",
+      "vi": "tiếp viên (trên tàu)",
+      "ipa": "/ˈstuːɚd/",
+      "ipaCheck": true
+    },
+    "cabin": {
+      "en": "a small room where you sleep on a ship",
+      "vi": "buồng (trên tàu)",
+      "ipa": "/ˈkæbɪn/"
+    },
+    "upper": {
+      "en": "higher; above another thing",
+      "vi": "ở trên; tầng trên",
+      "ipa": "/ˈʌpɚ/"
+    },
+    "smell": {
+      "en": "to notice something with your nose",
+      "vi": "ngửi thấy; có mùi",
+      "ipa": "/smel/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "The year is 1886. Your friend Brisbane is crossing the ocean.",
+      "vi": "Năm 1886. Brisbane, bạn của bạn, đang vượt đại dương."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "brisbane",
+      "text": "Hello from the sea! I'm on a big [[ship]] 🚢",
+      "vi": "Chào từ biển khơi! Mình đang ở trên một con tàu lớn 🚢"
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "brisbane",
+      "text": "It's called the Kamtschatka. Very fancy! 😄"
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "brisbane",
+      "text": "I told the [[steward]], “My [[cabin]] is 105.”",
+      "vi": "Mình nói với anh tiếp viên: “Buồng của tôi là 105.”"
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "brisbane",
+      "text": "His face changed. He said quietly, “Oh… 105.”",
+      "vi": "Mặt anh ta biến sắc. Anh ta khẽ nói: “Ồ… 105.”"
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn trả lời Brisbane thế nào?",
+      "hint": "Bạn có thể hỏi buồng 105 có gì lạ, hoặc trấn an Brisbane.",
+      "options": [
+        {
+          "text": "That's strange. What's wrong with 105?",
+          "vi": "Lạ nhỉ. Buồng 105 bị sao vậy?",
+          "next": "c1a"
+        },
+        {
+          "text": "Maybe he's just tired.",
+          "vi": "Chắc anh ta mệt thôi.",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "brisbane",
+      "text": "I don't know. He said nothing more.",
+      "next": "n6"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "brisbane",
+      "text": "Maybe. But he said nothing more 🤔"
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "brisbane",
+      "text": "My [[cabin]] has two beds, one above the other.",
+      "vi": "Buồng của mình có hai giường, một cái ở trên cái kia."
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "brisbane",
+      "text": "A man sleeps in the [[upper]] bed. He looks very tired.",
+      "vi": "Một người đàn ông ngủ ở giường trên. Trông ông ta rất mệt."
+    },
+    {
+      "id": "n8",
+      "type": "narration",
+      "text": "Midnight. Brisbane wakes up.",
+      "vi": "Nửa đêm. Brisbane tỉnh giấc."
+    },
+    {
+      "id": "n9",
+      "type": "message",
+      "from": "brisbane",
+      "text": "The man just jumped down and ran out! The door banged! 😳"
+    },
+    {
+      "id": "n10",
+      "type": "narration",
+      "text": "The [[cabin]] is very cold now.",
+      "vi": "Căn buồng giờ lạnh buốt."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "brisbane",
+      "text": "Why does it [[smell]] of sea water?",
+      "vi": "Sao ở đây lại có mùi nước biển nhỉ?"
+    },
+    {
+      "id": "n11",
+      "type": "narration",
+      "text": "Morning. Brisbane looks for the man everywhere."
+    },
+    {
+      "id": "n12",
+      "type": "message",
+      "from": "brisbane",
+      "text": "He's not on the [[ship]]. Nobody can find him.",
+      "vi": "Ông ta không còn trên tàu. Không ai tìm thấy ông ta."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "from": "brisbane",
+      "text": "And the small round window is wide open.",
+      "vi": "Và ô cửa sổ tròn nhỏ đang mở toang."
+    }
+  ]
+}
