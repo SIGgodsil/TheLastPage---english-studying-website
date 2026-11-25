@@ -1,5 +1,7 @@
+import Link from "next/link";
+
 // Placeholder home (MVP phase 1). Phase 5 replaces it with a screen that
-// goes straight into the story.
+// goes straight into the story and resumes saved progress.
 export default function Home() {
   return (
     <main className="mx-auto flex w-full max-w-md flex-1 flex-col items-center justify-center gap-6 px-6 py-16 text-center">
@@ -12,13 +14,12 @@ export default function Home() {
         Học tiếng Anh qua truyện kinh điển, kể bằng tin nhắn. Bạn chọn câu trả lời, luyện nói theo nhân vật và
         tự viết lại đoạn kết.
       </p>
-      <button
-        type="button"
-        disabled
-        className="mt-2 w-full rounded-full bg-wine px-6 py-3 font-medium text-paper opacity-60"
+      <Link
+        href="/story/monkeys-paw/1"
+        className="mt-2 w-full rounded-full bg-wine px-6 py-3 font-medium text-paper transition active:scale-[0.98]"
       >
-        Câu chuyện đầu tiên sắp ra mắt…
-      </button>
+        Đọc <span className="font-serif italic">The Monkey&apos;s Paw</span>
+      </Link>
     </main>
   );
 }
