@@ -1,0 +1,189 @@
+{
+  "storyId": "temple-judge",
+  "page": 2,
+  "title": "The Old Man",
+  "titleVi": "Ông lão",
+  "level": "A2",
+  "chatTitle": "Van 🔥",
+  "characters": {
+    "van": {
+      "name": "Van",
+      "emoji": "🔥"
+    },
+    "tallMan": {
+      "name": "The tall man",
+      "emoji": "⚔️"
+    },
+    "oldMan": {
+      "name": "The old man",
+      "emoji": "🌿"
+    }
+  },
+  "vocab": {
+    "underworld": {
+      "en": "the place where dead people go",
+      "vi": "âm phủ",
+      "ipa": "/ˈʌndɚwɝːld/"
+    },
+    "court": {
+      "en": "a place where people decide if someone did wrong",
+      "vi": "phiên tòa; công đường",
+      "ipa": "/kɔːrt/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "message",
+      "from": "van",
+      "text": "I told him no. He is [[evil]], and I won't help him.",
+      "vi": "Mình bảo không. Hắn độc ác, và mình sẽ không giúp hắn."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "tallMan",
+      "voice": true,
+      "text": "Then you will meet the King of the [[Underworld|underworld]].",
+      "vi": "Vậy ngươi sẽ phải gặp Diêm Vương."
+    },
+    {
+      "id": "n3",
+      "type": "narration",
+      "text": "And he disappears.",
+      "vi": "Rồi hắn biến mất."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì cho Văn?",
+      "hint": "Bạn có thể lo lắng, hoặc ủng hộ quyết định của Văn.",
+      "options": [
+        {
+          "text": "The King of the [[Underworld|underworld]]?! That's bad!",
+          "vi": "Diêm Vương ư?! Tệ quá!",
+          "next": "c1a"
+        },
+        {
+          "text": "You were right, Van. Don't help him.",
+          "vi": "Cậu đúng đấy, Văn. Đừng giúp hắn.",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "van",
+      "text": "Maybe. But I'm not afraid.",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "van",
+      "text": "I won't. Never."
+    },
+    {
+      "id": "j1",
+      "type": "narration",
+      "text": "The next day, an old man comes to see Van. His clothes are simple.",
+      "vi": "Hôm sau, có một ông lão đến gặp Văn. Quần áo ông giản dị."
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "van",
+      "text": "He says he is the Earth God! 😮",
+      "vi": "Ông ấy nói mình là Thổ thần! 😮"
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "oldMan",
+      "voice": true,
+      "text": "That ghost took my [[temple]]. Thank you for helping me.",
+      "vi": "Hồn ma đó đã chiếm đền của ta. Cảm ơn con đã giúp ta."
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "van",
+      "text": "I asked him, “Will the ghost hurt me?”"
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "oldMan",
+      "voice": true,
+      "text": "He will take you to the [[court]] of the dead.",
+      "vi": "Hắn sẽ đưa con đến phiên tòa của cõi chết."
+    },
+    {
+      "id": "n8",
+      "type": "message",
+      "from": "oldMan",
+      "voice": true,
+      "text": "He will tell lies there."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "oldMan",
+      "voice": true,
+      "text": "But you must tell the truth.",
+      "vi": "Nhưng con phải nói sự thật."
+    },
+    {
+      "id": "n9",
+      "type": "message",
+      "from": "oldMan",
+      "voice": true,
+      "text": "If the king doesn't believe you, ask Tan Vien [[temple]].",
+      "vi": "Nếu nhà vua không tin, hãy xin hỏi đền Tản Viên."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nói gì với Văn?",
+      "hint": "Bạn có thể nhắc Văn nhớ lời Thổ thần, hoặc nói bạn lo cho cậu ấy.",
+      "options": [
+        {
+          "text": "Remember that, Van! Tan Vien!",
+          "vi": "Nhớ nhé Văn! Tản Viên!",
+          "next": "c2a"
+        },
+        {
+          "text": "I'm scared for you, Van.",
+          "vi": "Mình lo cho cậu quá, Văn.",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "van",
+      "text": "I will. Tan Vien [[temple]].",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "van",
+      "text": "Don't be. I'll tell the truth."
+    },
+    {
+      "id": "j2",
+      "type": "narration",
+      "text": "That night, two ghost soldiers come. They grab Van's arms.",
+      "vi": "Đêm đó, hai tên lính ma xuất hiện. Chúng tóm lấy tay Văn."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "They pull him into the darkness…",
+      "vi": "Chúng kéo chàng vào bóng tối…"
+    }
+  ]
+}

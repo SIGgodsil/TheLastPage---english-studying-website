@@ -1,0 +1,203 @@
+{
+  "storyId": "temple-judge",
+  "page": 1,
+  "title": "The Burning Temple",
+  "titleVi": "Ngôi đền bốc cháy",
+  "level": "A2",
+  "chatTitle": "Van 🔥",
+  "characters": {
+    "van": {
+      "name": "Van",
+      "emoji": "🔥"
+    },
+    "tallMan": {
+      "name": "The tall man",
+      "emoji": "⚔️"
+    }
+  },
+  "vocab": {
+    "honest": {
+      "en": "always telling the truth",
+      "vi": "thật thà; trung thực",
+      "ipa": "/ˈɑːnɪst/"
+    },
+    "brave": {
+      "en": "not afraid of danger",
+      "vi": "dũng cảm",
+      "ipa": "/breɪv/"
+    },
+    "temple": {
+      "en": "a building where people pray to gods",
+      "vi": "ngôi đền",
+      "ipa": "/ˈtempəl/"
+    },
+    "evil": {
+      "en": "very bad; wanting to hurt people",
+      "vi": "độc ác; tà ác",
+      "ipa": "/ˈiːvəl/"
+    },
+    "enemy": {
+      "en": "a person or army that fights against you",
+      "vi": "kẻ thù; giặc",
+      "ipa": "/ˈenəmi/"
+    },
+    "burn": {
+      "en": "to set fire to something",
+      "vi": "đốt cháy",
+      "ipa": "/bɝːn/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "Long ago. Ngo Tu Van is young, [[honest]] and [[brave]].",
+      "vi": "Ngày xưa. Ngô Tử Văn là chàng trai trẻ, thật thà và dũng cảm."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "van",
+      "text": "My friend, you know me. I'm not afraid of anything 😎"
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "van",
+      "text": "But there's a problem in our village. The old [[temple]].",
+      "vi": "Nhưng làng mình có chuyện. Ngôi đền cũ."
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "van",
+      "text": "An [[evil]] ghost lives there now.",
+      "vi": "Giờ có một hồn ma độc ác ở đó."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "van",
+      "text": "He was an [[enemy]] general. He died in a war long ago.",
+      "vi": "Hắn từng là một viên tướng giặc. Hắn chết trong chiến tranh từ lâu rồi."
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "van",
+      "text": "He took the [[temple]] from the good Earth God.",
+      "vi": "Hắn chiếm ngôi đền của vị Thổ thần tốt bụng."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn hỏi Văn điều gì?",
+      "hint": "Bạn có thể hỏi hồn ma làm gì, hoặc hỏi dân làng có sợ không.",
+      "options": [
+        {
+          "text": "What does the ghost do?",
+          "vi": "Hồn ma đó làm gì?",
+          "next": "c1a"
+        },
+        {
+          "text": "Is everyone afraid of him?",
+          "vi": "Mọi người có sợ hắn không?",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "van",
+      "text": "He makes people sick. He steals their animals.",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "van",
+      "text": "Yes. He makes people sick and steals their animals."
+    },
+    {
+      "id": "j1",
+      "type": "shadow",
+      "from": "van",
+      "text": "This is wrong. I will stop him.",
+      "vi": "Thế là sai. Mình sẽ ngăn hắn lại."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nói gì với Văn?",
+      "hint": "Bạn có thể dặn Văn cẩn thận, hoặc hỏi Văn định làm thế nào.",
+      "options": [
+        {
+          "text": "Be careful, Van!",
+          "vi": "Cẩn thận nhé Văn!",
+          "next": "c2a"
+        },
+        {
+          "text": "How? He's a ghost!",
+          "vi": "Bằng cách nào? Hắn là ma mà!",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "van",
+      "text": "Don't worry. I have a plan.",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "van",
+      "text": "I have a plan. Watch."
+    },
+    {
+      "id": "j2",
+      "type": "narration",
+      "text": "Van washes and prays to the sky. Then he sets fire to the [[temple]].",
+      "vi": "Văn tắm gội, khấn trời, rồi phóng hỏa đốt ngôi đền."
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "van",
+      "text": "Everyone is watching it [[burn]] 🔥",
+      "vi": "Mọi người đang đứng xem nó cháy 🔥"
+    },
+    {
+      "id": "n8",
+      "type": "narration",
+      "text": "That night, Van feels sick. He opens his eyes.",
+      "vi": "Đêm đó, Văn thấy khó chịu. Chàng mở mắt ra."
+    },
+    {
+      "id": "n9",
+      "type": "message",
+      "from": "van",
+      "text": "A tall man is standing by my bed! He's wearing a helmet 😨",
+      "vi": "Có một người cao lớn đứng cạnh giường mình! Hắn đội mũ trụ 😨"
+    },
+    {
+      "id": "n10",
+      "type": "message",
+      "from": "tallMan",
+      "voice": true,
+      "text": "You [[burned|burn]] my house.",
+      "vi": "Ngươi đã đốt nhà ta."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "from": "tallMan",
+      "voice": true,
+      "text": "Build it again, or you will die!",
+      "vi": "Dựng lại nó, nếu không ngươi sẽ chết!"
+    }
+  ]
+}

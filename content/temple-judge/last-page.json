@@ -1,0 +1,100 @@
+{
+  "storyId": "temple-judge",
+  "promptVi": "Diêm Vương quyết định thế nào? Chuyện gì xảy ra với Văn và hồn ma tướng giặc?",
+  "pattern": "If I were the king, I would…",
+  "moods": [
+    {
+      "id": "happy",
+      "hintVi": "Sự thật được sáng tỏ, và Văn trở về nhà."
+    },
+    {
+      "id": "sad",
+      "hintVi": "Văn thắng, nhưng phải trả một cái giá."
+    },
+    {
+      "id": "twist",
+      "hintVi": "Lá thư từ Tản Viên nói một điều không ai ngờ."
+    }
+  ],
+  "starters": [
+    "The king pointed at…",
+    "If I were the king, I would…",
+    "The ghost general fell to his knees and…",
+    "Van opened his eyes. He was…",
+    "The Earth God smiled and said, “…”",
+    "A month later, Van…"
+  ],
+  "wordBank": [
+    {
+      "word": "honest",
+      "vi": "thật thà; trung thực"
+    },
+    {
+      "word": "brave",
+      "vi": "dũng cảm"
+    },
+    {
+      "word": "temple",
+      "vi": "ngôi đền"
+    },
+    {
+      "word": "evil",
+      "vi": "độc ác; tà ác"
+    },
+    {
+      "word": "enemy",
+      "vi": "kẻ thù; giặc"
+    },
+    {
+      "word": "burn",
+      "vi": "đốt cháy"
+    },
+    {
+      "word": "underworld",
+      "vi": "âm phủ"
+    },
+    {
+      "word": "court",
+      "vi": "phiên tòa; công đường"
+    },
+    {
+      "word": "liar",
+      "vi": "kẻ nói dối"
+    },
+    {
+      "word": "messenger",
+      "vi": "người đưa tin"
+    },
+    {
+      "word": "punish",
+      "vi": "trừng phạt"
+    },
+    {
+      "word": "truth",
+      "vi": "sự thật"
+    },
+    {
+      "word": "letter",
+      "vi": "lá thư"
+    },
+    {
+      "word": "chance",
+      "vi": "cơ hội"
+    },
+    {
+      "word": "return",
+      "vi": "trở về"
+    }
+  ],
+  "modelEndings": [
+    {
+      "level": "A2",
+      "text": "The king read the letter again. “Van is honest,” he said. “And you, general, are a liar.” The general cried, “Please, give me one more chance!” The king thought for a long time. “Go back to the village. Help the people you hurt. Build the Earth God a new temple, stone by stone.” Van woke up in his own bed. Outside, a tall shadow was carrying stones up the hill."
+    },
+    {
+      "level": "B1",
+      "text": "The king raised his hand, but he did not point at anyone. “This letter says that both of you have done wrong,” he said. “The general stole a temple and hurt many people. That is evil. But you, Van, burned a holy place without asking the gods first. If you had asked them, you would not be standing here.” Van bowed his head. He had not thought of that. The king decided that the general would serve the Earth God for a thousand years, and that Van would go home and rebuild the temple with his own hands. When Van woke up, there was a small black helmet on the floor beside his bed."
+    }
+  ],
+  "authorNote": "Thư từ đền Tản Viên chứng minh Văn nói thật. Hồn ma tướng giặc bị trị tội và đày xuống ngục sâu. Văn được trả về dương gian và sống lại. Một tháng sau, nhờ Thổ thần tiến cử, Văn nhận chức phán sự (quan xử án) ở đền Tản Viên."
+}

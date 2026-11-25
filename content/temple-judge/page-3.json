@@ -1,0 +1,173 @@
+{
+  "storyId": "temple-judge",
+  "page": 3,
+  "title": "The Court of the Dead",
+  "titleVi": "Phiên tòa cõi chết",
+  "level": "A2",
+  "chatTitle": "Van 🔥",
+  "characters": {
+    "van": {
+      "name": "Van",
+      "emoji": "🔥"
+    },
+    "king": {
+      "name": "The King",
+      "emoji": "👑"
+    },
+    "general": {
+      "name": "The ghost general",
+      "emoji": "⚔️"
+    }
+  },
+  "vocab": {
+    "liar": {
+      "en": "a person who does not tell the truth",
+      "vi": "kẻ nói dối",
+      "ipa": "/ˈlaɪɚ/"
+    },
+    "messenger": {
+      "en": "a person who carries a message or letter",
+      "vi": "người đưa tin",
+      "ipa": "/ˈmesəndʒɚ/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "Van wakes up in a big, dark hall. Ghosts and soldiers are everywhere.",
+      "vi": "Văn tỉnh dậy trong một đại sảnh tối om. Ma quỷ và binh lính ở khắp nơi."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "van",
+      "text": "I'm in the [[underworld]]. The King sits on a high chair 😰",
+      "vi": "Mình đang ở âm phủ. Nhà vua ngồi trên một chiếc ghế cao 😰"
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "general",
+      "voice": true,
+      "text": "This man [[burned|burn]] my [[temple]]! Punish him!",
+      "vi": "Kẻ này đã đốt đền của ta! Hãy trừng phạt hắn!"
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "king",
+      "voice": true,
+      "text": "Is this true?"
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn khuyên Văn thế nào?",
+      "hint": "Hãy nhắc Văn điều Thổ thần đã dặn.",
+      "options": [
+        {
+          "text": "Tell the truth, Van!",
+          "vi": "Nói sự thật đi Văn!",
+          "next": "c1a"
+        },
+        {
+          "text": "Be [[brave]]! Remember the Earth God!",
+          "vi": "Dũng cảm lên! Nhớ lời Thổ thần!",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "van",
+      "text": "I will. I'm not afraid.",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "van",
+      "text": "I remember. I'm ready."
+    },
+    {
+      "id": "j1",
+      "type": "message",
+      "from": "van",
+      "text": "“Yes, I [[burned|burn]] the [[temple]],” I said."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "van",
+      "text": "“But this ghost is [[evil]]. He hurt many people.”",
+      "vi": "“Nhưng hồn ma này độc ác. Hắn đã hại rất nhiều người.”"
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "general",
+      "voice": true,
+      "text": "[[Liar|liar]]! Don't listen to him!",
+      "vi": "Đồ dối trá! Đừng nghe hắn!"
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "king",
+      "voice": true,
+      "text": "Who is telling the truth?"
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì cho Văn?",
+      "hint": "Bạn có thể nhắc đến đền Tản Viên, hoặc giúp Văn bình tĩnh.",
+      "options": [
+        {
+          "text": "Van, ask about Tan Vien!",
+          "vi": "Văn, hỏi về Tản Viên đi!",
+          "next": "c2a"
+        },
+        {
+          "text": "Stay calm. You're not a [[liar]].",
+          "vi": "Bình tĩnh. Cậu không phải kẻ nói dối.",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "van",
+      "text": "Yes! I almost forgot.",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "van",
+      "text": "Thank you. Now I remember Tan Vien."
+    },
+    {
+      "id": "j2",
+      "type": "message",
+      "from": "van",
+      "text": "“Please, ask the Tan Vien [[temple]]. They know everything.”",
+      "vi": "“Xin hãy hỏi đền Tản Viên. Họ biết mọi chuyện.”"
+    },
+    {
+      "id": "n7",
+      "type": "narration",
+      "text": "The king sends a [[messenger]] to Tan Vien.",
+      "vi": "Nhà vua sai một người đưa tin đến Tản Viên."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "The ghost general's face turns white.",
+      "vi": "Mặt viên tướng ma trắng bệch."
+    }
+  ]
+}

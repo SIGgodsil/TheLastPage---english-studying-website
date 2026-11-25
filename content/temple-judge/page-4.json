@@ -1,0 +1,146 @@
+{
+  "storyId": "temple-judge",
+  "page": 4,
+  "title": "The King's Decision",
+  "titleVi": "Phán quyết của nhà vua",
+  "level": "A2",
+  "chatTitle": "Van 🔥",
+  "characters": {
+    "van": {
+      "name": "Van",
+      "emoji": "🔥"
+    }
+  },
+  "vocab": {},
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "Everyone waits in the dark hall. Nobody speaks.",
+      "vi": "Mọi người chờ đợi trong đại sảnh tối. Không ai nói gì."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "van",
+      "text": "The ghost general keeps looking at the door.",
+      "vi": "Viên tướng ma cứ nhìn ra cửa mãi."
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "van",
+      "text": "His hands are shaking 😏"
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì cho Văn?",
+      "hint": "Bạn có thể nói điều bạn nhận ra, hoặc khuyên Văn kiên nhẫn.",
+      "options": [
+        {
+          "text": "He's scared. He is the [[liar]]!",
+          "vi": "Hắn sợ rồi. Hắn mới là kẻ nói dối!",
+          "next": "c1a"
+        },
+        {
+          "text": "Wait. Don't say anything yet.",
+          "vi": "Chờ đã. Đừng nói gì vội.",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "van",
+      "text": "I think so too. But we must wait.",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "van",
+      "text": "You're right. I'm waiting quietly."
+    },
+    {
+      "id": "j1",
+      "type": "narration",
+      "text": "After a long time, the big doors open.",
+      "vi": "Một lúc lâu sau, cánh cửa lớn mở ra."
+    },
+    {
+      "id": "n4",
+      "type": "narration",
+      "text": "The [[messenger]] comes in with a letter from Tan Vien.",
+      "vi": "Người đưa tin bước vào với một lá thư từ Tản Viên."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "van",
+      "text": "Here it is. The letter from Tan Vien!",
+      "vi": "Đây rồi. Lá thư từ Tản Viên!"
+    },
+    {
+      "id": "n5",
+      "type": "narration",
+      "text": "The king opens the letter and reads it slowly."
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "van",
+      "text": "His face doesn't change. I can't tell what it says 😟",
+      "vi": "Mặt ngài không đổi sắc. Mình không đoán được thư viết gì 😟"
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì cho Văn?",
+      "hint": "Hãy động viên Văn.",
+      "options": [
+        {
+          "text": "Stay strong, Van!",
+          "vi": "Vững vàng nhé Văn!",
+          "next": "c2a"
+        },
+        {
+          "text": "The truth will win. I know it.",
+          "vi": "Sự thật sẽ thắng. Mình biết mà.",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "van",
+      "text": "I'm trying. My heart is beating so fast.",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "van",
+      "text": "I hope you're right."
+    },
+    {
+      "id": "j2",
+      "type": "narration",
+      "text": "The king looks at the ghost general. Then he looks at Van.",
+      "vi": "Nhà vua nhìn viên tướng ma. Rồi ngài nhìn Văn."
+    },
+    {
+      "id": "n7",
+      "type": "narration",
+      "text": "The hall is silent."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "The king stands up and raises his hand…",
+      "vi": "Nhà vua đứng dậy và giơ tay lên…"
+    }
+  ]
+}
