@@ -1,0 +1,188 @@
+{
+  "storyId": "nam-xuong",
+  "page": 3,
+  "title": "The River",
+  "titleVi": "Dòng sông",
+  "level": "A2",
+  "chatTitle": "Vu Nuong 🌸",
+  "characters": {
+    "vuNuong": {
+      "name": "Vu Nuong",
+      "emoji": "🌸"
+    },
+    "truongSinh": {
+      "name": "Truong Sinh",
+      "emoji": "⚔️"
+    },
+    "dan": {
+      "name": "Dan",
+      "emoji": "👶"
+    }
+  },
+  "vocab": {
+    "truth": {
+      "en": "what really happened; the true facts",
+      "vi": "sự thật",
+      "ipa": "/truːθ/"
+    },
+    "neighbor": {
+      "en": "a person who lives near you",
+      "vi": "hàng xóm",
+      "ipa": "/ˈneɪbɚ/"
+    },
+    "river": {
+      "en": "a long line of water that flows to the sea",
+      "vi": "sông; dòng sông",
+      "ipa": "/ˈrɪvɚ/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "At home, Truong Sinh shouts at Vu Nuong."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "My friend, help me! He is so angry 😢"
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "He shouts, “Who is the man that comes every night?”"
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "There is no man! But he does not listen to me."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì cho Vũ Nương?",
+      "hint": "Bạn có thể nói bạn tin cô ấy, hoặc nhờ hàng xóm giúp.",
+      "options": [
+        {
+          "text": "I believe you. I know the [[truth]].",
+          "vi": "Mình tin bạn. Mình biết sự thật mà.",
+          "next": "c1a"
+        },
+        {
+          "text": "I'll ask the [[neighbors|neighbor]] to talk to him.",
+          "vi": "Mình sẽ nhờ hàng xóm nói chuyện với chàng.",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "Thank you. But he does not want the [[truth]].",
+      "vi": "Cảm ơn bạn. Nhưng chàng không muốn nghe sự thật.",
+      "next": "n5"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "The [[neighbors|neighbor]] tried. He did not listen to them either.",
+      "vi": "Hàng xóm đã thử rồi. Chàng cũng không nghe họ."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "He told me to leave. I am going to the [[river]].",
+      "vi": "Chàng đuổi mình đi. Mình sẽ ra bờ sông."
+    },
+    {
+      "id": "n6",
+      "type": "narration",
+      "text": "Vu Nuong walks to the Hoang Giang [[river]]. She looks up at the sky.",
+      "vi": "Vũ Nương đi đến sông Hoàng Giang. Nàng ngước nhìn trời."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "vuNuong",
+      "text": "I did nothing wrong.",
+      "vi": "Thiếp không làm gì sai."
+    },
+    {
+      "id": "n7",
+      "type": "narration",
+      "text": "Then she walks into the [[river]]. The water closes over her.",
+      "vi": "Rồi nàng bước xuống sông. Dòng nước khép lại trên người nàng."
+    },
+    {
+      "id": "n8",
+      "type": "narration",
+      "text": "That night, a small lamp burns. Truong Sinh sits alone with Dan."
+    },
+    {
+      "id": "n9",
+      "type": "message",
+      "from": "dan",
+      "voice": true,
+      "text": "Look! Father is here!"
+    },
+    {
+      "id": "n10",
+      "type": "message",
+      "from": "truongSinh",
+      "text": "Dan pointed at the wall. I looked."
+    },
+    {
+      "id": "n11",
+      "type": "message",
+      "from": "truongSinh",
+      "text": "It was my own [[shadow]].",
+      "vi": "Đó là cái bóng của chính tôi."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nói gì với Trương Sinh?",
+      "hint": "Bạn có thể giải thích sự thật, hoặc hỏi Vũ Nương đang ở đâu.",
+      "options": [
+        {
+          "text": "That [[shadow]] was the “father”!",
+          "vi": "Cái bóng đó chính là “người cha”!",
+          "next": "c2a"
+        },
+        {
+          "text": "Where is Vu Nuong now?",
+          "vi": "Vũ Nương giờ ở đâu?",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "truongSinh",
+      "text": "Yes. Now I know the [[truth]].",
+      "vi": "Đúng vậy. Giờ tôi đã biết sự thật.",
+      "next": "end"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "truongSinh",
+      "text": "She is gone. She went into the [[river]].",
+      "vi": "Nàng đi rồi. Nàng đã gieo mình xuống sông."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "from": "truongSinh",
+      "text": "Now I understand. But it is too late.",
+      "vi": "Giờ tôi đã hiểu. Nhưng đã quá muộn rồi."
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "storyId": "nam-xuong",
+  "page": 1,
+  "title": "The Shadow on the Wall",
+  "titleVi": "Cái bóng trên tường",
+  "level": "A2",
+  "chatTitle": "Vu Nuong 🌸",
+  "characters": {
+    "vuNuong": {
+      "name": "Vu Nuong",
+      "emoji": "🌸"
+    },
+    "dan": {
+      "name": "Dan",
+      "emoji": "👶"
+    }
+  },
+  "vocab": {
+    "jealous": {
+      "en": "angry because you think someone loves another person",
+      "vi": "ghen tuông",
+      "ipa": "/ˈdʒeləs/"
+    },
+    "trust": {
+      "en": "to believe that someone is good and honest",
+      "vi": "tin tưởng; tin",
+      "ipa": "/trʌst/"
+    },
+    "war": {
+      "en": "fighting between two countries or groups",
+      "vi": "chiến tranh",
+      "ipa": "/wɔːr/"
+    },
+    "shadow": {
+      "en": "the dark shape your body makes in the light",
+      "vi": "cái bóng",
+      "ipa": "/ˈʃædoʊ/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "Long ago, in Nam Xuong village. Your friend Vu Nuong writes to you.",
+      "vi": "Ngày xưa, ở làng Nam Xương. Vũ Nương, bạn thân của bạn, nhắn cho bạn."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "My friend, I have news. I am getting married! 🌸"
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "His name is Truong Sinh. He is rich, but he is [[jealous]].",
+      "vi": "Chàng tên là Trương Sinh. Chàng giàu có, nhưng hay ghen."
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "He does not [[trust]] people easily.",
+      "vi": "Chàng không dễ tin người."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn trả lời Vũ Nương thế nào?",
+      "hint": "Bạn có thể chúc mừng, hoặc hỏi thêm về Trương Sinh.",
+      "options": [
+        {
+          "text": "Congratulations! I'm so happy for you!",
+          "vi": "Chúc mừng bạn! Mình mừng cho bạn lắm!",
+          "next": "c1a"
+        },
+        {
+          "text": "[[Jealous|jealous]]? Will he [[trust]] you?",
+          "vi": "Hay ghen ư? Chàng có tin bạn không?",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "Thank you! You are a true friend.",
+      "next": "n5"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "I hope so. I will always be good to him."
+    },
+    {
+      "id": "n5",
+      "type": "narration",
+      "text": "One day, a [[war]] starts. Truong Sinh must go and fight.",
+      "vi": "Một ngày, chiến tranh nổ ra. Trương Sinh phải ra trận."
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "He left for the [[war]] today. I cried at the gate.",
+      "vi": "Hôm nay chàng ra trận. Mình khóc ở cổng."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "vuNuong",
+      "text": "Please come home safe, my love.",
+      "vi": "Chàng hãy về bình an nhé."
+    },
+    {
+      "id": "n7",
+      "type": "narration",
+      "text": "A few months later.",
+      "vi": "Vài tháng sau."
+    },
+    {
+      "id": "n8",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "I have a baby boy now! His name is Dan 👶"
+    },
+    {
+      "id": "n9",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "I take care of Dan and my husband's old mother."
+    },
+    {
+      "id": "n10",
+      "type": "narration",
+      "text": "The old mother dies. Vu Nuong buries her with love."
+    },
+    {
+      "id": "n11",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "Every night, little Dan asks me the same question."
+    },
+    {
+      "id": "n12",
+      "type": "message",
+      "from": "dan",
+      "voice": true,
+      "text": "Mama, where is my father?",
+      "vi": "Mẹ ơi, cha con đâu?"
+    },
+    {
+      "id": "n13",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "Tonight I pointed at my [[shadow]] on the wall.",
+      "vi": "Tối nay mình chỉ vào cái bóng của mình trên tường."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "from": "vuNuong",
+      "text": "“Look,” I said. “That is your father.” 🌙",
+      "vi": "“Nhìn kìa,” mình nói. “Cha con đấy.” 🌙"
+    }
+  ]
+}

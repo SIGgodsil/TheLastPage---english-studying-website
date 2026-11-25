@@ -1,0 +1,183 @@
+{
+  "storyId": "nam-xuong",
+  "page": 4,
+  "title": "The Lady on the River",
+  "titleVi": "Người thiếu phụ trên sông",
+  "level": "A2",
+  "chatTitle": "Nam Xuong village",
+  "characters": {
+    "phanLang": {
+      "name": "Phan Lang",
+      "emoji": "🎣"
+    },
+    "vuNuong": {
+      "name": "Vu Nuong",
+      "emoji": "🌸"
+    },
+    "truongSinh": {
+      "name": "Truong Sinh",
+      "emoji": "⚔️"
+    }
+  },
+  "vocab": {
+    "palace": {
+      "en": "a very big, beautiful house for a king or queen",
+      "vi": "cung điện",
+      "ipa": "/ˈpæləs/"
+    },
+    "altar": {
+      "en": "a table for gifts and prayers to gods or spirits",
+      "vi": "bàn thờ",
+      "ipa": "/ˈɑːltɚ/",
+      "ipaCheck": true
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "Months later, Phan Lang has an accident at sea.",
+      "vi": "Vài tháng sau, Phan Lang trong làng gặp nạn trên biển."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "phanLang",
+      "text": "Friends, I have strange news! I nearly died at sea."
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "phanLang",
+      "text": "I woke up in a [[palace]] under the water. The Water Queen saved me!",
+      "vi": "Tôi tỉnh dậy trong một cung điện dưới nước. Linh Phi đã cứu tôi!"
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "phanLang",
+      "text": "And in the [[palace]], I saw a lady. It was Vu Nuong!",
+      "vi": "Và trong cung điện, tôi thấy một người phụ nữ. Đó là Vũ Nương!"
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn phản ứng thế nào?",
+      "hint": "Bạn có thể hỏi Vũ Nương còn sống không, hoặc hỏi cô ấy có ổn không.",
+      "options": [
+        {
+          "text": "Vu Nuong? Is she still alive?",
+          "vi": "Vũ Nương ư? Chị ấy còn sống sao?",
+          "next": "c1a"
+        },
+        {
+          "text": "No way! Is she okay?",
+          "vi": "Không thể nào! Chị ấy có ổn không?",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "phanLang",
+      "text": "In a way. She lives with the [[river]] spirits now.",
+      "next": "n5"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "phanLang",
+      "text": "She is well. She lives with the [[river]] spirits now."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "phanLang",
+      "text": "I said, “Please come home. Your husband knows the [[truth]] now.”",
+      "vi": "Tôi nói: “Nàng về đi. Chồng nàng đã biết sự thật rồi.”"
+    },
+    {
+      "id": "n6",
+      "type": "narration",
+      "text": "Later, a message arrives. It is from Vu Nuong."
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "My friend, I gave Phan Lang my golden hairpin. Give it to my husband.",
+      "vi": "Bạn ơi, mình đã gửi Phan Lang cây trâm vàng. Hãy đưa nó cho chồng mình."
+    },
+    {
+      "id": "n8",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "Tell him to make an [[altar]] by the [[river]].",
+      "vi": "Hãy bảo chàng lập một bàn thờ bên sông."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "vuNuong",
+      "text": "Then I will come.",
+      "vi": "Rồi mình sẽ đến."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn trả lời Vũ Nương thế nào?",
+      "hint": "Một lời hứa, hoặc một lời nhớ thương.",
+      "options": [
+        {
+          "text": "I'll tell him tonight. I promise.",
+          "vi": "Tối nay mình sẽ nói với chàng. Mình hứa.",
+          "next": "c2a"
+        },
+        {
+          "text": "I miss you so much, Vu Nuong.",
+          "vi": "Mình nhớ bạn lắm, Vũ Nương.",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "Thank you, my true friend 🌸",
+      "next": "n9"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "vuNuong",
+      "text": "I miss you too, my friend 🌸"
+    },
+    {
+      "id": "n9",
+      "type": "message",
+      "from": "truongSinh",
+      "text": "I made the [[altar]] by the [[river]]. I am waiting with Dan.",
+      "vi": "Tôi đã lập bàn thờ bên sông. Tôi đang chờ cùng bé Đản."
+    },
+    {
+      "id": "n10",
+      "type": "narration",
+      "text": "Suddenly, a beautiful boat appears on the water. Its flags are bright in the wind.",
+      "vi": "Bỗng một con thuyền lộng lẫy hiện ra trên mặt nước. Cờ bay rực rỡ trong gió."
+    },
+    {
+      "id": "n11",
+      "type": "message",
+      "from": "truongSinh",
+      "text": "A lady is standing on the boat. It is her!"
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "She looks at her husband and her son. Then she opens her mouth to speak…",
+      "vi": "Nàng nhìn chồng và con. Rồi nàng mở lời…"
+    }
+  ]
+}

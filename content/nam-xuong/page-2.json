@@ -1,0 +1,167 @@
+{
+  "storyId": "nam-xuong",
+  "page": 2,
+  "title": "“You Are Not My Father”",
+  "titleVi": "“Ông không phải cha tôi”",
+  "level": "A2",
+  "chatTitle": "Truong Sinh",
+  "characters": {
+    "truongSinh": {
+      "name": "Truong Sinh",
+      "emoji": "⚔️"
+    },
+    "dan": {
+      "name": "Dan",
+      "emoji": "👶"
+    }
+  },
+  "vocab": {
+    "grave": {
+      "en": "the place where a dead person is buried",
+      "vi": "mộ; ngôi mộ",
+      "ipa": "/ɡreɪv/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "Three years later, the [[war]] ends. Truong Sinh comes home.",
+      "vi": "Ba năm sau, chiến tranh kết thúc. Trương Sinh trở về."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "truongSinh",
+      "text": "Hello. I am Truong Sinh, Vu Nuong's husband."
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "truongSinh",
+      "text": "I am home from the [[war]]. But my mother is dead."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nói gì với Trương Sinh?",
+      "hint": "Hãy chia buồn, hoặc kể cho anh nghe Vũ Nương đã chăm sóc mẹ anh thế nào.",
+      "options": [
+        {
+          "text": "I'm so sorry about your mother.",
+          "vi": "Tôi rất tiếc về mẹ anh.",
+          "next": "c1a"
+        },
+        {
+          "text": "Vu Nuong took good care of her.",
+          "vi": "Vũ Nương đã chăm sóc bà rất chu đáo.",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "truongSinh",
+      "text": "Thank you. Today I visit her [[grave]] with my son.",
+      "vi": "Cảm ơn bạn. Hôm nay tôi đi thăm mộ mẹ cùng con trai.",
+      "next": "n4"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "truongSinh",
+      "text": "I know. Today I visit her [[grave]] with my son.",
+      "vi": "Tôi biết. Hôm nay tôi đi thăm mộ mẹ cùng con trai."
+    },
+    {
+      "id": "n4",
+      "type": "narration",
+      "text": "At the [[grave]], Truong Sinh holds out his arms.",
+      "vi": "Bên mộ, Trương Sinh dang tay ra."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "truongSinh",
+      "text": "“Come here, son,” I said. “I am your father.”"
+    },
+    {
+      "id": "n6",
+      "type": "narration",
+      "text": "But Dan cries and pushes him away."
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "dan",
+      "voice": true,
+      "text": "You are not my father! My father comes every night.",
+      "vi": "Ông không phải cha tôi! Cha tôi đêm nào cũng đến."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "dan",
+      "voice": true,
+      "text": "When Mother walks, he walks.",
+      "vi": "Mẹ đi thì cha cũng đi."
+    },
+    {
+      "id": "n8",
+      "type": "message",
+      "from": "dan",
+      "voice": true,
+      "text": "When Mother sits, he sits. But he never talks to me."
+    },
+    {
+      "id": "n9",
+      "type": "narration",
+      "text": "Truong Sinh stops. His heart goes cold."
+    },
+    {
+      "id": "n10",
+      "type": "message",
+      "from": "truongSinh",
+      "text": "Another man comes to my house every night?",
+      "vi": "Có người đàn ông khác đến nhà tôi mỗi đêm sao?"
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn trả lời Trương Sinh thế nào?",
+      "hint": "Bạn có thể bênh vực Vũ Nương, hoặc khuyên anh hỏi vợ trước.",
+      "options": [
+        {
+          "text": "No! Vu Nuong is a good woman.",
+          "vi": "Không! Vũ Nương là người tốt.",
+          "next": "c2a"
+        },
+        {
+          "text": "Please ask her first. Don't be angry.",
+          "vi": "Anh hãy hỏi chị ấy trước. Đừng giận.",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "truongSinh",
+      "text": "Then who is this man? I do not [[trust]] her.",
+      "next": "end"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "truongSinh",
+      "text": "I do not need to ask. I do not [[trust]] her."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "He walks home fast. His face is dark and angry.",
+      "vi": "Anh đi thật nhanh về nhà. Mặt anh tối sầm, giận dữ."
+    }
+  ]
+}

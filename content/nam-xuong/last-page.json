@@ -1,0 +1,100 @@
+{
+  "storyId": "nam-xuong",
+  "promptVi": "Vũ Nương nói gì với chồng và con? Nàng có trở về không?",
+  "pattern": "If I were Vu Nuong, I would say…",
+  "moods": [
+    {
+      "id": "happy",
+      "hintVi": "Vũ Nương tha thứ, và gia đình được ở bên nhau theo một cách nào đó."
+    },
+    {
+      "id": "sad",
+      "hintVi": "Nàng nói lời từ biệt, và hai cha con phải sống tiếp mà không có nàng."
+    },
+    {
+      "id": "twist",
+      "hintVi": "Một điều bất ngờ xảy ra trên dòng sông, hoặc bé Đản nói một câu làm mọi người sững sờ."
+    }
+  ],
+  "starters": [
+    "Vu Nuong looked at Dan and said, “…”",
+    "If I were Vu Nuong, I would say…",
+    "Truong Sinh fell to his knees. He…",
+    "The boat came closer, and…",
+    "Little Dan ran to the water. He…",
+    "From that day, every night…"
+  ],
+  "wordBank": [
+    {
+      "word": "jealous",
+      "vi": "ghen tuông"
+    },
+    {
+      "word": "trust",
+      "vi": "tin tưởng; tin"
+    },
+    {
+      "word": "war",
+      "vi": "chiến tranh"
+    },
+    {
+      "word": "shadow",
+      "vi": "cái bóng"
+    },
+    {
+      "word": "grave",
+      "vi": "mộ; ngôi mộ"
+    },
+    {
+      "word": "truth",
+      "vi": "sự thật"
+    },
+    {
+      "word": "neighbor",
+      "vi": "hàng xóm"
+    },
+    {
+      "word": "river",
+      "vi": "sông; dòng sông"
+    },
+    {
+      "word": "palace",
+      "vi": "cung điện"
+    },
+    {
+      "word": "altar",
+      "vi": "bàn thờ"
+    },
+    {
+      "word": "forgive",
+      "vi": "tha thứ"
+    },
+    {
+      "word": "goodbye",
+      "vi": "lời tạm biệt"
+    },
+    {
+      "word": "sorry",
+      "vi": "xin lỗi; hối tiếc"
+    },
+    {
+      "word": "boat",
+      "vi": "con thuyền"
+    },
+    {
+      "word": "lamp",
+      "vi": "ngọn đèn"
+    }
+  ],
+  "modelEndings": [
+    {
+      "level": "A2",
+      "text": "Vu Nuong smiled at Dan. “My son, I will always love you,” she said. Truong Sinh cried. “I am so sorry. I did not trust you.” Vu Nuong looked at him for a long time. “I forgive you. Now be a good father.” Then she gave Dan a small lamp. “Every night, light this lamp. When you see your shadow, think of me.” Dan held the lamp and waved to his mother."
+    },
+    {
+      "level": "B1",
+      "text": "Vu Nuong did not speak to her husband first. She spoke to Dan. “You were right, my son. Your father never came at night. It was only my shadow, and I am sorry I confused you.” Then she turned to Truong Sinh. “If you had trusted me, we would still be a family. But I have not come to punish you.” She took a lotus flower from her hair and dropped it into the river. It floated to the shore and stopped at Dan's feet. “Plant this by the altar,” she said. “When it blooms, you will know that I have forgiven you.” Truong Sinh bowed his head. When he looked up, the boat was still there, and his wife was still smiling."
+    }
+  ],
+  "authorNote": "Nàng cảm ơn chồng, nhưng nói rằng mình không thể trở về nhân gian nữa. Rồi bóng nàng mờ dần và biến mất trên mặt sông."
+}
