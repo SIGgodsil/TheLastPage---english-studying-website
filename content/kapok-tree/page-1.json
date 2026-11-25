@@ -1,0 +1,189 @@
+{
+  "storyId": "kapok-tree",
+  "page": 1,
+  "title": "The Girl at Night",
+  "titleVi": "Cô gái trong đêm",
+  "level": "A2",
+  "chatTitle": "Ngo 🍵",
+  "characters": {
+    "ngo": {
+      "name": "Ngo",
+      "emoji": "🍵"
+    },
+    "nhiKhanh": {
+      "name": "Nhi Khanh",
+      "emoji": "🤍"
+    }
+  },
+  "vocab": {
+    "merchant": {
+      "en": "a person who buys and sells things",
+      "vi": "thương nhân; lái buôn",
+      "ipa": "/ˈmɝːtʃənt/"
+    },
+    "servant": {
+      "en": "a person who works in another person's house",
+      "vi": "người hầu",
+      "ipa": "/ˈsɝːvənt/"
+    },
+    "pale": {
+      "en": "with very little color in the face",
+      "vi": "nhợt nhạt; xanh xao",
+      "ipa": "/peɪl/"
+    },
+    "follow": {
+      "en": "to go after someone",
+      "vi": "đi theo; bám theo",
+      "ipa": "/ˈfɑːloʊ/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "Long ago, near the capital. A young [[merchant]] lives by the river.",
+      "vi": "Ngày xưa, gần kinh thành. Một chàng thương nhân trẻ sống bên bờ sông."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "ngo",
+      "text": "My friend! Business is good. Life is good 😄"
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "ngo",
+      "text": "Tonight I saw a beautiful girl on the road."
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "ngo",
+      "text": "She wore a long white dress. A young [[servant]] walked behind her.",
+      "vi": "Nàng mặc áo dài trắng. Một người hầu nhỏ đi theo sau."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn hỏi Ngộ điều gì?",
+      "hint": "Bạn có thể hỏi thêm về cô gái, hoặc nói điều bạn thấy lạ.",
+      "options": [
+        {
+          "text": "Who is she? Tell me more!",
+          "vi": "Cô ấy là ai? Kể thêm đi!",
+          "next": "c1a"
+        },
+        {
+          "text": "A girl on the road at night? Strange…",
+          "vi": "Con gái ra đường ban đêm? Lạ nhỉ…",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "ngo",
+      "text": "I asked her name. Listen to this!",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "ngo",
+      "text": "She has a [[servant]] with her. Listen!",
+      "vi": "Nàng có người hầu đi cùng mà. Nghe này!"
+    },
+    {
+      "id": "j1",
+      "type": "message",
+      "from": "nhiKhanh",
+      "voice": true,
+      "text": "My name is Nhi Khanh."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "nhiKhanh",
+      "voice": true,
+      "text": "I live near here, alone.",
+      "vi": "Thiếp sống gần đây, một mình."
+    },
+    {
+      "id": "n5",
+      "type": "narration",
+      "text": "After that, Nhi Khanh comes to his house every night.",
+      "vi": "Từ đó, đêm nào Nhị Khanh cũng đến nhà chàng."
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "ngo",
+      "text": "We talk, laugh and drink tea together 🍵"
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "ngo",
+      "text": "But she always leaves before the sun comes up."
+    },
+    {
+      "id": "n8",
+      "type": "message",
+      "from": "ngo",
+      "text": "She never says where her house is 🤔"
+    },
+    {
+      "id": "n9",
+      "type": "narration",
+      "text": "Weeks pass. Ngo's face is very [[pale]] now.",
+      "vi": "Nhiều tuần trôi qua. Mặt Ngộ giờ nhợt nhạt lắm."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì cho Ngộ?",
+      "hint": "Bạn có thể hỏi thăm sức khỏe, hoặc hỏi về cô gái.",
+      "options": [
+        {
+          "text": "Your face is so [[pale]]. Are you sick?",
+          "vi": "Mặt cậu nhợt nhạt quá. Cậu ốm à?",
+          "next": "c2a"
+        },
+        {
+          "text": "Who is this girl really?",
+          "vi": "Cô gái đó thật ra là ai?",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "ngo",
+      "text": "[[Pale|pale]]? Me? I'm just tired 😅",
+      "vi": "Nhợt nhạt ư? Mình á? Mình chỉ mệt thôi 😅",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "ngo",
+      "text": "I don't know. But I want to find out."
+    },
+    {
+      "id": "j2",
+      "type": "message",
+      "from": "ngo",
+      "text": "Tonight, when she leaves, I will [[follow]] her.",
+      "vi": "Đêm nay, khi nàng về, mình sẽ bám theo nàng."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "Late that night, Ngo quietly [[follows|follow]] Nhi Khanh into the dark.",
+      "vi": "Đêm khuya, Ngộ lặng lẽ bám theo Nhị Khanh vào bóng tối."
+    }
+  ]
+}

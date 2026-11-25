@@ -1,0 +1,172 @@
+{
+  "storyId": "kapok-tree",
+  "page": 3,
+  "title": "The Call in the Night",
+  "titleVi": "Tiếng gọi trong đêm",
+  "level": "A2",
+  "chatTitle": "Ngo's friends 🏮",
+  "characters": {
+    "ngo": {
+      "name": "Ngo",
+      "emoji": "🍵"
+    },
+    "nhiKhanh": {
+      "name": "Nhi Khanh",
+      "emoji": "🤍"
+    },
+    "minh": {
+      "name": "Minh",
+      "emoji": "🧑"
+    }
+  },
+  "vocab": {},
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "Ngo screams and pulls his [[sleeve]] away. He runs all the way home.",
+      "vi": "Ngộ hét lên, giật tay áo ra và chạy một mạch về nhà."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "ngo",
+      "text": "I'm home now. But I can't stop shaking 😰"
+    },
+    {
+      "id": "n3",
+      "type": "narration",
+      "text": "After that day, Ngo is very sick. He does not eat or sleep.",
+      "vi": "Từ hôm đó, Ngộ ốm nặng. Chàng không ăn, không ngủ."
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "minh",
+      "text": "Ngo is so [[pale]] now. I'm worried about him.",
+      "vi": "Ngộ giờ xanh xao lắm. Mình lo cho cậu ấy."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "ngo",
+      "text": "Every night, I hear a soft voice outside my door.",
+      "vi": "Đêm nào mình cũng nghe một giọng nói khẽ ngoài cửa."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "nhiKhanh",
+      "voice": true,
+      "text": "Ngo… why did you leave me?",
+      "vi": "Ngộ ơi… sao chàng bỏ thiếp?"
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "nhiKhanh",
+      "voice": true,
+      "text": "Come to me…",
+      "vi": "Đến với thiếp đi…"
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn đề nghị gì?",
+      "hint": "Hãy nghĩ cách bảo vệ Ngộ.",
+      "options": [
+        {
+          "text": "Let's lock the door!",
+          "vi": "Khóa cửa lại đi!",
+          "next": "c1a"
+        },
+        {
+          "text": "Let's stay with him day and night.",
+          "vi": "Chúng ta ở bên cậu ấy cả ngày lẫn đêm đi.",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "minh",
+      "text": "Good idea. And we'll stay with him too.",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "minh",
+      "text": "Yes. And we'll lock the door too."
+    },
+    {
+      "id": "j1",
+      "type": "narration",
+      "text": "The friends lock the door. They stay with Ngo day and night."
+    },
+    {
+      "id": "n7",
+      "type": "narration",
+      "text": "But one night, the friends fall asleep.",
+      "vi": "Nhưng một đêm, đám bạn ngủ thiếp đi."
+    },
+    {
+      "id": "n8",
+      "type": "narration",
+      "text": "You wake up. The door is open, and Ngo's bed is empty.",
+      "vi": "Bạn tỉnh dậy. Cửa mở toang. Giường của Ngộ trống trơn."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn làm gì?",
+      "hint": "Hãy gọi mọi người, hoặc gọi Ngộ.",
+      "options": [
+        {
+          "text": "Wake up, everyone! Ngo is gone!",
+          "vi": "Dậy đi mọi người! Ngộ đi mất rồi!",
+          "next": "c2a"
+        },
+        {
+          "text": "Ngo! Where are you?!",
+          "vi": "Ngộ ơi! Cậu đâu rồi?!",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "minh",
+      "text": "The [[kapok tree]]! Let's go!",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "minh",
+      "text": "He went to the [[kapok tree]]! Run!"
+    },
+    {
+      "id": "j2",
+      "type": "narration",
+      "text": "At first light, the friends reach the [[kapok tree]].",
+      "vi": "Lúc trời hửng sáng, đám bạn đến được cây gạo."
+    },
+    {
+      "id": "n9",
+      "type": "message",
+      "from": "minh",
+      "text": "He's in the broken house. He is holding the [[coffin]].",
+      "vi": "Cậu ấy ở trong căn nhà đổ nát. Cậu ấy đang ôm cỗ quan tài."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "from": "minh",
+      "text": "And he is… dead.",
+      "vi": "Và cậu ấy… đã chết rồi."
+    }
+  ]
+}

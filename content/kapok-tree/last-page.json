@@ -1,0 +1,100 @@
+{
+  "storyId": "kapok-tree",
+  "promptVi": "Ông đạo sĩ làm gì? Hai hồn ma có được siêu thoát không?",
+  "pattern": "If I were the priest, I would…",
+  "moods": [
+    {
+      "id": "happy",
+      "hintVi": "Hai hồn ma được yên nghỉ bên nhau, và làng trở lại bình yên."
+    },
+    {
+      "id": "sad",
+      "hintVi": "Đạo sĩ thắng, nhưng cái giá phải trả rất buồn."
+    },
+    {
+      "id": "twist",
+      "hintVi": "Cây gạo, hoặc chính Nhị Khanh, giữ một bí mật không ai biết."
+    }
+  ],
+  "starters": [
+    "The priest lowered his sword and…",
+    "If I were the priest, I would…",
+    "Nhi Khanh looked at the priest and said, “…”",
+    "The kapok tree shook, and…",
+    "In the morning, the villagers…",
+    "Ngo held Nhi Khanh's hand and…"
+  ],
+  "wordBank": [
+    {
+      "word": "merchant",
+      "vi": "thương nhân; lái buôn"
+    },
+    {
+      "word": "servant",
+      "vi": "người hầu"
+    },
+    {
+      "word": "pale",
+      "vi": "nhợt nhạt; xanh xao"
+    },
+    {
+      "word": "follow",
+      "vi": "đi theo; bám theo"
+    },
+    {
+      "word": "kapok tree",
+      "vi": "cây gạo"
+    },
+    {
+      "word": "coffin",
+      "vi": "quan tài"
+    },
+    {
+      "word": "lid",
+      "vi": "nắp"
+    },
+    {
+      "word": "sleeve",
+      "vi": "tay áo"
+    },
+    {
+      "word": "priest",
+      "vi": "đạo sĩ; thầy pháp"
+    },
+    {
+      "word": "sword",
+      "vi": "thanh gươm; thanh kiếm"
+    },
+    {
+      "word": "rest",
+      "vi": "yên nghỉ"
+    },
+    {
+      "word": "peace",
+      "vi": "sự bình yên"
+    },
+    {
+      "word": "burn",
+      "vi": "đốt"
+    },
+    {
+      "word": "spirit",
+      "vi": "linh hồn"
+    },
+    {
+      "word": "forgive",
+      "vi": "tha thứ"
+    }
+  ],
+  "modelEndings": [
+    {
+      "level": "A2",
+      "text": "The old priest raised his sword, but he did not use it. He looked at the two ghosts. “You are sad, not bad,” he said. “But you make people sick. You must go.” Nhi Khanh cried, and Ngo held her hand. The priest burned his last magic paper. A soft wind came, and the ghosts became two red kapok flowers. The flowers fell into the river and floated away together."
+    },
+    {
+      "level": "B1",
+      "text": "The priest's sword came down, but it did not touch the ghosts. Instead, it cut the oldest branch of the kapok tree, and a small wooden box fell to the ground. Inside, there was a letter. Nhi Khanh had written it before she died, asking her family to bury her near her mother. Nobody had ever found it. “If you had been buried at home,” the priest said gently, “you would never have become a ghost.” The next day, the villagers carried the coffin to her family's village and buried Ngo beside her. From then on, nobody saw ghosts under the kapok tree, but every spring, two red flowers bloomed side by side on the same branch."
+    }
+  ],
+  "authorNote": "Đạo sĩ dùng bùa gọi thiên binh đến bắt hai hồn ma. Chiếc quan tài bị đập vỡ và ném xuống sông. Từ đó, cây gạo không còn ma quỷ nữa."
+}

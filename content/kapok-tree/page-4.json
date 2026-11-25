@@ -1,0 +1,183 @@
+{
+  "storyId": "kapok-tree",
+  "page": 4,
+  "title": "Two Ghosts",
+  "titleVi": "Hai hồn ma",
+  "level": "A2",
+  "chatTitle": "Village chat 🏮",
+  "characters": {
+    "mrsTu": {
+      "name": "Mrs. Tu",
+      "emoji": "👵"
+    },
+    "minh": {
+      "name": "Minh",
+      "emoji": "🧑"
+    },
+    "priest": {
+      "name": "The priest",
+      "emoji": "📜"
+    }
+  },
+  "vocab": {
+    "priest": {
+      "en": "a holy man who can fight bad spirits",
+      "vi": "đạo sĩ; thầy pháp",
+      "ipa": "/priːst/"
+    },
+    "sword": {
+      "en": "a long, sharp knife for fighting",
+      "vi": "thanh gươm; thanh kiếm",
+      "ipa": "/sɔːrd/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "After that, strange things happen near the [[kapok tree]].",
+      "vi": "Từ đó, những chuyện lạ xảy ra quanh cây gạo."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "mrsTu",
+      "text": "At night, I see two ghosts by the [[kapok tree]]! 😱",
+      "vi": "Ban đêm, tôi thấy hai hồn ma bên cây gạo! 😱"
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "mrsTu",
+      "text": "A young man and a girl in white."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "mrsTu",
+      "text": "They hold hands and laugh.",
+      "vi": "Họ nắm tay nhau và cười."
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "minh",
+      "text": "Sometimes they sing sad songs. I heard them too."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "mrsTu",
+      "text": "Anyone who sees them gets very sick 🤒"
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nói gì với dân làng?",
+      "hint": "Bạn có thể tìm người giúp, hoặc nói lên lòng thương cho hai hồn ma.",
+      "options": [
+        {
+          "text": "We need help. Who can stop them?",
+          "vi": "Chúng ta cần giúp đỡ. Ai ngăn được họ?",
+          "next": "c1a"
+        },
+        {
+          "text": "Poor Ngo… Maybe they are just sad.",
+          "vi": "Tội nghiệp Ngộ… Có lẽ họ chỉ buồn thôi.",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "mrsTu",
+      "text": "There is an old [[priest]] in the mountains.",
+      "vi": "Trên núi có một vị đạo sĩ già.",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "mrsTu",
+      "text": "Sad or not, people are sick. We need the old [[priest]].",
+      "vi": "Buồn hay không thì người ta vẫn ốm. Ta cần vị đạo sĩ già."
+    },
+    {
+      "id": "j1",
+      "type": "message",
+      "from": "minh",
+      "text": "He has magic papers and a long [[sword]].",
+      "vi": "Ông ấy có bùa phép và một thanh gươm dài."
+    },
+    {
+      "id": "n6",
+      "type": "narration",
+      "text": "Full moon. The [[priest]] walks to the [[kapok tree]].",
+      "vi": "Đêm trăng tròn. Vị đạo sĩ đi đến cây gạo."
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "priest",
+      "voice": true,
+      "text": "Stay back. Do not come closer."
+    },
+    {
+      "id": "n8",
+      "type": "narration",
+      "text": "He burns his magic papers. The wind blows hard."
+    },
+    {
+      "id": "n9",
+      "type": "narration",
+      "text": "The two ghosts appear and scream at him.",
+      "vi": "Hai hồn ma hiện ra và gào thét vào ông."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn hét gì?",
+      "hint": "Bạn có thể lo cho vị đạo sĩ, hoặc xin cho hai hồn ma.",
+      "options": [
+        {
+          "text": "Be careful, sir!",
+          "vi": "Cẩn thận, thưa thầy!",
+          "next": "c2a"
+        },
+        {
+          "text": "Please don't hurt them!",
+          "vi": "Xin thầy đừng làm hại họ!",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "priest",
+      "voice": true,
+      "text": "I am not afraid of them.",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "priest",
+      "voice": true,
+      "text": "Be quiet. I know what to do."
+    },
+    {
+      "id": "j2",
+      "type": "narration",
+      "text": "The old [[priest]] raises his [[sword]].",
+      "vi": "Vị đạo sĩ già giơ cao thanh gươm."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "The [[kapok tree]] begins to shake…",
+      "vi": "Cây gạo bắt đầu rung chuyển…"
+    }
+  ]
+}

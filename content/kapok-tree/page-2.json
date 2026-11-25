@@ -1,0 +1,179 @@
+{
+  "storyId": "kapok-tree",
+  "page": 2,
+  "title": "The House Under the Kapok Tree",
+  "titleVi": "Ngôi nhà dưới gốc gạo",
+  "level": "A2",
+  "chatTitle": "Ngo 🍵",
+  "characters": {
+    "ngo": {
+      "name": "Ngo",
+      "emoji": "🍵"
+    }
+  },
+  "vocab": {
+    "kapok tree": {
+      "en": "a very tall tree with big red flowers",
+      "vi": "cây gạo",
+      "ipa": "/ˈkeɪpɑːk triː/",
+      "ipaCheck": true
+    },
+    "coffin": {
+      "en": "a long box for a dead body",
+      "vi": "quan tài",
+      "ipa": "/ˈkɑːfɪn/",
+      "ipaCheck": true
+    },
+    "lid": {
+      "en": "the top part that covers a box",
+      "vi": "nắp",
+      "ipa": "/lɪd/"
+    },
+    "sleeve": {
+      "en": "the part of a shirt that covers your arm",
+      "vi": "tay áo",
+      "ipa": "/sliːv/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "message",
+      "from": "ngo",
+      "text": "I'm [[following|follow]] her now. She walks so fast."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "ngo",
+      "text": "We're far from the village. It's very dark here 😟"
+    },
+    {
+      "id": "n3",
+      "type": "narration",
+      "text": "She stops at an old, empty place. There is a huge [[kapok tree]].",
+      "vi": "Nàng dừng lại ở một nơi hoang vắng. Có một cây gạo khổng lồ."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "ngo",
+      "text": "Its branches look like long black arms.",
+      "vi": "Cành cây trông như những cánh tay đen dài."
+    },
+    {
+      "id": "n4",
+      "type": "narration",
+      "text": "Under the tree, there is a small, broken house. Nhi Khanh goes inside.",
+      "vi": "Dưới gốc cây có một căn nhà nhỏ đổ nát. Nhị Khanh bước vào trong."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "ngo",
+      "text": "Then the light went out 😨",
+      "vi": "Rồi ánh đèn vụt tắt 😨"
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn khuyên Ngộ thế nào?",
+      "hint": "Bạn có thể bảo Ngộ về nhà, hoặc chờ đến sáng.",
+      "options": [
+        {
+          "text": "Go home! This place is scary!",
+          "vi": "Về nhà đi! Chỗ đó đáng sợ quá!",
+          "next": "c1a"
+        },
+        {
+          "text": "Wait until morning. Then look.",
+          "vi": "Đợi đến sáng. Rồi hãy vào xem.",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "ngo",
+      "text": "No. I'll wait here until morning.",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "ngo",
+      "text": "Good idea. I'll wait here until morning."
+    },
+    {
+      "id": "j1",
+      "type": "narration",
+      "text": "Morning comes. Ngo goes into the broken house."
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "ngo",
+      "text": "There's no bed and no table."
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "ngo",
+      "text": "There's only a [[coffin]].",
+      "vi": "Chỉ có một cỗ quan tài."
+    },
+    {
+      "id": "n8",
+      "type": "message",
+      "from": "ngo",
+      "text": "Two words are written on the [[coffin]]: “Nhi Khanh.”",
+      "vi": "Trên quan tài có hai chữ: “Nhị Khanh.”"
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn phản ứng thế nào?",
+      "hint": "Bạn có thể hỏi điều bạn đang nghĩ, hoặc bảo Ngộ chạy đi.",
+      "options": [
+        {
+          "text": "No way! Is she a ghost?!",
+          "vi": "Không thể nào! Cô ấy là ma sao?!",
+          "next": "c2a"
+        },
+        {
+          "text": "Get out of there! NOW!",
+          "vi": "Ra khỏi đó ngay!",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "ngo",
+      "text": "She is dead. She died many years ago.",
+      "vi": "Nàng đã chết. Nàng chết từ nhiều năm trước rồi.",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "ngo",
+      "text": "She died many years ago. I can't move…",
+      "vi": "Nàng chết từ nhiều năm trước rồi. Mình không cử động được…"
+    },
+    {
+      "id": "j2",
+      "type": "narration",
+      "text": "Suddenly, the [[lid]] of the [[coffin]] moves.",
+      "vi": "Bỗng nắp quan tài cử động."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "A [[pale]] hand comes out and holds his [[sleeve]].",
+      "vi": "Một bàn tay nhợt nhạt thò ra và nắm lấy tay áo chàng."
+    }
+  ]
+}
