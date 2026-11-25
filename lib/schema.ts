@@ -140,6 +140,7 @@ export const CliffhangerNodeSchema = z.object({
   from: CharacterId.optional(),
   text: StoryText,
   vi: ViText.optional(),
+  voice: z.boolean().optional(),
 });
 
 export const NodeSchema = z.discriminatedUnion("type", [

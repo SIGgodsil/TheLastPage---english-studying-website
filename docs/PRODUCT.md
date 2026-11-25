@@ -86,7 +86,7 @@ Nodes play **in array order**, starting at `nodes[0]`. A node with `next` jumps 
 | `choice` | `prompt` (vi), `hint` (vi), `options[]` (`text`, `vi?`, `next`) | 2–3 reply buttons. The chosen option is sent as the learner's own message. Wrong choices are never punished: every option leads on and the branches rejoin within 1–3 nodes |
 | `shadow` | `from`, `text`, `vi`, `voice?`, `next?` | the character's line as a bubble, plus a 🎙️ button to repeat it aloud. 4–9 words |
 | `free-reply` | `prompt` (vi), `hint` (vi), `sample`, `level?`, `next?` | an optional (B1) typed reply, with `sample` as the last hint tier |
-| `cliffhanger` | `from?`, `text`, `vi?` | the page's last line. With `from` it is a bubble; without it, a narration-style line. Followed by the "next page" screen |
+| `cliffhanger` | `from?`, `text`, `vi?`, `voice?` | the page's last line. With `from` it is a bubble; without it, a narration-style line. Followed by the "next page" screen |
 
 ### 6.4 Text markup
 
