@@ -1,0 +1,169 @@
+{
+  "storyId": "toll-house",
+  "page": 4,
+  "title": "Before the Sun (Dawn)",
+  "titleVi": "Trước khi mặt trời lên (Bình minh)",
+  "level": "A2",
+  "chatTitle": "Toll-house night 🏚️",
+  "characters": {
+    "lester": {
+      "name": "Lester",
+      "emoji": "🃏"
+    },
+    "white": {
+      "name": "White",
+      "emoji": "🙄"
+    },
+    "meagar": {
+      "name": "Meagar",
+      "emoji": "😬"
+    }
+  },
+  "vocab": {
+    "match": {
+      "en": "a small stick that makes fire",
+      "vi": "que diêm",
+      "ipa": "/mætʃ/"
+    },
+    "dawn": {
+      "en": "the time when the sun comes up",
+      "vi": "bình minh",
+      "ipa": "/dɑːn/",
+      "ipaCheck": true
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "message",
+      "from": "white",
+      "text": "Jack! Jack, where are you?!",
+      "vi": "Jack! Jack, cậu đâu rồi?!"
+    },
+    {
+      "id": "n2",
+      "type": "narration",
+      "text": "Lester finds a [[match]] and lights one candle.",
+      "vi": "Lester tìm thấy một que diêm và thắp một cây nến."
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "lester",
+      "text": "Jack is gone. He's not in the [[circle]].",
+      "vi": "Jack biến mất rồi. Cậu ấy không còn trong vòng tròn."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì?",
+      "hint": "Bạn có thể bảo họ đi tìm Jack, hoặc hỏi thăm mọi người.",
+      "options": [
+        {
+          "text": "Call his name! Look for him!",
+          "vi": "Gọi tên cậu ấy! Đi tìm đi!",
+          "next": "c1a"
+        },
+        {
+          "text": "Is anyone hurt?",
+          "vi": "Có ai bị thương không?",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "white",
+      "text": "JACK! Answer us!",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "meagar",
+      "text": "We're okay. But where is Jack?"
+    },
+    {
+      "id": "j1",
+      "type": "narration",
+      "text": "Then they hear a laugh [[upstairs]].",
+      "vi": "Rồi họ nghe thấy một tràng cười ở tầng trên."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "meagar",
+      "text": "It's Jack's voice. But it's not his laugh.",
+      "vi": "Đó là giọng Jack. Nhưng không phải tiếng cười của cậu ấy."
+    },
+    {
+      "id": "n4",
+      "type": "narration",
+      "text": "The three friends run [[upstairs]] with the small candle."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "lester",
+      "text": "The hall is long and dark."
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "lester",
+      "text": "There's a man at the end. His back is to us.",
+      "vi": "Có một người đàn ông ở cuối hành lang. Hắn quay lưng về phía bọn mình."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì?",
+      "hint": "Bạn có thể bảo họ gọi Jack, hoặc chờ đến bình minh.",
+      "options": [
+        {
+          "text": "Is it Jack? Say his name!",
+          "vi": "Có phải Jack không? Gọi tên cậu ấy đi!",
+          "next": "c2a"
+        },
+        {
+          "text": "Don't go closer! Wait for [[dawn]]!",
+          "vi": "Đừng lại gần! Chờ đến bình minh!",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "lester",
+      "text": "Jack…?",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "white",
+      "text": "[[Dawn|dawn]] is almost here. Just one more minute!",
+      "vi": "Sắp bình minh rồi. Chỉ một phút nữa thôi!"
+    },
+    {
+      "id": "j2",
+      "type": "narration",
+      "text": "Outside, the sky is getting light. [[Dawn|dawn]] is one minute away.",
+      "vi": "Bên ngoài, trời đang hửng sáng. Chỉ còn một phút nữa là bình minh."
+    },
+    {
+      "id": "n7",
+      "type": "narration",
+      "text": "The man begins to turn around, very slowly.",
+      "vi": "Người đàn ông bắt đầu quay lại, rất chậm."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "And they see his face…",
+      "vi": "Và họ nhìn thấy khuôn mặt hắn…"
+    }
+  ]
+}

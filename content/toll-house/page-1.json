@@ -1,0 +1,190 @@
+{
+  "storyId": "toll-house",
+  "page": 1,
+  "title": "The Bet (10 p.m.)",
+  "titleVi": "Vụ cá cược (10 giờ tối)",
+  "level": "A2",
+  "chatTitle": "Toll-house night 🏚️",
+  "characters": {
+    "jack": {
+      "name": "Jack",
+      "emoji": "🎲"
+    },
+    "lester": {
+      "name": "Lester",
+      "emoji": "🃏"
+    },
+    "white": {
+      "name": "White",
+      "emoji": "🙄"
+    },
+    "meagar": {
+      "name": "Meagar",
+      "emoji": "😬"
+    }
+  },
+  "vocab": {
+    "bet": {
+      "en": "a promise to pay if you are wrong",
+      "vi": "vụ cá cược; cá cược",
+      "ipa": "/bet/"
+    },
+    "empty": {
+      "en": "with nothing or nobody inside",
+      "vi": "trống rỗng; không người",
+      "ipa": "/ˈempti/"
+    },
+    "heavy": {
+      "en": "very hard to lift or move",
+      "vi": "nặng",
+      "ipa": "/ˈhevi/"
+    },
+    "upstairs": {
+      "en": "on a higher floor of a house",
+      "vi": "ở tầng trên",
+      "ipa": "/ʌpˈsterz/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "jack",
+      "text": "Nobody can stay one night in the old toll-house.",
+      "vi": "Không ai ở nổi một đêm trong trạm thu phí cũ đâu."
+    },
+    {
+      "id": "n1",
+      "type": "message",
+      "from": "jack",
+      "text": "Everyone runs away before morning 👻",
+      "vi": "Ai cũng bỏ chạy trước khi trời sáng 👻"
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "white",
+      "text": "Ghosts aren't real 🙄"
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "lester",
+      "text": "Haha, true! 😂"
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "jack",
+      "text": "Then let's stay there tonight. Want to make a [[bet]]? 🎲",
+      "vi": "Vậy tối nay ở đó đi. Cược không? 🎲"
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì vào nhóm?",
+      "hint": "Bạn là người bạn thứ năm. Bạn có tham gia vụ cá cược không?",
+      "options": [
+        {
+          "text": "I'm staying home. But good luck!",
+          "vi": "Mình ở nhà thôi. Chúc may mắn nhé!",
+          "next": "c1a"
+        },
+        {
+          "text": "That's a bad idea, guys.",
+          "vi": "Ý tưởng tồi đấy mọi người.",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "meagar",
+      "text": "Lucky you. I'm already scared 😬",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "lester",
+      "text": "Too late! The [[bet]] is on! 😎",
+      "vi": "Muộn rồi! Vụ cược bắt đầu rồi! 😎"
+    },
+    {
+      "id": "j1",
+      "type": "narration",
+      "text": "The toll-house is old and [[empty]], by a lonely road.",
+      "vi": "Trạm thu phí là một ngôi nhà cũ không người, bên con đường vắng."
+    },
+    {
+      "id": "n5",
+      "type": "narration",
+      "text": "Ten o'clock. They open the [[heavy]] door.",
+      "vi": "Mười giờ tối. Họ mở cánh cửa nặng nề."
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "meagar",
+      "text": "It's cold and dark in here. It smells of dust 😷"
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "white",
+      "text": "We have candles, cards and hot coffee ☕"
+    },
+    {
+      "id": "n8",
+      "type": "message",
+      "from": "lester",
+      "text": "See? Nothing here. This house is just [[empty]] 😂",
+      "vi": "Thấy chưa? Chẳng có gì. Nhà này trống trơn 😂"
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn hỏi gì?",
+      "hint": "Bạn có thể nhắc họ kiểm tra tầng trên, hoặc xin một tấm ảnh.",
+      "options": [
+        {
+          "text": "Did you check [[upstairs]]?",
+          "vi": "Các cậu kiểm tra tầng trên chưa?",
+          "next": "c2a"
+        },
+        {
+          "text": "Send me a photo!",
+          "vi": "Gửi mình tấm ảnh đi!",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "jack",
+      "text": "Not yet. We'll check later.",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "white",
+      "text": "Here. Just an old kitchen 🙄"
+    },
+    {
+      "id": "j2",
+      "type": "narration",
+      "text": "Then, [[upstairs]], a door closes.",
+      "vi": "Rồi, ở tầng trên, một cánh cửa đóng sầm lại."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "from": "meagar",
+      "text": "BANG. Did you hear that?! 😨",
+      "vi": "RẦM. Các cậu có nghe thấy không?! 😨"
+    }
+  ]
+}

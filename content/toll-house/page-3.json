@@ -1,0 +1,171 @@
+{
+  "storyId": "toll-house",
+  "page": 3,
+  "title": "The Open Door (2 a.m.)",
+  "titleVi": "Cánh cửa mở (2 giờ sáng)",
+  "level": "A2",
+  "chatTitle": "Toll-house night 🏚️",
+  "characters": {
+    "jack": {
+      "name": "Jack",
+      "emoji": "🎲"
+    },
+    "lester": {
+      "name": "Lester",
+      "emoji": "🃏"
+    },
+    "white": {
+      "name": "White",
+      "emoji": "🙄"
+    },
+    "meagar": {
+      "name": "Meagar",
+      "emoji": "😬"
+    }
+  },
+  "vocab": {
+    "circle": {
+      "en": "a round shape, like the letter O",
+      "vi": "vòng tròn",
+      "ipa": "/ˈsɝːkəl/"
+    },
+    "sleepwalker": {
+      "en": "a person who walks while they are asleep",
+      "vi": "người mộng du",
+      "ipa": "/ˈsliːpˌwɑːkɚ/",
+      "ipaCheck": true
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "message",
+      "from": "jack",
+      "text": "Let's sit together and hold hands."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "jack",
+      "text": "Nobody goes anywhere alone.",
+      "vi": "Không ai được đi đâu một mình."
+    },
+    {
+      "id": "n3",
+      "type": "narration",
+      "text": "They sit in a [[circle]] in the kitchen. Nobody talks.",
+      "vi": "Họ ngồi thành vòng tròn trong bếp. Không ai nói gì."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì?",
+      "hint": "Bạn có thể dặn họ ở yên, hoặc động viên họ.",
+      "options": [
+        {
+          "text": "Good idea. Stay in the [[circle]]!",
+          "vi": "Ý hay đấy. Ở yên trong vòng tròn nhé!",
+          "next": "c1a"
+        },
+        {
+          "text": "Only four more hours. You can do it!",
+          "vi": "Chỉ còn bốn tiếng nữa. Các cậu làm được mà!",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "meagar",
+      "text": "We will. My hands are shaking 😬",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "white",
+      "text": "Easy. Nothing is happening 🙄"
+    },
+    {
+      "id": "j1",
+      "type": "narration",
+      "text": "Two o'clock. The kitchen door opens slowly by itself.",
+      "vi": "Hai giờ sáng. Cửa bếp từ từ tự mở ra."
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "lester",
+      "text": "Guys… the door just opened. By itself 😰"
+    },
+    {
+      "id": "n5",
+      "type": "narration",
+      "text": "Suddenly, Jack stands up. His eyes look strange and [[empty]].",
+      "vi": "Bỗng Jack đứng dậy. Mắt cậu ấy trông lạ lùng và trống rỗng."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "meagar",
+      "text": "Jack! Sit down! Stay with us!",
+      "vi": "Jack! Ngồi xuống! Ở lại với bọn mình!"
+    },
+    {
+      "id": "n6",
+      "type": "narration",
+      "text": "But Jack does not hear. He walks to the door like a [[sleepwalker]].",
+      "vi": "Nhưng Jack không nghe thấy. Cậu đi về phía cửa như người mộng du."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì?",
+      "hint": "Bạn có thể bảo họ giữ Jack lại, hoặc gọi Jack tỉnh dậy.",
+      "options": [
+        {
+          "text": "Hold his arms! Don't let go!",
+          "vi": "Giữ tay cậu ấy! Đừng buông!",
+          "next": "c2a"
+        },
+        {
+          "text": "Jack! Wake up! JACK!",
+          "vi": "Jack! Tỉnh lại đi! JACK!",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "white",
+      "text": "We're holding him! He's so strong!",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "meagar",
+      "text": "He can't hear us! We're holding his arms!"
+    },
+    {
+      "id": "j2",
+      "type": "message",
+      "from": "lester",
+      "text": "He's pulling and pulling…"
+    },
+    {
+      "id": "n7",
+      "type": "narration",
+      "text": "A cold wind blows, and all the candles go out.",
+      "vi": "Rồi một cơn gió lạnh thổi qua, và tất cả nến đều tắt."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "In the dark, Jack's hand slips away.",
+      "vi": "Trong bóng tối, bàn tay Jack tuột mất."
+    }
+  ]
+}

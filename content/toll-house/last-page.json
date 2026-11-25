@@ -1,0 +1,100 @@
+{
+  "storyId": "toll-house",
+  "promptVi": "Chuyện gì đã xảy ra với Jack? Ba người bạn có cứu được Jack và thoát ra trước bình minh không?",
+  "pattern": "If I were Jack's friend, I would…",
+  "moods": [
+    {
+      "id": "happy",
+      "hintVi": "Bình minh lên kịp lúc, và cả bốn người bạn cùng thoát ra."
+    },
+    {
+      "id": "sad",
+      "hintVi": "Ngôi nhà giữ lại một người, và vụ cá cược có cái giá quá đắt."
+    },
+    {
+      "id": "twist",
+      "hintVi": "Khuôn mặt đó không phải của Jack, hoặc chính Jack đang bày trò."
+    }
+  ],
+  "starters": [
+    "The man turned around. It was…",
+    "If I were Jack's friend, I would…",
+    "The sun came up, and…",
+    "Lester held up the candle and said, “…”",
+    "Jack opened his eyes and…",
+    "After that night, the four friends…"
+  ],
+  "wordBank": [
+    {
+      "word": "bet",
+      "vi": "vụ cá cược; cá cược"
+    },
+    {
+      "word": "empty",
+      "vi": "trống rỗng; không người"
+    },
+    {
+      "word": "heavy",
+      "vi": "nặng"
+    },
+    {
+      "word": "upstairs",
+      "vi": "ở tầng trên"
+    },
+    {
+      "word": "footstep",
+      "vi": "tiếng bước chân"
+    },
+    {
+      "word": "shoulder",
+      "vi": "vai"
+    },
+    {
+      "word": "circle",
+      "vi": "vòng tròn"
+    },
+    {
+      "word": "sleepwalker",
+      "vi": "người mộng du"
+    },
+    {
+      "word": "match",
+      "vi": "que diêm"
+    },
+    {
+      "word": "dawn",
+      "vi": "bình minh"
+    },
+    {
+      "word": "sunlight",
+      "vi": "ánh nắng"
+    },
+    {
+      "word": "escape",
+      "vi": "trốn thoát"
+    },
+    {
+      "word": "scream",
+      "vi": "hét lên"
+    },
+    {
+      "word": "promise",
+      "vi": "hứa; lời hứa"
+    },
+    {
+      "word": "window",
+      "vi": "cửa sổ"
+    }
+  ],
+  "modelEndings": [
+    {
+      "level": "A2",
+      "text": "The man turned around. It was Jack, but his face was gray and his eyes were empty. “Stay with me,” he said in a strange voice. Lester ran to the window and opened it. The first sunlight came into the hall. Jack fell to the floor. When he opened his eyes, they were his own eyes again. The four friends ran out of the toll-house and never came back."
+    },
+    {
+      "level": "B1",
+      "text": "When the man turned around, his face was not Jack's at all. It was the face of an old toll-keeper, gray and tired, with eyes that had not slept for a hundred years. “Every night someone tries to stay,” he said, “and every night I make them leave.” Behind him, Jack was sitting on the floor, confused but unhurt. White stepped forward. “If you let our friend go, we will tell everyone to stay away from this house,” he promised. The old man looked at the window, where the first light was shining. “It's dawn,” he whispered, and he disappeared like smoke. The friends carried Jack outside. None of them ever made a bet again."
+    }
+  ],
+  "authorNote": "Barnes bị ngôi nhà \"gọi\" đi và được tìm thấy đã chết ở cầu thang ngay trước bình minh. Ngôi nhà vẫn bị ma ám. Lưu ý: bản gốc kể rằng những người từng ở lại trong nhà đều đã tự tử. Bản chuyển thể thay chi tiết này bằng \"không ai ở được đến sáng\" để tránh chủ đề nhạy cảm."
+}

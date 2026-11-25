@@ -1,0 +1,175 @@
+{
+  "storyId": "toll-house",
+  "page": 2,
+  "title": "Footsteps (Midnight)",
+  "titleVi": "Tiếng bước chân (Nửa đêm)",
+  "level": "A2",
+  "chatTitle": "Toll-house night 🏚️",
+  "characters": {
+    "jack": {
+      "name": "Jack",
+      "emoji": "🎲"
+    },
+    "lester": {
+      "name": "Lester",
+      "emoji": "🃏"
+    },
+    "white": {
+      "name": "White",
+      "emoji": "🙄"
+    },
+    "meagar": {
+      "name": "Meagar",
+      "emoji": "😬"
+    }
+  },
+  "vocab": {
+    "footstep": {
+      "en": "the sound of a foot when someone walks",
+      "vi": "tiếng bước chân",
+      "ipa": "/ˈfʊtstep/"
+    },
+    "shoulder": {
+      "en": "the part of your body between your neck and arm",
+      "vi": "vai",
+      "ipa": "/ˈʃoʊldɚ/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "message",
+      "from": "white",
+      "text": "It's just the wind… right?"
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "meagar",
+      "text": "Your voice is very quiet, White 😬"
+    },
+    {
+      "id": "n3",
+      "type": "narration",
+      "text": "Midnight. They take the candles and go [[upstairs]].",
+      "vi": "Nửa đêm. Họ cầm nến đi lên tầng trên."
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "jack",
+      "text": "Every room is [[empty]]. Every window is closed.",
+      "vi": "Phòng nào cũng trống. Cửa sổ nào cũng đóng."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì?",
+      "hint": "Bạn có thể hỏi về cánh cửa, hoặc bảo họ quay xuống.",
+      "options": [
+        {
+          "text": "So who closed that door?",
+          "vi": "Vậy ai đóng cánh cửa đó?",
+          "next": "c1a"
+        },
+        {
+          "text": "Good. Now go back down.",
+          "vi": "Tốt. Giờ xuống lại đi.",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "white",
+      "text": "The wind. It was the wind 🙄",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "jack",
+      "text": "Okay. We're going back to the kitchen."
+    },
+    {
+      "id": "j1",
+      "type": "narration",
+      "text": "They go back down. Behind them, they hear [[footsteps|footstep]].",
+      "vi": "Họ đi xuống. Phía sau họ có tiếng bước chân."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "lester",
+      "text": "Slow, [[heavy]] [[footsteps|footstep]] on the stairs.",
+      "vi": "Những bước chân chậm, nặng nề trên cầu thang."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "meagar",
+      "text": "We turned around. Nobody was there 😨",
+      "vi": "Bọn mình quay lại. Không có ai cả 😨"
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "meagar",
+      "text": "And the [[footsteps|footstep]] stopped.",
+      "vi": "Và tiếng bước chân dừng lại."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì?",
+      "hint": "Bạn có thể bảo họ ra khỏi nhà, hoặc dặn họ ở cạnh nhau.",
+      "options": [
+        {
+          "text": "Get out of that house now!",
+          "vi": "Ra khỏi nhà đó ngay!",
+          "next": "c2a"
+        },
+        {
+          "text": "Stay together! Don't split up!",
+          "vi": "Ở cạnh nhau! Đừng tách ra!",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "jack",
+      "text": "No. A [[bet]] is a [[bet]].",
+      "vi": "Không. Đã cược thì phải giữ lời.",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "jack",
+      "text": "Yes. Everyone stay close."
+    },
+    {
+      "id": "j2",
+      "type": "narration",
+      "text": "Then Lester feels a cold hand on his [[shoulder]].",
+      "vi": "Rồi Lester cảm thấy một bàn tay lạnh đặt lên vai mình."
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "lester",
+      "text": "Who touched my [[shoulder]]?! Not funny!",
+      "vi": "Ai chạm vào vai tôi đấy?! Không vui đâu!"
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "from": "lester",
+      "text": "I turned around. Nobody is behind me.",
+      "vi": "Mình quay lại. Không có ai phía sau cả."
+    }
+  ]
+}
