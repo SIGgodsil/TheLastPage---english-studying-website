@@ -4,6 +4,7 @@
 
 import { z } from "zod";
 import type { PlayState } from "./engine.ts";
+import { MOODS } from "./schema.ts";
 
 const STORAGE_KEY = "tlp:progress";
 /** Fired on window after every save, so this tab's views can update too. */
@@ -17,6 +18,11 @@ const SavedPlaySchema = z.object({
   picks: z.record(z.string(), z.number().int().min(0)),
 });
 
+const EndingSchema = z.object({
+  mood: z.enum(MOODS).optional(),
+  text: z.string().max(5000),
+});
+
 const StoryProgressSchema = z.object({
   /** Chat pages finished (cliffhanger reached). */
   completedPages: z.array(PageNumber),
@@ -24,6 +30,8 @@ const StoryProgressSchema = z.object({
   play: SavedPlaySchema.optional(),
   /** Best shadowing score (0–1) per line, keyed by `shadowKey(page, nodeId)`. */
   shadow: z.record(z.string(), z.number().min(0).max(1)).optional(),
+  /** The learner's ending on The Last Page (a draft until finished). */
+  ending: EndingSchema.optional(),
 });
 
 const ProgressSchema = z.object({
@@ -33,6 +41,7 @@ const ProgressSchema = z.object({
 });
 
 export type SavedPlay = z.infer<typeof SavedPlaySchema>;
+export type Ending = z.infer<typeof EndingSchema>;
 export type StoryProgress = z.infer<typeof StoryProgressSchema>;
 export type Progress = z.infer<typeof ProgressSchema>;
 
@@ -129,6 +138,11 @@ export function saveShadow(storyId: string, page: number, nodeId: string, score:
     ...story,
     shadow: { ...story.shadow, [key]: Math.max(story.shadow?.[key] ?? 0, clamped) },
   }));
+}
+
+/** Save the ending draft (mood and text) for a story. */
+export function saveEnding(storyId: string, ending: Ending): boolean {
+  return updateStory(storyId, (story) => ({ ...story, ending: { mood: ending.mood, text: ending.text.slice(0, 5000) } }));
 }
 
 /**

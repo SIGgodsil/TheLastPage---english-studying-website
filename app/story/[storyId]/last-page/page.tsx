@@ -5,9 +5,10 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { loadLastPage, loadStories, loadStory } from "@/lib/content";
 import { pageHref } from "@/lib/links";
+import LastPageWriter from "@/components/LastPageWriter";
 
-// Placeholder for The Last Page (a later milestone): shows the writing question
-// so the story has an ending to look forward to.
+// The Last Page: the learner writes a new ending for the story.
+// The original ending (authorNote) never reaches the browser.
 
 type Props = PageProps<"/story/[storyId]/last-page">;
 
@@ -33,13 +34,13 @@ export default function LastPageRoute({ params }: Props) {
   return (
     <main className="mx-auto flex w-full max-w-xl flex-1 flex-col px-5 py-8">
       <Suspense fallback={null}>
-        <LastPagePlaceholder params={params} />
+        <LastPageScreen params={params} />
       </Suspense>
     </main>
   );
 }
 
-async function LastPagePlaceholder({ params }: Pick<Props, "params">) {
+async function LastPageScreen({ params }: Pick<Props, "params">) {
   const { storyId } = await params;
   const data = await getLastPage(storyId);
   if (!data) notFound();
@@ -47,9 +48,14 @@ async function LastPagePlaceholder({ params }: Pick<Props, "params">) {
 
   return (
     <div className="flex flex-1 flex-col gap-6">
-      <Link href="/" className="self-start text-sm text-muted underline-offset-4 hover:underline">
-        ← Trang chủ
-      </Link>
+      <nav className="flex items-center justify-between text-sm text-muted">
+        <Link href={pageHref(story.id, story.pages)} className="underline-offset-4 hover:underline">
+          ← Trang {story.pages}
+        </Link>
+        <Link href="/" className="underline-offset-4 hover:underline">
+          Trang chủ
+        </Link>
+      </nav>
 
       <header className="text-center">
         <p className="text-4xl" aria-hidden>
@@ -63,28 +69,19 @@ async function LastPagePlaceholder({ params }: Pick<Props, "params">) {
 
       <section className="rounded-2xl border border-line bg-card p-5">
         <p className="text-lg leading-relaxed">{lastPage.promptVi}</p>
-        <p className="mt-3 font-serif text-wine italic">“{lastPage.pattern}”</p>
+        <p className="mt-3 text-xs font-medium tracking-wide text-muted uppercase">Mẫu câu</p>
+        <p lang="en" className="mt-1 font-serif text-lg text-wine italic">
+          {lastPage.pattern}
+        </p>
       </section>
 
-      <p className="text-center leading-relaxed text-muted">
-        Màn viết đoạn kết đang được xây dựng. Trong lúc chờ, bạn thử nghĩ xem mình muốn câu chuyện kết thúc thế nào
-        nhé!
-      </p>
-
-      <div className="mt-auto flex flex-col gap-3">
-        <Link
-          href="/"
-          className="w-full rounded-full bg-wine px-6 py-3 text-center font-medium text-paper transition active:scale-[0.98]"
-        >
-          Chọn truyện khác
-        </Link>
-        <Link
-          href={pageHref(story.id, 1)}
-          className="w-full rounded-full border border-line px-6 py-3 text-center font-medium transition active:scale-[0.98]"
-        >
-          Đọc lại từ trang 1
-        </Link>
-      </div>
+      <LastPageWriter
+        storyId={story.id}
+        pattern={lastPage.pattern}
+        moods={lastPage.moods}
+        starters={lastPage.starters}
+        wordBank={lastPage.wordBank}
+      />
     </div>
   );
 }
