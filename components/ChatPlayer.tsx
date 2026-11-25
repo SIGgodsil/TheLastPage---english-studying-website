@@ -20,6 +20,7 @@ import ChatBubble from "./ChatBubble";
 import ChoiceButtons from "./ChoiceButtons";
 import NarrationLine from "./NarrationLine";
 import PageEnd from "./PageEnd";
+import ShadowPractice from "./ShadowPractice";
 import TypingIndicator from "./TypingIndicator";
 import { WordProvider } from "./WordContext";
 
@@ -196,22 +197,16 @@ function StepView({ step, page, previous, groupChat }: StepViewProps) {
         vi={node.vi}
         voice={node.voice}
         accent={node.type === "cliffhanger"}
-        footer={node.type === "shadow" ? <ShadowSoon /> : undefined}
+        footer={
+          node.type === "shadow" ? (
+            <ShadowPractice
+              text={node.text}
+              vi={node.vi}
+              names={Object.values(page.characters).map((c) => c.name)}
+            />
+          ) : undefined
+        }
       />
     </div>
-  );
-}
-
-/** Placeholder for the shadowing button (next milestone). */
-function ShadowSoon() {
-  return (
-    <button
-      type="button"
-      disabled
-      title="Luyện nói: sắp có"
-      className="inline-flex items-center gap-1.5 rounded-full border border-line bg-card px-3 py-1 text-xs text-muted"
-    >
-      <span aria-hidden>🎙️</span> Luyện nói · sắp có
-    </button>
   );
 }
