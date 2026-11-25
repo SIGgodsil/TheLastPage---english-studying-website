@@ -149,6 +149,7 @@ for (let p = 1; existsSync(join(dir, `page-${p}.json`)); p++) {
   page.vocabUsed = [...used];
   page.viRatio = `${viCount}/${talk}`;
   if (viCount / talk < 0.3) warn(where, `only ${viCount}/${talk} messages have vi (aim for about 1 in 3)`);
+  if (viCount / talk > 0.6) warn(where, `${viCount}/${talk} messages have vi (aim for about 1 in 3)`);
 }
 if (pages.length !== 4) err(storyId, `found ${pages.length} pages (need 4)`);
 
