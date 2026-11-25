@@ -4,7 +4,8 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import ChatHeader from "@/components/ChatHeader";
 import ChatPlayer from "@/components/ChatPlayer";
-import { loadPage, loadStories, loadStory } from "@/lib/content";
+import { loadPages, loadStories, loadStory } from "@/lib/content";
+import { buildGlossary } from "@/lib/vocab";
 
 type Props = PageProps<"/story/[storyId]/[page]">;
 
@@ -20,8 +21,12 @@ async function getChat(storyId: string, rawPage: string) {
   "use cache";
   cacheLife("max");
   if (!/^[1-9]\d*$/.test(rawPage)) return null;
-  const [story, page] = await Promise.all([loadStory(storyId), loadPage(storyId, Number(rawPage))]);
-  return story && page ? { story, page } : null;
+  const pageNumber = Number(rawPage);
+  const [story, pages] = await Promise.all([loadStory(storyId), loadPages(storyId)]);
+  const page = pages?.find((p) => p.page === pageNumber);
+  if (!story || !pages || !page) return null;
+  // Words from this page and earlier ones: a word is defined where it first appears.
+  return { story, page, glossary: buildGlossary(pages, pageNumber) };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -49,7 +54,12 @@ async function Chat({ params }: Pick<Props, "params">) {
   return (
     <>
       <ChatHeader page={chat.page} totalPages={chat.story.pages} />
-      <ChatPlayer storyId={chat.story.id} page={chat.page} totalPages={chat.story.pages} />
+      <ChatPlayer
+        storyId={chat.story.id}
+        page={chat.page}
+        totalPages={chat.story.pages}
+        glossary={chat.glossary}
+      />
     </>
   );
 }

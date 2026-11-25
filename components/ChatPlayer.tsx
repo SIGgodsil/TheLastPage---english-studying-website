@@ -14,14 +14,22 @@ import {
   type Step,
 } from "@/lib/engine";
 import type { Page, StoryNode } from "@/lib/schema";
+import type { Glossary } from "@/lib/vocab";
 import { completePage, savePlay, storyProgress } from "@/lib/storage";
 import ChatBubble from "./ChatBubble";
 import ChoiceButtons from "./ChoiceButtons";
 import NarrationLine from "./NarrationLine";
 import PageEnd from "./PageEnd";
 import TypingIndicator from "./TypingIndicator";
+import { WordProvider } from "./WordContext";
 
-type Props = { storyId: string; page: Page; totalPages: number };
+type Props = {
+  storyId: string;
+  page: Page;
+  totalPages: number;
+  /** Vocab from this page and earlier ones, for tap-to-understand. */
+  glossary: Glossary;
+};
 
 const noSubscribe = () => () => {};
 
@@ -61,7 +69,7 @@ function typingDelay(text: string): number {
   return Math.min(1500, 450 + text.length * 15);
 }
 
-function ChatSession({ storyId, page, totalPages }: Props) {
+function ChatSession({ storyId, page, totalPages, glossary }: Props) {
   const [play, setPlay] = useState(() => initialState(storyId, page));
   const [typing, setTyping] = useState(false);
   const timer = useRef<number | null>(null);
@@ -107,7 +115,7 @@ function ChatSession({ storyId, page, totalPages }: Props) {
   const groupChat = Object.keys(page.characters).length > 1;
 
   return (
-    <>
+    <WordProvider glossary={glossary} pageNumber={page.page}>
       <div role="log" aria-live="polite" className="flex flex-1 flex-col gap-2 px-3 pt-4 pb-6">
         {steps.map((step, i) => {
           const isLast = i === steps.length - 1;
@@ -130,7 +138,7 @@ function ChatSession({ storyId, page, totalPages }: Props) {
 
       <footer className="sticky bottom-0 border-t border-line bg-paper/95 px-3 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur">
         {!typing && isAwaitingChoice(page, play) && node.type === "choice" ? (
-          <ChoiceButtons node={node} onChoose={(i) => goTo(choose(page, play, i))} />
+          <ChoiceButtons key={node.id} node={node} onChoose={(i) => goTo(choose(page, play, i))} />
         ) : !typing && isPageEnd(page, play) ? (
           <PageEnd storyId={storyId} pageNumber={page.page} totalPages={totalPages} />
         ) : (
@@ -143,7 +151,7 @@ function ChatSession({ storyId, page, totalPages }: Props) {
           </button>
         )}
       </footer>
-    </>
+    </WordProvider>
   );
 }
 
@@ -158,14 +166,14 @@ function StepView({ step, page, previous, groupChat }: StepViewProps) {
     return step.pick === undefined ? null : <ChatBubble side="learner" text={node.options[step.pick].text} />;
   }
 
-  if (node.type === "narration") return <NarrationLine text={node.text} />;
+  if (node.type === "narration") return <NarrationLine text={node.text} vi={node.vi} />;
 
   if (node.type === "free-reply") {
     // Typed replies are a B1 extra, not built yet: show the task so the page still makes sense.
     return <NarrationLine text={node.prompt} />;
   }
 
-  if (node.type === "cliffhanger" && !node.from) return <NarrationLine text={node.text} accent />;
+  if (node.type === "cliffhanger" && !node.from) return <NarrationLine text={node.text} vi={node.vi} accent />;
 
   const from = node.from!;
   const character = page.characters[from];
@@ -183,6 +191,7 @@ function StepView({ step, page, previous, groupChat }: StepViewProps) {
         showName={groupChat && startsRun}
         showAvatar={startsRun}
         text={node.text}
+        vi={node.vi}
         voice={node.voice}
         accent={node.type === "cliffhanger"}
         footer={node.type === "shadow" ? <ShadowSoon /> : undefined}

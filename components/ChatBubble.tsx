@@ -1,6 +1,9 @@
-import type { ReactNode } from "react";
+"use client";
+
+import { useState, type ReactNode } from "react";
 import Avatar from "./Avatar";
 import StoryText from "./StoryText";
+import TranslateButton from "./TranslateButton";
 
 type CharacterProps = {
   side: "character";
@@ -11,6 +14,8 @@ type CharacterProps = {
   /** Show the avatar (first bubble of a run). Later bubbles in the run keep the space. */
   showAvatar: boolean;
   text: string;
+  /** Vietnamese translation, shown on request. */
+  vi?: string;
   voice?: boolean;
   /** The cliffhanger line gets a wine-coloured edge. */
   accent?: boolean;
@@ -27,14 +32,18 @@ export default function ChatBubble(props: Props) {
   if (props.side === "learner") {
     return (
       <div className="flex justify-end pl-12">
-        <p className="rounded-2xl rounded-br-md bg-wine px-4 py-2.5 leading-relaxed text-paper">
+        <p className="rounded-2xl rounded-br-md bg-wine px-4 py-2.5 leading-relaxed text-paper [&_button]:decoration-paper/60">
           <StoryText text={props.text} />
         </p>
       </div>
     );
   }
 
-  const { name, emoji, showName, showAvatar, text, voice, accent, footer } = props;
+  return <CharacterBubble {...props} />;
+}
+
+function CharacterBubble({ name, emoji, showName, showAvatar, text, vi, voice, accent, footer }: CharacterProps) {
+  const [showVi, setShowVi] = useState(false);
   return (
     <div className="pr-10">
       {showName && <p className="mb-1 ml-11 text-xs font-medium text-muted">{name}</p>}
@@ -49,9 +58,15 @@ export default function ChatBubble(props: Props) {
           <p className={voice ? "text-[0.95rem] italic" : undefined}>
             <StoryText text={text} />
           </p>
+          {vi && showVi && <p className="mt-2 border-t border-line pt-2 text-[0.95rem] text-muted">{vi}</p>}
         </div>
       </div>
-      {footer && <div className="mt-1.5 ml-11">{footer}</div>}
+      {(vi || footer) && (
+        <div className="mt-1 ml-10 flex flex-wrap items-center gap-2">
+          {vi && <TranslateButton shown={showVi} onToggle={() => setShowVi(!showVi)} />}
+          {footer}
+        </div>
+      )}
     </div>
   );
 }
