@@ -1,0 +1,174 @@
+{
+  "storyId": "bluebeard",
+  "page": 2,
+  "title": "The Secret Room",
+  "titleVi": "Căn phòng bí mật",
+  "level": "A2",
+  "chatTitle": "Anna 💍",
+  "characters": {
+    "anna": {
+      "name": "Anna",
+      "emoji": "💍"
+    }
+  },
+  "vocab": {
+    "secret": {
+      "en": "something that other people must not know",
+      "vi": "bí mật",
+      "ipa": "/ˈsiːkrət/"
+    },
+    "spot": {
+      "en": "a small mark of a different color",
+      "vi": "vết; đốm",
+      "ipa": "/spɑːt/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "message",
+      "from": "anna",
+      "text": "I'm at the door. Just one look… 🙈"
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì cho Anna?",
+      "hint": "Bạn có thể ngăn Anna lại, hoặc giục cô làm nhanh.",
+      "options": [
+        {
+          "text": "Don't do it, Anna!",
+          "vi": "Đừng làm thế, Anna!",
+          "next": "c1a"
+        },
+        {
+          "text": "Okay. But be quick!",
+          "vi": "Được thôi. Nhưng nhanh lên nhé!",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "anna",
+      "text": "My hands are shaking. But I need to know.",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "anna",
+      "text": "My hands are shaking. Okay, I'm opening it."
+    },
+    {
+      "id": "j1",
+      "type": "narration",
+      "text": "Anna opens the [[secret]] room. It is dark, and the windows are closed.",
+      "vi": "Anna mở căn phòng bí mật. Trong phòng tối om, cửa sổ đóng kín."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "anna",
+      "text": "At first, I can't see anything."
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "anna",
+      "text": "The floor is dark and wet.",
+      "vi": "Sàn nhà tối màu và ướt."
+    },
+    {
+      "id": "n4",
+      "type": "narration",
+      "text": "Along the wall, there are women in long dresses.",
+      "vi": "Dọc bức tường là những người phụ nữ mặc váy dài."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "anna",
+      "text": "They don't move. They don't breathe.",
+      "vi": "Họ không cử động. Họ không thở."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "anna",
+      "text": "They are Bluebeard's [[wives|wife]] 😱",
+      "vi": "Họ là những người vợ của Râu Xanh 😱"
+    },
+    {
+      "id": "n6",
+      "type": "narration",
+      "text": "Anna screams. The little [[key]] falls onto the wet floor."
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "anna",
+      "text": "I ran to my room. I washed the [[key]]."
+    },
+    {
+      "id": "n8",
+      "type": "message",
+      "from": "anna",
+      "text": "There's a red [[spot]] on it. It won't go away!",
+      "vi": "Có một vết đỏ trên đó. Nó không chịu mất đi!"
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn khuyên Anna thế nào?",
+      "hint": "Bạn có thể bảo Anna rửa lại, hoặc giấu chiếc chìa khóa đi.",
+      "options": [
+        {
+          "text": "Wash it again! Try harder!",
+          "vi": "Rửa lại đi! Cố lên!",
+          "next": "c2a"
+        },
+        {
+          "text": "Hide the [[key]]! Keep it [[secret]]!",
+          "vi": "Giấu chìa khóa đi! Giữ bí mật!",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "anna",
+      "text": "I washed it ten times. The [[spot]] is still there.",
+      "vi": "Mình rửa mười lần rồi. Vết đó vẫn còn.",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "anna",
+      "text": "I can't. He will count the [[keys|key]]."
+    },
+    {
+      "id": "j2",
+      "type": "message",
+      "from": "anna",
+      "text": "It's a magic [[key]]. The red [[spot]] never goes away.",
+      "vi": "Đó là chìa khóa phép. Vết đỏ không bao giờ phai."
+    },
+    {
+      "id": "n9",
+      "type": "narration",
+      "text": "Then Anna hears horses outside.",
+      "vi": "Rồi Anna nghe tiếng ngựa bên ngoài."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "from": "anna",
+      "text": "Oh no. Bluebeard is home early.",
+      "vi": "Ôi không. Râu Xanh về sớm."
+    }
+  ]
+}

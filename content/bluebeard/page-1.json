@@ -1,0 +1,191 @@
+{
+  "storyId": "bluebeard",
+  "page": 1,
+  "title": "The Little Key",
+  "titleVi": "Chiếc chìa khóa nhỏ",
+  "level": "A2",
+  "chatTitle": "Anna 💍",
+  "characters": {
+    "anna": {
+      "name": "Anna",
+      "emoji": "💍"
+    },
+    "bluebeard": {
+      "name": "Bluebeard",
+      "emoji": "🧔"
+    }
+  },
+  "vocab": {
+    "rich": {
+      "en": "having a lot of money",
+      "vi": "giàu có",
+      "ipa": "/rɪtʃ/"
+    },
+    "beard": {
+      "en": "hair that grows on a man's chin and face",
+      "vi": "râu",
+      "ipa": "/bɪrd/"
+    },
+    "wife": {
+      "en": "the woman a man is married to",
+      "vi": "vợ",
+      "ipa": "/waɪf/"
+    },
+    "trip": {
+      "en": "going to a place and coming back",
+      "vi": "chuyến đi",
+      "ipa": "/trɪp/"
+    },
+    "key": {
+      "en": "a small metal thing that opens a lock",
+      "vi": "chìa khóa",
+      "ipa": "/kiː/"
+    },
+    "hall": {
+      "en": "a long, narrow space between rooms",
+      "vi": "hành lang",
+      "ipa": "/hɑːl/",
+      "ipaCheck": true
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "Long ago. A very [[rich]] man lives in a big castle.",
+      "vi": "Ngày xưa. Một người đàn ông rất giàu sống trong một tòa lâu đài lớn."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "anna",
+      "text": "A [[rich]] man wants to marry me! He has gold and horses 😳",
+      "vi": "Một người đàn ông giàu có muốn cưới mình! Ông ấy có vàng và ngựa 😳"
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "anna",
+      "text": "But he has a blue [[beard]]. People call him Bluebeard.",
+      "vi": "Nhưng ông ta có bộ râu màu xanh. Người ta gọi ông là Râu Xanh."
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "anna",
+      "text": "He had many [[wives|wife]] before. Nobody knows where they are 😟",
+      "vi": "Trước đây ông ta có nhiều vợ. Không ai biết họ giờ ở đâu 😟"
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn khuyên Anna thế nào?",
+      "hint": "Bạn có thể nhắc Anna cẩn thận, hoặc hỏi ông ấy đối xử với cô thế nào.",
+      "options": [
+        {
+          "text": "Be careful, Anna. That's strange.",
+          "vi": "Cẩn thận nhé Anna. Chuyện đó lạ lắm.",
+          "next": "c1a"
+        },
+        {
+          "text": "Is he kind to you?",
+          "vi": "Ông ấy có tốt với bạn không?",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "anna",
+      "text": "I know. But he is kind to me.",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "anna",
+      "text": "Yes, very kind. And my family is poor…"
+    },
+    {
+      "id": "j1",
+      "type": "narration",
+      "text": "Anna says yes. A month later, Bluebeard must go on a long [[trip]].",
+      "vi": "Anna nhận lời. Một tháng sau, Râu Xanh phải đi một chuyến xa."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "anna",
+      "text": "He gave me a big bunch of [[keys|key]] 🔑",
+      "vi": "Ông ấy đưa mình cả một chùm chìa khóa 🔑"
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "bluebeard",
+      "voice": true,
+      "text": "You can open every room in the castle.",
+      "vi": "Nàng được mở mọi căn phòng trong lâu đài."
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "bluebeard",
+      "voice": true,
+      "text": "This [[key]] opens the last room in the [[hall]]. Never open it.",
+      "vi": "Chìa này mở căn phòng cuối hành lang. Đừng bao giờ mở nó."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "bluebeard",
+      "voice": true,
+      "text": "If you open it, you will be very sorry.",
+      "vi": "Nếu nàng mở nó, nàng sẽ phải hối hận."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì cho Anna?",
+      "hint": "Bạn có thể khuyên Anna đừng mở, hoặc tò mò hỏi thêm.",
+      "options": [
+        {
+          "text": "Then don't open it. Easy!",
+          "vi": "Vậy thì đừng mở. Dễ mà!",
+          "next": "c2a"
+        },
+        {
+          "text": "What's in that room?",
+          "vi": "Trong phòng đó có gì vậy?",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "anna",
+      "text": "Of course I won't. But… I really want to know 🙈",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "anna",
+      "text": "I don't know. And I really want to know 🙈"
+    },
+    {
+      "id": "j2",
+      "type": "narration",
+      "text": "That night, Anna stands in front of the small door.",
+      "vi": "Đêm đó, Anna đứng trước cánh cửa nhỏ."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "The little [[key]] is in her hand.",
+      "vi": "Chiếc chìa khóa nhỏ nằm trong tay cô."
+    }
+  ]
+}

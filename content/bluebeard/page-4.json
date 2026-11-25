@@ -1,0 +1,158 @@
+{
+  "storyId": "bluebeard",
+  "page": 4,
+  "title": "Dust on the Road",
+  "titleVi": "Bụi trên đường",
+  "level": "A2",
+  "chatTitle": "Anna & Anne 🏰",
+  "characters": {
+    "anna": {
+      "name": "Anna",
+      "emoji": "💍"
+    },
+    "anne": {
+      "name": "Sister Anne",
+      "emoji": "👀"
+    }
+  },
+  "vocab": {},
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "message",
+      "from": "anna",
+      "text": "Sister Anne, do you see anyone coming?",
+      "vi": "Chị Anne, chị có thấy ai đến không?"
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "anne",
+      "text": "I see a cloud of [[dust]]!",
+      "vi": "Chị thấy một đám bụi!"
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "anne",
+      "text": "But it's only a group of sheep 🐑",
+      "vi": "Nhưng đó chỉ là một đàn cừu 🐑"
+    },
+    {
+      "id": "n4",
+      "type": "narration",
+      "text": "Bluebeard's footsteps come closer and closer.",
+      "vi": "Tiếng bước chân Râu Xanh mỗi lúc một gần."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì cho Anna?",
+      "hint": "Bạn có thể bảo Anna trốn, hoặc động viên cô.",
+      "options": [
+        {
+          "text": "Hide, Anna!",
+          "vi": "Trốn đi Anna!",
+          "next": "c1a"
+        },
+        {
+          "text": "Be brave! Your brothers are coming!",
+          "vi": "Dũng cảm lên! Các anh bạn sắp đến rồi!",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "anna",
+      "text": "There's nowhere to hide!",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "anna",
+      "text": "I'm trying. But I'm so scared."
+    },
+    {
+      "id": "j1",
+      "type": "narration",
+      "text": "The door opens. Bluebeard pulls Anna down the stairs.",
+      "vi": "Cánh cửa mở ra. Râu Xanh lôi Anna xuống cầu thang."
+    },
+    {
+      "id": "n5",
+      "type": "narration",
+      "text": "He raises his long sword."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "anna",
+      "text": "Sister Anne! Please, look again!",
+      "vi": "Chị Anne ơi! Làm ơn nhìn lại đi!"
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "anne",
+      "text": "Two riders! Two riders on the road!",
+      "vi": "Hai người cưỡi ngựa! Có hai người trên đường!"
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "anne",
+      "text": "They're coming fast!"
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì?",
+      "hint": "Hãy giục họ, hoặc động viên Anna.",
+      "options": [
+        {
+          "text": "Hurry! Hurry!",
+          "vi": "Nhanh lên! Nhanh lên!",
+          "next": "c2a"
+        },
+        {
+          "text": "Anna, hold on!",
+          "vi": "Anna, cố lên!",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "anne",
+      "text": "They're almost at the gate!",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "anna",
+      "text": "I'm trying…"
+    },
+    {
+      "id": "j2",
+      "type": "narration",
+      "text": "At that moment, someone bangs hard on the castle gate.",
+      "vi": "Đúng lúc đó, có người đập mạnh vào cổng lâu đài."
+    },
+    {
+      "id": "n8",
+      "type": "narration",
+      "text": "Bluebeard stops. He looks at the gate."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "Then he looks at Anna, and he lifts his sword higher…",
+      "vi": "Rồi hắn nhìn Anna, và giơ thanh gươm cao hơn nữa…"
+    }
+  ]
+}

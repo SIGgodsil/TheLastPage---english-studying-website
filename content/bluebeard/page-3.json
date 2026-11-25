@@ -1,0 +1,181 @@
+{
+  "storyId": "bluebeard",
+  "page": 3,
+  "title": "Sister Anne",
+  "titleVi": "Chị Anne",
+  "level": "A2",
+  "chatTitle": "Anna & Anne 🏰",
+  "characters": {
+    "anna": {
+      "name": "Anna",
+      "emoji": "💍"
+    },
+    "anne": {
+      "name": "Sister Anne",
+      "emoji": "👀"
+    },
+    "bluebeard": {
+      "name": "Bluebeard",
+      "emoji": "🧔"
+    }
+  },
+  "vocab": {
+    "tower": {
+      "en": "a tall, narrow part of a castle",
+      "vi": "tòa tháp",
+      "ipa": "/ˈtaʊɚ/"
+    },
+    "dust": {
+      "en": "very small bits of dry dirt",
+      "vi": "bụi",
+      "ipa": "/dʌst/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "message",
+      "from": "bluebeard",
+      "voice": true,
+      "text": "Give me my [[keys|key]]."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "anna",
+      "text": "I gave him the [[keys|key]]. My hands are so cold."
+    },
+    {
+      "id": "n3",
+      "type": "narration",
+      "text": "Bluebeard looks at the little [[key]]. He sees the red [[spot]]."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "bluebeard",
+      "voice": true,
+      "text": "You opened the door, my dear.",
+      "vi": "Nàng đã mở cánh cửa đó."
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "bluebeard",
+      "voice": true,
+      "text": "Now you will join them.",
+      "vi": "Giờ nàng sẽ ở cùng với họ."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "anna",
+      "text": "I asked for fifteen minutes to pray 🙏"
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "bluebeard",
+      "voice": true,
+      "text": "Fifteen minutes. Not one more."
+    },
+    {
+      "id": "n7",
+      "type": "narration",
+      "text": "Anna runs up to the high [[tower]]. Her sister Anne is there.",
+      "vi": "Anna chạy lên tòa tháp cao. Chị gái Anne đang ở đó."
+    },
+    {
+      "id": "n8",
+      "type": "message",
+      "from": "anna",
+      "text": "Our brothers are coming to visit today!",
+      "vi": "Hôm nay các anh trai mình đến thăm!"
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì?",
+      "hint": "Hãy nhờ chị Anne tìm các anh trai.",
+      "options": [
+        {
+          "text": "Sister Anne, look at the road!",
+          "vi": "Chị Anne, nhìn ra đường đi!",
+          "next": "c1a"
+        },
+        {
+          "text": "Anne, can you see your brothers?",
+          "vi": "Chị Anne, chị thấy các anh chưa?",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "anne",
+      "text": "I'm looking from the [[tower]] window.",
+      "vi": "Chị đang nhìn từ cửa sổ tháp.",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "anne",
+      "text": "Wait. I'm going to the [[tower]] window.",
+      "vi": "Đợi chút. Chị đang ra cửa sổ tháp."
+    },
+    {
+      "id": "j1",
+      "type": "message",
+      "from": "anne",
+      "text": "I see only the sun and the [[dust]].",
+      "vi": "Chị chỉ thấy nắng và bụi."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì tiếp?",
+      "hint": "Bạn có thể giục chị Anne, hoặc bảo Anna khóa cửa.",
+      "options": [
+        {
+          "text": "Keep looking! Please!",
+          "vi": "Cứ nhìn tiếp đi! Làm ơn!",
+          "next": "c2a"
+        },
+        {
+          "text": "Anna, lock the [[tower]] door!",
+          "vi": "Anna, khóa cửa tháp lại!",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "anne",
+      "text": "I am! But there's nothing yet.",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "anna",
+      "text": "There's no lock on this door! 😰"
+    },
+    {
+      "id": "j2",
+      "type": "message",
+      "from": "bluebeard",
+      "voice": true,
+      "text": "Come down now!",
+      "vi": "Xuống đây ngay!"
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "He starts to climb the stairs with a long sword.",
+      "vi": "Hắn bắt đầu leo cầu thang với một thanh gươm dài."
+    }
+  ]
+}

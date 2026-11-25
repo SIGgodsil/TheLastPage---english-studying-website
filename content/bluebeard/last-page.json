@@ -1,0 +1,100 @@
+{
+  "storyId": "bluebeard",
+  "promptVi": "Ai đang đến? Chuyện gì xảy ra với Anna và Râu Xanh?",
+  "pattern": "If I were Anna, I would…",
+  "moods": [
+    {
+      "id": "happy",
+      "hintVi": "Anna được cứu và bắt đầu một cuộc sống mới."
+    },
+    {
+      "id": "sad",
+      "hintVi": "Có người phải trả giá cho bí mật của căn phòng."
+    },
+    {
+      "id": "twist",
+      "hintVi": "Người đến không phải là các anh trai, hoặc Anna có một kế hoạch riêng."
+    }
+  ],
+  "starters": [
+    "The gate broke open, and…",
+    "If I were Anna, I would…",
+    "Anna looked at Bluebeard and said, “…”",
+    "The two riders ran up the stairs. They were…",
+    "Bluebeard dropped his sword because…",
+    "A year later, the castle…"
+  ],
+  "wordBank": [
+    {
+      "word": "rich",
+      "vi": "giàu có"
+    },
+    {
+      "word": "beard",
+      "vi": "râu"
+    },
+    {
+      "word": "wife",
+      "vi": "vợ"
+    },
+    {
+      "word": "trip",
+      "vi": "chuyến đi"
+    },
+    {
+      "word": "key",
+      "vi": "chìa khóa"
+    },
+    {
+      "word": "hall",
+      "vi": "hành lang"
+    },
+    {
+      "word": "secret",
+      "vi": "bí mật"
+    },
+    {
+      "word": "spot",
+      "vi": "vết; đốm"
+    },
+    {
+      "word": "tower",
+      "vi": "tòa tháp"
+    },
+    {
+      "word": "dust",
+      "vi": "bụi"
+    },
+    {
+      "word": "brave",
+      "vi": "dũng cảm"
+    },
+    {
+      "word": "gate",
+      "vi": "cổng"
+    },
+    {
+      "word": "brother",
+      "vi": "anh/em trai"
+    },
+    {
+      "word": "escape",
+      "vi": "trốn thoát"
+    },
+    {
+      "word": "free",
+      "vi": "tự do"
+    }
+  ],
+  "modelEndings": [
+    {
+      "level": "A2",
+      "text": "Anna did not cry. She looked into Bluebeard's eyes. “My brothers are here,” she said. “Soon everyone will know your secret.” Bluebeard turned to the gate, and Anna ran. Her brothers broke the gate and ran inside. Bluebeard dropped his sword and escaped through the back door. Nobody ever saw him again. Then Anna opened every window in the castle, and the sun came in."
+    },
+    {
+      "level": "B1",
+      "text": "Bluebeard's sword stopped in the air. The banging at the gate grew louder, and then he heard a voice he did not expect: the voice of a woman. “Open the gate, husband!” It was his first wife. She had escaped from the secret room years ago and had lived in the forest ever since, waiting for the right day. Now she had come back with Anna's brothers and half the village. Bluebeard's face turned as white as his beard was blue. “If you had told the truth,” Anna said quietly, “you would not be so afraid now.” That day, the castle gates opened for everyone, and the little key was thrown into the deepest well."
+    }
+  ],
+  "authorNote": "Hai người anh trai xông vào kịp lúc và đánh bại Râu Xanh. Anna thừa kế toàn bộ tài sản, giúp đỡ gia đình, và sau đó cưới một người tốt."
+}
