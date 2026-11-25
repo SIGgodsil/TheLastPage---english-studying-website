@@ -1,0 +1,168 @@
+{
+  "storyId": "ma-da",
+  "page": 1,
+  "title": "The Red Shirt",
+  "titleVi": "Chiếc áo đỏ",
+  "level": "A2",
+  "chatTitle": "Nam 🏊",
+  "characters": {
+    "nam": {
+      "name": "Nam",
+      "emoji": "😄"
+    },
+    "grandma": {
+      "name": "Grandma",
+      "emoji": "👵"
+    }
+  },
+  "vocab": {
+    "river": {
+      "en": "a long line of water that flows to the sea",
+      "vi": "sông; dòng sông",
+      "ipa": "/ˈrɪvɚ/"
+    },
+    "drown": {
+      "en": "to die under water because you cannot breathe",
+      "vi": "chết đuối",
+      "ipa": "/draʊn/"
+    },
+    "ghost": {
+      "en": "the spirit of a dead person",
+      "vi": "ma; hồn ma",
+      "ipa": "/ɡoʊst/"
+    },
+    "lonely": {
+      "en": "sad because you are alone",
+      "vi": "cô đơn",
+      "ipa": "/ˈloʊnli/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "A small village by a big [[river]]. It's summer.",
+      "vi": "Một ngôi làng nhỏ bên dòng sông lớn. Đang là mùa hè."
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "nam",
+      "text": "Hey! Want to swim in the [[river]] later? 🏊",
+      "vi": "Ê! Lát nữa đi bơi sông không? 🏊"
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "nam",
+      "text": "Grandma says no again 🙄 Listen:"
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "grandma",
+      "voice": true,
+      "text": "Don't swim at noon. And never swim alone.",
+      "vi": "Đừng bơi lúc trưa. Và đừng bao giờ bơi một mình."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "nam",
+      "text": "I asked why. She told me about the ma da 🙄"
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "grandma",
+      "voice": true,
+      "text": "When a person [[drowns|drown]], he becomes a water [[ghost]].",
+      "vi": "Khi một người chết đuối, người đó sẽ thành ma nước."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "grandma",
+      "voice": true,
+      "text": "He is cold and [[lonely]].",
+      "vi": "Nó lạnh lẽo và cô đơn."
+    },
+    {
+      "id": "n7",
+      "type": "message",
+      "from": "grandma",
+      "voice": true,
+      "text": "He waits for someone to take his place.",
+      "vi": "Nó chờ có người đến thế chỗ."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn nghĩ gì về chuyện ma da?",
+      "hint": "Bạn có thể nghĩ đó chỉ là chuyện xưa, hoặc tin lời bà.",
+      "options": [
+        {
+          "text": "It's just an old story, right?",
+          "vi": "Chỉ là chuyện xưa thôi, đúng không?",
+          "next": "c1a"
+        },
+        {
+          "text": "That's scary. Maybe Grandma is right.",
+          "vi": "Đáng sợ thật. Có khi bà nói đúng.",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "nam",
+      "text": "Exactly! That's what I told her 😂",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "nam",
+      "text": "Come on, it's just an old story 😂"
+    },
+    {
+      "id": "j1",
+      "type": "message",
+      "from": "nam",
+      "text": "But… you know about Hung."
+    },
+    {
+      "id": "n8",
+      "type": "narration",
+      "text": "Last summer, Nam's best friend Hung [[drowned|drown]] in that [[river]].",
+      "vi": "Mùa hè năm ngoái, Hùng, bạn thân của Nam, chết đuối ở khúc sông đó."
+    },
+    {
+      "id": "n9",
+      "type": "narration",
+      "text": "Nobody ever found him. One hot afternoon, Nam goes there alone."
+    },
+    {
+      "id": "n10",
+      "type": "message",
+      "from": "nam",
+      "text": "I'm at the [[river]]. There's something red on a big rock.",
+      "vi": "Mình đang ở bờ sông. Có gì đó màu đỏ trên một tảng đá to."
+    },
+    {
+      "id": "n11",
+      "type": "message",
+      "from": "nam",
+      "text": "It's a shirt. Hung's red shirt 😨",
+      "vi": "Là một cái áo. Áo đỏ của Hùng 😨"
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "from": "nam",
+      "text": "And it's wet.",
+      "vi": "Và nó còn ướt."
+    }
+  ]
+}

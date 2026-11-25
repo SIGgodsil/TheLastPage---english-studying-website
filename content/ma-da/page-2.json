@@ -1,0 +1,194 @@
+{
+  "storyId": "ma-da",
+  "page": 2,
+  "title": "The Hand Under the Water",
+  "titleVi": "Bàn tay dưới nước",
+  "level": "A2",
+  "chatTitle": "Nam 🏊",
+  "characters": {
+    "nam": {
+      "name": "Nam",
+      "emoji": "😄"
+    },
+    "grandma": {
+      "name": "Grandma",
+      "emoji": "👵"
+    },
+    "hung": {
+      "name": "Hung",
+      "emoji": "👕"
+    }
+  },
+  "vocab": {
+    "ankle": {
+      "en": "the part between your foot and your leg",
+      "vi": "mắt cá chân; cổ chân",
+      "ipa": "/ˈæŋkəl/"
+    },
+    "bank": {
+      "en": "the land at the side of a river",
+      "vi": "bờ sông",
+      "ipa": "/bæŋk/"
+    },
+    "footstep": {
+      "en": "the sound of a foot when someone walks",
+      "vi": "tiếng bước chân",
+      "ipa": "/ˈfʊtstep/"
+    },
+    "whisper": {
+      "en": "to speak very, very quietly",
+      "vi": "thì thầm",
+      "ipa": "/ˈwɪspɚ/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "message",
+      "from": "nam",
+      "text": "My heart is beating fast. Is someone playing a joke? 🤨",
+      "vi": "Tim mình đập nhanh quá. Có ai đang đùa không vậy? 🤨"
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn khuyên Nam thế nào?",
+      "hint": "Bạn có thể bảo Nam về nhà, hoặc nhìn quanh trước.",
+      "options": [
+        {
+          "text": "Don't go in the water! Go home!",
+          "vi": "Đừng xuống nước! Về nhà đi!",
+          "next": "c1a"
+        },
+        {
+          "text": "Maybe. Look around first.",
+          "vi": "Có thể. Nhìn quanh trước đã.",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "nam",
+      "text": "Relax 😎 I'm a good swimmer.",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "nam",
+      "text": "Nobody's here. I'm going in 😎"
+    },
+    {
+      "id": "j1",
+      "type": "narration",
+      "text": "Nam jumps into the water. The [[river]] is warm.",
+      "vi": "Nam nhảy xuống nước. Nước sông ấm."
+    },
+    {
+      "id": "n2",
+      "type": "narration",
+      "text": "But in the middle, the water is suddenly ice cold.",
+      "vi": "Nhưng ra đến giữa, nước bỗng lạnh như băng."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "nam",
+      "text": "A hand is holding my [[ankle]]!",
+      "vi": "Có bàn tay đang nắm cổ chân mình!"
+    },
+    {
+      "id": "n3",
+      "type": "narration",
+      "text": "It pulls him down. Nam kicks hard."
+    },
+    {
+      "id": "n4",
+      "type": "message",
+      "from": "nam",
+      "text": "I made it to the [[bank]]. I climbed out.",
+      "vi": "Mình bơi được vào bờ rồi. Mình trèo lên được rồi."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "nam",
+      "text": "There are five dark marks on my [[ankle]]. Like fingers 😰",
+      "vi": "Trên cổ chân mình có năm vết thâm. Như dấu ngón tay 😰"
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nói gì với Nam?",
+      "hint": "Bạn có thể bảo Nam cho bà xem, hoặc hỏi thăm cậu ấy.",
+      "options": [
+        {
+          "text": "Show it to Grandma!",
+          "vi": "Cho bà xem đi!",
+          "next": "c2a"
+        },
+        {
+          "text": "Are you okay? Does it hurt?",
+          "vi": "Cậu ổn không? Có đau không?",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "nam",
+      "text": "I did. She went very quiet.",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "nam",
+      "text": "It doesn't hurt. It's just very cold."
+    },
+    {
+      "id": "j2",
+      "type": "narration",
+      "text": "That night, Nam can't sleep. Outside, he hears [[footsteps|footstep]].",
+      "vi": "Đêm đó, Nam không ngủ được. Bên ngoài, cậu nghe tiếng bước chân."
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "nam",
+      "text": "Wet [[footsteps|footstep]]. Drip. Drip. Drip.",
+      "vi": "Tiếng bước chân ướt sũng. Tóc. Tóc. Tóc."
+    },
+    {
+      "id": "n7",
+      "type": "narration",
+      "text": "A voice [[whispers|whisper]] at the window.",
+      "vi": "Một giọng nói thì thầm ngoài cửa sổ."
+    },
+    {
+      "id": "n8",
+      "type": "message",
+      "from": "hung",
+      "voice": true,
+      "text": "Nam… come and swim with me. I'm so cold.",
+      "vi": "Nam ơi… xuống bơi với tớ đi. Tớ lạnh lắm."
+    },
+    {
+      "id": "n9",
+      "type": "message",
+      "from": "nam",
+      "text": "That's Hung's voice."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "from": "grandma",
+      "voice": true,
+      "text": "He is looking for someone to take his place.",
+      "vi": "Nó đang tìm người thế chỗ."
+    }
+  ]
+}

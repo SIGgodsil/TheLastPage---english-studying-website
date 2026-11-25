@@ -1,0 +1,100 @@
+{
+  "storyId": "ma-da",
+  "promptVi": "Nam nói gì với Hùng? Chuyện gì xảy ra với Nam, Lan và Hùng?",
+  "pattern": "If I were Nam, I would say…",
+  "moods": [
+    {
+      "id": "happy",
+      "hintVi": "Tình bạn giúp Hùng được yên nghỉ, và hai anh em trở về an toàn."
+    },
+    {
+      "id": "sad",
+      "hintVi": "Có người phải trả giá, nhưng câu chuyện vẫn còn chút ấm áp."
+    },
+    {
+      "id": "twist",
+      "hintVi": "Hùng không phải là người muốn giữ Lan lại, hoặc Hùng cần một điều không ai ngờ."
+    }
+  ],
+  "starters": [
+    "Nam looked at Hung and said, “…”",
+    "If I were Nam, I would say…",
+    "Slowly, Hung let go of…",
+    "On the bank, Grandma…",
+    "When Nam opened his eyes,…",
+    "Every summer after that,…"
+  ],
+  "wordBank": [
+    {
+      "word": "river",
+      "vi": "sông; dòng sông"
+    },
+    {
+      "word": "drown",
+      "vi": "chết đuối"
+    },
+    {
+      "word": "ghost",
+      "vi": "ma; hồn ma"
+    },
+    {
+      "word": "lonely",
+      "vi": "cô đơn"
+    },
+    {
+      "word": "ankle",
+      "vi": "mắt cá chân; cổ chân"
+    },
+    {
+      "word": "bank",
+      "vi": "bờ sông"
+    },
+    {
+      "word": "footstep",
+      "vi": "tiếng bước chân"
+    },
+    {
+      "word": "whisper",
+      "vi": "thì thầm"
+    },
+    {
+      "word": "missing",
+      "vi": "mất tích"
+    },
+    {
+      "word": "slipper",
+      "vi": "dép (đi trong nhà)"
+    },
+    {
+      "word": "remember",
+      "vi": "nhớ"
+    },
+    {
+      "word": "promise",
+      "vi": "lời hứa; hứa"
+    },
+    {
+      "word": "forget",
+      "vi": "quên"
+    },
+    {
+      "word": "friend",
+      "vi": "bạn"
+    },
+    {
+      "word": "lamp",
+      "vi": "ngọn đèn"
+    }
+  ],
+  "modelEndings": [
+    {
+      "level": "A2",
+      "text": "Nam said, “Hung, I remember you. You are my best friend.” Hung's cold hand opened, and he let Lan go. Nam pulled his sister up to the air. On the bank, Grandma held them both and cried. The next day, Nam and Lan brought flowers and a red shirt to the river. “We will never forget you,” Nam said. That night, there were no wet footsteps. Hung was not lonely anymore."
+    },
+    {
+      "level": "B1",
+      "text": "Nam almost said, “Take me instead,” but then he stopped. He understood that Hung did not really want a new friend under the water. He wanted to be remembered. “Hung, if you let her go, I promise I will never forget you,” Nam said. “Every summer, I will light a lamp for you on the bank.” For a long moment, nothing happened. Then the cold hand slowly opened, and Lan floated up towards the moonlight. Nam followed her. On the bank, Grandma was waiting with a blanket. From that year on, the whole village lit lamps on the river every summer, and nobody drowned there again."
+    }
+  ],
+  "authorNote": "Truyền thuyết dân gian không có cái kết cố định. Theo tín ngưỡng, ma da chỉ được siêu thoát khi có người chết thay, hoặc khi người sống cúng giỗ, giải oan. Truyện đã cài sẵn hướng thứ hai: tình bạn và sự thương nhớ giải thoát cho Hùng."
+}

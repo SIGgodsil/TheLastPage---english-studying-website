@@ -1,0 +1,158 @@
+{
+  "storyId": "ma-da",
+  "page": 3,
+  "title": "Lan",
+  "titleVi": "Bé Lan",
+  "level": "A2",
+  "chatTitle": "Nam 🏊",
+  "characters": {
+    "nam": {
+      "name": "Nam",
+      "emoji": "😄"
+    }
+  },
+  "vocab": {
+    "missing": {
+      "en": "lost; nobody can find them",
+      "vi": "mất tích",
+      "ipa": "/ˈmɪsɪŋ/"
+    },
+    "slipper": {
+      "en": "a soft, easy shoe you wear at home",
+      "vi": "dép (đi trong nhà)",
+      "ipa": "/ˈslɪpɚ/"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "message",
+      "from": "nam",
+      "text": "Help! My little sister Lan is [[missing]]!",
+      "vi": "Cứu với! Em gái Lan của mình mất tích rồi!"
+    },
+    {
+      "id": "n2",
+      "type": "message",
+      "from": "nam",
+      "text": "Everyone is looking for her. I'm going to the [[river]]."
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn làm gì?",
+      "hint": "Bạn có thể chạy đến giúp, hoặc dặn Nam mang đèn.",
+      "options": [
+        {
+          "text": "I'm coming! Wait for me!",
+          "vi": "Mình đến ngay! Chờ mình!",
+          "next": "c1a"
+        },
+        {
+          "text": "Take a lamp! It's dark!",
+          "vi": "Cầm đèn theo! Trời tối đó!",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "message",
+      "from": "nam",
+      "text": "No time! I'm going now with a lamp.",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "message",
+      "from": "nam",
+      "text": "I have one. I'm going now."
+    },
+    {
+      "id": "j1",
+      "type": "narration",
+      "text": "On the [[bank]], Nam finds two small pink [[slippers|slipper]].",
+      "vi": "Trên bờ sông, Nam thấy đôi dép nhỏ màu hồng."
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "from": "nam",
+      "text": "Lan's [[slippers|slipper]]! LAN!!",
+      "vi": "Dép của Lan! LAN ƠI!!"
+    },
+    {
+      "id": "n4",
+      "type": "narration",
+      "text": "Then he sees her. She is standing in the [[river]].",
+      "vi": "Rồi cậu thấy em. Em đang đứng giữa sông."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "nam",
+      "text": "The water is up to her waist."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "nam",
+      "text": "She's smiling, but her eyes are closed.",
+      "vi": "Em đang cười, nhưng mắt nhắm nghiền."
+    },
+    {
+      "id": "n6",
+      "type": "narration",
+      "text": "She walks slowly into deeper water."
+    },
+    {
+      "id": "n7",
+      "type": "narration",
+      "text": "Next to her, there is a dark shadow. A boy in a red shirt.",
+      "vi": "Bên cạnh em có một cái bóng đen. Một cậu bé mặc áo đỏ."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn nhắn gì cho Nam?",
+      "hint": "Bạn có thể bảo Nam gọi bà, hoặc hét lên với Hùng.",
+      "options": [
+        {
+          "text": "Call Grandma! Now!",
+          "vi": "Gọi bà ngay!",
+          "next": "c2a"
+        },
+        {
+          "text": "Shout to Hung! Make him stop!",
+          "vi": "Hét lên với Hùng! Bắt cậu ấy dừng lại!",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "message",
+      "from": "nam",
+      "text": "No time! HUNG, STOP!",
+      "next": "j2"
+    },
+    {
+      "id": "c2b",
+      "type": "message",
+      "from": "nam",
+      "text": "HUNG, STOP!"
+    },
+    {
+      "id": "j2",
+      "type": "narration",
+      "text": "The shadow turns and looks at Nam. Then it pulls Lan under.",
+      "vi": "Cái bóng quay lại nhìn Nam. Rồi nó kéo Lan xuống nước."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "Nam drops the lamp and jumps into the dark [[river]].",
+      "vi": "Nam buông rơi ngọn đèn và nhảy xuống dòng sông tối."
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "storyId": "ma-da",
+  "page": 4,
+  "title": "“One of You Must Stay”",
+  "titleVi": "“Một người phải ở lại”",
+  "level": "A2",
+  "chatTitle": "Nam 🏊",
+  "characters": {
+    "grandma": {
+      "name": "Grandma",
+      "emoji": "👵"
+    },
+    "hung": {
+      "name": "Hung",
+      "emoji": "👕"
+    }
+  },
+  "vocab": {},
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "narration",
+      "text": "Under the water, it is black and very cold.",
+      "vi": "Dưới nước tối đen và lạnh buốt."
+    },
+    {
+      "id": "n2",
+      "type": "narration",
+      "text": "Nam finds Lan's hand. He pulls hard."
+    },
+    {
+      "id": "n3",
+      "type": "narration",
+      "text": "But another hand holds her. It is Hung's hand.",
+      "vi": "Nhưng có một bàn tay khác giữ em lại. Đó là tay Hùng."
+    },
+    {
+      "id": "n4",
+      "type": "narration",
+      "text": "You run to the [[bank]] with Grandma. The water is dark and still.",
+      "vi": "Bạn chạy ra bờ sông cùng bà. Mặt nước tối và lặng."
+    },
+    {
+      "id": "n5",
+      "type": "message",
+      "from": "grandma",
+      "text": "Nam! Lan! Oh, please, no… 🙏"
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Bạn hét gì về phía dòng sông?",
+      "hint": "Bạn có thể gọi Nam, hoặc xin Hùng thả hai anh em ra.",
+      "options": [
+        {
+          "text": "Nam! Hold on to Lan!",
+          "vi": "Nam ơi! Giữ chặt Lan!",
+          "next": "c1a"
+        },
+        {
+          "text": "Hung, please let them go!",
+          "vi": "Hùng ơi, làm ơn thả họ ra!",
+          "next": "c1b"
+        }
+      ]
+    },
+    {
+      "id": "c1a",
+      "type": "narration",
+      "text": "Under the water, Nam holds on. But his chest hurts.",
+      "next": "j1"
+    },
+    {
+      "id": "c1b",
+      "type": "narration",
+      "text": "Under the water, Hung's hand does not let go."
+    },
+    {
+      "id": "j1",
+      "type": "message",
+      "from": "hung",
+      "voice": true,
+      "text": "I'm cold, Nam. I'm so [[lonely]].",
+      "vi": "Tớ lạnh lắm, Nam. Tớ cô đơn lắm."
+    },
+    {
+      "id": "n6",
+      "type": "message",
+      "from": "hung",
+      "voice": true,
+      "text": "Nobody remembers me.",
+      "vi": "Không ai còn nhớ đến tớ."
+    },
+    {
+      "id": "s1",
+      "type": "shadow",
+      "from": "hung",
+      "voice": true,
+      "text": "One of you must stay with me.",
+      "vi": "Một trong hai người phải ở lại với tớ."
+    },
+    {
+      "id": "n7",
+      "type": "narration",
+      "text": "Nam needs air. Lan is not moving.",
+      "vi": "Nam cần thở. Lan không cử động."
+    },
+    {
+      "id": "n8",
+      "type": "narration",
+      "text": "Nam remembers Grandma's words: “He is cold and [[lonely]].”",
+      "vi": "Nam nhớ lời bà: “Nó lạnh lẽo và cô đơn.”"
+    },
+    {
+      "id": "n9",
+      "type": "narration",
+      "text": "He looks into Hung's empty eyes. He is not angry anymore."
+    },
+    {
+      "id": "n10",
+      "type": "narration",
+      "text": "He feels sad for his friend.",
+      "vi": "Cậu thấy thương bạn mình."
+    },
+    {
+      "id": "c2",
+      "type": "choice",
+      "prompt": "Bạn mong Nam nhớ điều gì lúc này?",
+      "hint": "Hãy nghĩ về tình bạn giữa Nam và Hùng.",
+      "options": [
+        {
+          "text": "Hung was your best friend, Nam!",
+          "vi": "Hùng từng là bạn thân nhất của cậu mà, Nam!",
+          "next": "c2a"
+        },
+        {
+          "text": "Don't give up, Nam!",
+          "vi": "Đừng bỏ cuộc, Nam!",
+          "next": "c2b"
+        }
+      ]
+    },
+    {
+      "id": "c2a",
+      "type": "narration",
+      "text": "Nam remembers summer days with Hung, laughing in the sun.",
+      "next": "end"
+    },
+    {
+      "id": "c2b",
+      "type": "narration",
+      "text": "Nam does not give up. He holds Lan's hand tight."
+    },
+    {
+      "id": "end",
+      "type": "cliffhanger",
+      "text": "Then Nam makes a choice. He opens his mouth and speaks to his friend…",
+      "vi": "Rồi Nam đưa ra lựa chọn. Cậu mở miệng và nói với bạn mình…"
+    }
+  ]
+}
