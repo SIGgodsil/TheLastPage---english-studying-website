@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { lastPageHref, pageHref } from "@/lib/links";
+import ShadowPractice from "./ShadowPractice";
 
 type Props = {
   storyId: string;
@@ -7,10 +8,12 @@ type Props = {
   totalPages: number;
   /** Title of the next chat page, as a teaser. Undefined on the last chat page. */
   nextTitle?: string;
+  /** This page's shadow line, offered once more before moving on. */
+  shadow?: { nodeId: string; text: string; vi: string; names: string[] };
 };
 
 /** The "next page" screen shown under the cliffhanger. */
-export default function PageEnd({ storyId, pageNumber, totalPages, nextTitle }: Props) {
+export default function PageEnd({ storyId, pageNumber, totalPages, nextTitle, shadow }: Props) {
   const isLast = pageNumber >= totalPages;
   return (
     <div className="flex flex-col items-center gap-3 py-1 text-center">
@@ -25,6 +28,8 @@ export default function PageEnd({ storyId, pageNumber, totalPages, nextTitle }: 
       <p className="font-serif italic text-muted">
         Hết trang {pageNumber}. {isLast ? "Câu chuyện chưa kết thúc đâu…" : "Chuyện gì sẽ xảy ra tiếp theo?"}
       </p>
+
+      {shadow && <ShadowPractice storyId={storyId} page={pageNumber} variant="wide" {...shadow} />}
 
       {isLast ? (
         <Link

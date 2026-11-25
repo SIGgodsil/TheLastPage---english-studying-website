@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { plainText } from "@/lib/schema";
-import { checkShadow, type ShadowResult, type ShadowWord } from "@/lib/shadow";
+import { checkShadow, GREAT, type ShadowResult, type ShadowWord } from "@/lib/shadow";
 import {
   isRecognitionSupported,
   isSynthesisSupported,
@@ -11,10 +11,12 @@ import {
   stopSpeaking,
   type RecognitionSession,
 } from "@/lib/speech";
+import { saveShadow, shadowKey } from "@/lib/storage";
 import BottomSheet, { CloseButton } from "./BottomSheet";
 import { FAILURE, PRAISE, tipMessage } from "./shadowCopy";
+import { useProgress } from "./useProgress";
 
-type Props = {
+type Line = {
   /** The line to repeat (may contain [[vocab]] marks). */
   text: string;
   vi: string;
@@ -22,22 +24,46 @@ type Props = {
   names: string[];
 };
 
-/** The 🎙️ button under a shadow line, and the practice sheet it opens. */
-export default function ShadowPractice({ text, vi, names }: Props) {
+type Props = Line & {
+  storyId: string;
+  page: number;
+  nodeId: string;
+  /** "chip" sits under the chat bubble; "wide" is a full-width button (end-of-page screen). */
+  variant?: "chip" | "wide";
+};
+
+/** The 🎙️ button for a shadow line, and the practice sheet it opens. */
+export default function ShadowPractice({ storyId, page, nodeId, variant = "chip", ...line }: Props) {
   const [open, setOpen] = useState(false);
+  const progress = useProgress();
+  const best = progress?.stories[storyId]?.shadow?.[shadowKey(page, nodeId)];
   const close = () => setOpen(false);
+  const onResult = (result: ShadowResult) => {
+    if (result.tier !== "silent") saveShadow(storyId, page, nodeId, result.score);
+  };
+
+  const practised = best !== undefined;
+  const mark = practised ? (best >= GREAT ? "⭐" : "✓") : null;
+  const label = practised ? "Luyện lại" : "Luyện nói";
+
   return (
     <>
       <button
         type="button"
         onClick={() => setOpen(true)}
         aria-haspopup="dialog"
-        className="inline-flex items-center gap-1.5 rounded-full border border-wine/40 bg-card px-3 py-1 text-xs font-medium text-wine transition hover:border-wine active:scale-[0.97]"
+        aria-label={practised ? `${label} (đã luyện)` : label}
+        className={
+          variant === "wide"
+            ? "flex w-full items-center justify-center gap-2 rounded-full border border-wine/40 bg-card px-6 py-3 font-medium text-wine transition hover:border-wine active:scale-[0.98]"
+            : "inline-flex items-center gap-1.5 rounded-full border border-wine/40 bg-card px-3 py-1 text-xs font-medium text-wine transition hover:border-wine active:scale-[0.97]"
+        }
       >
-        <span aria-hidden>🎙️</span> Luyện nói
+        <span aria-hidden>🎙️</span> {variant === "wide" && !practised ? "Luyện nói câu của trang này" : label}
+        {mark && <span aria-hidden>{mark}</span>}
       </button>
       <BottomSheet open={open} onClose={close} labelledBy="shadow-sheet-title">
-        <ShadowPanel text={text} vi={vi} names={names} onClose={close} />
+        <ShadowPanel {...line} onClose={close} onResult={onResult} />
       </BottomSheet>
     </>
   );
@@ -52,7 +78,13 @@ type Phase =
 type Speed = "normal" | "slow";
 
 /** The sheet's content. Unmounted when the sheet closes, which cancels listening and speech. */
-function ShadowPanel({ text, vi, names, onClose }: Props & { onClose: () => void }) {
+function ShadowPanel({
+  text,
+  vi,
+  names,
+  onClose,
+  onResult,
+}: Line & { onClose: () => void; onResult: (result: ShadowResult) => void }) {
   const [phase, setPhase] = useState<Phase>({ kind: "ready" });
   const [speaking, setSpeaking] = useState<Speed | null>(null);
   const session = useRef<RecognitionSession | null>(null);
@@ -83,7 +115,11 @@ function ShadowPanel({ text, vi, names, onClose }: Props & { onClose: () => void
     const outcome = await current.result;
     if (session.current !== current) return; // cancelled or replaced
     session.current = null;
-    if (outcome.ok) setPhase({ kind: "result", result: checkShadow(text, outcome.alternatives, names) });
+    if (outcome.ok) {
+      const result = checkShadow(text, outcome.alternatives, names);
+      onResult(result);
+      setPhase({ kind: "result", result });
+    }
     else if (outcome.reason === "no-speech") setPhase({ kind: "result", result: checkShadow(text, [], names) });
     else if (outcome.reason === "aborted") setPhase({ kind: "ready" });
     else setPhase({ kind: "failed", reason: outcome.reason });

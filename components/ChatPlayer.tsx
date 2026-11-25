@@ -143,7 +143,13 @@ function ChatSession({ storyId, page, totalPages, glossary, nextTitle }: Props) 
         {!typing && isAwaitingChoice(page, play) && node.type === "choice" ? (
           <ChoiceButtons key={node.id} node={node} onChoose={(i) => goTo(choose(page, play, i))} />
         ) : !typing && isPageEnd(page, play) ? (
-          <PageEnd storyId={storyId} pageNumber={page.page} totalPages={totalPages} nextTitle={nextTitle} />
+          <PageEnd
+            storyId={storyId}
+            pageNumber={page.page}
+            totalPages={totalPages}
+            nextTitle={nextTitle}
+            shadow={shadowLine(page)}
+          />
         ) : (
           <button
             type="button"
@@ -200,13 +206,29 @@ function StepView({ step, page, previous, groupChat }: StepViewProps) {
         footer={
           node.type === "shadow" ? (
             <ShadowPractice
+              storyId={page.storyId}
+              page={page.page}
+              nodeId={node.id}
               text={node.text}
               vi={node.vi}
-              names={Object.values(page.characters).map((c) => c.name)}
+              names={characterNames(page)}
             />
           ) : undefined
         }
       />
     </div>
   );
+}
+
+/** Every character name on the page (for lenient shadowing checks). */
+function characterNames(page: Page): string[] {
+  return Object.values(page.characters).map((c) => c.name);
+}
+
+/** The page's shadow line (each page has one), shaped for the end-of-page screen. */
+function shadowLine(page: Page) {
+  const node = page.nodes.find((n) => n.type === "shadow");
+  return node?.type === "shadow"
+    ? { nodeId: node.id, text: node.text, vi: node.vi, names: characterNames(page) }
+    : undefined;
 }

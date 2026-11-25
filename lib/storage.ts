@@ -6,6 +6,8 @@ import { z } from "zod";
 import type { PlayState } from "./engine.ts";
 
 const STORAGE_KEY = "tlp:progress";
+/** Fired on window after every save, so this tab's views can update too. */
+const CHANGE_EVENT = "tlp:progress-change";
 
 const PageNumber = z.number().int().min(1);
 
@@ -20,6 +22,8 @@ const StoryProgressSchema = z.object({
   completedPages: z.array(PageNumber),
   /** Where the learner is inside an unfinished page. */
   play: SavedPlaySchema.optional(),
+  /** Best shadowing score (0–1) per line, keyed by `shadowKey(page, nodeId)`. */
+  shadow: z.record(z.string(), z.number().min(0).max(1)).optional(),
 });
 
 const ProgressSchema = z.object({
@@ -60,19 +64,24 @@ export function readProgress(): Progress {
   return parseProgress(readProgressRaw());
 }
 
-/** Call `onChange` when progress changes in another tab. Returns an unsubscribe function. */
+/** Call `onChange` when progress changes, in this tab or another. Returns an unsubscribe function. */
 export function subscribeProgress(onChange: () => void): () => void {
-  const listener = (e: StorageEvent) => {
+  const fromOtherTab = (e: StorageEvent) => {
     if (e.key === null || e.key === STORAGE_KEY) onChange();
   };
-  window.addEventListener("storage", listener);
-  return () => window.removeEventListener("storage", listener);
+  window.addEventListener("storage", fromOtherTab);
+  window.addEventListener(CHANGE_EVENT, onChange);
+  return () => {
+    window.removeEventListener("storage", fromOtherTab);
+    window.removeEventListener(CHANGE_EVENT, onChange);
+  };
 }
 
 /** Save progress. Returns false if storage is unavailable; the app keeps working without it. */
 export function writeProgress(progress: Progress): boolean {
   try {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+    window.dispatchEvent?.(new Event(CHANGE_EVENT));
     return true;
   } catch {
     return false;
@@ -101,8 +110,24 @@ export function savePlay(storyId: string, page: number, state: PlayState): boole
 
 /** Mark a chat page as finished and forget the in-page position. */
 export function completePage(storyId: string, page: number): boolean {
+  return updateStory(storyId, ({ play, ...story }) => {
+    void play;
+    return { ...story, completedPages: [...new Set([...story.completedPages, page])].sort((a, b) => a - b) };
+  });
+}
+
+/** Key for one shadow line in `StoryProgress.shadow`. */
+export function shadowKey(page: number, nodeId: string): string {
+  return `${page}/${nodeId}`;
+}
+
+/** Remember a shadowing attempt; only the best score per line is kept. */
+export function saveShadow(storyId: string, page: number, nodeId: string, score: number): boolean {
+  const key = shadowKey(page, nodeId);
+  const clamped = Math.min(1, Math.max(0, score));
   return updateStory(storyId, (story) => ({
-    completedPages: [...new Set([...story.completedPages, page])].sort((a, b) => a - b),
+    ...story,
+    shadow: { ...story.shadow, [key]: Math.max(story.shadow?.[key] ?? 0, clamped) },
   }));
 }
 
