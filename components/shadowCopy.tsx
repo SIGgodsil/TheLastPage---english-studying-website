@@ -51,6 +51,8 @@ export const FAILURE: Record<Exclude<RecognitionFailure, "aborted">, string> = {
     "Micro đã bật nhưng chưa thu được tiếng nào. Có thể trình duyệt đang dùng nhầm micro: bấm biểu tượng 🎙️ trên thanh địa chỉ để chọn đúng micro, hoặc kiểm tra micro trong cài đặt của máy nhé.",
   unclear:
     "Mình nghe thấy tiếng bạn nhưng chưa nhận ra từ nào. Bạn thử nói chậm, rõ và gần micro hơn nhé. Trình duyệt cần mạng để nhận giọng nói, nên bạn kiểm tra cả kết nối mạng nữa.",
+  "no-reply":
+    "Micro đã thu được giọng bạn, nhưng dịch vụ nhận giọng nói của trình duyệt không trả lời. Thường là do trình duyệt (Cốc Cốc, Brave, Opera… không có dịch vụ này) hoặc do VPN, tường lửa chặn. Bạn thử mở bằng Chrome hoặc Edge, và tắt VPN nếu đang bật nhé.",
   network: "Chưa kết nối được dịch vụ nhận giọng nói của trình duyệt. Bạn kiểm tra mạng rồi thử lại nhé.",
   error: "Có chút trục trặc khi ghi âm. Bạn thử lại nhé.",
 };

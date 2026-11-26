@@ -54,6 +54,7 @@ export type RecognitionFailure =
   | "no-audio" // the microphone never started recording
   | "quiet" // recording, but no sound reached the microphone
   | "unclear" // sound was heard, but no words were recognised
+  | "no-reply" // speech was captured, but the speech service never answered
   | "network" // the browser's speech service could not be reached
   | "aborted" // stopped by the app
   | "error"; // anything else
@@ -136,7 +137,8 @@ export function listen({ lang = "en-US", maxSeconds = 8, onInterim, onStage }: L
     resolveResult(outcome);
   };
 
-  const outcomeSoFar = (): RecognitionOutcome => {
+  /** `timedOut`: the browser never ended the session after stop(), so its service never answered. */
+  const outcomeSoFar = (timedOut = false): RecognitionOutcome => {
     // Build each alternative across all final results ("first part" + "second part").
     const count = Math.max(0, ...finals.map((r) => r.length));
     const alternatives = Array.from({ length: count }, (_, i) =>
@@ -146,6 +148,7 @@ export function listen({ lang = "en-US", maxSeconds = 8, onInterim, onStage }: L
     if (heard) return { ok: true, alternatives: [heard] };
     const trace = events.join(" · ");
     if (failure) return { ok: false, reason: failure, trace };
+    if (timedOut && stage === "sound") return { ok: false, reason: "no-reply", trace };
     return { ok: false, reason: stage === "starting" ? "no-audio" : stage === "recording" ? "quiet" : "unclear", trace };
   };
 
@@ -204,7 +207,7 @@ export function listen({ lang = "en-US", maxSeconds = 8, onInterim, onStage }: L
     }
     grace = setTimeout(() => {
       note("no-end");
-      settle(outcomeSoFar());
+      settle(outcomeSoFar(true));
       abort();
     }, STOP_GRACE_MS);
   };
