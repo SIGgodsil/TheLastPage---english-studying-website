@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "reac
 import { insertSnippet, usedWords, wordCount } from "@/lib/ending";
 import type { LastPage } from "@/lib/schema";
 import { saveEnding, storyProgress } from "@/lib/storage";
+import EndingFeedback from "./EndingFeedback";
 import { MoodPicker, StarterChips, WordBank, WordCounter, type Mood } from "./EndingParts";
 
 type Props = {
@@ -12,6 +13,8 @@ type Props = {
   moods: LastPage["moods"];
   starters: string[];
   wordBank: LastPage["wordBank"];
+  /** Character names from the story, so they are not flagged as spelling mistakes. */
+  names: string[];
 };
 
 const noSubscribe = () => () => {};
@@ -33,7 +36,7 @@ export default function LastPageWriter(props: Props) {
 
 type SaveState = "idle" | "saved" | "failed";
 
-function Writer({ storyId, pattern, moods, starters, wordBank }: Props) {
+function Writer({ storyId, pattern, moods, starters, wordBank, names }: Props) {
   const [initial] = useState(() => storyProgress(storyId).ending);
   const [mood, setMood] = useState<Mood | undefined>(initial?.mood);
   const [text, setText] = useState(initial?.text ?? "");
@@ -45,6 +48,7 @@ function Writer({ storyId, pattern, moods, starters, wordBank }: Props) {
   const count = wordCount(text);
   const bankWords = useMemo(() => wordBank.map((w) => w.word), [wordBank]);
   const used = useMemo(() => usedWords(text, bankWords), [text, bankWords]);
+  const knownWords = useMemo(() => [...names, ...bankWords], [names, bankWords]);
 
   // Save the draft shortly after the learner stops typing, and when leaving.
   const latest = useRef({ mood, text });
@@ -85,6 +89,15 @@ function Writer({ storyId, pattern, moods, starters, wordBank }: Props) {
     dirty.current = true;
     setSaveState("idle");
     setText(next);
+  };
+
+  /** Replace the whole text (a feedback fix); a cursor focuses the box there. */
+  const replace = (next: string, cursor?: number) => {
+    if (cursor !== undefined) {
+      pendingCursor.current = cursor;
+      touched.current = true;
+    }
+    edit(next);
   };
 
   const insert = (snippet: string) => {
@@ -139,6 +152,8 @@ function Writer({ storyId, pattern, moods, starters, wordBank }: Props) {
         />
         <WordCounter count={count} />
       </section>
+
+      <EndingFeedback text={text} pattern={pattern} bank={bankWords} knownWords={knownWords} onChange={replace} />
 
       <section aria-label="Từ của câu chuyện">
         <WordBank words={wordBank} used={used} onInsert={insert} />

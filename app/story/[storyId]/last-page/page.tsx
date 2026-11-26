@@ -3,7 +3,7 @@ import { cacheLife } from "next/cache";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import { loadLastPage, loadStories, loadStory } from "@/lib/content";
+import { loadLastPage, loadPages, loadStories, loadStory } from "@/lib/content";
 import { pageHref } from "@/lib/links";
 import LastPageWriter from "@/components/LastPageWriter";
 
@@ -20,8 +20,10 @@ export async function generateStaticParams() {
 async function getLastPage(storyId: string) {
   "use cache";
   cacheLife("max");
-  const [story, lastPage] = await Promise.all([loadStory(storyId), loadLastPage(storyId)]);
-  return story && lastPage ? { story, lastPage } : null;
+  const [story, lastPage, pages] = await Promise.all([loadStory(storyId), loadLastPage(storyId), loadPages(storyId)]);
+  if (!story || !lastPage || !pages) return null;
+  const names = [...new Set(pages.flatMap((p) => Object.values(p.characters).map((c) => c.name)))];
+  return { story, lastPage, names };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -44,7 +46,7 @@ async function LastPageScreen({ params }: Pick<Props, "params">) {
   const { storyId } = await params;
   const data = await getLastPage(storyId);
   if (!data) notFound();
-  const { story, lastPage } = data;
+  const { story, lastPage, names } = data;
 
   return (
     <div className="flex flex-1 flex-col gap-6">
@@ -81,6 +83,7 @@ async function LastPageScreen({ params }: Pick<Props, "params">) {
         moods={lastPage.moods}
         starters={lastPage.starters}
         wordBank={lastPage.wordBank}
+        names={names}
       />
     </div>
   );
