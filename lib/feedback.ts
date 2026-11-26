@@ -121,8 +121,27 @@ function looksLikeName(text: string, offset: number): boolean {
 }
 
 /**
+ * True if the fix would change a name into another word, e.g. "say sorry to
+ * Hung" → "to Hang" (LanguageTool reads the name as the verb "hung"). A name
+ * is a capitalised word that is a known word (a character) or sits in the
+ * middle of a sentence (one the learner invented).
+ */
+function rewritesName(text: string, offset: number, flagged: string, replacements: string[], known: Set<string>): boolean {
+  for (const m of flagged.matchAll(/\p{Lu}[\p{L}'’-]*/gu)) {
+    const name = m[0];
+    if (name === "I" || name.startsWith("I'") || name.startsWith("I’")) continue; // the pronoun, not a name
+    const isName = known.has(name.toLowerCase()) || looksLikeName(text, offset + m.index);
+    if (!isName) continue;
+    const keeps = (r: string) => new RegExp(`(^|[^\\p{L}])${name}($|[^\\p{L}])`, "u").test(r);
+    if (replacements.length === 0 || !replacements.every(keeps)) return true;
+  }
+  return false;
+}
+
+/**
  * LanguageTool matches as fixes. Spelling flags on `knownWords` (character
- * names, the story's own words) are dropped: they are not mistakes here.
+ * names, the story's own words) are dropped: they are not mistakes here. No
+ * fix may rewrite a name, whatever kind it is.
  */
 export function languageToolFixes(text: string, matches: CheckMatch[], knownWords: string[] = []): Fix[] {
   const known = new Set(knownWords.flatMap((w) => tokens(w)));
@@ -133,6 +152,7 @@ export function languageToolFixes(text: string, matches: CheckMatch[], knownWord
     const flagged = text.slice(match.offset, match.offset + match.length);
     if (!flagged || match.offset < 0 || match.offset + match.length > text.length) continue;
     if (kind === "spelling" && (tokens(flagged).every((t) => known.has(t)) || looksLikeName(text, match.offset))) continue;
+    if (kind !== "capital" && rewritesName(text, match.offset, flagged, match.replacements, known)) continue;
     fixes.push({
       kind,
       offset: match.offset,

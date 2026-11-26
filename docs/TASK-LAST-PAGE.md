@@ -60,3 +60,5 @@ Built in **phases**, each ending with `npm run lint` and `npm run build` passing
 
 ## Notes
 
+- 2026-11-26: LanguageTool suggested "sorry to Hung" → "to Hang" (it read the name as the verb). Now no LanguageTool fix may rewrite a name, whatever its kind: a known character name, or a capitalised word in the middle of a sentence. Capital-letter fixes still apply.
+
