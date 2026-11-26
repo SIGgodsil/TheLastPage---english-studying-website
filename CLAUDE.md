@@ -51,7 +51,7 @@ docs/PRODUCT.md         # product spec and roadmap
 - Background (paper ivory): `#F7F3EA`
 - Text (ink): `#2B2420`
 - Accent (wine red): `#8B2E2E`
-- Headings: Playfair Display or Lora (serif). Chat and UI: Inter (sans-serif). Load fonts with `next/font`.
+- Typeface: **Times New Roman** for everything (headings, chat and UI), with Tinos via `next/font` as the fallback where it is not installed. Full design rules: `docs/DESIGN.md`.
 - Tone: calm, literary, warm. No harsh red error states: mistakes are shown kindly.
 
 ## UX principles

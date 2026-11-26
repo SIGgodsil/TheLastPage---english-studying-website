@@ -1,22 +1,123 @@
 @import "tailwindcss";
 
-/* Design tokens (see CLAUDE.md). The app is always light: paper and ink. */
+/*
+ * Design tokens (see CLAUDE.md and docs/DESIGN.md). The app is always light:
+ * paper and ink. One typeface, Times New Roman, carries every role; hierarchy
+ * comes from size, italics, small tracked capitals and hairline rules.
+ */
 @theme {
   --color-paper: #f7f3ea;
   --color-ink: #2b2420;
   --color-wine: #8b2e2e;
-  --color-muted: #7a6f66;
-  --color-line: #e4dccd;
+  --color-wine-deep: #6f2323;
+  --color-muted: #6e645b;
+  --color-line: #ddd3c2;
   --color-card: #fffdf8;
-  --font-serif: var(--font-lora), Georgia, serif;
-  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  /* Times New Roman where installed (Windows, macOS, iOS); Tinos, its metric twin, elsewhere (Android). */
+  --font-times: "Times New Roman", Times, var(--font-tinos), "Liberation Serif", serif;
+  --font-serif: var(--font-times);
+  --font-sans: var(--font-times);
 }
 
 :root {
   color-scheme: light;
+  /* Times New Roman has a small x-height: a slightly larger root keeps it readable on phones. */
+  font-size: 17px;
 }
 
 body {
   background: var(--color-paper);
   color: var(--color-ink);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: color-mix(in srgb, var(--color-wine) 12%, transparent);
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-wine) 18%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-wine);
+  outline-offset: 2px;
+}
+
+/* Small tracked capitals: section labels, metadata. */
+@utility eyebrow {
+  font-size: 0.7rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* The one decisive action on a view. */
+@utility btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 2px;
+  background: var(--color-wine);
+  color: var(--color-paper);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition:
+    background-color 150ms,
+    transform 150ms;
+  &:hover {
+    background: var(--color-wine-deep);
+  }
+  &:active {
+    transform: scale(0.99);
+  }
+  &:disabled {
+    background: var(--color-line);
+    color: var(--color-muted);
+    cursor: not-allowed;
+  }
+}
+
+/* A quieter action next to a primary one. */
+@utility btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.7rem 1.5rem;
+  border: 1px solid var(--color-ink);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--color-ink);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition:
+    background-color 150ms,
+    color 150ms;
+  &:hover {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+  &:disabled {
+    border-color: var(--color-line);
+    color: var(--color-muted);
+    background: transparent;
+    cursor: not-allowed;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

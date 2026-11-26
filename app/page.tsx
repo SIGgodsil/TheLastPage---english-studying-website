@@ -12,14 +12,18 @@ async function getStories() {
 export default async function Home() {
   const stories = await getStories();
   return (
-    <main className="mx-auto w-full max-w-xl px-4 pt-6 pb-12">
-      <header className="mb-5">
-        <h1 className="font-serif text-2xl font-semibold tracking-tight">
-          <span aria-hidden>📖 </span>The Last Page
-        </h1>
-        <p className="font-serif text-sm text-muted italic">Turn to the last page — and change it.</p>
+    <main className="mx-auto w-full max-w-xl px-5 pt-7 pb-16">
+      <header className="text-center">
+        <p className="eyebrow text-muted">Truyện ma kinh điển · Tiếng Anh A2–B1</p>
+        <h1 translate="no" className="mt-2 text-[2.6rem] leading-none tracking-tight">The Last Page</h1>
+        <p className="mt-2 text-muted italic">Turn to the last page — and change it.</p>
+        <div aria-hidden className="mt-5 border-t-2 border-ink" />
+        <div aria-hidden className="mt-[3px] border-t border-ink" />
       </header>
       <StoryShelf stories={stories} />
+      <footer className="mt-14 border-t border-line pt-4 text-center text-sm text-muted italic">
+        Miễn phí · Không quảng cáo · Không cần đăng ký
+      </footer>
     </main>
   );
 }

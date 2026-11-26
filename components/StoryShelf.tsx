@@ -50,22 +50,24 @@ export default function StoryShelf({ stories }: Props) {
     <>
       <ContinueCard story={target} status={statusOf(progress, target)} />
 
-      <h2 className="mt-10 font-serif text-2xl font-semibold">Tủ truyện</h2>
-      <p className="mt-1 text-sm text-muted">
-        {stories.length} truyện ma kinh điển, mỗi cặp một truyện Việt và một truyện phương Tây.
-      </p>
+      <div className="mt-12 flex items-baseline justify-between gap-4 border-b border-ink pb-2">
+        <h2 className="text-2xl">Tủ truyện</h2>
+        <p className="eyebrow text-muted">{stories.length} truyện</p>
+      </div>
+      <p className="mt-3 text-muted italic">Mỗi cặp một truyện Việt và một truyện phương Tây, cùng một đề tài.</p>
 
       {pairs.map((pair) => {
         const inPair = stories.filter((s) => s.pair === pair);
         return (
-          <section key={pair} className="mt-6" aria-labelledby={`pair-${pair}`}>
-            <h3 id={`pair-${pair}`} className="mb-2 text-xs font-medium tracking-wide text-muted uppercase">
+          <section key={pair} className="mt-8" aria-labelledby={`pair-${pair}`}>
+            <h3 id={`pair-${pair}`} className="eyebrow flex items-center gap-3 text-wine">
               {inPair[0].themeVi}
+              <span aria-hidden className="h-px flex-1 bg-line" />
             </h3>
-            <ul className="flex flex-col gap-2">
+            <ul className="mt-1 divide-y divide-line">
               {inPair.map((story) => (
                 <li key={story.id}>
-                  <StoryCard story={story} status={statusOf(progress, story)} />
+                  <StoryRow story={story} status={statusOf(progress, story)} />
                 </li>
               ))}
             </ul>
@@ -87,70 +89,75 @@ function ContinueCard({ story, status }: { story: StoryMeta; status: Status }) {
   const reading = status.state === "reading";
   const copy = CONTINUE_COPY[status.state];
   return (
-    <section className="rounded-3xl bg-ink p-5 text-paper shadow-lg">
-      <p className="text-xs font-medium tracking-wide text-paper/70 uppercase">{copy.eyebrow}</p>
-      <h2 className="mt-2 font-serif text-2xl font-semibold">{story.title}</h2>
-      <p className="font-serif text-paper/80 italic">{story.titleVi}</p>
+    <section className="mt-8 bg-ink px-5 py-6 text-paper" aria-labelledby="continue-title">
+      <p className="eyebrow text-paper/65">{copy.eyebrow}</p>
+      <h2 id="continue-title" className="mt-3 text-[1.9rem] leading-tight">
+        {story.title}
+      </h2>
+      <p className="mt-1 text-paper/75 italic">{story.titleVi}</p>
+      <div aria-hidden className="mt-4 border-t border-paper/20" />
       {reading ? (
         <div className="mt-4">
           <Bar done={status.done} total={story.pages} dark />
-          <p className="mt-1.5 text-sm text-paper/70">
+          <p className="mt-2 text-sm text-paper/70">
             Đã đọc {status.done}/{story.pages} trang
           </p>
         </div>
       ) : status.state === "writing" ? (
-        <p className="mt-3 text-sm text-paper/70">
-          Bạn đã đọc hết {story.pages} trang. Giờ hãy viết đoạn kết của riêng bạn.
-        </p>
+        <p className="mt-4 text-paper/75">Bạn đã đọc hết {story.pages} trang. Giờ hãy viết đoạn kết của riêng bạn.</p>
       ) : (
-        <p className="mt-3 text-sm text-paper/70">
-          {story.themeVi} · {story.source}
+        <p className="mt-4 text-paper/75">
+          {story.themeVi} · <span className="italic">{story.source}</span>
         </p>
       )}
-      <Link
-        href={status.href}
-        className="mt-5 block w-full rounded-full bg-wine px-6 py-3 text-center font-medium text-paper transition active:scale-[0.98]"
-      >
-        {copy.button(status.next)} →
+      <Link href={status.href} className="btn-primary mt-5 w-full text-lg">
+        {copy.button(status.next)} <span aria-hidden>→</span>
       </Link>
     </section>
   );
 }
 
-function StoryCard({ story, status }: { story: StoryMeta; status: Status }) {
-  const label = {
+const STATUS_LABEL = (story: StoryMeta, status: Status): string =>
+  ({
     new: "Chưa đọc",
     reading: `Đang đọc · trang ${status.next}/${story.pages}`,
-    writing: "Chờ viết đoạn kết ✍️",
+    writing: "Chờ viết đoạn kết",
     finished: "Hoàn thành ✓",
-  }[status.state];
+  })[status.state];
 
+/** One story as a row on the shelf, like a contents page. */
+function StoryRow({ story, status }: { story: StoryMeta; status: Status }) {
+  const active = status.state !== "new";
   return (
-    <Link
-      href={status.href}
-      className="block rounded-2xl border border-line bg-card px-4 py-3 transition hover:border-wine/50 active:scale-[0.99]"
-    >
-      <div className="flex items-start justify-between gap-3">
-        <div className="min-w-0">
-          <p className="font-serif text-lg leading-snug font-semibold">{story.title}</p>
-          <p className="text-sm text-muted">{story.titleVi}</p>
-        </div>
-        <span className="shrink-0 text-sm" role="img" aria-label={`Độ sợ ${story.fearLevel}/3`}>
-          {"🕯️".repeat(story.fearLevel)}
-        </span>
+    <Link href={status.href} className="group block py-4 transition-colors hover:bg-card/70">
+      <div className="flex items-baseline justify-between gap-3">
+        <p className="eyebrow text-muted">
+          {story.origin === "vn" ? "Việt Nam" : "Phương Tây"} · {story.level}
+        </p>
+        <Fear level={story.fearLevel} />
       </div>
-      <div className="mt-2 flex items-center justify-between gap-3 text-xs text-muted">
-        <span>
-          {story.origin === "vn" ? "Truyện Việt Nam" : "Truyện phương Tây"} · {story.level}
-        </span>
-        <span className={status.state === "new" ? undefined : "font-medium text-wine"}>{label}</span>
+      <p className="mt-1.5 text-xl leading-snug group-hover:text-wine">{story.title}</p>
+      <p className="text-muted italic">{story.titleVi}</p>
+      <div className="mt-2 flex items-center gap-3">
+        <p className={`text-sm ${active ? "font-bold text-wine" : "text-muted"}`}>{STATUS_LABEL(story, status)}</p>
+        {status.state === "reading" && (
+          <div className="w-24">
+            <Bar done={status.done} total={story.pages} />
+          </div>
+        )}
       </div>
-      {status.state === "reading" && (
-        <div className="mt-2">
-          <Bar done={status.done} total={story.pages} />
-        </div>
-      )}
     </Link>
+  );
+}
+
+/** How frightening a story is, out of 3. */
+function Fear({ level }: { level: number }) {
+  return (
+    <span className="flex items-center gap-1" role="img" aria-label={`Độ sợ ${level}/3`}>
+      {[1, 2, 3].map((i) => (
+        <span key={i} className={`size-1.5 rotate-45 ${i <= level ? "bg-wine" : "bg-line"}`} />
+      ))}
+    </span>
   );
 }
 
@@ -160,7 +167,7 @@ function Bar({ done, total, dark }: { done: number; total: number; dark?: boolea
       {Array.from({ length: total }, (_, i) => (
         <span
           key={i}
-          className={`h-1.5 flex-1 rounded-full ${i < done ? "bg-wine" : dark ? "bg-paper/20" : "bg-line"}`}
+          className={`h-1 flex-1 ${i < done ? (dark ? "bg-paper" : "bg-wine") : dark ? "bg-paper/20" : "bg-line"}`}
         />
       ))}
     </div>

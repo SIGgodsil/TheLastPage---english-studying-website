@@ -1,15 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Lora } from "next/font/google";
+import { Tinos } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+// The app is set in Times New Roman. Devices without it (Android) get Tinos,
+// a metric-compatible twin. It is not preloaded, so browsers that have Times
+// New Roman never download it.
+const tinos = Tinos({
+  variable: "--font-tinos",
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
   subsets: ["latin", "vietnamese"],
-});
-
-const lora = Lora({
-  variable: "--font-lora",
-  subsets: ["latin", "vietnamese"],
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="vi" className={`${inter.variable} ${lora.variable} h-full antialiased`}>
+    <html lang="vi" className={`${tinos.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col font-sans">{children}</body>
     </html>
   );
