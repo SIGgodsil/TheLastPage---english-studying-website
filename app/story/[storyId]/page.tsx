@@ -42,7 +42,7 @@ const HOW_TO: { title: string; text: string }[] = [
   { title: "Đọc", text: "Tin nhắn hiện ra từng cái một. Bấm “Tiếp” để đọc tin tiếp theo." },
   {
     title: "Tra từ",
-    text: "Từ có gạch chấm là từ mới: bấm vào để xem nghĩa. Bấm “Dịch” dưới tin nhắn nếu cần bản tiếng Việt.",
+    text: "Bấm vào bất kỳ từ nào để xem nghĩa ngay. Từ có gạch chấm là từ mới quan trọng của truyện.",
   },
   {
     title: "Trả lời",

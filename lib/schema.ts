@@ -273,6 +273,23 @@ export const LastPageSchema = z.object({
 
 export type LastPage = z.infer<typeof LastPageSchema>;
 
+// ---------- Dictionary (content/dictionary.json) ----------
+// Every word a learner can tap, beyond the story key words. Keys are base forms
+// or short phrases in lowercase ("bury", "take care of"). Regular forms (-s, -ed,
+// -ing, -er) are derived in lib/dictionary.ts; `forms` lists the irregular ones.
+
+export const DictionaryEntrySchema = z.object({
+  vi: ViText,
+  en: z.string().min(1).optional(),
+  ipa: z.string().regex(/^\/[^/\s][^/]*\/$/).optional(),
+  forms: z.array(z.string().regex(/^[a-z][a-z' -]*$/)).optional(),
+});
+
+export const DictionarySchema = z.record(z.string().regex(/^[a-z][a-z' -]*$/), DictionaryEntrySchema);
+
+export type DictionaryEntry = z.infer<typeof DictionaryEntrySchema>;
+export type Dictionary = z.infer<typeof DictionarySchema>;
+
 // ---------- Stories manifest (content/stories.json) ----------
 
 export const StoryMetaSchema = z.object({

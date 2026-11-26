@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import {
   advance,
   choose,
@@ -14,8 +14,9 @@ import {
   type Step,
 } from "@/lib/engine";
 import type { Page, StoryNode } from "@/lib/schema";
+import type { PageWords } from "@/lib/dictionary";
 import type { Glossary } from "@/lib/vocab";
-import { completePage, savePlay, storyProgress } from "@/lib/storage";
+import { completePage, markWordTipSeen, savePlay, storyProgress, wordTipSeen } from "@/lib/storage";
 import ChatBubble from "./ChatBubble";
 import ChoiceButtons from "./ChoiceButtons";
 import NarrationLine from "./NarrationLine";
@@ -30,6 +31,8 @@ type Props = {
   totalPages: number;
   /** Vocab from this page and earlier ones, for tap-to-understand. */
   glossary: Glossary;
+  /** Every other tappable word on this page, from the dictionary. */
+  words: PageWords;
   /** Title of the next page, for the end-of-page teaser. */
   nextTitle?: string;
 };
@@ -72,8 +75,10 @@ function typingDelay(text: string): number {
   return Math.min(1500, 450 + text.length * 15);
 }
 
-function ChatSession({ storyId, page, totalPages, glossary, nextTitle }: Props) {
+function ChatSession({ storyId, page, totalPages, glossary, words, nextTitle }: Props) {
   const [play, setPlay] = useState(() => initialState(storyId, page));
+  const [showTip, setShowTip] = useState(() => !wordTipSeen());
+  const hideTip = useCallback(() => setShowTip(false), []);
   const [typing, setTyping] = useState(false);
   const timer = useRef<number | null>(null);
 
@@ -118,7 +123,15 @@ function ChatSession({ storyId, page, totalPages, glossary, nextTitle }: Props) 
   const groupChat = Object.keys(page.characters).length > 1;
 
   return (
-    <WordProvider glossary={glossary} pageNumber={page.page}>
+    <WordProvider glossary={glossary} words={words} pageNumber={page.page} onFirstWord={hideTip}>
+      {showTip && (
+        <WordTip
+          onDismiss={() => {
+            markWordTipSeen();
+            hideTip();
+          }}
+        />
+      )}
       <div role="log" aria-live="polite" className="flex flex-1 flex-col gap-2.5 px-3 pt-5 pb-8">
         {steps.map((step, i) => {
           const isLast = i === steps.length - 1;
@@ -231,4 +244,24 @@ function shadowLine(page: Page) {
   return node?.type === "shadow"
     ? { nodeId: node.id, text: node.text, vi: node.vi, names: characterNames(page) }
     : undefined;
+}
+
+/** A one-time tip above the chat: every word can be tapped. */
+function WordTip({ onDismiss }: { onDismiss: () => void }) {
+  return (
+    <div className="mx-3 mt-4 flex items-start gap-3 rounded-2xl border border-wine/25 bg-wine/[0.05] px-4 py-3">
+      <span aria-hidden className="text-lg leading-snug">💡</span>
+      <p className="flex-1 leading-snug">
+        Không hiểu từ nào, <span className="font-bold">bấm vào từ đó</span> để xem nghĩa ngay. Từ có gạch chấm là từ
+        mới quan trọng của truyện.
+      </p>
+      <button
+        type="button"
+        onClick={onDismiss}
+        className="shrink-0 rounded-full px-2.5 py-1 text-sm text-wine italic transition-colors hover:bg-wine/10"
+      >
+        Đã hiểu
+      </button>
+    </div>
+  );
 }

@@ -1,0 +1,2367 @@
+{
+ "a few": {
+  "vi": "một vài"
+ },
+ "a little": {
+  "vi": "một chút"
+ },
+ "about": {
+  "vi": "về; khoảng"
+ },
+ "above": {
+  "vi": "ở trên, phía trên"
+ },
+ "accident": {
+  "vi": "tai nạn",
+  "en": "something bad that happens suddenly; people may get hurt",
+  "ipa": "/ˈæksədənt/"
+ },
+ "add": {
+  "vi": "thêm (vào)"
+ },
+ "afraid": {
+  "vi": "sợ hãi",
+  "en": "feeling fear; scared",
+  "ipa": "/əˈfreɪd/"
+ },
+ "after": {
+  "vi": "sau, sau khi"
+ },
+ "afternoon": {
+  "vi": "buổi chiều"
+ },
+ "again": {
+  "vi": "lại, lần nữa"
+ },
+ "ago": {
+  "vi": "cách đây, trước đây"
+ },
+ "air": {
+  "vi": "không khí"
+ },
+ "alive": {
+  "vi": "còn sống",
+  "en": "living; not dead",
+  "ipa": "/əˈlaɪv/"
+ },
+ "all": {
+  "vi": "tất cả"
+ },
+ "almost": {
+  "vi": "gần như, suýt"
+ },
+ "alone": {
+  "vi": "một mình"
+ },
+ "along": {
+  "vi": "dọc theo"
+ },
+ "already": {
+  "vi": "đã… rồi"
+ },
+ "also": {
+  "vi": "cũng"
+ },
+ "altar": {
+  "vi": "bàn thờ",
+  "en": "a table for gifts and prayers to gods or spirits",
+  "ipa": "/ˈɑːltɚ/"
+ },
+ "always": {
+  "vi": "luôn luôn"
+ },
+ "angry": {
+  "vi": "tức giận"
+ },
+ "animal": {
+  "vi": "con vật, động vật"
+ },
+ "ankle": {
+  "vi": "mắt cá chân; cổ chân",
+  "en": "the part between your foot and your leg",
+  "ipa": "/ˈæŋkəl/"
+ },
+ "another": {
+  "vi": "một… khác; thêm một"
+ },
+ "answer": {
+  "vi": "trả lời; câu trả lời"
+ },
+ "any": {
+  "vi": "nào, chút nào (trong câu hỏi, câu phủ định)"
+ },
+ "anymore": {
+  "vi": "nữa (not… anymore: không… nữa)"
+ },
+ "anyone": {
+  "vi": "bất kỳ ai; có ai (trong câu hỏi)"
+ },
+ "anything": {
+  "vi": "bất cứ điều gì; gì (trong câu hỏi)"
+ },
+ "anywhere": {
+  "vi": "bất cứ đâu"
+ },
+ "appear": {
+  "vi": "xuất hiện, hiện ra"
+ },
+ "aren't": {
+  "vi": "không phải, không (= are not)"
+ },
+ "arm": {
+  "vi": "cánh tay"
+ },
+ "around": {
+  "vi": "xung quanh"
+ },
+ "arrive": {
+  "vi": "đến nơi"
+ },
+ "as": {
+  "vi": "như; khi"
+ },
+ "ask": {
+  "vi": "hỏi; nhờ, xin"
+ },
+ "asleep": {
+  "vi": "đang ngủ"
+ },
+ "awake": {
+  "vi": "còn thức, tỉnh"
+ },
+ "away": {
+  "vi": "đi xa, ra xa, mất"
+ },
+ "baby": {
+  "vi": "em bé"
+ },
+ "back": {
+  "vi": "trở lại; phía sau; lưng"
+ },
+ "bad": {
+  "vi": "xấu, tệ"
+ },
+ "badly": {
+  "vi": "nặng, tệ (Not badly: không nặng lắm)"
+ },
+ "ball": {
+  "vi": "quả bóng; khối tròn (a ball of fire: quả cầu lửa)"
+ },
+ "ball of fire": {
+  "vi": "quả cầu lửa"
+ },
+ "bang": {
+  "vi": "tiếng rầm; đập mạnh"
+ },
+ "bank": {
+  "vi": "bờ sông",
+  "en": "the land at the side of a river",
+  "ipa": "/bæŋk/"
+ },
+ "beard": {
+  "vi": "râu",
+  "en": "hair that grows on a man's chin and face",
+  "ipa": "/bɪrd/"
+ },
+ "beat": {
+  "vi": "đập (tim đập); đánh",
+  "forms": [
+   "beaten"
+  ]
+ },
+ "beautiful": {
+  "vi": "đẹp"
+ },
+ "become": {
+  "vi": "trở thành, trở nên",
+  "forms": [
+   "became"
+  ]
+ },
+ "bed": {
+  "vi": "giường"
+ },
+ "before": {
+  "vi": "trước, trước khi"
+ },
+ "begin": {
+  "vi": "bắt đầu",
+  "forms": [
+   "began",
+   "begun"
+  ]
+ },
+ "behind": {
+  "vi": "phía sau"
+ },
+ "believe": {
+  "vi": "tin"
+ },
+ "belong": {
+  "vi": "thuộc về"
+ },
+ "best": {
+  "vi": "tốt nhất, giỏi nhất (best friend: bạn thân nhất)"
+ },
+ "bet": {
+  "vi": "vụ cá cược; cá cược",
+  "en": "a promise to pay if you are wrong",
+  "ipa": "/bet/"
+ },
+ "better": {
+  "vi": "tốt hơn, khá hơn"
+ },
+ "big": {
+  "vi": "to, lớn"
+ },
+ "black": {
+  "vi": "đen"
+ },
+ "blood": {
+  "vi": "máu",
+  "en": "the red stuff that moves inside your body",
+  "ipa": "/blʌd/"
+ },
+ "blow": {
+  "vi": "thổi",
+  "forms": [
+   "blew",
+   "blown"
+  ]
+ },
+ "blue": {
+  "vi": "xanh dương"
+ },
+ "boat": {
+  "vi": "con thuyền"
+ },
+ "bone": {
+  "vi": "xương (Brom Bones: biệt danh của Brom)"
+ },
+ "both": {
+  "vi": "cả hai"
+ },
+ "boy": {
+  "vi": "cậu bé, con trai"
+ },
+ "branch": {
+  "vi": "cành cây"
+ },
+ "brave": {
+  "vi": "dũng cảm",
+  "en": "not afraid of danger",
+  "ipa": "/breɪv/"
+ },
+ "breathe": {
+  "vi": "thở"
+ },
+ "bridge": {
+  "vi": "cây cầu",
+  "en": "a road that goes over a river",
+  "ipa": "/brɪdʒ/"
+ },
+ "bright": {
+  "vi": "sáng, rực rỡ"
+ },
+ "bring": {
+  "vi": "mang đến",
+  "forms": [
+   "brought"
+  ]
+ },
+ "broken": {
+  "vi": "bị vỡ, bị hỏng"
+ },
+ "brother": {
+  "vi": "anh trai, em trai"
+ },
+ "brown": {
+  "vi": "nâu"
+ },
+ "build": {
+  "vi": "xây",
+  "forms": [
+   "built"
+  ]
+ },
+ "bunch": {
+  "vi": "chùm, bó (a bunch of keys: một chùm chìa khóa)"
+ },
+ "burn": {
+  "vi": "đốt cháy",
+  "en": "to set fire to something",
+  "ipa": "/bɝːn/"
+ },
+ "bury": {
+  "vi": "chôn cất",
+  "en": "to put a dead body in the ground",
+  "ipa": "/ˈberi/"
+ },
+ "business": {
+  "vi": "việc làm ăn, kinh doanh"
+ },
+ "buy": {
+  "vi": "mua",
+  "forms": [
+   "bought"
+  ]
+ },
+ "by": {
+  "vi": "bên cạnh; bởi; trước (lúc)"
+ },
+ "cabin": {
+  "vi": "buồng (trên tàu)",
+  "en": "a small room where you sleep on a ship",
+  "ipa": "/ˈkæbɪn/"
+ },
+ "call": {
+  "vi": "gọi; gọi là (be called: được gọi là, tên là)"
+ },
+ "calm": {
+  "vi": "bình tĩnh"
+ },
+ "can't": {
+  "vi": "không thể (= cannot)"
+ },
+ "candle": {
+  "vi": "cây nến",
+  "en": "a white stick that burns to give light",
+  "ipa": "/ˈkændəl/"
+ },
+ "cannot": {
+  "vi": "không thể"
+ },
+ "capital": {
+  "vi": "kinh đô, thủ đô"
+ },
+ "captain": {
+  "vi": "thuyền trưởng",
+  "en": "the person who is the boss of a ship",
+  "ipa": "/ˈkæptən/"
+ },
+ "card": {
+  "vi": "lá bài; tấm thiệp"
+ },
+ "care": {
+  "vi": "sự chăm sóc; quan tâm"
+ },
+ "careful": {
+  "vi": "cẩn thận",
+  "en": "thinking about what you do, so nothing bad happens",
+  "ipa": "/ˈkerfəl/"
+ },
+ "castle": {
+  "vi": "lâu đài"
+ },
+ "catch": {
+  "vi": "bắt, chụp",
+  "forms": [
+   "caught"
+  ]
+ },
+ "chair": {
+  "vi": "cái ghế"
+ },
+ "change": {
+  "vi": "thay đổi"
+ },
+ "chat": {
+  "vi": "nhóm chat; trò chuyện"
+ },
+ "check": {
+  "vi": "kiểm tra"
+ },
+ "cheek": {
+  "vi": "má"
+ },
+ "chest": {
+  "vi": "ngực"
+ },
+ "choice": {
+  "vi": "sự lựa chọn"
+ },
+ "church": {
+  "vi": "nhà thờ"
+ },
+ "circle": {
+  "vi": "vòng tròn",
+  "en": "a round shape, like the letter O",
+  "ipa": "/ˈsɝːkəl/"
+ },
+ "clearly": {
+  "vi": "rõ ràng"
+ },
+ "climb": {
+  "vi": "leo, trèo"
+ },
+ "close": {
+  "vi": "đóng; gần (stay close: ở sát nhau)"
+ },
+ "clothes": {
+  "vi": "quần áo"
+ },
+ "cloud": {
+  "vi": "đám mây"
+ },
+ "coffee": {
+  "vi": "cà phê"
+ },
+ "coffin": {
+  "vi": "quan tài",
+  "en": "a long box for a dead body",
+  "ipa": "/ˈkɑːfɪn/"
+ },
+ "cold": {
+  "vi": "lạnh"
+ },
+ "come": {
+  "vi": "đến, tới",
+  "forms": [
+   "came"
+  ]
+ },
+ "come up": {
+  "vi": "(mặt trời) mọc"
+ },
+ "company": {
+  "vi": "công ty"
+ },
+ "congratulations": {
+  "vi": "chúc mừng!"
+ },
+ "cool": {
+  "vi": "tuyệt!; mát"
+ },
+ "count": {
+  "vi": "đếm"
+ },
+ "court": {
+  "vi": "phiên tòa; công đường",
+  "en": "a place where people decide if someone did wrong",
+  "ipa": "/kɔːrt/"
+ },
+ "cross": {
+  "vi": "băng qua; đi qua",
+  "en": "to go from one side to the other",
+  "ipa": "/krɑːs/"
+ },
+ "cry": {
+  "vi": "khóc; kêu lên"
+ },
+ "cut": {
+  "vi": "cắt"
+ },
+ "dad": {
+  "vi": "bố"
+ },
+ "dance": {
+  "vi": "nhảy múa"
+ },
+ "dark": {
+  "vi": "tối; bóng tối"
+ },
+ "darkness": {
+  "vi": "bóng tối"
+ },
+ "dawn": {
+  "vi": "bình minh",
+  "en": "the time when the sun comes up",
+  "ipa": "/dɑːn/"
+ },
+ "day": {
+  "vi": "ngày"
+ },
+ "dead": {
+  "vi": "chết, đã chết"
+ },
+ "dear": {
+  "vi": "người yêu dấu; thân mến (my dear: em yêu, cưng)"
+ },
+ "deep": {
+  "vi": "sâu"
+ },
+ "didn't": {
+  "vi": "đã không (= did not)"
+ },
+ "die": {
+  "vi": "chết",
+  "forms": [
+   "dying"
+  ]
+ },
+ "disappear": {
+  "vi": "biến mất; mất tích",
+  "en": "to suddenly go away and not be seen",
+  "ipa": "/ˌdɪsəˈpɪr/"
+ },
+ "doesn't": {
+  "vi": "không (= does not)"
+ },
+ "don't": {
+  "vi": "đừng; không (= do not)"
+ },
+ "door": {
+  "vi": "cửa"
+ },
+ "downstairs": {
+  "vi": "tầng dưới"
+ },
+ "dress": {
+  "vi": "váy, áo đầm"
+ },
+ "drink": {
+  "vi": "uống",
+  "forms": [
+   "drank",
+   "drunk"
+  ]
+ },
+ "drip": {
+  "vi": "tí tách (tiếng nước nhỏ giọt); nhỏ giọt"
+ },
+ "drop": {
+  "vi": "giọt",
+  "en": "a very small bit of water or blood",
+  "ipa": "/drɑːp/"
+ },
+ "drown": {
+  "vi": "chết đuối",
+  "en": "to die under water because you cannot breathe",
+  "ipa": "/draʊn/"
+ },
+ "dry": {
+  "vi": "khô"
+ },
+ "dust": {
+  "vi": "bụi",
+  "en": "very small bits of dry dirt",
+  "ipa": "/dʌst/"
+ },
+ "early": {
+  "vi": "sớm"
+ },
+ "earth": {
+  "vi": "đất; trái đất"
+ },
+ "earth god": {
+  "vi": "Thổ thần (vị thần bảo vệ đất đai)"
+ },
+ "easily": {
+  "vi": "dễ dàng"
+ },
+ "easy": {
+  "vi": "dễ"
+ },
+ "eat": {
+  "vi": "ăn",
+  "forms": [
+   "ate",
+   "eaten"
+  ]
+ },
+ "either": {
+  "vi": "(not… either) cũng không"
+ },
+ "empty": {
+  "vi": "trống rỗng; không người",
+  "en": "with nothing or nobody inside",
+  "ipa": "/ˈempti/"
+ },
+ "end": {
+  "vi": "kết thúc; phần cuối"
+ },
+ "enemy": {
+  "vi": "kẻ thù; giặc",
+  "en": "a person or army that fights against you",
+  "ipa": "/ˈenəmi/"
+ },
+ "ever": {
+  "vi": "từng, bao giờ"
+ },
+ "every": {
+  "vi": "mỗi, mọi"
+ },
+ "everyone": {
+  "vi": "mọi người"
+ },
+ "everything": {
+  "vi": "mọi thứ"
+ },
+ "everywhere": {
+  "vi": "khắp nơi"
+ },
+ "evil": {
+  "vi": "độc ác; tà ác",
+  "en": "very bad; wanting to hurt people",
+  "ipa": "/ˈiːvəl/"
+ },
+ "exactly": {
+  "vi": "chính xác; đúng vậy!"
+ },
+ "eye": {
+  "vi": "mắt"
+ },
+ "face": {
+  "vi": "khuôn mặt"
+ },
+ "factory": {
+  "vi": "nhà máy"
+ },
+ "fall": {
+  "vi": "ngã, rơi",
+  "forms": [
+   "fell",
+   "fallen"
+  ]
+ },
+ "family": {
+  "vi": "gia đình"
+ },
+ "famous": {
+  "vi": "nổi tiếng"
+ },
+ "fancy": {
+  "vi": "sang trọng, xịn"
+ },
+ "far": {
+  "vi": "xa"
+ },
+ "farmer": {
+  "vi": "nông dân",
+  "en": "a person who grows food on the land",
+  "ipa": "/ˈfɑːrmɚ/"
+ },
+ "fast": {
+  "vi": "nhanh"
+ },
+ "father": {
+  "vi": "cha, bố"
+ },
+ "feel": {
+  "vi": "cảm thấy",
+  "forms": [
+   "felt"
+  ]
+ },
+ "few": {
+  "vi": "ít; vài"
+ },
+ "field": {
+  "vi": "cánh đồng; ruộng",
+  "en": "an area of land where farmers grow food",
+  "ipa": "/fiːld/"
+ },
+ "fifteen": {
+  "vi": "mười lăm"
+ },
+ "fight": {
+  "vi": "chiến đấu, đánh nhau",
+  "forms": [
+   "fought"
+  ]
+ },
+ "find": {
+  "vi": "tìm thấy",
+  "forms": [
+   "found"
+  ]
+ },
+ "fine": {
+  "vi": "ổn; được thôi"
+ },
+ "finger": {
+  "vi": "ngón tay",
+  "en": "one of the five long parts of your hand",
+  "ipa": "/ˈfɪŋɡɚ/"
+ },
+ "fire": {
+  "vi": "lửa; đám cháy"
+ },
+ "first": {
+  "vi": "đầu tiên, trước tiên"
+ },
+ "first light": {
+  "vi": "lúc trời vừa hửng sáng"
+ },
+ "flag": {
+  "vi": "lá cờ"
+ },
+ "floor": {
+  "vi": "sàn nhà"
+ },
+ "fly": {
+  "vi": "bay",
+  "forms": [
+   "flew",
+   "flown",
+   "flies"
+  ]
+ },
+ "follow": {
+  "vi": "đi theo; bám theo",
+  "en": "to go after someone",
+  "ipa": "/ˈfɑːloʊ/"
+ },
+ "food": {
+  "vi": "thức ăn"
+ },
+ "footstep": {
+  "vi": "tiếng bước chân",
+  "en": "the sound of a foot when someone walks",
+  "ipa": "/ˈfʊtstep/"
+ },
+ "forget": {
+  "vi": "quên",
+  "forms": [
+   "forgot",
+   "forgotten"
+  ]
+ },
+ "friend": {
+  "vi": "bạn"
+ },
+ "front": {
+  "vi": "phía trước"
+ },
+ "full": {
+  "vi": "đầy"
+ },
+ "funny": {
+  "vi": "buồn cười"
+ },
+ "gate": {
+  "vi": "cổng"
+ },
+ "general": {
+  "vi": "vị tướng"
+ },
+ "get": {
+  "vi": "lấy; nhận; trở nên; đến",
+  "forms": [
+   "got"
+  ]
+ },
+ "get married": {
+  "vi": "cưới, kết hôn"
+ },
+ "ghost": {
+  "vi": "ma; hồn ma",
+  "en": "the spirit of a dead person",
+  "ipa": "/ɡoʊst/"
+ },
+ "girl": {
+  "vi": "cô gái"
+ },
+ "give": {
+  "vi": "đưa, cho",
+  "forms": [
+   "gave",
+   "given"
+  ]
+ },
+ "go": {
+  "vi": "đi",
+  "forms": [
+   "went",
+   "gone",
+   "goes"
+  ]
+ },
+ "go out": {
+  "vi": "tắt (đèn, lửa)"
+ },
+ "god": {
+  "vi": "thần; Chúa"
+ },
+ "gold": {
+  "vi": "vàng; bằng vàng"
+ },
+ "golden": {
+  "vi": "bằng vàng, màu vàng óng"
+ },
+ "good": {
+  "vi": "tốt, hay, ngoan"
+ },
+ "grab": {
+  "vi": "chộp lấy; túm lấy",
+  "en": "to take something quickly and strongly",
+  "ipa": "/ɡræb/"
+ },
+ "grandma": {
+  "vi": "bà"
+ },
+ "grave": {
+  "vi": "mộ; ngôi mộ",
+  "en": "the place where a dead person is buried",
+  "ipa": "/ɡreɪv/"
+ },
+ "great": {
+  "vi": "tuyệt vời; lớn"
+ },
+ "green": {
+  "vi": "xanh lá"
+ },
+ "greetings": {
+  "vi": "xin chào! (lời chào trang trọng)"
+ },
+ "ground": {
+  "vi": "mặt đất"
+ },
+ "group": {
+  "vi": "nhóm"
+ },
+ "grow": {
+  "vi": "lớn lên; to dần ra",
+  "forms": [
+   "grew",
+   "grown"
+  ]
+ },
+ "gunpowder": {
+  "vi": "thuốc súng (ở đây là tên con ngựa của Ichabod)"
+ },
+ "guy": {
+  "vi": "anh chàng (guys: các cậu, mọi người)"
+ },
+ "hairpin": {
+  "vi": "cây trâm cài tóc"
+ },
+ "hall": {
+  "vi": "hành lang",
+  "en": "a long, narrow space between rooms",
+  "ipa": "/hɑːl/"
+ },
+ "hand": {
+  "vi": "bàn tay"
+ },
+ "happen": {
+  "vi": "xảy ra"
+ },
+ "happy": {
+  "vi": "vui"
+ },
+ "hard": {
+  "vi": "mạnh; khó; chăm chỉ"
+ },
+ "head": {
+  "vi": "cái đầu"
+ },
+ "headless": {
+  "vi": "không đầu",
+  "en": "with no head",
+  "ipa": "/ˈhedləs/"
+ },
+ "hear": {
+  "vi": "nghe thấy",
+  "forms": [
+   "heard"
+  ]
+ },
+ "heart": {
+  "vi": "trái tim"
+ },
+ "heavy": {
+  "vi": "nặng",
+  "en": "very hard to lift or move",
+  "ipa": "/ˈhevi/"
+ },
+ "helmet": {
+  "vi": "mũ sắt (của lính)"
+ },
+ "help": {
+  "vi": "giúp"
+ },
+ "here": {
+  "vi": "ở đây; đây (khi đưa đồ cho ai)"
+ },
+ "hide": {
+  "vi": "trốn; giấu",
+  "forms": [
+   "hid",
+   "hidden"
+  ]
+ },
+ "high": {
+  "vi": "cao"
+ },
+ "hoang giang": {
+  "vi": "sông Hoàng Giang"
+ },
+ "hold": {
+  "vi": "cầm, giữ; ôm",
+  "forms": [
+   "held"
+  ]
+ },
+ "hold hands": {
+  "vi": "nắm tay nhau"
+ },
+ "hold on": {
+  "vi": "bám chặt; cố lên"
+ },
+ "home": {
+  "vi": "nhà"
+ },
+ "honest": {
+  "vi": "thật thà; trung thực",
+  "en": "always telling the truth",
+  "ipa": "/ˈɑːnɪst/"
+ },
+ "hope": {
+  "vi": "hy vọng"
+ },
+ "horrible": {
+  "vi": "kinh khủng"
+ },
+ "horse": {
+  "vi": "con ngựa"
+ },
+ "horseman": {
+  "vi": "kỵ sĩ, người cưỡi ngựa",
+  "forms": [
+   "horsemen"
+  ]
+ },
+ "hot": {
+  "vi": "nóng"
+ },
+ "hour": {
+  "vi": "giờ, tiếng đồng hồ"
+ },
+ "house": {
+  "vi": "ngôi nhà"
+ },
+ "huge": {
+  "vi": "khổng lồ, rất to"
+ },
+ "hundred": {
+  "vi": "trăm"
+ },
+ "hurry": {
+  "vi": "vội, nhanh lên"
+ },
+ "hurt": {
+  "vi": "đau; làm đau"
+ },
+ "husband": {
+  "vi": "chồng"
+ },
+ "i'll": {
+  "vi": "tôi sẽ (= I will)"
+ },
+ "ice": {
+  "vi": "băng, nước đá"
+ },
+ "ice cold": {
+  "vi": "lạnh buốt"
+ },
+ "idea": {
+  "vi": "ý tưởng, ý kiến"
+ },
+ "if": {
+  "vi": "nếu"
+ },
+ "in front of": {
+  "vi": "ở phía trước"
+ },
+ "in love": {
+  "vi": "đang yêu"
+ },
+ "india": {
+  "vi": "Ấn Độ"
+ },
+ "inside": {
+  "vi": "bên trong"
+ },
+ "into": {
+  "vi": "vào trong"
+ },
+ "invite": {
+  "vi": "mời",
+  "en": "to ask someone to come to a party",
+  "ipa": "/ɪnˈvaɪt/"
+ },
+ "isn't": {
+  "vi": "không phải, không (= is not)"
+ },
+ "itself": {
+  "vi": "chính nó"
+ },
+ "jealous": {
+  "vi": "ghen tuông",
+  "en": "angry because you think someone loves another person",
+  "ipa": "/ˈdʒeləs/"
+ },
+ "join": {
+  "vi": "tham gia; nhập bọn"
+ },
+ "joke": {
+  "vi": "trò đùa; nói đùa"
+ },
+ "jump": {
+  "vi": "nhảy"
+ },
+ "just": {
+  "vi": "chỉ; vừa mới; đúng là"
+ },
+ "just in case": {
+  "vi": "phòng khi, để đề phòng"
+ },
+ "kapok": {
+  "vi": "cây gạo (loài cây cao, hoa đỏ)"
+ },
+ "kapok tree": {
+  "vi": "cây gạo",
+  "en": "a very tall tree with big red flowers",
+  "ipa": "/ˈkeɪpɑːk triː/"
+ },
+ "keep": {
+  "vi": "giữ; cứ tiếp tục (keep + V-ing)",
+  "forms": [
+   "kept"
+  ]
+ },
+ "key": {
+  "vi": "chìa khóa",
+  "en": "a small metal thing that opens a lock",
+  "ipa": "/kiː/"
+ },
+ "kick": {
+  "vi": "đá; quẫy (chân)"
+ },
+ "kind": {
+  "vi": "tử tế, tốt bụng; loại"
+ },
+ "king": {
+  "vi": "vua"
+ },
+ "kitchen": {
+  "vi": "nhà bếp"
+ },
+ "knife": {
+  "vi": "con dao",
+  "forms": [
+   "knives"
+  ]
+ },
+ "knock": {
+  "vi": "gõ (cửa); tiếng gõ cửa",
+  "en": "to hit a door so someone opens it",
+  "ipa": "/nɑːk/"
+ },
+ "know": {
+  "vi": "biết",
+  "forms": [
+   "knew",
+   "known"
+  ]
+ },
+ "lady": {
+  "vi": "quý bà, tiểu thư"
+ },
+ "lamp": {
+  "vi": "đèn (đèn dầu)"
+ },
+ "last": {
+  "vi": "cuối cùng; trước (last summer: mùa hè năm ngoái)"
+ },
+ "late": {
+  "vi": "muộn"
+ },
+ "later": {
+  "vi": "sau đó, lát nữa"
+ },
+ "laugh": {
+  "vi": "cười (thành tiếng)"
+ },
+ "laugh at": {
+  "vi": "cười nhạo, chế giễu"
+ },
+ "leave": {
+  "vi": "rời đi; để lại",
+  "forms": [
+   "left"
+  ]
+ },
+ "let": {
+  "vi": "để, cho phép"
+ },
+ "let's": {
+  "vi": "chúng ta hãy… (= let us)"
+ },
+ "letter": {
+  "vi": "lá thư"
+ },
+ "liar": {
+  "vi": "kẻ nói dối",
+  "en": "a person who does not tell the truth",
+  "ipa": "/ˈlaɪɚ/"
+ },
+ "lid": {
+  "vi": "nắp",
+  "en": "the top part that covers a box",
+  "ipa": "/lɪd/"
+ },
+ "lie": {
+  "vi": "nói dối; lời nói dối; nằm"
+ },
+ "life": {
+  "vi": "cuộc sống; mạng sống"
+ },
+ "lift": {
+  "vi": "nhấc lên"
+ },
+ "light": {
+  "vi": "ánh sáng; đèn; thắp (nến, đèn)"
+ },
+ "like": {
+  "vi": "thích; giống như"
+ },
+ "listen": {
+  "vi": "lắng nghe"
+ },
+ "little": {
+  "vi": "nhỏ; một chút"
+ },
+ "live": {
+  "vi": "sống"
+ },
+ "lock": {
+  "vi": "ổ khóa; khóa",
+  "en": "a thing on a door that keeps it closed",
+  "ipa": "/lɑːk/"
+ },
+ "lonely": {
+  "vi": "cô đơn",
+  "en": "sad because you are alone",
+  "ipa": "/ˈloʊnli/"
+ },
+ "long": {
+  "vi": "dài; lâu"
+ },
+ "long ago": {
+  "vi": "ngày xưa, cách đây rất lâu"
+ },
+ "look": {
+  "vi": "nhìn; trông có vẻ"
+ },
+ "look at": {
+  "vi": "nhìn vào"
+ },
+ "look for": {
+  "vi": "tìm kiếm"
+ },
+ "lose": {
+  "vi": "mất; thua",
+  "forms": [
+   "lost"
+  ]
+ },
+ "loud": {
+  "vi": "to, ồn"
+ },
+ "love": {
+  "vi": "yêu; tình yêu"
+ },
+ "luck": {
+  "vi": "sự may mắn (good luck: chúc may mắn)"
+ },
+ "lucky": {
+  "vi": "may mắn"
+ },
+ "lucky you": {
+  "vi": "cậu may thật đấy"
+ },
+ "ma da": {
+  "vi": "ma da: hồn người chết đuối dưới nước (truyện dân gian)"
+ },
+ "machine": {
+  "vi": "máy móc; cỗ máy",
+  "en": "a big thing with moving parts that does work",
+  "ipa": "/məˈʃiːn/"
+ },
+ "magic": {
+  "vi": "phép thuật; có phép"
+ },
+ "make": {
+  "vi": "làm; khiến",
+  "forms": [
+   "made"
+  ]
+ },
+ "make it to": {
+  "vi": "đến được (nơi nào đó)"
+ },
+ "mama": {
+  "vi": "mẹ"
+ },
+ "man": {
+  "vi": "người đàn ông",
+  "forms": [
+   "men"
+  ]
+ },
+ "many": {
+  "vi": "nhiều"
+ },
+ "mark": {
+  "vi": "vết, dấu"
+ },
+ "market": {
+  "vi": "chợ",
+  "en": "a place where people buy and sell food",
+  "ipa": "/ˈmɑːrkɪt/"
+ },
+ "marry": {
+  "vi": "cưới, kết hôn"
+ },
+ "match": {
+  "vi": "que diêm",
+  "en": "a small stick that makes fire",
+  "ipa": "/mætʃ/"
+ },
+ "may": {
+  "vi": "có thể"
+ },
+ "maybe": {
+  "vi": "có lẽ"
+ },
+ "meet": {
+  "vi": "gặp",
+  "forms": [
+   "met"
+  ]
+ },
+ "merchant": {
+  "vi": "thương nhân; lái buôn",
+  "en": "a person who buys and sells things",
+  "ipa": "/ˈmɝːtʃənt/"
+ },
+ "message": {
+  "vi": "tin nhắn"
+ },
+ "messenger": {
+  "vi": "người đưa tin",
+  "en": "a person who carries a message or letter",
+  "ipa": "/ˈmesəndʒɚ/"
+ },
+ "middle": {
+  "vi": "ở giữa"
+ },
+ "midnight": {
+  "vi": "nửa đêm"
+ },
+ "mile": {
+  "vi": "dặm (khoảng 1,6 km)"
+ },
+ "minute": {
+  "vi": "phút"
+ },
+ "miss": {
+  "vi": "nhớ (ai đó); lỡ"
+ },
+ "missing": {
+  "vi": "mất tích",
+  "en": "lost; nobody can find them",
+  "ipa": "/ˈmɪsɪŋ/"
+ },
+ "moment": {
+  "vi": "khoảnh khắc, lúc"
+ },
+ "money": {
+  "vi": "tiền"
+ },
+ "monkey": {
+  "vi": "con khỉ"
+ },
+ "monster": {
+  "vi": "quái vật"
+ },
+ "month": {
+  "vi": "tháng"
+ },
+ "moon": {
+  "vi": "mặt trăng"
+ },
+ "more": {
+  "vi": "nhiều hơn; thêm"
+ },
+ "morning": {
+  "vi": "buổi sáng"
+ },
+ "most": {
+  "vi": "nhất; hầu hết"
+ },
+ "mother": {
+  "vi": "mẹ"
+ },
+ "mountain": {
+  "vi": "núi"
+ },
+ "mouth": {
+  "vi": "miệng"
+ },
+ "move": {
+  "vi": "di chuyển, cử động"
+ },
+ "mr": {
+  "vi": "ông (đứng trước họ)"
+ },
+ "mrs": {
+  "vi": "bà (đứng trước họ của chồng)"
+ },
+ "much": {
+  "vi": "nhiều"
+ },
+ "music": {
+  "vi": "âm nhạc"
+ },
+ "must": {
+  "vi": "phải"
+ },
+ "nam xuong": {
+  "vi": "Nam Xương (tên một vùng đất)"
+ },
+ "name": {
+  "vi": "tên"
+ },
+ "near": {
+  "vi": "gần"
+ },
+ "nearly": {
+  "vi": "gần như, suýt"
+ },
+ "need": {
+  "vi": "cần"
+ },
+ "neighbor": {
+  "vi": "hàng xóm",
+  "en": "a person who lives near you",
+  "ipa": "/ˈneɪbɚ/"
+ },
+ "never": {
+  "vi": "không bao giờ"
+ },
+ "new": {
+  "vi": "mới"
+ },
+ "news": {
+  "vi": "tin tức"
+ },
+ "next": {
+  "vi": "tiếp theo; bên cạnh"
+ },
+ "nice": {
+  "vi": "đẹp, tốt, dễ chịu"
+ },
+ "night": {
+  "vi": "đêm"
+ },
+ "nobody": {
+  "vi": "không ai"
+ },
+ "noon": {
+  "vi": "buổi trưa"
+ },
+ "normal": {
+  "vi": "bình thường"
+ },
+ "nose": {
+  "vi": "mũi"
+ },
+ "not yet": {
+  "vi": "chưa"
+ },
+ "nothing": {
+  "vi": "không có gì"
+ },
+ "now": {
+  "vi": "bây giờ"
+ },
+ "nowhere": {
+  "vi": "không ở đâu cả"
+ },
+ "o'clock": {
+  "vi": "giờ đúng (ten o'clock: 10 giờ)"
+ },
+ "ocean": {
+  "vi": "đại dương"
+ },
+ "of course": {
+  "vi": "tất nhiên"
+ },
+ "off": {
+  "vi": "tắt; rời khỏi; đi (Off to work: đi làm đây)"
+ },
+ "off to work": {
+  "vi": "đi làm đây"
+ },
+ "okay": {
+  "vi": "ổn, được"
+ },
+ "old": {
+  "vi": "cũ; già"
+ },
+ "only": {
+  "vi": "chỉ"
+ },
+ "onto": {
+  "vi": "lên trên"
+ },
+ "open": {
+  "vi": "mở"
+ },
+ "other": {
+  "vi": "khác"
+ },
+ "ours": {
+  "vi": "của chúng ta"
+ },
+ "out": {
+  "vi": "ra ngoài; tắt"
+ },
+ "outside": {
+  "vi": "bên ngoài"
+ },
+ "over": {
+  "vi": "qua; phía trên; kết thúc"
+ },
+ "own": {
+  "vi": "của chính mình (my own: của chính tôi)"
+ },
+ "palace": {
+  "vi": "cung điện",
+  "en": "a very big, beautiful house for a king or queen",
+  "ipa": "/ˈpæləs/"
+ },
+ "pale": {
+  "vi": "nhợt nhạt; xanh xao",
+  "en": "with very little color in the face",
+  "ipa": "/peɪl/"
+ },
+ "paper": {
+  "vi": "giấy (magic papers: bùa giấy)"
+ },
+ "party": {
+  "vi": "bữa tiệc"
+ },
+ "pass": {
+  "vi": "trôi qua (thời gian); đi qua"
+ },
+ "paw": {
+  "vi": "bàn chân (của thú)",
+  "en": "the foot of an animal, like a cat or monkey",
+  "ipa": "/pɑː/"
+ },
+ "people": {
+  "vi": "mọi người, người ta"
+ },
+ "perhaps": {
+  "vi": "có lẽ"
+ },
+ "person": {
+  "vi": "người"
+ },
+ "phew": {
+  "vi": "phù! (thở phào nhẹ nhõm)"
+ },
+ "phone": {
+  "vi": "điện thoại"
+ },
+ "photo": {
+  "vi": "bức ảnh"
+ },
+ "pink": {
+  "vi": "hồng"
+ },
+ "place": {
+  "vi": "nơi, chỗ"
+ },
+ "plan": {
+  "vi": "kế hoạch"
+ },
+ "play": {
+  "vi": "chơi"
+ },
+ "please": {
+  "vi": "làm ơn, xin hãy"
+ },
+ "pocket": {
+  "vi": "túi (áo, quần)"
+ },
+ "point": {
+  "vi": "chỉ (tay)"
+ },
+ "point at": {
+  "vi": "chỉ vào"
+ },
+ "poor": {
+  "vi": "nghèo; tội nghiệp"
+ },
+ "port": {
+  "vi": "bến cảng"
+ },
+ "pound": {
+  "vi": "bảng Anh (tiền)"
+ },
+ "pray": {
+  "vi": "cầu nguyện"
+ },
+ "priest": {
+  "vi": "đạo sĩ; thầy pháp",
+  "en": "a holy man who can fight bad spirits",
+  "ipa": "/priːst/"
+ },
+ "problem": {
+  "vi": "vấn đề"
+ },
+ "promise": {
+  "vi": "hứa; lời hứa"
+ },
+ "pull": {
+  "vi": "kéo"
+ },
+ "punish": {
+  "vi": "trừng phạt"
+ },
+ "push": {
+  "vi": "đẩy"
+ },
+ "put": {
+  "vi": "đặt, để"
+ },
+ "queen": {
+  "vi": "hoàng hậu, nữ hoàng"
+ },
+ "question": {
+  "vi": "câu hỏi"
+ },
+ "quick": {
+  "vi": "nhanh"
+ },
+ "quickly": {
+  "vi": "nhanh chóng"
+ },
+ "quiet": {
+  "vi": "yên tĩnh"
+ },
+ "quietly": {
+  "vi": "khẽ, lặng lẽ"
+ },
+ "race": {
+  "vi": "phóng nhanh, chạy đua"
+ },
+ "rainy": {
+  "vi": "có mưa"
+ },
+ "raise": {
+  "vi": "giơ lên, nâng lên"
+ },
+ "reach": {
+  "vi": "với tới; đến được"
+ },
+ "read": {
+  "vi": "đọc"
+ },
+ "ready": {
+  "vi": "sẵn sàng"
+ },
+ "real": {
+  "vi": "thật, có thật"
+ },
+ "really": {
+  "vi": "thật sự"
+ },
+ "record": {
+  "vi": "ghi âm"
+ },
+ "red": {
+  "vi": "đỏ"
+ },
+ "relax": {
+  "vi": "thư giãn, bình tĩnh"
+ },
+ "remember": {
+  "vi": "nhớ"
+ },
+ "rich": {
+  "vi": "giàu có",
+  "en": "having a lot of money",
+  "ipa": "/rɪtʃ/"
+ },
+ "ride": {
+  "vi": "cưỡi (ngựa); đi (xe)",
+  "forms": [
+   "rode",
+   "ridden"
+  ]
+ },
+ "rider": {
+  "vi": "người cưỡi ngựa; kỵ sĩ",
+  "en": "a person who rides a horse",
+  "ipa": "/ˈraɪdɚ/"
+ },
+ "right": {
+  "vi": "đúng; phải (phía); ngay (right?: phải không?)"
+ },
+ "ring": {
+  "vi": "chiếc nhẫn; reo",
+  "forms": [
+   "rang",
+   "rung"
+  ]
+ },
+ "river": {
+  "vi": "sông; dòng sông",
+  "en": "a long line of water that flows to the sea",
+  "ipa": "/ˈrɪvɚ/"
+ },
+ "road": {
+  "vi": "con đường"
+ },
+ "rock": {
+  "vi": "tảng đá"
+ },
+ "room": {
+  "vi": "căn phòng"
+ },
+ "round": {
+  "vi": "tròn"
+ },
+ "run": {
+  "vi": "chạy",
+  "forms": [
+   "ran"
+  ]
+ },
+ "run away": {
+  "vi": "bỏ chạy"
+ },
+ "sad": {
+  "vi": "buồn"
+ },
+ "saddle": {
+  "vi": "yên ngựa",
+  "en": "the seat on a horse's back",
+  "ipa": "/ˈsædəl/"
+ },
+ "safe": {
+  "vi": "an toàn"
+ },
+ "safely": {
+  "vi": "an toàn"
+ },
+ "sail": {
+  "vi": "đi thuyền; giong buồm",
+  "en": "to travel on water in a boat",
+  "ipa": "/seɪl/"
+ },
+ "same": {
+  "vi": "giống nhau, cùng một"
+ },
+ "save": {
+  "vi": "cứu"
+ },
+ "say": {
+  "vi": "nói",
+  "forms": [
+   "said"
+  ]
+ },
+ "scare": {
+  "vi": "làm sợ"
+ },
+ "scared": {
+  "vi": "sợ hãi"
+ },
+ "scary": {
+  "vi": "đáng sợ"
+ },
+ "scream": {
+  "vi": "hét lên"
+ },
+ "screw": {
+  "vi": "vặn (ốc) chặt"
+ },
+ "sea": {
+  "vi": "biển"
+ },
+ "secret": {
+  "vi": "bí mật",
+  "en": "something that other people must not know",
+  "ipa": "/ˈsiːkrət/"
+ },
+ "see": {
+  "vi": "thấy, nhìn thấy",
+  "forms": [
+   "saw",
+   "seen"
+  ]
+ },
+ "sell": {
+  "vi": "bán",
+  "forms": [
+   "sold"
+  ]
+ },
+ "send": {
+  "vi": "gửi",
+  "forms": [
+   "sent"
+  ]
+ },
+ "sergeant-major": {
+  "vi": "thượng sĩ (cấp bậc trong quân đội)"
+ },
+ "serious": {
+  "vi": "nghiêm túc, nghiêm trọng"
+ },
+ "servant": {
+  "vi": "người hầu",
+  "en": "a person who works in another person's house",
+  "ipa": "/ˈsɝːvənt/"
+ },
+ "set": {
+  "vi": "đặt",
+  "forms": [
+   "setting"
+  ]
+ },
+ "set fire to": {
+  "vi": "phóng hỏa, đốt"
+ },
+ "shadow": {
+  "vi": "cái bóng",
+  "en": "the dark shape your body makes in the light",
+  "ipa": "/ˈʃædoʊ/"
+ },
+ "shake": {
+  "vi": "run, lắc",
+  "forms": [
+   "shook",
+   "shaken"
+  ]
+ },
+ "shape": {
+  "vi": "hình dáng; cái bóng",
+  "en": "the outside form of a thing",
+  "ipa": "/ʃeɪp/"
+ },
+ "sheep": {
+  "vi": "con cừu"
+ },
+ "ship": {
+  "vi": "con tàu",
+  "en": "a big boat that travels across the sea",
+  "ipa": "/ʃɪp/"
+ },
+ "shirt": {
+  "vi": "áo sơ mi"
+ },
+ "should": {
+  "vi": "nên"
+ },
+ "shoulder": {
+  "vi": "vai",
+  "en": "the part of your body between your neck and arm",
+  "ipa": "/ˈʃoʊldɚ/"
+ },
+ "shout": {
+  "vi": "hét, la lớn"
+ },
+ "show": {
+  "vi": "cho xem",
+  "forms": [
+   "shown"
+  ]
+ },
+ "shut": {
+  "vi": "đóng (chặt)"
+ },
+ "sick": {
+  "vi": "ốm, bệnh"
+ },
+ "side": {
+  "vi": "bên, phía"
+ },
+ "silent": {
+  "vi": "im lặng"
+ },
+ "silk": {
+  "vi": "lụa",
+  "en": "soft, shiny, expensive cloth",
+  "ipa": "/sɪlk/"
+ },
+ "silly": {
+  "vi": "ngớ ngẩn"
+ },
+ "simple": {
+  "vi": "đơn giản, giản dị"
+ },
+ "sing": {
+  "vi": "hát",
+  "forms": [
+   "sang",
+   "sung"
+  ]
+ },
+ "sir": {
+  "vi": "thưa ông"
+ },
+ "sister": {
+  "vi": "chị gái, em gái"
+ },
+ "sit": {
+  "vi": "ngồi",
+  "forms": [
+   "sat"
+  ]
+ },
+ "sky": {
+  "vi": "bầu trời"
+ },
+ "sleep": {
+  "vi": "ngủ",
+  "forms": [
+   "slept"
+  ]
+ },
+ "sleepwalker": {
+  "vi": "người mộng du",
+  "en": "a person who walks while they are asleep",
+  "ipa": "/ˈsliːpˌwɑːkɚ/"
+ },
+ "sleepy": {
+  "vi": "buồn ngủ"
+ },
+ "sleepy hollow": {
+  "vi": "Sleepy Hollow: tên thung lũng (nghĩa là “thung lũng ngái ngủ”)"
+ },
+ "sleeve": {
+  "vi": "tay áo",
+  "en": "the part of a shirt that covers your arm",
+  "ipa": "/sliːv/"
+ },
+ "slip": {
+  "vi": "tuột, trượt"
+ },
+ "slipper": {
+  "vi": "dép (đi trong nhà)",
+  "en": "a soft, easy shoe you wear at home",
+  "ipa": "/ˈslɪpɚ/"
+ },
+ "slow": {
+  "vi": "chậm"
+ },
+ "slowly": {
+  "vi": "chậm rãi"
+ },
+ "small": {
+  "vi": "nhỏ"
+ },
+ "smell": {
+  "vi": "ngửi thấy; có mùi",
+  "en": "to notice something with your nose",
+  "ipa": "/smel/"
+ },
+ "smile": {
+  "vi": "cười, mỉm cười"
+ },
+ "snake": {
+  "vi": "con rắn"
+ },
+ "so": {
+  "vi": "vì vậy; rất; cũng vậy"
+ },
+ "so do i": {
+  "vi": "tôi cũng vậy"
+ },
+ "soft": {
+  "vi": "mềm, nhẹ"
+ },
+ "soldier": {
+  "vi": "người lính",
+  "en": "a person who fights in an army",
+  "ipa": "/ˈsoʊldʒɚ/"
+ },
+ "some": {
+  "vi": "một vài, một ít"
+ },
+ "someone": {
+  "vi": "ai đó"
+ },
+ "something": {
+  "vi": "cái gì đó"
+ },
+ "sometimes": {
+  "vi": "thỉnh thoảng"
+ },
+ "son": {
+  "vi": "con trai"
+ },
+ "song": {
+  "vi": "bài hát"
+ },
+ "soon": {
+  "vi": "sớm, chẳng bao lâu nữa"
+ },
+ "sorry": {
+  "vi": "hối hận; xin lỗi",
+  "en": "feeling sad about something you did",
+  "ipa": "/ˈsɑːri/"
+ },
+ "speak": {
+  "vi": "nói",
+  "forms": [
+   "spoke",
+   "spoken"
+  ]
+ },
+ "spell": {
+  "vi": "bùa phép",
+  "en": "magic words that make strange things happen",
+  "ipa": "/spel/"
+ },
+ "spirit": {
+  "vi": "linh hồn; vị thần"
+ },
+ "split": {
+  "vi": "tách ra"
+ },
+ "split up": {
+  "vi": "tách nhau ra"
+ },
+ "spot": {
+  "vi": "vết; đốm",
+  "en": "a small mark of a different color",
+  "ipa": "/spɑːt/"
+ },
+ "stair": {
+  "vi": "bậc thang (stairs: cầu thang)"
+ },
+ "stand": {
+  "vi": "đứng",
+  "forms": [
+   "stood"
+  ]
+ },
+ "start": {
+  "vi": "bắt đầu"
+ },
+ "stay": {
+  "vi": "ở lại"
+ },
+ "steal": {
+  "vi": "ăn trộm, cướp",
+  "forms": [
+   "stole",
+   "stolen"
+  ]
+ },
+ "steward": {
+  "vi": "tiếp viên (trên tàu)",
+  "en": "a man who helps people traveling on a ship",
+  "ipa": "/ˈstuːɚd/"
+ },
+ "still": {
+  "vi": "vẫn; đứng yên"
+ },
+ "stop": {
+  "vi": "dừng lại"
+ },
+ "story": {
+  "vi": "câu chuyện"
+ },
+ "straight": {
+  "vi": "thẳng"
+ },
+ "strange": {
+  "vi": "lạ"
+ },
+ "strong": {
+  "vi": "mạnh"
+ },
+ "suddenly": {
+  "vi": "bỗng nhiên, đột nhiên"
+ },
+ "suit": {
+  "vi": "bộ com-lê"
+ },
+ "summer": {
+  "vi": "mùa hè"
+ },
+ "sun": {
+  "vi": "mặt trời"
+ },
+ "sure": {
+  "vi": "chắc chắn"
+ },
+ "swim": {
+  "vi": "bơi",
+  "forms": [
+   "swam",
+   "swum"
+  ]
+ },
+ "swimmer": {
+  "vi": "người bơi"
+ },
+ "sword": {
+  "vi": "thanh gươm; thanh kiếm",
+  "en": "a long, sharp knife for fighting",
+  "ipa": "/sɔːrd/"
+ },
+ "table": {
+  "vi": "cái bàn"
+ },
+ "take": {
+  "vi": "lấy; mang; đưa",
+  "forms": [
+   "took",
+   "taken"
+  ]
+ },
+ "take care of": {
+  "vi": "chăm sóc"
+ },
+ "talk": {
+  "vi": "nói chuyện"
+ },
+ "tall": {
+  "vi": "cao"
+ },
+ "tan vien": {
+  "vi": "Tản Viên (núi thiêng; đền thờ Thần núi Tản Viên)"
+ },
+ "tea": {
+  "vi": "trà"
+ },
+ "teacher": {
+  "vi": "giáo viên"
+ },
+ "tell": {
+  "vi": "kể; bảo",
+  "forms": [
+   "told"
+  ]
+ },
+ "temple": {
+  "vi": "ngôi đền",
+  "en": "a building where people pray to gods",
+  "ipa": "/ˈtempəl/"
+ },
+ "than": {
+  "vi": "hơn"
+ },
+ "thank": {
+  "vi": "cảm ơn"
+ },
+ "thanks": {
+  "vi": "cảm ơn"
+ },
+ "the dead": {
+  "vi": "người chết"
+ },
+ "then": {
+  "vi": "sau đó; vậy thì"
+ },
+ "there": {
+  "vi": "ở đó (there is: có)"
+ },
+ "thing": {
+  "vi": "thứ, đồ vật, chuyện"
+ },
+ "think": {
+  "vi": "nghĩ",
+  "forms": [
+   "thought"
+  ]
+ },
+ "third": {
+  "vi": "thứ ba"
+ },
+ "through": {
+  "vi": "xuyên qua"
+ },
+ "throw": {
+  "vi": "ném",
+  "en": "to send something through the air with your hand",
+  "ipa": "/θroʊ/",
+  "forms": [
+   "threw",
+   "thrown"
+  ]
+ },
+ "tight": {
+  "vi": "chặt"
+ },
+ "time": {
+  "vi": "thời gian; lần (ten times: mười lần)"
+ },
+ "tired": {
+  "vi": "mệt"
+ },
+ "today": {
+  "vi": "hôm nay"
+ },
+ "together": {
+  "vi": "cùng nhau"
+ },
+ "toll-house": {
+  "vi": "trạm thu phí (ngày xưa, thu tiền người qua đường)"
+ },
+ "tonight": {
+  "vi": "tối nay"
+ },
+ "too": {
+  "vi": "cũng; quá"
+ },
+ "top": {
+  "vi": "đỉnh, phía trên cùng"
+ },
+ "touch": {
+  "vi": "chạm"
+ },
+ "toward": {
+  "vi": "về phía"
+ },
+ "tower": {
+  "vi": "tòa tháp",
+  "en": "a tall, narrow part of a castle",
+  "ipa": "/ˈtaʊɚ/"
+ },
+ "town": {
+  "vi": "thị trấn"
+ },
+ "tree": {
+  "vi": "cái cây"
+ },
+ "trip": {
+  "vi": "chuyến đi",
+  "en": "going to a place and coming back",
+  "ipa": "/trɪp/"
+ },
+ "true": {
+  "vi": "đúng, thật"
+ },
+ "trust": {
+  "vi": "tin tưởng; tin",
+  "en": "to believe that someone is good and honest",
+  "ipa": "/trʌst/"
+ },
+ "truth": {
+  "vi": "sự thật",
+  "en": "what really happened; the true facts",
+  "ipa": "/truːθ/"
+ },
+ "try": {
+  "vi": "cố gắng; thử"
+ },
+ "turn": {
+  "vi": "quay; rẽ; trở nên (turns white: trắng bệch)"
+ },
+ "under": {
+  "vi": "dưới"
+ },
+ "understand": {
+  "vi": "hiểu",
+  "forms": [
+   "understood"
+  ]
+ },
+ "underworld": {
+  "vi": "âm phủ",
+  "en": "the place where dead people go",
+  "ipa": "/ˈʌndɚwɝːld/"
+ },
+ "until": {
+  "vi": "cho đến khi"
+ },
+ "upper": {
+  "vi": "ở trên; tầng trên",
+  "en": "higher; above another thing",
+  "ipa": "/ˈʌpɚ/"
+ },
+ "upstairs": {
+  "vi": "ở tầng trên",
+  "en": "on a higher floor of a house",
+  "ipa": "/ʌpˈsterz/"
+ },
+ "valley": {
+  "vi": "thung lũng",
+  "en": "low land between hills or mountains",
+  "ipa": "/ˈvæli/"
+ },
+ "very well": {
+  "vi": "thôi được, được thôi"
+ },
+ "village": {
+  "vi": "ngôi làng"
+ },
+ "visit": {
+  "vi": "thăm"
+ },
+ "voice": {
+  "vi": "giọng nói"
+ },
+ "waist": {
+  "vi": "eo, thắt lưng (up to her waist: ngập đến eo)"
+ },
+ "wait": {
+  "vi": "chờ"
+ },
+ "wake": {
+  "vi": "thức dậy; đánh thức",
+  "forms": [
+   "woke",
+   "woken"
+  ]
+ },
+ "wake up": {
+  "vi": "thức dậy; tỉnh dậy"
+ },
+ "walk": {
+  "vi": "đi bộ"
+ },
+ "wall": {
+  "vi": "bức tường"
+ },
+ "want": {
+  "vi": "muốn"
+ },
+ "war": {
+  "vi": "chiến tranh",
+  "en": "fighting between two countries or groups",
+  "ipa": "/wɔːr/"
+ },
+ "warm": {
+  "vi": "ấm"
+ },
+ "wash": {
+  "vi": "rửa, giặt"
+ },
+ "wasn't": {
+  "vi": "đã không (= was not)"
+ },
+ "watch": {
+  "vi": "xem, nhìn theo"
+ },
+ "water": {
+  "vi": "nước"
+ },
+ "way": {
+  "vi": "đường đi; cách"
+ },
+ "we'll": {
+  "vi": "chúng ta sẽ (= we will)"
+ },
+ "wear": {
+  "vi": "mặc, đội, đeo",
+  "forms": [
+   "wore",
+   "worn"
+  ]
+ },
+ "week": {
+  "vi": "tuần"
+ },
+ "weird": {
+  "vi": "kỳ lạ"
+ },
+ "well": {
+  "vi": "à, ừm (từ đệm); tốt, khỏe"
+ },
+ "wet": {
+  "vi": "ướt",
+  "en": "covered with water; not dry",
+  "ipa": "/wet/"
+ },
+ "whisper": {
+  "vi": "thì thầm",
+  "en": "to speak very, very quietly",
+  "ipa": "/ˈwɪspɚ/"
+ },
+ "white": {
+  "vi": "trắng; White (họ của gia đình trong truyện)"
+ },
+ "wide": {
+  "vi": "rộng"
+ },
+ "wide open": {
+  "vi": "mở toang"
+ },
+ "wife": {
+  "vi": "vợ",
+  "en": "the woman a man is married to",
+  "ipa": "/waɪf/",
+  "forms": [
+   "wives"
+  ]
+ },
+ "will": {
+  "vi": "sẽ"
+ },
+ "win": {
+  "vi": "thắng",
+  "forms": [
+   "won"
+  ]
+ },
+ "wind": {
+  "vi": "gió"
+ },
+ "window": {
+  "vi": "cửa sổ"
+ },
+ "wish": {
+  "vi": "điều ước; ước",
+  "en": "something you want very much to happen",
+  "ipa": "/wɪʃ/"
+ },
+ "woman": {
+  "vi": "người phụ nữ",
+  "forms": [
+   "women"
+  ]
+ },
+ "won't": {
+  "vi": "sẽ không (= will not)"
+ },
+ "wonderful": {
+  "vi": "tuyệt vời"
+ },
+ "word": {
+  "vi": "từ; lời"
+ },
+ "work": {
+  "vi": "làm việc; công việc"
+ },
+ "world": {
+  "vi": "thế giới"
+ },
+ "worried": {
+  "vi": "lo lắng"
+ },
+ "worry": {
+  "vi": "lo lắng"
+ },
+ "write": {
+  "vi": "viết",
+  "forms": [
+   "wrote",
+   "written"
+  ]
+ },
+ "wrong": {
+  "vi": "sai; có chuyện"
+ },
+ "year": {
+  "vi": "năm"
+ },
+ "yet": {
+  "vi": "chưa (not yet: chưa)"
+ },
+ "young": {
+  "vi": "trẻ"
+ }
+}

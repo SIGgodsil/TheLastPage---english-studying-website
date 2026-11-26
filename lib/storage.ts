@@ -178,3 +178,24 @@ export function resumePage(story: StoryProgress, totalPages: number): number {
   }
   return totalPages + 1;
 }
+
+// ---------- One-time tips ----------
+
+const WORD_TIP_KEY = "tlp:tip-words";
+
+/** True once the learner has dismissed the "tap any word" tip or opened a word. */
+export function wordTipSeen(): boolean {
+  try {
+    return window.localStorage.getItem(WORD_TIP_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+export function markWordTipSeen(): void {
+  try {
+    window.localStorage.setItem(WORD_TIP_KEY, "1");
+  } catch {
+    // Storage unavailable: the tip simply shows again next time.
+  }
+}

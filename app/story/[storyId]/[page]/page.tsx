@@ -4,7 +4,8 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import ChatHeader from "@/components/ChatHeader";
 import ChatPlayer from "@/components/ChatPlayer";
-import { loadPages, loadStories, loadStory } from "@/lib/content";
+import { loadDictionary, loadPages, loadStories, loadStory } from "@/lib/content";
+import { pageWords } from "@/lib/dictionary";
 import { buildGlossary } from "@/lib/vocab";
 
 type Props = PageProps<"/story/[storyId]/[page]">;
@@ -22,12 +23,14 @@ async function getChat(storyId: string, rawPage: string) {
   cacheLife("max");
   if (!/^[1-9]\d*$/.test(rawPage)) return null;
   const pageNumber = Number(rawPage);
-  const [story, pages] = await Promise.all([loadStory(storyId), loadPages(storyId)]);
+  const [story, pages, dictionary] = await Promise.all([loadStory(storyId), loadPages(storyId), loadDictionary()]);
   const page = pages?.find((p) => p.page === pageNumber);
   if (!story || !pages || !page) return null;
   // Words from this page and earlier ones: a word is defined where it first appears.
   const nextTitle = pages.find((p) => p.page === pageNumber + 1)?.title;
-  return { story, page, nextTitle, glossary: buildGlossary(pages, pageNumber) };
+  const glossary = buildGlossary(pages, pageNumber);
+  // Only the dictionary words this page uses travel to the browser.
+  return { story, page, nextTitle, glossary, words: pageWords(page, dictionary, glossary) };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -60,6 +63,7 @@ async function Chat({ params }: Pick<Props, "params">) {
         page={chat.page}
         totalPages={chat.story.pages}
         glossary={chat.glossary}
+        words={chat.words}
         nextTitle={chat.nextTitle}
       />
     </>

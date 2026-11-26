@@ -6,9 +6,11 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { z } from "zod";
 import {
+  DictionarySchema,
   LastPageSchema,
   PageSchema,
   StoriesManifestSchema,
+  type Dictionary,
   type LastPage,
   type Page,
   type StoryMeta,
@@ -67,6 +69,11 @@ export async function loadPages(storyId: string): Promise<Page[] | null> {
   const numbers = Array.from({ length: story.pages }, (_, i) => i + 1);
   const pages = await Promise.all(numbers.map((n) => loadPage(storyId, n)));
   return pages.filter((p): p is Page => p !== null);
+}
+
+/** The tap-any-word dictionary shared by all stories. */
+export async function loadDictionary(): Promise<Dictionary> {
+  return readJson(DictionarySchema, "dictionary.json");
 }
 
 /** The Last Page for a story, without the writers-only `authorNote`, or null if unknown. */
