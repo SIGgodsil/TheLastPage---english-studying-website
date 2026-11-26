@@ -32,11 +32,11 @@ export default function BottomSheet({ open, onClose, labelledBy, children }: Pro
       // A click on the dialog itself (not its content) is a click on the backdrop.
       onClick={(e) => e.target === e.currentTarget && onClose()}
       aria-labelledby={labelledBy}
-      className="fixed inset-x-0 top-auto bottom-0 m-0 mx-auto max-h-[90dvh] w-full max-w-xl overflow-y-auto rounded-t-3xl bg-paper p-0 text-ink shadow-2xl backdrop:bg-ink/40"
+      className="fixed inset-x-0 top-auto bottom-0 m-0 mx-auto max-h-[90dvh] w-full max-w-xl overscroll-contain overflow-y-auto rounded-t-[2rem] bg-paper p-0 text-left text-ink shadow-[0_-16px_48px_-16px_rgb(43_36_32/0.4)] backdrop:bg-ink/35 backdrop:backdrop-blur-[2px]"
     >
       {open && (
         <div className="px-6 pt-5 pb-[max(1.5rem,env(safe-area-inset-bottom))]">
-          <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-line" aria-hidden />
+          <div className="mx-auto mb-4 h-1 w-12 rounded-full bg-line" aria-hidden />
           {children}
         </div>
       )}
@@ -51,9 +51,9 @@ export function CloseButton({ onClose }: { onClose: () => void }) {
       type="button"
       onClick={onClose}
       aria-label="Đóng"
-      className="flex size-10 shrink-0 items-center justify-center rounded-full text-xl text-muted hover:bg-line/60"
+      className="flex size-10 shrink-0 items-center justify-center rounded-full border border-line bg-card text-base text-muted transition-colors hover:border-ink/30 hover:text-ink"
     >
-      ✕
+      <span aria-hidden>✕</span>
     </button>
   );
 }

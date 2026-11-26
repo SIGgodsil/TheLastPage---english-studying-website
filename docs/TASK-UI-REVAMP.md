@@ -16,7 +16,10 @@ Each phase runs the skill's loop: Build → Review (Mode C, `references/review-c
   - Choices: each option a soft card with a "›" mark that lifts on hover; the hint is a light wine wash in italics, the prompt is italic.
   - "Tiếp" is an ink pill (`btn-ink`) so wine stays for decisions; the page end uses an eyebrow "HẾT TRANG 1/4", an italic teaser and `btn-primary`.
   - Review: added `scroll-padding-block` so the sticky header and footer never hide a focused word.
-- [ ] **3. Sheets.** Bottom sheet, word sheet, shadowing sheet.
+- [x] **3. Sheets.** Bottom sheet, word sheet, shadowing sheet.
+  - Bottom sheet: 2 rem top corners, a soft warm shadow, a lightly blurred backdrop, `overscroll-contain`, and always left-aligned (it used to inherit centring from the page end). The close button is a round outlined chip.
+  - Word sheet: "TỪ MỚI" eyebrow, the word large in wine, the IPA, then one soft card with "NGHĨA" and the English explanation, a wine-wash reminder for words met earlier, and an ink "Đã hiểu" pill.
+  - Shadowing sheet: wine eyebrow, the line at 1.75 rem in regular weight, the Vietnamese in italics, outlined "Nghe" pills, a softer glow on the microphone, the result as a soft card, and `btn-primary`/`btn-secondary` for "Thử lại" and "Xong".
 - [ ] **4. The Last Page and the shared page.** Prompt card, mood cards, starters, writer, word bank, feedback, done view, sharing, shared ending.
 
 ## Notes

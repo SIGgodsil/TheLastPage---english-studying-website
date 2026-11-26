@@ -58,8 +58,8 @@ export default function ShadowPractice({ storyId, page, nodeId, variant = "chip"
         aria-label={practised ? `${label} (đã luyện)` : label}
         className={
           variant === "wide"
-            ? "flex w-full items-center justify-center gap-2 rounded-full border border-wine/40 bg-card px-6 py-3 font-medium text-wine transition hover:border-wine active:scale-[0.98]"
-            : "inline-flex items-center gap-1.5 rounded-full border border-wine/40 bg-card px-3 py-1 text-xs font-medium text-wine transition hover:border-wine active:scale-[0.97]"
+            ? "flex min-h-11 w-full items-center justify-center gap-2 rounded-full border border-wine/30 bg-card px-6 py-2.5 text-wine transition-[border-color,box-shadow] hover:border-wine/60 hover:shadow-paper"
+            : "inline-flex min-h-7 items-center gap-1.5 rounded-full border border-wine/30 bg-card px-3 py-1 text-[0.8rem] text-wine transition-[border-color,box-shadow] hover:border-wine/60 hover:shadow-paper"
         }
       >
         <span aria-hidden>🎙️</span> {variant === "wide" && !practised ? "Luyện nói câu của trang này" : label}
@@ -142,14 +142,14 @@ function ShadowPanel({
   return (
     <div className="flex flex-col">
       <div className="flex items-start justify-between gap-4">
-        <p className="text-xs font-medium tracking-wide text-muted uppercase">Luyện nói · đọc to theo câu này</p>
+        <p className="eyebrow pt-1 text-wine">Luyện nói · đọc to theo câu này</p>
         <CloseButton onClose={onClose} />
       </div>
 
-      <h2 id="shadow-sheet-title" lang="en" className="mt-1 font-serif text-2xl leading-snug font-semibold">
+      <h2 id="shadow-sheet-title" lang="en" className="mt-1 text-[1.75rem] leading-snug text-balance">
         {result && result.tier !== "silent" ? <MarkedLine words={result.words} /> : line}
       </h2>
-      <p className="mt-2 text-muted">{vi}</p>
+      <p className="mt-1.5 text-lg text-muted italic">{vi}</p>
 
       {canSpeak && (
         <div className="mt-4 flex flex-wrap gap-2">
@@ -162,7 +162,7 @@ function ShadowPanel({
         </div>
       )}
       {audio && (
-        <p className="mt-2 text-xs text-muted/70">
+        <p className="mt-2 text-xs text-muted/80 italic">
           Giọng đọc tạo bằng{" "}
           <a href={AUDIO_CREDIT.href} target="_blank" rel="noopener" className="underline underline-offset-2">
             {AUDIO_CREDIT.label}
@@ -194,18 +194,14 @@ function ShadowPanel({
           <button
             type="button"
             onClick={record}
-            className={`flex-1 rounded-full px-5 py-3 font-medium transition active:scale-[0.98] ${
-              result?.tier === "great" ? "border border-line" : "bg-wine text-paper"
-            }`}
+            className={`flex-1 ${result?.tier === "great" ? "btn-secondary" : "btn-primary"}`}
           >
             🎙️ Thử lại
           </button>
           <button
             type="button"
             onClick={onClose}
-            className={`flex-1 rounded-full px-5 py-3 font-medium transition active:scale-[0.98] ${
-              result?.tier === "great" ? "bg-ink text-paper" : "border border-line"
-            }`}
+            className={`flex-1 ${result?.tier === "great" ? "btn-primary" : "btn-secondary"}`}
           >
             Xong
           </button>
@@ -215,7 +211,7 @@ function ShadowPanel({
         <button
           type="button"
           onClick={onClose}
-          className="mt-6 w-full rounded-full bg-ink px-6 py-3 font-medium text-paper transition active:scale-[0.98]"
+          className="btn-ink mt-6 w-full"
         >
           Bỏ qua
         </button>
@@ -247,18 +243,18 @@ function MarkedLine({ words }: { words: ShadowWord[] }) {
 
 function Feedback({ result }: { result: ShadowResult }) {
   return (
-    <div className="rounded-2xl bg-card px-4 py-4">
-      <p className="text-lg font-medium">{PRAISE[result.tier]}</p>
+    <div className="shadow-paper rounded-2xl border border-line bg-card px-5 py-4">
+      <p className="text-xl">{PRAISE[result.tier]}</p>
       {result.tip && result.tier !== "silent" && (
         <p className="mt-2 leading-relaxed">{tipMessage(result.tip.kind, result.tip.word, result.tier === "great")}</p>
       )}
       {result.heard && (
-        <p className="mt-3 text-sm text-muted">
+        <p className="mt-3 text-muted">
           Máy nghe được: <span lang="en" className="italic">“{result.heard}”</span>
         </p>
       )}
       {result.tier !== "great" && result.tier !== "silent" && (
-        <p className="mt-2 text-xs text-muted">Từ được gạch chân là những từ máy nghe chưa rõ.</p>
+        <p className="mt-2 text-sm text-muted italic">Từ được gạch chân là những từ máy nghe chưa rõ.</p>
       )}
     </div>
   );
@@ -271,11 +267,11 @@ function MicButton({ onClick, label }: { onClick: () => void; label: string }) {
         type="button"
         onClick={onClick}
         aria-label={label}
-        className="flex size-20 items-center justify-center rounded-full bg-wine text-3xl text-paper shadow-lg transition active:scale-95"
+        className="flex size-20 items-center justify-center rounded-full bg-wine text-3xl text-paper shadow-[0_12px_32px_-12px_rgb(139_46_46/0.7)] transition-[background-color,transform] hover:bg-wine-deep active:scale-95"
       >
         🎙️
       </button>
-      <p className="text-sm text-muted">{label}</p>
+      <p className="text-muted italic">{label}</p>
     </div>
   );
 }
@@ -296,7 +292,7 @@ function Listening({ interim, stage, onStop }: { interim: string; stage: ListenS
           🎙️
         </span>
       </span>
-      <p className="font-medium">{stopping ? "Đang chấm câu bạn vừa đọc…" : "Đang nghe… Đọc xong thì bấm nút bên dưới nhé."}</p>
+      <p className="text-lg">{stopping ? "Đang chấm câu bạn vừa đọc…" : "Đang nghe… Đọc xong thì bấm nút bên dưới nhé."}</p>
       <p className="flex items-center gap-1.5 text-xs text-muted">
         <span
           aria-hidden
@@ -314,7 +310,7 @@ function Listening({ interim, stage, onStop }: { interim: string; stage: ListenS
           onStop();
         }}
         disabled={stopping}
-        className="rounded-full bg-wine px-6 py-3 font-medium text-paper transition active:scale-[0.98] disabled:opacity-50"
+        className="btn-primary px-8"
       >
         {stopping ? "Đang dừng…" : "✓ Đọc xong"}
       </button>
@@ -323,7 +319,7 @@ function Listening({ interim, stage, onStop }: { interim: string; stage: ListenS
 }
 
 function Message({ children }: { children: string }) {
-  return <p className="rounded-2xl bg-card px-4 py-4 leading-relaxed">{children}</p>;
+  return <p className="rounded-2xl border border-line bg-card px-5 py-4 leading-relaxed">{children}</p>;
 }
 
 function ListenButton({
@@ -343,8 +339,8 @@ function ListenButton({
       onClick={onClick}
       disabled={disabled}
       aria-pressed={active}
-      className={`rounded-full border px-4 py-2 text-sm font-medium transition active:scale-[0.97] disabled:opacity-50 ${
-        active ? "border-wine bg-wine/10 text-wine" : "border-line bg-card"
+      className={`min-h-10 rounded-full border px-4 py-2 transition-[border-color,background-color,color] disabled:opacity-50 ${
+        active ? "border-wine/60 bg-wine/[0.07] text-wine" : "border-line bg-card hover:border-ink/30"
       }`}
     >
       {children}
