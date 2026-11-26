@@ -33,13 +33,15 @@
       "id": "n1",
       "type": "message",
       "from": "ichabod",
-      "text": "The party is wonderful! Music, dancing and so much food 🥧"
+      "text": "The party is wonderful! Music, dancing and so much food 🥧",
+      "noteVi": "*so much + danh từ không đếm được*: rất nhiều… (*so much food*)."
     },
     {
       "id": "n2",
       "type": "narration",
       "text": "Late at night, people tell ghost stories by the fire.",
-      "vi": "Đêm khuya, mọi người kể chuyện ma bên đống lửa."
+      "vi": "Đêm khuya, mọi người kể chuyện ma bên đống lửa.",
+      "noteVi": "*Late at night*: đêm khuya. *by the fire*: bên đống lửa."
     },
     {
       "id": "n3",
@@ -53,7 +55,8 @@
       "from": "brom",
       "voice": true,
       "text": "I saw the [[Headless|headless]] Horseman! I raced him to the old [[bridge]].",
-      "vi": "Tôi đã thấy Kỵ sĩ không đầu! Tôi đua với hắn đến cây cầu cũ."
+      "vi": "Tôi đã thấy Kỵ sĩ không đầu! Tôi đua với hắn đến cây cầu cũ.",
+      "noteVi": "*race + người + to + nơi*: đua với ai đến đâu."
     },
     {
       "id": "s1",
@@ -61,7 +64,8 @@
       "from": "brom",
       "voice": true,
       "text": "Ghosts can't [[cross]] that [[bridge]].",
-      "vi": "Ma không thể đi qua cây cầu đó."
+      "vi": "Ma không thể đi qua cây cầu đó.",
+      "noteVi": "*can't + động từ*: không thể. *Ghosts* số nhiều = ma nói chung."
     },
     {
       "id": "n5",
@@ -69,13 +73,15 @@
       "from": "brom",
       "voice": true,
       "text": "So he disappeared in a ball of fire! 🔥",
-      "vi": "Thế là hắn biến mất trong một quả cầu lửa! 🔥"
+      "vi": "Thế là hắn biến mất trong một quả cầu lửa! 🔥",
+      "noteVi": "*So*: vì vậy. *in a ball of fire*: trong một quả cầu lửa."
     },
     {
       "id": "n6",
       "type": "message",
       "from": "ichabod",
-      "text": "Everyone laughed. But I feel cold 🥶"
+      "text": "Everyone laughed. But I feel cold 🥶",
+      "noteVi": "*Everyone laughed* (quá khứ, đã xong) nhưng *I feel cold* (hiện tại, vẫn còn đang thấy)."
     },
     {
       "id": "c1",
@@ -112,13 +118,15 @@
       "id": "j1",
       "type": "message",
       "from": "ichabod",
-      "text": "Now I'm going to talk to Katrina. Wish me luck! 🤞"
+      "text": "Now I'm going to talk to Katrina. Wish me luck! 🤞",
+      "noteVi": "*be going to + động từ*: định làm gì. *Wish me luck!*: chúc mình may mắn đi!"
     },
     {
       "id": "n7",
       "type": "narration",
       "text": "Later, Ichabod asks Katrina to marry him. She says no.",
-      "vi": "Sau đó, Ichabod cầu hôn Katrina. Nàng từ chối."
+      "vi": "Sau đó, Ichabod cầu hôn Katrina. Nàng từ chối.",
+      "noteVi": "*ask + người + to + động từ*: đề nghị ai làm gì. *asks Katrina to marry him* = hỏi cưới Katrina."
     },
     {
       "id": "n8",
@@ -161,21 +169,24 @@
       "id": "j2",
       "type": "narration",
       "text": "Midnight. Ichabod rides home alone on his old horse, Gunpowder.",
-      "vi": "Nửa đêm. Ichabod cưỡi con ngựa già Gunpowder về nhà một mình."
+      "vi": "Nửa đêm. Ichabod cưỡi con ngựa già Gunpowder về nhà một mình.",
+      "noteVi": "*on his old horse*: (cưỡi) trên lưng con ngựa già."
     },
     {
       "id": "n9",
       "type": "message",
       "from": "ichabod",
       "text": "The road is dark and empty. The trees look like monsters 😨",
-      "vi": "Con đường tối và vắng tanh. Mấy cái cây trông như quái vật 😨"
+      "vi": "Con đường tối và vắng tanh. Mấy cái cây trông như quái vật 😨",
+      "noteVi": "*look like + danh từ*: trông như…"
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "from": "ichabod",
       "text": "Wait. I can hear another horse behind me…",
-      "vi": "Khoan. Mình nghe thấy tiếng một con ngựa khác phía sau…"
+      "vi": "Khoan. Mình nghe thấy tiếng một con ngựa khác phía sau…",
+      "noteVi": "Với *hear, see*, người Anh hay thêm *can*: *I can hear* = mình nghe thấy (ngay lúc này)."
     }
   ]
 }

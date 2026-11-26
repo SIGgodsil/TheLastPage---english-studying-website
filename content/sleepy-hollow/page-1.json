@@ -48,48 +48,55 @@
       "id": "n1",
       "type": "narration",
       "text": "Sleepy Hollow, long ago. A quiet village in a deep [[valley]].",
-      "vi": "Sleepy Hollow, ngày xưa. Một ngôi làng yên tĩnh trong thung lũng sâu."
+      "vi": "Sleepy Hollow, ngày xưa. Một ngôi làng yên tĩnh trong thung lũng sâu.",
+      "noteVi": "Câu dẫn không có động từ, như dòng mở đầu một bộ phim."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "ichabod",
-      "text": "Greetings, my friend! I'm the new teacher here 📚"
+      "text": "Greetings, my friend! I'm the new teacher here 📚",
+      "noteVi": "*Greetings*: lời chào trang trọng, kiểu cũ. Ichabod là thầy giáo nên nói hơi kiểu cách."
     },
     {
       "id": "n3",
       "type": "message",
       "from": "ichabod",
       "text": "People in this [[valley]] love ghost stories. So do I! 👻",
-      "vi": "Người dân thung lũng này mê chuyện ma. Mình cũng vậy! 👻"
+      "vi": "Người dân thung lũng này mê chuyện ma. Mình cũng vậy! 👻",
+      "noteVi": "*So do I!*: tôi cũng vậy. Dùng để đồng ý với câu khẳng định ngay trước (*People love ghost stories*)."
     },
     {
       "id": "n4",
       "type": "message",
       "from": "ichabod",
       "text": "The most famous one is about the [[Headless|headless]] Horseman.",
-      "vi": "Chuyện nổi tiếng nhất là về Kỵ sĩ không đầu."
+      "vi": "Chuyện nổi tiếng nhất là về Kỵ sĩ không đầu.",
+      "noteVi": "*the most + tính từ*: … nhất. *one* thay cho *story* để khỏi lặp."
     },
     {
       "id": "n5",
       "type": "message",
       "from": "ichabod",
       "text": "He was a [[soldier]]. He lost his head in a war.",
-      "vi": "Hắn từng là một người lính. Hắn mất đầu trong chiến tranh."
+      "vi": "Hắn từng là một người lính. Hắn mất đầu trong chiến tranh.",
+      "noteVi": "*lost* là quá khứ của *lose*: mất."
     },
     {
       "id": "n6",
       "type": "message",
       "from": "ichabod",
       "text": "Every night, the [[headless]] [[rider]] rides through the [[valley]].",
-      "vi": "Đêm nào, kỵ sĩ không đầu cũng phi ngựa qua thung lũng."
+      "vi": "Đêm nào, kỵ sĩ không đầu cũng phi ngựa qua thung lũng.",
+      "noteVi": "*through*: xuyên qua. *rides through the valley* = phi ngựa xuyên qua thung lũng."
     },
     {
       "id": "s1",
       "type": "shadow",
       "from": "ichabod",
       "text": "He is looking for his head.",
-      "vi": "Hắn đang đi tìm cái đầu của mình."
+      "vi": "Hắn đang đi tìm cái đầu của mình.",
+      "noteVi": "*look for*: tìm. *is looking for* = đang tìm."
     },
     {
       "id": "c1",
@@ -126,13 +133,15 @@
       "id": "j1",
       "type": "narration",
       "text": "He loves ghost stories, but he is [[afraid]] of the dark.",
-      "vi": "Ichabod mê chuyện ma, nhưng lại sợ bóng tối."
+      "vi": "Ichabod mê chuyện ma, nhưng lại sợ bóng tối.",
+      "noteVi": "*afraid of + danh từ*: sợ cái gì."
     },
     {
       "id": "n7",
       "type": "message",
       "from": "ichabod",
-      "text": "Also… I'm in love! Her name is Katrina 😍"
+      "text": "Also… I'm in love! Her name is Katrina 😍",
+      "noteVi": "*be in love*: đang yêu."
     },
     {
       "id": "n8",
@@ -145,20 +154,23 @@
       "type": "message",
       "from": "ichabod",
       "text": "But Brom Bones loves her too. He always laughs at me 😤",
-      "vi": "Nhưng Brom Bones cũng yêu nàng. Hắn lúc nào cũng cười nhạo mình 😤"
+      "vi": "Nhưng Brom Bones cũng yêu nàng. Hắn lúc nào cũng cười nhạo mình 😤",
+      "noteVi": "*laugh at + người*: cười nhạo, chế giễu ai."
     },
     {
       "id": "n10",
       "type": "message",
       "from": "ichabod",
-      "text": "Great news! A letter came today ✉️"
+      "text": "Great news! A letter came today ✉️",
+      "noteVi": "*news* luôn là số ít dù có *s* ở cuối: *Great news!* (không nói *a great news*)."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "from": "ichabod",
       "text": "Katrina's family [[invited|invite]] me to a big party! 🎉",
-      "vi": "Gia đình Katrina mời mình đến một bữa tiệc lớn! 🎉"
+      "vi": "Gia đình Katrina mời mình đến một bữa tiệc lớn! 🎉",
+      "noteVi": "*invite + người + to + sự kiện*: mời ai đến đâu."
     }
   ]
 }

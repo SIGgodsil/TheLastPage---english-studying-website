@@ -60,21 +60,24 @@
       "type": "message",
       "from": "anna",
       "text": "A [[rich]] man wants to marry me! He has gold and horses 😳",
-      "vi": "Một người đàn ông giàu có muốn cưới mình! Ông ấy có vàng và ngựa 😳"
+      "vi": "Một người đàn ông giàu có muốn cưới mình! Ông ấy có vàng và ngựa 😳",
+      "noteVi": "*wants to + động từ*: muốn làm gì. *marry me*: cưới tôi (không nói *marry with me*)."
     },
     {
       "id": "n3",
       "type": "message",
       "from": "anna",
       "text": "But he has a blue [[beard]]. People call him Bluebeard.",
-      "vi": "Nhưng ông ta có bộ râu màu xanh. Người ta gọi ông là Râu Xanh."
+      "vi": "Nhưng ông ta có bộ râu màu xanh. Người ta gọi ông là Râu Xanh.",
+      "noteVi": "*call + ai đó + tên*: gọi ai đó là… *People call him Bluebeard* = mọi người gọi ông ta là Râu Xanh."
     },
     {
       "id": "n4",
       "type": "message",
       "from": "anna",
       "text": "He had many [[wives|wife]] before. Nobody knows where they are 😟",
-      "vi": "Trước đây ông ta có nhiều vợ. Không ai biết họ giờ ở đâu 😟"
+      "vi": "Trước đây ông ta có nhiều vợ. Không ai biết họ giờ ở đâu 😟",
+      "noteVi": "*had … before*: chuyện đã có từ trước. *Nobody knows where they are*: câu hỏi nằm trong câu thì không đảo ngữ (*where they are*, không phải *where are they*)."
     },
     {
       "id": "c1",
@@ -111,14 +114,16 @@
       "id": "j1",
       "type": "narration",
       "text": "Anna says yes. A month later, Bluebeard must go on a long [[trip]].",
-      "vi": "Anna nhận lời. Một tháng sau, Râu Xanh phải đi một chuyến xa."
+      "vi": "Anna nhận lời. Một tháng sau, Râu Xanh phải đi một chuyến xa.",
+      "noteVi": "*must + động từ*: phải làm gì. *go on a trip*: đi một chuyến xa."
     },
     {
       "id": "n5",
       "type": "message",
       "from": "anna",
       "text": "He gave me a big bunch of [[keys|key]] 🔑",
-      "vi": "Ông ấy đưa mình cả một chùm chìa khóa 🔑"
+      "vi": "Ông ấy đưa mình cả một chùm chìa khóa 🔑",
+      "noteVi": "*gave* là quá khứ của *give*. *a bunch of keys*: một chùm chìa khóa."
     },
     {
       "id": "n6",
@@ -126,7 +131,8 @@
       "from": "bluebeard",
       "voice": true,
       "text": "You can open every room in the castle.",
-      "vi": "Nàng được mở mọi căn phòng trong lâu đài."
+      "vi": "Nàng được mở mọi căn phòng trong lâu đài.",
+      "noteVi": "*You can + động từ*: bạn được phép làm gì."
     },
     {
       "id": "n7",
@@ -134,7 +140,8 @@
       "from": "bluebeard",
       "voice": true,
       "text": "This [[key]] opens the last room in the [[hall]]. Never open it.",
-      "vi": "Chìa này mở căn phòng cuối hành lang. Đừng bao giờ mở nó."
+      "vi": "Chìa này mở căn phòng cuối hành lang. Đừng bao giờ mở nó.",
+      "noteVi": "*Never + động từ*: câu ra lệnh, mạnh hơn *Don't*: đừng bao giờ…"
     },
     {
       "id": "s1",
@@ -142,7 +149,8 @@
       "from": "bluebeard",
       "voice": true,
       "text": "If you open it, you will be very sorry.",
-      "vi": "Nếu nàng mở nó, nàng sẽ phải hối hận."
+      "vi": "Nếu nàng mở nó, nàng sẽ phải hối hận.",
+      "noteVi": "Câu điều kiện: *If + hiện tại, … will + động từ*: nếu…, thì sẽ… Dùng để cảnh báo điều sẽ xảy ra."
     },
     {
       "id": "c2",
@@ -179,7 +187,8 @@
       "id": "j2",
       "type": "narration",
       "text": "That night, Anna stands in front of the small door.",
-      "vi": "Đêm đó, Anna đứng trước cánh cửa nhỏ."
+      "vi": "Đêm đó, Anna đứng trước cánh cửa nhỏ.",
+      "noteVi": "*in front of*: ở phía trước. Truyện kể ở thì hiện tại (*stands*) để người đọc thấy như đang xem tận mắt."
     },
     {
       "id": "end",

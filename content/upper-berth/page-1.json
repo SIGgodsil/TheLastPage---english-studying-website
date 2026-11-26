@@ -44,34 +44,39 @@
       "id": "n1",
       "type": "narration",
       "text": "The year is 1886. Your friend Brisbane is crossing the ocean.",
-      "vi": "Năm 1886. Brisbane, bạn của bạn, đang vượt đại dương."
+      "vi": "Năm 1886. Brisbane, bạn của bạn, đang vượt đại dương.",
+      "noteVi": "*The year is 1886*: năm đó là 1886. *is crossing*: đang vượt (đại dương)."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "brisbane",
       "text": "Hello from the sea! I'm on a big [[ship]] 🚢",
-      "vi": "Chào từ biển khơi! Mình đang ở trên một con tàu lớn 🚢"
+      "vi": "Chào từ biển khơi! Mình đang ở trên một con tàu lớn 🚢",
+      "noteVi": "*Hello from + nơi*: lời chào gửi từ… *on a big ship*: trên một con tàu lớn."
     },
     {
       "id": "n3",
       "type": "message",
       "from": "brisbane",
-      "text": "It's called the Kamtschatka. Very fancy! 😄"
+      "text": "It's called the Kamtschatka. Very fancy! 😄",
+      "noteVi": "*be called + tên*: có tên là… *It's called the Kamtschatka* = tàu tên là Kamtschatka."
     },
     {
       "id": "n4",
       "type": "message",
       "from": "brisbane",
       "text": "I told the [[steward]], “My [[cabin]] is 105.”",
-      "vi": "Mình nói với anh tiếp viên: “Buồng của tôi là 105.”"
+      "vi": "Mình nói với anh tiếp viên: “Buồng của tôi là 105.”",
+      "noteVi": "*tell + người*: nói với ai. Lời nói đặt trong ngoặc kép."
     },
     {
       "id": "n5",
       "type": "message",
       "from": "brisbane",
       "text": "His face changed. He said quietly, “Oh… 105.”",
-      "vi": "Mặt anh ta biến sắc. Anh ta khẽ nói: “Ồ… 105.”"
+      "vi": "Mặt anh ta biến sắc. Anh ta khẽ nói: “Ồ… 105.”",
+      "noteVi": "*His face changed*: sắc mặt anh ta thay đổi. *said quietly*: nói khẽ."
     },
     {
       "id": "c1",
@@ -109,14 +114,16 @@
       "type": "message",
       "from": "brisbane",
       "text": "My [[cabin]] has two beds, one above the other.",
-      "vi": "Buồng của mình có hai giường, một cái ở trên cái kia."
+      "vi": "Buồng của mình có hai giường, một cái ở trên cái kia.",
+      "noteVi": "*one above the other*: cái này ở trên cái kia (giường tầng)."
     },
     {
       "id": "n7",
       "type": "message",
       "from": "brisbane",
       "text": "A man sleeps in the [[upper]] bed. He looks very tired.",
-      "vi": "Một người đàn ông ngủ ở giường trên. Trông ông ta rất mệt."
+      "vi": "Một người đàn ông ngủ ở giường trên. Trông ông ta rất mệt.",
+      "noteVi": "*look + tính từ*: trông có vẻ. *He looks very tired* = trông anh ta rất mệt."
     },
     {
       "id": "n8",
@@ -128,7 +135,8 @@
       "id": "n9",
       "type": "message",
       "from": "brisbane",
-      "text": "The man just jumped down and ran out! The door banged! 😳"
+      "text": "The man just jumped down and ran out! The door banged! 😳",
+      "noteVi": "*just* + quá khứ = vừa mới. *jumped down and ran out*: nhảy xuống rồi chạy ra ngoài."
     },
     {
       "id": "n10",
@@ -141,7 +149,8 @@
       "type": "shadow",
       "from": "brisbane",
       "text": "Why does it [[smell]] of sea water?",
-      "vi": "Sao ở đây lại có mùi nước biển nhỉ?"
+      "vi": "Sao ở đây lại có mùi nước biển nhỉ?",
+      "noteVi": "Câu hỏi: *Why + does + chủ ngữ + động từ?* *smell of* = có mùi."
     },
     {
       "id": "n11",
@@ -153,14 +162,16 @@
       "type": "message",
       "from": "brisbane",
       "text": "He's not on the [[ship]]. Nobody can find him.",
-      "vi": "Ông ta không còn trên tàu. Không ai tìm thấy ông ta."
+      "vi": "Ông ta không còn trên tàu. Không ai tìm thấy ông ta.",
+      "noteVi": "*Nobody can find him*: không ai tìm thấy anh ta. Có *Nobody* thì không thêm *not*."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "from": "brisbane",
       "text": "And the small round window is wide open.",
-      "vi": "Và ô cửa sổ tròn nhỏ đang mở toang."
+      "vi": "Và ô cửa sổ tròn nhỏ đang mở toang.",
+      "noteVi": "*wide open*: mở toang."
     }
   ]
 }

@@ -3,7 +3,8 @@
 import { useState, type ReactNode } from "react";
 import Avatar from "./Avatar";
 import StoryText from "./StoryText";
-import TranslateButton from "./TranslateButton";
+import PatternNote from "./PatternNote";
+import TranslateButton, { NoteButton } from "./TranslateButton";
 
 type CharacterProps = {
   side: "character";
@@ -16,6 +17,8 @@ type CharacterProps = {
   text: string;
   /** Vietnamese translation, shown on request. */
   vi?: string;
+  /** Vietnamese note on the line's sentence pattern, shown on request. */
+  note?: string;
   voice?: boolean;
   /** The cliffhanger line gets a wine-coloured edge. */
   accent?: boolean;
@@ -42,8 +45,9 @@ export default function ChatBubble(props: Props) {
   return <CharacterBubble {...props} />;
 }
 
-function CharacterBubble({ name, emoji, showName, showAvatar, text, vi, voice, accent, footer }: CharacterProps) {
+function CharacterBubble({ name, emoji, showName, showAvatar, text, vi, note, voice, accent, footer }: CharacterProps) {
   const [showVi, setShowVi] = useState(false);
+  const [showNote, setShowNote] = useState(false);
   return (
     <div className="pr-10">
       {showName && <p className="eyebrow mb-1.5 ml-11 text-muted">{name}</p>}
@@ -59,11 +63,13 @@ function CharacterBubble({ name, emoji, showName, showAvatar, text, vi, voice, a
             <StoryText text={text} />
           </p>
           {vi && showVi && <p className="mt-2 border-t border-line pt-2 text-[0.95rem] text-muted italic">{vi}</p>}
+          {note && showNote && <PatternNote note={note} className="mt-2 border-t border-line pt-2" />}
         </div>
       </div>
-      {(vi || footer) && (
+      {(vi || note || footer) && (
         <div className="mt-1 ml-10 flex flex-wrap items-center gap-1.5">
           {vi && <TranslateButton shown={showVi} onToggle={() => setShowVi(!showVi)} />}
+          {note && <NoteButton shown={showNote} onToggle={() => setShowNote(!showNote)} />}
           {footer}
         </div>
       )}

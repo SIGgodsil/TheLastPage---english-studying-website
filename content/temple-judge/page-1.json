@@ -52,20 +52,23 @@
       "id": "n1",
       "type": "narration",
       "text": "Long ago. Ngo Tu Van is young, [[honest]] and [[brave]].",
-      "vi": "Ngày xưa. Ngô Tử Văn là chàng trai trẻ, thật thà và dũng cảm."
+      "vi": "Ngày xưa. Ngô Tử Văn là chàng trai trẻ, thật thà và dũng cảm.",
+      "noteVi": "Ba tính từ liệt kê: *young, honest and brave*; chỉ có *and* trước từ cuối."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "van",
-      "text": "My friend, you know me. I'm not afraid of anything 😎"
+      "text": "My friend, you know me. I'm not afraid of anything 😎",
+      "noteVi": "*not afraid of anything*: không sợ gì cả. Câu phủ định dùng *anything*."
     },
     {
       "id": "n3",
       "type": "message",
       "from": "van",
       "text": "But there's a problem in our village. The old [[temple]].",
-      "vi": "Nhưng làng mình có chuyện. Ngôi đền cũ."
+      "vi": "Nhưng làng mình có chuyện. Ngôi đền cũ.",
+      "noteVi": "*there's a problem in*: có một vấn đề ở… *The old temple*: câu rút gọn chỉ có danh từ."
     },
     {
       "id": "n4",
@@ -79,14 +82,16 @@
       "type": "message",
       "from": "van",
       "text": "He was an [[enemy]] general. He died in a war long ago.",
-      "vi": "Hắn từng là một viên tướng giặc. Hắn chết trong chiến tranh từ lâu rồi."
+      "vi": "Hắn từng là một viên tướng giặc. Hắn chết trong chiến tranh từ lâu rồi.",
+      "noteVi": "*an enemy general*: một viên tướng giặc. *long ago*: từ lâu rồi."
     },
     {
       "id": "n6",
       "type": "message",
       "from": "van",
       "text": "He took the [[temple]] from the good Earth God.",
-      "vi": "Hắn chiếm ngôi đền của vị Thổ thần tốt bụng."
+      "vi": "Hắn chiếm ngôi đền của vị Thổ thần tốt bụng.",
+      "noteVi": "*take … from + ai*: lấy, cướp cái gì của ai. *took* là quá khứ của *take*."
     },
     {
       "id": "c1",
@@ -124,7 +129,8 @@
       "type": "shadow",
       "from": "van",
       "text": "This is wrong. I will stop him.",
-      "vi": "Thế là sai. Mình sẽ ngăn hắn lại."
+      "vi": "Thế là sai. Mình sẽ ngăn hắn lại.",
+      "noteVi": "*will + động từ* nói quyết tâm ngay lúc nói: *I will stop him* = mình sẽ ngăn hắn lại."
     },
     {
       "id": "c2",
@@ -161,27 +167,31 @@
       "id": "j2",
       "type": "narration",
       "text": "Van washes and prays to the sky. Then he sets fire to the [[temple]].",
-      "vi": "Văn tắm gội, khấn trời, rồi phóng hỏa đốt ngôi đền."
+      "vi": "Văn tắm gội, khấn trời, rồi phóng hỏa đốt ngôi đền.",
+      "noteVi": "*set fire to + vật*: đốt, phóng hỏa."
     },
     {
       "id": "n7",
       "type": "message",
       "from": "van",
       "text": "Everyone is watching it [[burn]] 🔥",
-      "vi": "Mọi người đang đứng xem nó cháy 🔥"
+      "vi": "Mọi người đang đứng xem nó cháy 🔥",
+      "noteVi": "*watch + vật + động từ nguyên mẫu*: xem cái gì làm gì. *watching it burn* = xem nó cháy."
     },
     {
       "id": "n8",
       "type": "narration",
       "text": "That night, Van feels sick. He opens his eyes.",
-      "vi": "Đêm đó, Văn thấy khó chịu. Chàng mở mắt ra."
+      "vi": "Đêm đó, Văn thấy khó chịu. Chàng mở mắt ra.",
+      "noteVi": "*feel + tính từ*: thấy (trong người). *feels sick* = thấy khó chịu, ốm."
     },
     {
       "id": "n9",
       "type": "message",
       "from": "van",
       "text": "A tall man is standing by my bed! He's wearing a helmet 😨",
-      "vi": "Có một người cao lớn đứng cạnh giường mình! Hắn đội mũ trụ 😨"
+      "vi": "Có một người cao lớn đứng cạnh giường mình! Hắn đội mũ trụ 😨",
+      "noteVi": "*is standing by my bed*: đang đứng cạnh giường. *He's wearing*: hắn đang đội (mũ)."
     },
     {
       "id": "n10",
@@ -189,7 +199,8 @@
       "from": "tallMan",
       "voice": true,
       "text": "You [[burned|burn]] my house.",
-      "vi": "Ngươi đã đốt nhà ta."
+      "vi": "Ngươi đã đốt nhà ta.",
+      "noteVi": "Quá khứ vì việc đã xong. *my house* ở đây là ngôi đền hắn chiếm."
     },
     {
       "id": "end",
@@ -197,7 +208,8 @@
       "from": "tallMan",
       "voice": true,
       "text": "Build it again, or you will die!",
-      "vi": "Dựng lại nó, nếu không ngươi sẽ chết!"
+      "vi": "Dựng lại nó, nếu không ngươi sẽ chết!",
+      "noteVi": "*Mệnh lệnh + or + will*: làm đi, nếu không thì sẽ… (lời đe dọa)."
     }
   ]
 }

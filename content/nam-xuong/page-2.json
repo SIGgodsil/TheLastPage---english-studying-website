@@ -27,19 +27,22 @@
       "id": "n1",
       "type": "narration",
       "text": "Three years later, the [[war]] ends. Truong Sinh comes home.",
-      "vi": "Ba năm sau, chiến tranh kết thúc. Trương Sinh trở về."
+      "vi": "Ba năm sau, chiến tranh kết thúc. Trương Sinh trở về.",
+      "noteVi": "*Three years later*: ba năm sau. *the war ends*: chiến tranh kết thúc."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "truongSinh",
-      "text": "Hello. I am Truong Sinh, Vu Nuong's husband."
+      "text": "Hello. I am Truong Sinh, Vu Nuong's husband.",
+      "noteVi": "*Vu Nuong's husband*: chồng của Vũ Nương. *'s* = của."
     },
     {
       "id": "n3",
       "type": "message",
       "from": "truongSinh",
-      "text": "I am home from the [[war]]. But my mother is dead."
+      "text": "I am home from the [[war]]. But my mother is dead.",
+      "noteVi": "*be home from + nơi*: đã trở về từ…"
     },
     {
       "id": "c1",
@@ -78,7 +81,8 @@
       "id": "n4",
       "type": "narration",
       "text": "At the [[grave]], Truong Sinh holds out his arms.",
-      "vi": "Bên mộ, Trương Sinh dang tay ra."
+      "vi": "Bên mộ, Trương Sinh dang tay ra.",
+      "noteVi": "*holds out his arms*: dang tay ra (để ôm con)."
     },
     {
       "id": "n5",
@@ -89,7 +93,8 @@
     {
       "id": "n6",
       "type": "narration",
-      "text": "But Dan cries and pushes him away."
+      "text": "But Dan cries and pushes him away.",
+      "noteVi": "*push + người + away*: đẩy ai ra."
     },
     {
       "id": "n7",
@@ -97,7 +102,8 @@
       "from": "dan",
       "voice": true,
       "text": "You are not my father! My father comes every night.",
-      "vi": "Ông không phải cha tôi! Cha tôi đêm nào cũng đến."
+      "vi": "Ông không phải cha tôi! Cha tôi đêm nào cũng đến.",
+      "noteVi": "Hiện tại đơn + *every night*: việc lặp lại mỗi đêm."
     },
     {
       "id": "s1",
@@ -105,26 +111,30 @@
       "from": "dan",
       "voice": true,
       "text": "When Mother walks, he walks.",
-      "vi": "Mẹ đi thì cha cũng đi."
+      "vi": "Mẹ đi thì cha cũng đi.",
+      "noteVi": "*When A, B*: khi A thì B. Lặp cấu trúc để kể thói quen của “người cha”."
     },
     {
       "id": "n8",
       "type": "message",
       "from": "dan",
       "voice": true,
-      "text": "When Mother sits, he sits. But he never talks to me."
+      "text": "When Mother sits, he sits. But he never talks to me.",
+      "noteVi": "*talk to + người*: nói chuyện với ai."
     },
     {
       "id": "n9",
       "type": "narration",
-      "text": "Truong Sinh stops. His heart goes cold."
+      "text": "Truong Sinh stops. His heart goes cold.",
+      "noteVi": "*go + tính từ*: trở nên (thường là xấu đi). *His heart goes cold* = tim anh lạnh đi."
     },
     {
       "id": "n10",
       "type": "message",
       "from": "truongSinh",
       "text": "Another man comes to my house every night?",
-      "vi": "Có người đàn ông khác đến nhà tôi mỗi đêm sao?"
+      "vi": "Có người đàn ông khác đến nhà tôi mỗi đêm sao?",
+      "noteVi": "Câu khẳng định mà có dấu hỏi: Trương Sinh nhắc lại lời con vì không tin nổi."
     },
     {
       "id": "c2",
@@ -161,7 +171,8 @@
       "id": "end",
       "type": "cliffhanger",
       "text": "He walks home fast. His face is dark and angry.",
-      "vi": "Anh đi thật nhanh về nhà. Mặt anh tối sầm, giận dữ."
+      "vi": "Anh đi thật nhanh về nhà. Mặt anh tối sầm, giận dữ.",
+      "noteVi": "*His face is dark*: mặt anh sa sầm. *dark* ở đây nói về nét mặt, không phải màu."
     }
   ]
 }

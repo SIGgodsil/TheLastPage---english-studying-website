@@ -188,14 +188,16 @@ function StepView({ step, page, previous, groupChat }: StepViewProps) {
     return step.pick === undefined ? null : <ChatBubble side="learner" text={node.options[step.pick].text} />;
   }
 
-  if (node.type === "narration") return <NarrationLine text={node.text} vi={node.vi} />;
+  if (node.type === "narration") return <NarrationLine text={node.text} vi={node.vi} note={node.noteVi} />;
 
   if (node.type === "free-reply") {
     // Typed replies are a B1 extra, not built yet: show the task so the page still makes sense.
     return <NarrationLine text={node.prompt} />;
   }
 
-  if (node.type === "cliffhanger" && !node.from) return <NarrationLine text={node.text} vi={node.vi} accent />;
+  if (node.type === "cliffhanger" && !node.from) {
+    return <NarrationLine text={node.text} vi={node.vi} note={node.noteVi} accent />;
+  }
 
   const from = node.from!;
   const character = page.characters[from];
@@ -214,6 +216,7 @@ function StepView({ step, page, previous, groupChat }: StepViewProps) {
         showAvatar={startsRun}
         text={node.text}
         vi={node.vi}
+        note={node.noteVi}
         voice={node.voice}
         accent={node.type === "cliffhanger"}
         footer={

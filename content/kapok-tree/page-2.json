@@ -40,26 +40,30 @@
       "id": "n1",
       "type": "message",
       "from": "ngo",
-      "text": "I'm [[following|follow]] her now. She walks so fast."
+      "text": "I'm [[following|follow]] her now. She walks so fast.",
+      "noteVi": "*I'm following her*: hiện tại tiếp diễn = đang làm ngay lúc nhắn. *so fast*: nhanh quá."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "ngo",
-      "text": "We're far from the village. It's very dark here 😟"
+      "text": "We're far from the village. It's very dark here 😟",
+      "noteVi": "*far from + nơi*: xa nơi nào. *We're* = *We are*."
     },
     {
       "id": "n3",
       "type": "narration",
       "text": "She stops at an old, empty place. There is a huge [[kapok tree]].",
-      "vi": "Nàng dừng lại ở một nơi hoang vắng. Có một cây gạo khổng lồ."
+      "vi": "Nàng dừng lại ở một nơi hoang vắng. Có một cây gạo khổng lồ.",
+      "noteVi": "*There is + danh từ số ít*: có một… *an old, empty place*: hai tính từ đứng trước danh từ."
     },
     {
       "id": "s1",
       "type": "shadow",
       "from": "ngo",
       "text": "Its branches look like long black arms.",
-      "vi": "Cành cây trông như những cánh tay đen dài."
+      "vi": "Cành cây trông như những cánh tay đen dài.",
+      "noteVi": "*look like + danh từ*: trông giống như… *Its* (không có dấu ') = của nó."
     },
     {
       "id": "n4",
@@ -72,7 +76,8 @@
       "type": "message",
       "from": "ngo",
       "text": "Then the light went out 😨",
-      "vi": "Rồi ánh đèn vụt tắt 😨"
+      "vi": "Rồi ánh đèn vụt tắt 😨",
+      "noteVi": "*went out* là quá khứ của *go out*: (đèn, lửa) tắt."
     },
     {
       "id": "c1",
@@ -114,7 +119,8 @@
       "id": "n6",
       "type": "message",
       "from": "ngo",
-      "text": "There's no bed and no table."
+      "text": "There's no bed and no table.",
+      "noteVi": "*no + danh từ*: không có… *There's no bed and no table* = không giường, không bàn."
     },
     {
       "id": "n7",
@@ -128,7 +134,8 @@
       "type": "message",
       "from": "ngo",
       "text": "Two words are written on the [[coffin]]: “Nhi Khanh.”",
-      "vi": "Trên quan tài có hai chữ: “Nhị Khanh.”"
+      "vi": "Trên quan tài có hai chữ: “Nhị Khanh.”",
+      "noteVi": "*are written*: bị động = được viết. Ai viết không quan trọng, chỉ quan trọng chữ gì."
     },
     {
       "id": "c2",
@@ -167,13 +174,15 @@
       "id": "j2",
       "type": "narration",
       "text": "Suddenly, the [[lid]] of the [[coffin]] moves.",
-      "vi": "Bỗng nắp quan tài cử động."
+      "vi": "Bỗng nắp quan tài cử động.",
+      "noteVi": "*the lid of the coffin*: cái nắp của chiếc quan tài. *A of B* = A của B."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "text": "A [[pale]] hand comes out and holds his [[sleeve]].",
-      "vi": "Một bàn tay nhợt nhạt thò ra và nắm lấy tay áo chàng."
+      "vi": "Một bàn tay nhợt nhạt thò ra và nắm lấy tay áo chàng.",
+      "noteVi": "*comes out*: thò ra. *holds his sleeve*: nắm lấy tay áo anh."
     }
   ]
 }

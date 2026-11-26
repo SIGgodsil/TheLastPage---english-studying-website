@@ -49,13 +49,15 @@
       "type": "message",
       "from": "nam",
       "text": "Hey! Want to swim in the [[river]] later? 🏊",
-      "vi": "Ê! Lát nữa đi bơi sông không? 🏊"
+      "vi": "Ê! Lát nữa đi bơi sông không? 🏊",
+      "noteVi": "*Want to swim…?*: rút gọn của *Do you want to swim…?* Rất hay gặp trong tin nhắn."
     },
     {
       "id": "n3",
       "type": "message",
       "from": "nam",
-      "text": "Grandma says no again 🙄 Listen:"
+      "text": "Grandma says no again 🙄 Listen:",
+      "noteVi": "*says no*: nói không, không cho. *again*: lại nữa."
     },
     {
       "id": "n4",
@@ -63,13 +65,15 @@
       "from": "grandma",
       "voice": true,
       "text": "Don't swim at noon. And never swim alone.",
-      "vi": "Đừng bơi lúc trưa. Và đừng bao giờ bơi một mình."
+      "vi": "Đừng bơi lúc trưa. Và đừng bao giờ bơi một mình.",
+      "noteVi": "*Don't + động từ* và *never + động từ*: hai cách ra lệnh phủ định; *never* mạnh hơn = không bao giờ."
     },
     {
       "id": "n5",
       "type": "message",
       "from": "nam",
-      "text": "I asked why. She told me about the ma da 🙄"
+      "text": "I asked why. She told me about the ma da 🙄",
+      "noteVi": "*asked why*: hỏi tại sao. *told me about*: kể cho tôi về…"
     },
     {
       "id": "n6",
@@ -77,7 +81,8 @@
       "from": "grandma",
       "voice": true,
       "text": "When a person [[drowns|drown]], he becomes a water [[ghost]].",
-      "vi": "Khi một người chết đuối, người đó sẽ thành ma nước."
+      "vi": "Khi một người chết đuối, người đó sẽ thành ma nước.",
+      "noteVi": "*When + hiện tại, … hiện tại*: điều luôn xảy ra (theo truyền thuyết). *becomes* = trở thành."
     },
     {
       "id": "s1",
@@ -93,7 +98,8 @@
       "from": "grandma",
       "voice": true,
       "text": "He waits for someone to take his place.",
-      "vi": "Nó chờ có người đến thế chỗ."
+      "vi": "Nó chờ có người đến thế chỗ.",
+      "noteVi": "*wait for + ai + to + động từ*: chờ ai làm gì. *take his place*: thế chỗ hắn."
     },
     {
       "id": "c1",
@@ -130,25 +136,29 @@
       "id": "j1",
       "type": "message",
       "from": "nam",
-      "text": "But… you know about Hung."
+      "text": "But… you know about Hung.",
+      "noteVi": "*you know about Hung*: cậu biết chuyện của Hùng mà. Câu bỏ lửng để người đọc tự đoán."
     },
     {
       "id": "n8",
       "type": "narration",
       "text": "Last summer, Nam's best friend Hung [[drowned|drown]] in that [[river]].",
-      "vi": "Mùa hè năm ngoái, Hùng, bạn thân của Nam, chết đuối ở khúc sông đó."
+      "vi": "Mùa hè năm ngoái, Hùng, bạn thân của Nam, chết đuối ở khúc sông đó.",
+      "noteVi": "*Last summer*: mùa hè năm ngoái, nên động từ ở quá khứ (*drowned*)."
     },
     {
       "id": "n9",
       "type": "narration",
-      "text": "Nobody ever found him. One hot afternoon, Nam goes there alone."
+      "text": "Nobody ever found him. One hot afternoon, Nam goes there alone.",
+      "noteVi": "*Nobody ever found him*: chưa ai tìm thấy cậu ấy. Câu đã có *Nobody* thì không thêm *not*."
     },
     {
       "id": "n10",
       "type": "message",
       "from": "nam",
       "text": "I'm at the [[river]]. There's something red on a big rock.",
-      "vi": "Mình đang ở bờ sông. Có gì đó màu đỏ trên một tảng đá to."
+      "vi": "Mình đang ở bờ sông. Có gì đó màu đỏ trên một tảng đá to.",
+      "noteVi": "*something red*: cái gì đó màu đỏ. Tính từ đứng sau *something*."
     },
     {
       "id": "n11",
@@ -162,7 +172,8 @@
       "type": "cliffhanger",
       "from": "nam",
       "text": "And it's wet.",
-      "vi": "Và nó còn ướt."
+      "vi": "Và nó còn ướt.",
+      "noteVi": "Câu ngắn cuối trang để gây hồi hộp. *it's* = *it is*."
     }
   ]
 }

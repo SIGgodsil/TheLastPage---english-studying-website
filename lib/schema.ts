@@ -84,6 +84,8 @@ export const MessageNodeSchema = z.object({
   /** Shown as a voice note (e.g. Herbert records Morris talking). */
   voice: z.boolean().optional(),
   next: NodeId.optional(),
+  /** A short Vietnamese note on a sentence pattern or idiom in this line (not a translation). */
+  noteVi: ViText.optional(),
 });
 
 export const NarrationNodeSchema = z.object({
@@ -92,6 +94,8 @@ export const NarrationNodeSchema = z.object({
   text: StoryText,
   vi: ViText.optional(),
   next: NodeId.optional(),
+  /** A short Vietnamese note on a sentence pattern or idiom in this line (not a translation). */
+  noteVi: ViText.optional(),
 });
 
 export const ChoiceOptionSchema = z.object({
@@ -120,6 +124,8 @@ export const ShadowNodeSchema = z.object({
   vi: ViText,
   voice: z.boolean().optional(),
   next: NodeId.optional(),
+  /** A short Vietnamese note on a sentence pattern or idiom in this line (not a translation). */
+  noteVi: ViText.optional(),
 });
 
 export const FreeReplyNodeSchema = z.object({
@@ -141,6 +147,8 @@ export const CliffhangerNodeSchema = z.object({
   text: StoryText,
   vi: ViText.optional(),
   voice: z.boolean().optional(),
+  /** A short Vietnamese note on a sentence pattern or idiom in this line (not a translation). */
+  noteVi: ViText.optional(),
 });
 
 export const NodeSchema = z.discriminatedUnion("type", [

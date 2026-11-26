@@ -47,7 +47,8 @@
       "type": "message",
       "from": "nam",
       "text": "My heart is beating fast. Is someone playing a joke? 🤨",
-      "vi": "Tim mình đập nhanh quá. Có ai đang đùa không vậy? 🤨"
+      "vi": "Tim mình đập nhanh quá. Có ai đang đùa không vậy? 🤨",
+      "noteVi": "*Is someone playing a joke?*: có ai đang trêu mình không? *play a joke* = trêu, chơi khăm."
     },
     {
       "id": "c1",
@@ -84,39 +85,45 @@
       "id": "j1",
       "type": "narration",
       "text": "Nam jumps into the water. The [[river]] is warm.",
-      "vi": "Nam nhảy xuống nước. Nước sông ấm."
+      "vi": "Nam nhảy xuống nước. Nước sông ấm.",
+      "noteVi": "*jumps into*: nhảy xuống (vào trong) nước."
     },
     {
       "id": "n2",
       "type": "narration",
       "text": "But in the middle, the water is suddenly ice cold.",
-      "vi": "Nhưng ra đến giữa, nước bỗng lạnh như băng."
+      "vi": "Nhưng ra đến giữa, nước bỗng lạnh như băng.",
+      "noteVi": "*in the middle*: ở giữa (sông). *ice cold*: lạnh như băng."
     },
     {
       "id": "s1",
       "type": "shadow",
       "from": "nam",
       "text": "A hand is holding my [[ankle]]!",
-      "vi": "Có bàn tay đang nắm cổ chân mình!"
+      "vi": "Có bàn tay đang nắm cổ chân mình!",
+      "noteVi": "*is holding*: đang nắm (ngay lúc này). Hiện tại tiếp diễn làm câu gấp gáp hơn."
     },
     {
       "id": "n3",
       "type": "narration",
-      "text": "It pulls him down. Nam kicks hard."
+      "text": "It pulls him down. Nam kicks hard.",
+      "noteVi": "*pulls him down*: kéo cậu xuống. *kicks hard*: đạp chân thật mạnh."
     },
     {
       "id": "n4",
       "type": "message",
       "from": "nam",
       "text": "I made it to the [[bank]]. I climbed out.",
-      "vi": "Mình bơi được vào bờ rồi. Mình trèo lên được rồi."
+      "vi": "Mình bơi được vào bờ rồi. Mình trèo lên được rồi.",
+      "noteVi": "*made it to*: cố gắng đến được nơi nào đó. *climbed out*: trèo ra (khỏi nước)."
     },
     {
       "id": "n5",
       "type": "message",
       "from": "nam",
       "text": "There are five dark marks on my [[ankle]]. Like fingers 😰",
-      "vi": "Trên cổ chân mình có năm vết thâm. Như dấu ngón tay 😰"
+      "vi": "Trên cổ chân mình có năm vết thâm. Như dấu ngón tay 😰",
+      "noteVi": "*There are + số nhiều*: có… *Like fingers*: giống như ngón tay (câu rút gọn)."
     },
     {
       "id": "c2",
@@ -153,14 +160,16 @@
       "id": "j2",
       "type": "narration",
       "text": "That night, Nam can't sleep. Outside, he hears [[footsteps|footstep]].",
-      "vi": "Đêm đó, Nam không ngủ được. Bên ngoài, cậu nghe tiếng bước chân."
+      "vi": "Đêm đó, Nam không ngủ được. Bên ngoài, cậu nghe tiếng bước chân.",
+      "noteVi": "*can't sleep*: không ngủ được. *hears footsteps*: nghe thấy tiếng bước chân."
     },
     {
       "id": "n6",
       "type": "message",
       "from": "nam",
       "text": "Wet [[footsteps|footstep]]. Drip. Drip. Drip.",
-      "vi": "Tiếng bước chân ướt sũng. Tóc. Tóc. Tóc."
+      "vi": "Tiếng bước chân ướt sũng. Tóc. Tóc. Tóc.",
+      "noteVi": "*Drip*: từ mô phỏng tiếng nước nhỏ giọt, lặp ba lần cho rợn."
     },
     {
       "id": "n7",
@@ -174,7 +183,8 @@
       "from": "hung",
       "voice": true,
       "text": "Nam… come and swim with me. I'm so cold.",
-      "vi": "Nam ơi… xuống bơi với tớ đi. Tớ lạnh lắm."
+      "vi": "Nam ơi… xuống bơi với tớ đi. Tớ lạnh lắm.",
+      "noteVi": "*come and + động từ*: đến và làm gì (lời rủ). *I'm so cold*: mình lạnh lắm."
     },
     {
       "id": "n9",
@@ -188,7 +198,8 @@
       "from": "grandma",
       "voice": true,
       "text": "He is looking for someone to take his place.",
-      "vi": "Nó đang tìm người thế chỗ."
+      "vi": "Nó đang tìm người thế chỗ.",
+      "noteVi": "*is looking for someone to + động từ*: đang tìm ai đó để… *look for* = tìm."
     }
   ]
 }

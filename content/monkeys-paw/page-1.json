@@ -21,20 +21,23 @@
       "id": "n1",
       "type": "narration",
       "text": "A cold, rainy night. Someone [[knocks|knock]] at the Whites' door.",
-      "vi": "Một đêm mưa lạnh. Có ai đó gõ cửa nhà White."
+      "vi": "Một đêm mưa lạnh. Có ai đó gõ cửa nhà White.",
+      "noteVi": "*the Whites' door*: cửa nhà White. Tên gia đình số nhiều (*the Whites*) chỉ thêm *'* để chỉ sở hữu."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "herbert",
       "text": "Hey, are you awake? Someone just [[knocked|knock]] at our door 👀",
-      "vi": "Này, cậu còn thức không? Vừa có người gõ cửa nhà mình 👀"
+      "vi": "Này, cậu còn thức không? Vừa có người gõ cửa nhà mình 👀",
+      "noteVi": "*are you awake?*: cậu còn thức không? *just* + quá khứ (*just knocked*) = vừa mới."
     },
     {
       "id": "n3",
       "type": "message",
       "from": "herbert",
-      "text": "It's Sergeant-Major Morris, Dad's old friend. He's back from India! ✈️"
+      "text": "It's Sergeant-Major Morris, Dad's old friend. He's back from India! ✈️",
+      "noteVi": "*be back from + nơi*: trở về từ… *He's* = *He is*."
     },
     {
       "id": "c1",
@@ -63,14 +66,16 @@
       "id": "n4",
       "type": "message",
       "from": "herbert",
-      "text": "Now he's taking something small out of his pocket…"
+      "text": "Now he's taking something small out of his pocket…",
+      "noteVi": "*take something out of*: lấy cái gì ra khỏi… *he's taking* = ông ấy đang lấy."
     },
     {
       "id": "n5",
       "type": "message",
       "from": "herbert",
       "text": "It's a dry, brown [[paw]] 😬 Listen, I'm recording him 🎙️",
-      "vi": "Đó là một bàn chân khô, màu nâu 😬 Nghe này, mình đang ghi âm ông ấy 🎙️"
+      "vi": "Đó là một bàn chân khô, màu nâu 😬 Nghe này, mình đang ghi âm ông ấy 🎙️",
+      "noteVi": "*I'm recording him*: mình đang ghi âm ông ấy (ngay lúc này)."
     },
     {
       "id": "n6",
@@ -78,7 +83,8 @@
       "from": "morris",
       "voice": true,
       "text": "This is a monkey's [[paw]]. An old man put a [[spell]] on it.",
-      "vi": "Đây là bàn chân khỉ. Một ông già đã yểm bùa lên nó."
+      "vi": "Đây là bàn chân khỉ. Một ông già đã yểm bùa lên nó.",
+      "noteVi": "*put a spell on*: yểm bùa lên. *put* có dạng quá khứ giống hệt hiện tại."
     },
     {
       "id": "n7",
@@ -93,26 +99,30 @@
       "type": "message",
       "from": "herbert",
       "text": "I asked, “Did you make your [[wishes|wish]]?” He said yes, very quietly.",
-      "vi": "Mình hỏi: “Ông đã ước chưa?” Ông ấy khẽ đáp: rồi."
+      "vi": "Mình hỏi: “Ông đã ước chưa?” Ông ấy khẽ đáp: rồi.",
+      "noteVi": "Câu hỏi quá khứ: *Did you + động từ nguyên mẫu?* (*Did you make*, không viết *Did you made*)."
     },
     {
       "id": "n9",
       "type": "narration",
       "text": "Morris's face is white. Suddenly, he throws the [[paw]] into the fire.",
-      "vi": "Mặt ông Morris trắng bệch. Bỗng ông ném bàn chân khỉ vào lửa."
+      "vi": "Mặt ông Morris trắng bệch. Bỗng ông ném bàn chân khỉ vào lửa.",
+      "noteVi": "*throws … into the fire*: ném vào lửa. *into* = vào bên trong."
     },
     {
       "id": "n10",
       "type": "message",
       "from": "herbert",
-      "text": "WHAT?! 😱 Dad pulled it out fast!"
+      "text": "WHAT?! 😱 Dad pulled it out fast!",
+      "noteVi": "*pulled it out*: kéo nó ra. Với *it*, phải đặt *it* ở giữa (*pull it out*, không nói *pull out it*)."
     },
     {
       "id": "n11",
       "type": "message",
       "from": "morris",
       "voice": true,
-      "text": "Throw it away."
+      "text": "Throw it away.",
+      "noteVi": "*Throw it away*: vứt nó đi. Câu mệnh lệnh, *it* nằm giữa *throw* và *away*."
     },
     {
       "id": "s1",
@@ -120,21 +130,24 @@
       "from": "morris",
       "voice": true,
       "text": "If you [[wish]], be [[careful]] what you [[wish]] for.",
-      "vi": "Nếu ước, hãy cẩn thận với điều mình ước."
+      "vi": "Nếu ước, hãy cẩn thận với điều mình ước.",
+      "noteVi": "*be careful what you wish for*: hãy cẩn thận với điều mình ước. *If you wish* = nếu (ông) muốn ước."
     },
     {
       "id": "n12",
       "type": "message",
       "from": "herbert",
       "text": "Morris left. Dad is holding the [[paw]] now 🤔",
-      "vi": "Ông Morris về rồi. Giờ bố mình đang cầm cái bàn chân khỉ 🤔"
+      "vi": "Ông Morris về rồi. Giờ bố mình đang cầm cái bàn chân khỉ 🤔",
+      "noteVi": "*left* là quá khứ của *leave*: rời đi. *is holding*: đang cầm."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "from": "herbert",
       "text": "And he's… smiling. 😳",
-      "vi": "Và bố mình đang… mỉm cười. 😳"
+      "vi": "Và bố mình đang… mỉm cười. 😳",
+      "noteVi": "Dấu ba chấm làm câu ngập ngừng, như người nhắn đang sợ."
     }
   ]
 }

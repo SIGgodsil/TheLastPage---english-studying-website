@@ -47,14 +47,16 @@
       "id": "n1",
       "type": "narration",
       "text": "Long ago. A poor [[farmer]] works in the [[fields|field]] every day.",
-      "vi": "Ngày xưa. Một chàng nông dân nghèo ngày nào cũng làm việc ngoài đồng."
+      "vi": "Ngày xưa. Một chàng nông dân nghèo ngày nào cũng làm việc ngoài đồng.",
+      "noteVi": "Hiện tại đơn + *every day*: thói quen ngày nào cũng làm."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "ngocTam",
       "text": "Another long day in the [[fields|field]] 🌾 I'm so tired.",
-      "vi": "Lại một ngày dài ngoài đồng 🌾 Mệt quá."
+      "vi": "Lại một ngày dài ngoài đồng 🌾 Mệt quá.",
+      "noteVi": "*Another long day*: lại thêm một ngày dài. *so tired*: mệt quá."
     },
     {
       "id": "n3",
@@ -66,7 +68,8 @@
       "id": "n4",
       "type": "message",
       "from": "ngocTam",
-      "text": "But she doesn't like to work. She wants nice clothes and good food."
+      "text": "But she doesn't like to work. She wants nice clothes and good food.",
+      "noteVi": "*doesn't like to + động từ*: không thích làm gì."
     },
     {
       "id": "c1",
@@ -103,13 +106,15 @@
       "id": "j1",
       "type": "narration",
       "text": "One day, Nhan Diep suddenly gets sick and dies.",
-      "vi": "Một ngày, Nhan Diệp bỗng đổ bệnh rồi qua đời."
+      "vi": "Một ngày, Nhan Diệp bỗng đổ bệnh rồi qua đời.",
+      "noteVi": "*get + tính từ*: trở nên. *gets sick* = bị ốm."
     },
     {
       "id": "n5",
       "type": "message",
       "from": "ngocTam",
-      "text": "She's gone. I can't stop crying 😢"
+      "text": "She's gone. I can't stop crying 😢",
+      "noteVi": "*She's gone*: nàng đi rồi (cách nói nhẹ về cái chết). *can't stop + V-ing*: không thể ngừng làm gì."
     },
     {
       "id": "c2",
@@ -149,7 +154,8 @@
       "type": "message",
       "from": "ngocTam",
       "text": "I sold my house and my [[fields|field]]. I bought a small boat.",
-      "vi": "Mình đã bán nhà và ruộng. Mình mua một chiếc thuyền nhỏ."
+      "vi": "Mình đã bán nhà và ruộng. Mình mua một chiếc thuyền nhỏ.",
+      "noteVi": "*sold, bought*: quá khứ của *sell, buy*. Anh bán hết để mua một chiếc thuyền."
     },
     {
       "id": "n6",
@@ -162,19 +168,22 @@
       "type": "shadow",
       "from": "ngocTam",
       "text": "I will find a way to bring you back.",
-      "vi": "Ta sẽ tìm cách đưa nàng trở về."
+      "vi": "Ta sẽ tìm cách đưa nàng trở về.",
+      "noteVi": "*find a way to + động từ*: tìm cách để… *bring you back*: đưa em trở lại."
     },
     {
       "id": "n7",
       "type": "narration",
       "text": "He [[sails|sail]] for weeks. Then he finds a green mountain by the sea.",
-      "vi": "Anh đi thuyền nhiều tuần liền. Rồi anh tìm thấy một ngọn núi xanh bên biển."
+      "vi": "Anh đi thuyền nhiều tuần liền. Rồi anh tìm thấy một ngọn núi xanh bên biển.",
+      "noteVi": "*for + khoảng thời gian*: trong bao lâu. *sails for weeks* = đi thuyền nhiều tuần liền."
     },
     {
       "id": "n8",
       "type": "message",
       "from": "ngocTam",
-      "text": "An old man with a white beard is waiting!"
+      "text": "An old man with a white beard is waiting!",
+      "noteVi": "*with a white beard*: có râu trắng. *with* = có (đặc điểm)."
     },
     {
       "id": "n9",
@@ -182,7 +191,8 @@
       "from": "oldMan",
       "voice": true,
       "text": "I can bring your wife back.",
-      "vi": "Ta có thể đưa vợ con trở lại."
+      "vi": "Ta có thể đưa vợ con trở lại.",
+      "noteVi": "*bring + người + back*: đưa ai trở lại."
     },
     {
       "id": "end",
@@ -190,7 +200,8 @@
       "from": "oldMan",
       "voice": true,
       "text": "But you may be [[sorry]].",
-      "vi": "Nhưng con có thể sẽ hối hận."
+      "vi": "Nhưng con có thể sẽ hối hận.",
+      "noteVi": "*may*: có thể (không chắc). *you may be sorry* = anh có thể sẽ hối hận."
     }
   ]
 }

@@ -40,26 +40,30 @@
       "id": "n1",
       "type": "message",
       "from": "white",
-      "text": "It's just the wind… right?"
+      "text": "It's just the wind… right?",
+      "noteVi": "Thêm *right?* cuối câu để hỏi lại: … phải không?"
     },
     {
       "id": "n2",
       "type": "message",
       "from": "meagar",
-      "text": "Your voice is very quiet, White 😬"
+      "text": "Your voice is very quiet, White 😬",
+      "noteVi": "*White* ở đây là tên một người bạn trong nhóm. *very quiet*: rất nhỏ (vì sợ)."
     },
     {
       "id": "n3",
       "type": "narration",
       "text": "Midnight. They take the candles and go [[upstairs]].",
-      "vi": "Nửa đêm. Họ cầm nến đi lên tầng trên."
+      "vi": "Nửa đêm. Họ cầm nến đi lên tầng trên.",
+      "noteVi": "*go upstairs*: đi lên lầu (không cần *to*)."
     },
     {
       "id": "n4",
       "type": "message",
       "from": "jack",
       "text": "Every room is [[empty]]. Every window is closed.",
-      "vi": "Phòng nào cũng trống. Cửa sổ nào cũng đóng."
+      "vi": "Phòng nào cũng trống. Cửa sổ nào cũng đóng.",
+      "noteVi": "*Every + danh từ số ít + is*: *Every room is empty* (không dùng *are*)."
     },
     {
       "id": "c1",
@@ -96,28 +100,32 @@
       "id": "j1",
       "type": "narration",
       "text": "They go back down. Behind them, they hear [[footsteps|footstep]].",
-      "vi": "Họ đi xuống. Phía sau họ có tiếng bước chân."
+      "vi": "Họ đi xuống. Phía sau họ có tiếng bước chân.",
+      "noteVi": "*go back down*: đi xuống lại. *Behind them*: phía sau họ."
     },
     {
       "id": "s1",
       "type": "shadow",
       "from": "lester",
       "text": "Slow, [[heavy]] [[footsteps|footstep]] on the stairs.",
-      "vi": "Những bước chân chậm, nặng nề trên cầu thang."
+      "vi": "Những bước chân chậm, nặng nề trên cầu thang.",
+      "noteVi": "Hai tính từ trước danh từ, cách nhau bằng dấu phẩy: *Slow, heavy footsteps*."
     },
     {
       "id": "n5",
       "type": "message",
       "from": "meagar",
       "text": "We turned around. Nobody was there 😨",
-      "vi": "Bọn mình quay lại. Không có ai cả 😨"
+      "vi": "Bọn mình quay lại. Không có ai cả 😨",
+      "noteVi": "*turn around*: quay người lại. *Nobody was there*: không có ai ở đó."
     },
     {
       "id": "n6",
       "type": "message",
       "from": "meagar",
       "text": "And the [[footsteps|footstep]] stopped.",
-      "vi": "Và tiếng bước chân dừng lại."
+      "vi": "Và tiếng bước chân dừng lại.",
+      "noteVi": "*stopped*: quá khứ của *stop* (gấp đôi chữ *p*)."
     },
     {
       "id": "c2",
@@ -162,14 +170,16 @@
       "type": "message",
       "from": "lester",
       "text": "Who touched my [[shoulder]]?! Not funny!",
-      "vi": "Ai chạm vào vai tôi đấy?! Không vui đâu!"
+      "vi": "Ai chạm vào vai tôi đấy?! Không vui đâu!",
+      "noteVi": "*Who* làm chủ ngữ thì không cần *did*: *Who touched…?* *Not funny!* = chẳng vui đâu!"
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "from": "lester",
       "text": "I turned around. Nobody is behind me.",
-      "vi": "Mình quay lại. Không có ai phía sau cả."
+      "vi": "Mình quay lại. Không có ai phía sau cả.",
+      "noteVi": "Câu trước ở quá khứ (*turned*), câu sau ở hiện tại (*is*): chuyện vẫn đang xảy ra."
     }
   ]
 }

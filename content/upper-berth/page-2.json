@@ -42,7 +42,8 @@
       "type": "message",
       "from": "brisbane",
       "text": "I went to the [[captain]]. He looked serious.",
-      "vi": "Mình đến gặp thuyền trưởng. Trông ông ấy rất nghiêm trọng."
+      "vi": "Mình đến gặp thuyền trưởng. Trông ông ấy rất nghiêm trọng.",
+      "noteVi": "*go to + người*: đến gặp ai. *look + tính từ*: trông có vẻ (*looked serious*)."
     },
     {
       "id": "n2",
@@ -50,7 +51,8 @@
       "from": "captain",
       "voice": true,
       "text": "[[Cabin|cabin]] 105 again.",
-      "vi": "Lại là buồng 105."
+      "vi": "Lại là buồng 105.",
+      "noteVi": "Câu rút gọn không có động từ: lại là cabin 105."
     },
     {
       "id": "n3",
@@ -58,7 +60,8 @@
       "from": "captain",
       "voice": true,
       "text": "On my last three trips, someone [[disappeared|disappear]] at sea.",
-      "vi": "Ba chuyến gần đây của tôi, đều có người mất tích trên biển."
+      "vi": "Ba chuyến gần đây của tôi, đều có người mất tích trên biển.",
+      "noteVi": "*On my last three trips*: trong ba chuyến gần nhất. *at sea*: trên biển."
     },
     {
       "id": "n4",
@@ -66,14 +69,16 @@
       "from": "captain",
       "voice": true,
       "text": "Always from that [[cabin]].",
-      "vi": "Lần nào cũng từ buồng đó."
+      "vi": "Lần nào cũng từ buồng đó.",
+      "noteVi": "Câu rút gọn: (lần nào cũng) từ cabin đó."
     },
     {
       "id": "s1",
       "type": "shadow",
       "from": "brisbane",
       "text": "I'm not afraid. I will stay there.",
-      "vi": "Tôi không sợ. Tôi sẽ ở lại đó."
+      "vi": "Tôi không sợ. Tôi sẽ ở lại đó.",
+      "noteVi": "*will* nói quyết định ngay lúc nói: *I will stay there* = tôi sẽ ở lại đó."
     },
     {
       "id": "c1",
@@ -110,26 +115,30 @@
       "id": "n5",
       "type": "narration",
       "text": "The [[steward]] closes the round window. He screws it shut, very tight.",
-      "vi": "Anh tiếp viên đóng ô cửa tròn và vặn ốc thật chặt."
+      "vi": "Anh tiếp viên đóng ô cửa tròn và vặn ốc thật chặt.",
+      "noteVi": "*screw it shut*: vặn ốc đóng chặt nó lại. *very tight*: rất chặt."
     },
     {
       "id": "n6",
       "type": "message",
       "from": "steward",
       "voice": true,
-      "text": "Now no one can open it, sir."
+      "text": "Now no one can open it, sir.",
+      "noteVi": "*no one can + động từ*: không ai có thể… *sir*: thưa ông."
     },
     {
       "id": "n7",
       "type": "narration",
-      "text": "That night, Brisbane lies in his bed."
+      "text": "That night, Brisbane lies in his bed.",
+      "noteVi": "*lie* ở đây là *nằm* (không phải nói dối): *lies in his bed* = nằm trên giường."
     },
     {
       "id": "n8",
       "type": "message",
       "from": "brisbane",
       "text": "The air is cold and [[wet]]. I can [[smell]] the sea again.",
-      "vi": "Không khí lạnh và ẩm ướt. Mình lại ngửi thấy mùi biển."
+      "vi": "Không khí lạnh và ẩm ướt. Mình lại ngửi thấy mùi biển.",
+      "noteVi": "*I can smell*: mình ngửi thấy. *again*: lại nữa."
     },
     {
       "id": "n9",
@@ -142,7 +151,8 @@
       "type": "message",
       "from": "brisbane",
       "text": "It's open. IT'S OPEN. 😨",
-      "vi": "Nó mở. NÓ ĐANG MỞ. 😨"
+      "vi": "Nó mở. NÓ ĐANG MỞ. 😨",
+      "noteVi": "Chữ in hoa *IT'S OPEN*: như đang hét lên vì sợ."
     },
     {
       "id": "c2",
@@ -180,7 +190,8 @@
       "type": "cliffhanger",
       "from": "brisbane",
       "text": "Something is moving in the [[upper]] bed above me…",
-      "vi": "Có thứ gì đang cử động ở giường trên, ngay phía trên mình…"
+      "vi": "Có thứ gì đang cử động ở giường trên, ngay phía trên mình…",
+      "noteVi": "*Something is moving*: có cái gì đó đang cử động. *above me*: ở phía trên mình."
     }
   ]
 }

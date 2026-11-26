@@ -28,7 +28,8 @@
       "id": "n1",
       "type": "message",
       "from": "anna",
-      "text": "I'm at the door. Just one look… 🙈"
+      "text": "I'm at the door. Just one look… 🙈",
+      "noteVi": "*Just one look*: câu rút gọn = chỉ nhìn một cái thôi. Tin nhắn hay bỏ bớt chủ ngữ và động từ."
     },
     {
       "id": "c1",
@@ -71,7 +72,8 @@
       "id": "n2",
       "type": "message",
       "from": "anna",
-      "text": "At first, I can't see anything."
+      "text": "At first, I can't see anything.",
+      "noteVi": "*At first*: lúc đầu. Sau *can't* dùng *anything* (không dùng *nothing*): *can't see anything* = không thấy gì cả."
     },
     {
       "id": "n3",
@@ -84,39 +86,45 @@
       "id": "n4",
       "type": "narration",
       "text": "Along the wall, there are women in long dresses.",
-      "vi": "Dọc bức tường là những người phụ nữ mặc váy dài."
+      "vi": "Dọc bức tường là những người phụ nữ mặc váy dài.",
+      "noteVi": "*there are + danh từ số nhiều*: có… Cụm chỉ nơi chốn *Along the wall* được đưa lên đầu câu."
     },
     {
       "id": "s1",
       "type": "shadow",
       "from": "anna",
       "text": "They don't move. They don't breathe.",
-      "vi": "Họ không cử động. Họ không thở."
+      "vi": "Họ không cử động. Họ không thở.",
+      "noteVi": "*don't + động từ*: phủ định ở hiện tại. Hai câu ngắn lặp cùng cấu trúc để tạo cảm giác rợn người."
     },
     {
       "id": "n5",
       "type": "message",
       "from": "anna",
       "text": "They are Bluebeard's [[wives|wife]] 😱",
-      "vi": "Họ là những người vợ của Râu Xanh 😱"
+      "vi": "Họ là những người vợ của Râu Xanh 😱",
+      "noteVi": "*Bluebeard's wives*: *'s* chỉ sở hữu = những người vợ của Râu Xanh."
     },
     {
       "id": "n6",
       "type": "narration",
-      "text": "Anna screams. The little [[key]] falls onto the wet floor."
+      "text": "Anna screams. The little [[key]] falls onto the wet floor.",
+      "noteVi": "*falls onto the floor*: rơi xuống sàn. *onto* = chuyển động lên trên một bề mặt."
     },
     {
       "id": "n7",
       "type": "message",
       "from": "anna",
-      "text": "I ran to my room. I washed the [[key]]."
+      "text": "I ran to my room. I washed the [[key]].",
+      "noteVi": "Anna đổi sang quá khứ (*ran, washed*) để kể lại việc vừa làm xong."
     },
     {
       "id": "n8",
       "type": "message",
       "from": "anna",
       "text": "There's a red [[spot]] on it. It won't go away!",
-      "vi": "Có một vết đỏ trên đó. Nó không chịu mất đi!"
+      "vi": "Có một vết đỏ trên đó. Nó không chịu mất đi!",
+      "noteVi": "*There's* = *There is*. *won't go away* = *will not go away*: không chịu mất đi (vết bẩn cứ còn đó)."
     },
     {
       "id": "c2",
@@ -155,7 +163,8 @@
       "type": "message",
       "from": "anna",
       "text": "It's a magic [[key]]. The red [[spot]] never goes away.",
-      "vi": "Đó là chìa khóa phép. Vết đỏ không bao giờ phai."
+      "vi": "Đó là chìa khóa phép. Vết đỏ không bao giờ phai.",
+      "noteVi": "Hiện tại đơn (*never goes away*) nói một sự thật luôn đúng về chiếc chìa khóa."
     },
     {
       "id": "n9",
@@ -168,7 +177,8 @@
       "type": "cliffhanger",
       "from": "anna",
       "text": "Oh no. Bluebeard is home early.",
-      "vi": "Ôi không. Râu Xanh về sớm."
+      "vi": "Ôi không. Râu Xanh về sớm.",
+      "noteVi": "*is home*: đã về đến nhà. *early*: sớm hơn dự định."
     }
   ]
 }

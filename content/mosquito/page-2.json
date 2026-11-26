@@ -41,7 +41,8 @@
       "id": "n1",
       "type": "message",
       "from": "ngocTam",
-      "text": "I told him, “Please. I will do anything.”"
+      "text": "I told him, “Please. I will do anything.”",
+      "noteVi": "*told him, “…”*: nói với ông ấy (lời nói trong ngoặc kép). *do anything*: làm bất cứ điều gì."
     },
     {
       "id": "n2",
@@ -49,7 +50,8 @@
       "from": "oldMan",
       "voice": true,
       "text": "Cut your [[finger]].",
-      "vi": "Hãy cắt ngón tay con."
+      "vi": "Hãy cắt ngón tay con.",
+      "noteVi": "Câu mệnh lệnh bắt đầu ngay bằng động từ: *Cut…*"
     },
     {
       "id": "n3",
@@ -57,7 +59,8 @@
       "from": "oldMan",
       "voice": true,
       "text": "Let three [[drops|drop]] of [[blood]] fall on her.",
-      "vi": "Để ba giọt máu rơi lên người nàng."
+      "vi": "Để ba giọt máu rơi lên người nàng.",
+      "noteVi": "*Let + vật + động từ*: để cho cái gì làm gì. *Let three drops of blood fall* = để ba giọt máu rơi xuống."
     },
     {
       "id": "c1",
@@ -100,21 +103,24 @@
       "id": "n4",
       "type": "narration",
       "text": "Slowly, Nhan Diep opens her eyes. Her cheeks turn pink.",
-      "vi": "Từ từ, Nhan Diệp mở mắt. Má nàng hồng hào trở lại."
+      "vi": "Từ từ, Nhan Diệp mở mắt. Má nàng hồng hào trở lại.",
+      "noteVi": "*turn + màu*: chuyển sang màu… *Her cheeks turn pink* = má nàng hồng lên."
     },
     {
       "id": "n5",
       "type": "message",
       "from": "ngocTam",
       "text": "She's sitting up! She's smiling! 😭❤️",
-      "vi": "Cô ấy ngồi dậy rồi! Cô ấy đang cười! 😭❤️"
+      "vi": "Cô ấy ngồi dậy rồi! Cô ấy đang cười! 😭❤️",
+      "noteVi": "*sit up*: ngồi dậy (từ tư thế nằm). *She's sitting up* = nàng đang ngồi dậy."
     },
     {
       "id": "n6",
       "type": "message",
       "from": "oldMan",
       "voice": true,
-      "text": "Be careful, my son."
+      "text": "Be careful, my son.",
+      "noteVi": "*my son*: con trai ta. Người già hay gọi người trẻ như vậy cho thân mật."
     },
     {
       "id": "s1",
@@ -122,26 +128,30 @@
       "from": "oldMan",
       "voice": true,
       "text": "She does not love you like you love her.",
-      "vi": "Nàng không yêu con như con yêu nàng."
+      "vi": "Nàng không yêu con như con yêu nàng.",
+      "noteVi": "*like + câu*: giống như. *like you love her* = như cách anh yêu nàng."
     },
     {
       "id": "n7",
       "type": "narration",
       "text": "Ngoc Tam does not listen. On the way home, they stop at a [[market]].",
-      "vi": "Ngọc Tâm không nghe. Trên đường về, họ dừng lại ở một khu chợ."
+      "vi": "Ngọc Tâm không nghe. Trên đường về, họ dừng lại ở một khu chợ.",
+      "noteVi": "*does not listen*: không nghe lời. *On the way home*: trên đường về nhà."
     },
     {
       "id": "n8",
       "type": "message",
       "from": "ngocTam",
-      "text": "There's a big boat next to ours. It belongs to a rich merchant."
+      "text": "There's a big boat next to ours. It belongs to a rich merchant.",
+      "noteVi": "*ours* = *our boat*. *belongs to*: thuộc về."
     },
     {
       "id": "n9",
       "type": "message",
       "from": "ngocTam",
       "text": "The merchant is smiling at my wife 😠",
-      "vi": "Gã lái buôn đang cười với vợ mình 😠"
+      "vi": "Gã lái buôn đang cười với vợ mình 😠",
+      "noteVi": "*smile at + người*: mỉm cười với ai."
     },
     {
       "id": "c2",
@@ -178,14 +188,16 @@
       "id": "j2",
       "type": "narration",
       "text": "Ngoc Tam goes to buy food at the [[market]].",
-      "vi": "Ngọc Tâm đi mua đồ ăn trong chợ."
+      "vi": "Ngọc Tâm đi mua đồ ăn trong chợ.",
+      "noteVi": "*to + động từ* chỉ mục đích: *goes to buy food* = đi (để) mua đồ ăn."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "from": "ngocTam",
       "text": "I'm back… My wife and the big boat are gone!",
-      "vi": "Mình quay lại rồi… Vợ mình và con thuyền lớn biến mất rồi!"
+      "vi": "Mình quay lại rồi… Vợ mình và con thuyền lớn biến mất rồi!",
+      "noteVi": "*I'm back*: tôi về rồi. *are gone*: đã biến mất."
     }
   ]
 }

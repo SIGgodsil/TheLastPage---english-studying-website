@@ -51,33 +51,38 @@
       "type": "shadow",
       "from": "jack",
       "text": "Nobody can stay one night in the old toll-house.",
-      "vi": "Không ai ở nổi một đêm trong trạm thu phí cũ đâu."
+      "vi": "Không ai ở nổi một đêm trong trạm thu phí cũ đâu.",
+      "noteVi": "*Nobody can + động từ*: không ai có thể… Câu đã có *Nobody* thì không thêm *not*."
     },
     {
       "id": "n1",
       "type": "message",
       "from": "jack",
       "text": "Everyone runs away before morning 👻",
-      "vi": "Ai cũng bỏ chạy trước khi trời sáng 👻"
+      "vi": "Ai cũng bỏ chạy trước khi trời sáng 👻",
+      "noteVi": "*run away*: bỏ chạy. *before morning*: trước khi trời sáng."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "white",
-      "text": "Ghosts aren't real 🙄"
+      "text": "Ghosts aren't real 🙄",
+      "noteVi": "*aren't* = *are not*."
     },
     {
       "id": "n3",
       "type": "message",
       "from": "lester",
-      "text": "Haha, true! 😂"
+      "text": "Haha, true! 😂",
+      "noteVi": "*true!*: rút gọn của *That's true!* = đúng đấy!"
     },
     {
       "id": "n4",
       "type": "message",
       "from": "jack",
       "text": "Then let's stay there tonight. Want to make a [[bet]]? 🎲",
-      "vi": "Vậy tối nay ở đó đi. Cược không? 🎲"
+      "vi": "Vậy tối nay ở đó đi. Cược không? 🎲",
+      "noteVi": "*let's + động từ*: chúng ta hãy… *Want to make a bet?*: rút gọn của *Do you want to…?*; *make a bet* = đánh cược."
     },
     {
       "id": "c1",
@@ -115,19 +120,22 @@
       "id": "j1",
       "type": "narration",
       "text": "The toll-house is old and [[empty]], by a lonely road.",
-      "vi": "Trạm thu phí là một ngôi nhà cũ không người, bên con đường vắng."
+      "vi": "Trạm thu phí là một ngôi nhà cũ không người, bên con đường vắng.",
+      "noteVi": "*by a lonely road*: bên một con đường vắng. *by* = ở cạnh."
     },
     {
       "id": "n5",
       "type": "narration",
       "text": "Ten o'clock. They open the [[heavy]] door.",
-      "vi": "Mười giờ tối. Họ mở cánh cửa nặng nề."
+      "vi": "Mười giờ tối. Họ mở cánh cửa nặng nề.",
+      "noteVi": "*Ten o'clock*: mười giờ. Dòng chỉ giờ đứng riêng để đánh dấu thời gian trong đêm."
     },
     {
       "id": "n6",
       "type": "message",
       "from": "meagar",
-      "text": "It's cold and dark in here. It smells of dust 😷"
+      "text": "It's cold and dark in here. It smells of dust 😷",
+      "noteVi": "*smell of + danh từ*: có mùi gì. *It smells of dust* = có mùi bụi."
     },
     {
       "id": "n7",
@@ -140,7 +148,8 @@
       "type": "message",
       "from": "lester",
       "text": "See? Nothing here. This house is just [[empty]] 😂",
-      "vi": "Thấy chưa? Chẳng có gì. Nhà này trống trơn 😂"
+      "vi": "Thấy chưa? Chẳng có gì. Nhà này trống trơn 😂",
+      "noteVi": "*See?*: thấy chưa? *just empty*: chỉ trống không thôi."
     },
     {
       "id": "c2",
@@ -177,14 +186,16 @@
       "id": "j2",
       "type": "narration",
       "text": "Then, [[upstairs]], a door closes.",
-      "vi": "Rồi, ở tầng trên, một cánh cửa đóng sầm lại."
+      "vi": "Rồi, ở tầng trên, một cánh cửa đóng sầm lại.",
+      "noteVi": "*upstairs* (ở tầng trên) được đưa lên đầu câu để nhấn mạnh nơi phát ra tiếng động."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "from": "meagar",
       "text": "BANG. Did you hear that?! 😨",
-      "vi": "RẦM. Các cậu có nghe thấy không?! 😨"
+      "vi": "RẦM. Các cậu có nghe thấy không?! 😨",
+      "noteVi": "Câu hỏi quá khứ: *Did + chủ ngữ + động từ nguyên mẫu?* *Did you hear that?* = các cậu có nghe thấy không?"
     }
   ]
 }

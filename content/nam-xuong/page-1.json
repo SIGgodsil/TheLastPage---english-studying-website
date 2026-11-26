@@ -42,27 +42,31 @@
       "id": "n1",
       "type": "narration",
       "text": "Long ago, in Nam Xuong village. Your friend Vu Nuong writes to you.",
-      "vi": "Ngày xưa, ở làng Nam Xương. Vũ Nương, bạn thân của bạn, nhắn cho bạn."
+      "vi": "Ngày xưa, ở làng Nam Xương. Vũ Nương, bạn thân của bạn, nhắn cho bạn.",
+      "noteVi": "*write to + người*: viết (thư, tin nhắn) cho ai."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "vuNuong",
-      "text": "My friend, I have news. I am getting married! 🌸"
+      "text": "My friend, I have news. I am getting married! 🌸",
+      "noteVi": "*I am getting married*: mình sắp cưới. Hiện tại tiếp diễn cũng dùng cho việc đã định sắp xảy ra."
     },
     {
       "id": "n3",
       "type": "message",
       "from": "vuNuong",
       "text": "His name is Truong Sinh. He is rich, but he is [[jealous]].",
-      "vi": "Chàng tên là Trương Sinh. Chàng giàu có, nhưng hay ghen."
+      "vi": "Chàng tên là Trương Sinh. Chàng giàu có, nhưng hay ghen.",
+      "noteVi": "*but* nối hai ý trái ngược: giàu có, nhưng hay ghen."
     },
     {
       "id": "n4",
       "type": "message",
       "from": "vuNuong",
       "text": "He does not [[trust]] people easily.",
-      "vi": "Chàng không dễ tin người."
+      "vi": "Chàng không dễ tin người.",
+      "noteVi": "*easily* đứng cuối, bổ nghĩa cho *trust*: không dễ tin người."
     },
     {
       "id": "c1",
@@ -99,27 +103,31 @@
       "id": "n5",
       "type": "narration",
       "text": "One day, a [[war]] starts. Truong Sinh must go and fight.",
-      "vi": "Một ngày, chiến tranh nổ ra. Trương Sinh phải ra trận."
+      "vi": "Một ngày, chiến tranh nổ ra. Trương Sinh phải ra trận.",
+      "noteVi": "*must go and fight*: phải đi đánh trận. *go and + động từ*."
     },
     {
       "id": "n6",
       "type": "message",
       "from": "vuNuong",
       "text": "He left for the [[war]] today. I cried at the gate.",
-      "vi": "Hôm nay chàng ra trận. Mình khóc ở cổng."
+      "vi": "Hôm nay chàng ra trận. Mình khóc ở cổng.",
+      "noteVi": "*leave for + nơi*: lên đường đi đến… *left for the war* = lên đường ra trận."
     },
     {
       "id": "s1",
       "type": "shadow",
       "from": "vuNuong",
       "text": "Please come home safe, my love.",
-      "vi": "Chàng hãy về bình an nhé."
+      "vi": "Chàng hãy về bình an nhé.",
+      "noteVi": "*come home safe*: về nhà bình an. *my love*: cách gọi người mình yêu."
     },
     {
       "id": "n7",
       "type": "narration",
       "text": "A few months later.",
-      "vi": "Vài tháng sau."
+      "vi": "Vài tháng sau.",
+      "noteVi": "Câu dẫn chuyện không có động từ: vài tháng sau."
     },
     {
       "id": "n8",
@@ -131,18 +139,21 @@
       "id": "n9",
       "type": "message",
       "from": "vuNuong",
-      "text": "I take care of Dan and my husband's old mother."
+      "text": "I take care of Dan and my husband's old mother.",
+      "noteVi": "*take care of*: chăm sóc. *my husband's old mother*: mẹ già của chồng tôi."
     },
     {
       "id": "n10",
       "type": "narration",
-      "text": "The old mother dies. Vu Nuong buries her with love."
+      "text": "The old mother dies. Vu Nuong buries her with love.",
+      "noteVi": "*with love*: với tất cả tình thương, chu đáo."
     },
     {
       "id": "n11",
       "type": "message",
       "from": "vuNuong",
-      "text": "Every night, little Dan asks me the same question."
+      "text": "Every night, little Dan asks me the same question.",
+      "noteVi": "*ask + người + câu hỏi*: *asks me the same question* = hỏi tôi cùng một câu."
     },
     {
       "id": "n12",
@@ -157,14 +168,16 @@
       "type": "message",
       "from": "vuNuong",
       "text": "Tonight I pointed at my [[shadow]] on the wall.",
-      "vi": "Tối nay mình chỉ vào cái bóng của mình trên tường."
+      "vi": "Tối nay mình chỉ vào cái bóng của mình trên tường.",
+      "noteVi": "*point at*: chỉ vào. Quá khứ (*pointed*) vì chuyện đã xảy ra trước lúc nhắn."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "from": "vuNuong",
       "text": "“Look,” I said. “That is your father.” 🌙",
-      "vi": "“Nhìn kìa,” mình nói. “Cha con đấy.” 🌙"
+      "vi": "“Nhìn kìa,” mình nói. “Cha con đấy.” 🌙",
+      "noteVi": "Lời nói trong ngoặc kép; *I said* có thể chen vào giữa: *“Look,” I said. “…”*"
     }
   ]
 }

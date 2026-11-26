@@ -37,7 +37,8 @@
       "type": "message",
       "from": "van",
       "text": "I told him no. He is [[evil]], and I won't help him.",
-      "vi": "Mình bảo không. Hắn độc ác, và mình sẽ không giúp hắn."
+      "vi": "Mình bảo không. Hắn độc ác, và mình sẽ không giúp hắn.",
+      "noteVi": "*tell + người + no*: từ chối ai. *won't* = *will not*: sẽ không."
     },
     {
       "id": "n2",
@@ -45,7 +46,8 @@
       "from": "tallMan",
       "voice": true,
       "text": "Then you will meet the King of the [[Underworld|underworld]].",
-      "vi": "Vậy ngươi sẽ phải gặp Diêm Vương."
+      "vi": "Vậy ngươi sẽ phải gặp Diêm Vương.",
+      "noteVi": "*you will meet*: ngươi sẽ gặp. Lời đe dọa ở tương lai."
     },
     {
       "id": "n3",
@@ -88,14 +90,16 @@
       "id": "j1",
       "type": "narration",
       "text": "The next day, an old man comes to see Van. His clothes are simple.",
-      "vi": "Hôm sau, có một ông lão đến gặp Văn. Quần áo ông giản dị."
+      "vi": "Hôm sau, có một ông lão đến gặp Văn. Quần áo ông giản dị.",
+      "noteVi": "*come to + động từ*: đến để làm gì. *comes to see Van* = đến gặp Văn."
     },
     {
       "id": "n4",
       "type": "message",
       "from": "van",
       "text": "He says he is the Earth God! 😮",
-      "vi": "Ông ấy nói mình là Thổ thần! 😮"
+      "vi": "Ông ấy nói mình là Thổ thần! 😮",
+      "noteVi": "*He says he is…*: ông nói rằng ông là… Có thể bỏ *that* sau *says*."
     },
     {
       "id": "n5",
@@ -103,13 +107,15 @@
       "from": "oldMan",
       "voice": true,
       "text": "That ghost took my [[temple]]. Thank you for helping me.",
-      "vi": "Hồn ma đó đã chiếm đền của ta. Cảm ơn con đã giúp ta."
+      "vi": "Hồn ma đó đã chiếm đền của ta. Cảm ơn con đã giúp ta.",
+      "noteVi": "*Thank you for + V-ing*: cảm ơn vì đã… (*for helping me*)."
     },
     {
       "id": "n6",
       "type": "message",
       "from": "van",
-      "text": "I asked him, “Will the ghost hurt me?”"
+      "text": "I asked him, “Will the ghost hurt me?”",
+      "noteVi": "Câu hỏi tương lai: *Will + chủ ngữ + động từ?* = … có … không?"
     },
     {
       "id": "n7",
@@ -117,14 +123,16 @@
       "from": "oldMan",
       "voice": true,
       "text": "He will take you to the [[court]] of the dead.",
-      "vi": "Hắn sẽ đưa con đến phiên tòa của cõi chết."
+      "vi": "Hắn sẽ đưa con đến phiên tòa của cõi chết.",
+      "noteVi": "*take + ai + to + nơi*: đưa ai đến đâu. *the court of the dead*: phiên tòa của người chết."
     },
     {
       "id": "n8",
       "type": "message",
       "from": "oldMan",
       "voice": true,
-      "text": "He will tell lies there."
+      "text": "He will tell lies there.",
+      "noteVi": "*tell lies*: nói dối. Ngược lại là *tell the truth*: nói sự thật."
     },
     {
       "id": "s1",
@@ -132,7 +140,8 @@
       "from": "oldMan",
       "voice": true,
       "text": "But you must tell the truth.",
-      "vi": "Nhưng con phải nói sự thật."
+      "vi": "Nhưng con phải nói sự thật.",
+      "noteVi": "*must + động từ*: phải làm gì."
     },
     {
       "id": "n9",
@@ -140,7 +149,8 @@
       "from": "oldMan",
       "voice": true,
       "text": "If the king doesn't believe you, ask Tan Vien [[temple]].",
-      "vi": "Nếu nhà vua không tin, hãy xin hỏi đền Tản Viên."
+      "vi": "Nếu nhà vua không tin, hãy xin hỏi đền Tản Viên.",
+      "noteVi": "*If + hiện tại, + câu mệnh lệnh*: nếu…, thì hãy… (*ask Tan Vien temple*)."
     },
     {
       "id": "c2",
@@ -177,13 +187,15 @@
       "id": "j2",
       "type": "narration",
       "text": "That night, two ghost soldiers come. They grab Van's arms.",
-      "vi": "Đêm đó, hai tên lính ma xuất hiện. Chúng tóm lấy tay Văn."
+      "vi": "Đêm đó, hai tên lính ma xuất hiện. Chúng tóm lấy tay Văn.",
+      "noteVi": "*grab Van's arms*: túm lấy hai cánh tay Văn."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "text": "They pull him into the darkness…",
-      "vi": "Chúng kéo chàng vào bóng tối…"
+      "vi": "Chúng kéo chàng vào bóng tối…",
+      "noteVi": "*pull + ai + into*: kéo ai vào trong…"
     }
   ]
 }

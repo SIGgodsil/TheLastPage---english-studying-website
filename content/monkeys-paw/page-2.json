@@ -19,47 +19,54 @@
       "type": "message",
       "from": "herbert",
       "text": "I added you to our family chat 😄 Dad wants to make a [[wish]]!",
-      "vi": "Mình thêm cậu vào nhóm chat gia đình rồi 😄 Bố mình muốn ước một điều!"
+      "vi": "Mình thêm cậu vào nhóm chat gia đình rồi 😄 Bố mình muốn ước một điều!",
+      "noteVi": "*added you to*: thêm cậu vào (nhóm). *make a wish*: ước một điều."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "herbert",
       "text": "[[Wish|wish]] for money, Dad! Two hundred pounds! 💰",
-      "vi": "Ước có tiền đi bố! Hai trăm bảng! 💰"
+      "vi": "Ước có tiền đi bố! Hai trăm bảng! 💰",
+      "noteVi": "*wish for + điều mình muốn*: ước có… (*wish for money* = ước có tiền)."
     },
     {
       "id": "n3",
       "type": "message",
       "from": "mrWhite",
       "text": "Very well. I [[wish]] for two hundred pounds.",
-      "vi": "Được thôi. Tôi ước có hai trăm bảng."
+      "vi": "Được thôi. Tôi ước có hai trăm bảng.",
+      "noteVi": "*Very well*: thôi được (đồng ý, hơi miễn cưỡng)."
     },
     {
       "id": "n4",
       "type": "narration",
       "text": "Mr. White cries out and drops the [[paw]].",
-      "vi": "Ông White kêu lên và đánh rơi bàn chân khỉ."
+      "vi": "Ông White kêu lên và đánh rơi bàn chân khỉ.",
+      "noteVi": "*cries out*: kêu lên (vì sợ). *drops*: đánh rơi."
     },
     {
       "id": "s1",
       "type": "shadow",
       "from": "mrWhite",
       "text": "It moved in my hand like a snake!",
-      "vi": "Nó cựa quậy trong tay tôi như một con rắn!"
+      "vi": "Nó cựa quậy trong tay tôi như một con rắn!",
+      "noteVi": "*like a snake*: giống như một con rắn. *like + danh từ* = giống như."
     },
     {
       "id": "n5",
       "type": "message",
       "from": "herbert",
-      "text": "The [[paw]] isn't moving, Dad. And there's no money 🤨"
+      "text": "The [[paw]] isn't moving, Dad. And there's no money 🤨",
+      "noteVi": "*isn't moving*: chẳng hề động đậy. *there's no money*: không có đồng nào."
     },
     {
       "id": "n6",
       "type": "message",
       "from": "herbert",
       "text": "See? It's just a story 😂",
-      "vi": "Thấy chưa? Chỉ là chuyện kể thôi 😂"
+      "vi": "Thấy chưa? Chỉ là chuyện kể thôi 😂",
+      "noteVi": "*See?*: thấy chưa? Câu hỏi rút gọn, dùng khi mình nói đúng."
     },
     {
       "id": "c1",
@@ -94,27 +101,31 @@
       "type": "message",
       "from": "herbert",
       "text": "This is weird. I see a face in the fire 😨",
-      "vi": "Lạ thật. Mình thấy một khuôn mặt trong ngọn lửa 😨"
+      "vi": "Lạ thật. Mình thấy một khuôn mặt trong ngọn lửa 😨",
+      "noteVi": "*This is weird*: lạ thật. *I see a face*: hiện tại đơn với *see* cho điều đang thấy."
     },
     {
       "id": "n9",
       "type": "message",
       "from": "herbert",
       "text": "A horrible monkey face. And it's looking at me!",
-      "vi": "Một khuôn mặt khỉ ghê rợn. Và nó đang nhìn mình!"
+      "vi": "Một khuôn mặt khỉ ghê rợn. Và nó đang nhìn mình!",
+      "noteVi": "*it's looking at me*: nó đang nhìn mình. *look at* = nhìn vào."
     },
     {
       "id": "n10",
       "type": "narration",
       "text": "Morning. The sun is bright, and everything feels normal.",
-      "vi": "Buổi sáng. Nắng rực rỡ, mọi thứ có vẻ bình thường."
+      "vi": "Buổi sáng. Nắng rực rỡ, mọi thứ có vẻ bình thường.",
+      "noteVi": "*feel + tính từ*: có vẻ, cảm thấy. *everything feels normal* = mọi thứ có vẻ bình thường."
     },
     {
       "id": "n11",
       "type": "message",
       "from": "herbert",
       "text": "Off to work at the factory 🏭 Me and the big [[machine]] again 😅",
-      "vi": "Đi làm ở nhà máy đây 🏭 Lại là mình với cái máy to đùng 😅"
+      "vi": "Đi làm ở nhà máy đây 🏭 Lại là mình với cái máy to đùng 😅",
+      "noteVi": "*Off to work*: (mình) đi làm đây. *Me and the big machine again*: lại là mình với cái máy to (câu rút gọn, nói đùa)."
     },
     {
       "id": "c2",
@@ -143,7 +154,8 @@
       "id": "end",
       "type": "cliffhanger",
       "text": "In the afternoon, a man in a dark suit stops at the gate.",
-      "vi": "Buổi chiều, một người đàn ông mặc vest đen dừng lại trước cổng."
+      "vi": "Buổi chiều, một người đàn ông mặc vest đen dừng lại trước cổng.",
+      "noteVi": "*in + quần áo*: mặc… *a man in a dark suit* = người đàn ông mặc com-lê sẫm màu."
     }
   ]
 }

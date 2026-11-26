@@ -94,6 +94,7 @@ Nodes play **in array order**, starting at `nodes[0]`. A node with `next` jumps 
 
 - **Vocabulary:** mark every occurrence of a vocab word with `[[word]]`, or `[[shown form|key]]` when the shown form differs from the key (`[[knocked|knock]]`, `[[Wishes|wish]]`). A bare `[[Word]]` uses the lowercased word as its key. Vietnamese text never contains marks.
 - **Any word:** every other word in a line can be tapped too. Its meaning comes from `content/dictionary.json`: keys are base forms or short phrases in lowercase (`"bury"`, `"take care of"`), each with `vi` (the meaning in the story first, other senses after `;`) and `forms` for irregular forms only (`"lose": ["lost"]`). Regular forms are derived in `lib/dictionary.ts`, and phrases match before single words. Story key words are copied in with their `en` and `ipa`. After adding or editing a story, run `node scripts/check-dictionary.mjs`: it lists every word that cannot be tapped (only very basic words and names may stay plain).
+- **Pattern notes:** `noteVi` on a message, narration, shadow or cliffhanger line explains one sentence pattern or idiom in Vietnamese (not a translation of the line), shown behind a "Cấu trúc" button. Put English fragments between asterisks: `"*So do I!*: tôi cũng vậy…"`. Keep each note to one or two short sentences.
 - **Translations:** `vi` on about 1 in 3 messages: key plot moments and every message (or choice option) that contains a word introduced on that page.
 
 ### 6.5 `last-page.json`

@@ -59,13 +59,15 @@ Notes:
 
 ### Phase 2: explain sentence patterns
 
-- [ ] Optional `noteVi` on a line: one short Vietnamese note on the pattern or
-      idiom (*So do I! = Tôi cũng vậy, dùng để đồng ý với câu khẳng định*).
-      It explains the pattern; it does not translate the whole line.
-- [ ] A small "Cấu trúc" button under the line (next to "Dịch" when there is
-      one) shows the note.
-- [ ] Write notes for pages 1–2 of every story first (where learners give up),
-      then the later pages.
+- [x] Optional `noteVi` on a message, narration, shadow or cliffhanger line:
+      one short Vietnamese note on the pattern or idiom (*So do I! = Tôi cũng
+      vậy, dùng để đồng ý với câu khẳng định*). It explains the pattern; it does
+      not translate the whole line. English fragments go between asterisks
+      (`*So do I!*`) and show in italics.
+- [x] A small "Cấu trúc" button under the line (next to "Dịch" when there is
+      one) shows the note inside the bubble.
+- [x] Notes for pages 1–2 of every story (224 notes), where learners give up.
+- [ ] Notes for pages 3–4.
 
 ### Phase 3: a friendlier word sheet and page start
 

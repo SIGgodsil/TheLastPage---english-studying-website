@@ -42,26 +42,30 @@
       "id": "n1",
       "type": "narration",
       "text": "Long ago, near the capital. A young [[merchant]] lives by the river.",
-      "vi": "Ngày xưa, gần kinh thành. Một chàng thương nhân trẻ sống bên bờ sông."
+      "vi": "Ngày xưa, gần kinh thành. Một chàng thương nhân trẻ sống bên bờ sông.",
+      "noteVi": "*lives by the river*: sống bên sông. *by* = ở cạnh."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "ngo",
-      "text": "My friend! Business is good. Life is good 😄"
+      "text": "My friend! Business is good. Life is good 😄",
+      "noteVi": "*Business is good. Life is good*: hai câu ngắn giống nhau, cách khoe vui vẻ trong tin nhắn."
     },
     {
       "id": "n3",
       "type": "message",
       "from": "ngo",
-      "text": "Tonight I saw a beautiful girl on the road."
+      "text": "Tonight I saw a beautiful girl on the road.",
+      "noteVi": "*saw* là quá khứ của *see*. *Tonight* + quá khứ: chuyện vừa xảy ra tối nay."
     },
     {
       "id": "n4",
       "type": "message",
       "from": "ngo",
       "text": "She wore a long white dress. A young [[servant]] walked behind her.",
-      "vi": "Nàng mặc áo dài trắng. Một người hầu nhỏ đi theo sau."
+      "vi": "Nàng mặc áo dài trắng. Một người hầu nhỏ đi theo sau.",
+      "noteVi": "*wore* là quá khứ của *wear* (mặc). *walked behind her*: đi phía sau cô ấy."
     },
     {
       "id": "c1",
@@ -108,37 +112,43 @@
       "from": "nhiKhanh",
       "voice": true,
       "text": "I live near here, alone.",
-      "vi": "Thiếp sống gần đây, một mình."
+      "vi": "Thiếp sống gần đây, một mình.",
+      "noteVi": "*alone* đặt cuối câu, sau dấu phẩy, để nhấn mạnh: (tôi sống) một mình."
     },
     {
       "id": "n5",
       "type": "narration",
       "text": "After that, Nhi Khanh comes to his house every night.",
-      "vi": "Từ đó, đêm nào Nhị Khanh cũng đến nhà chàng."
+      "vi": "Từ đó, đêm nào Nhị Khanh cũng đến nhà chàng.",
+      "noteVi": "*After that*: sau đó. Hiện tại đơn + *every night* (*comes … every night*): việc lặp lại mỗi đêm."
     },
     {
       "id": "n6",
       "type": "message",
       "from": "ngo",
-      "text": "We talk, laugh and drink tea together 🍵"
+      "text": "We talk, laugh and drink tea together 🍵",
+      "noteVi": "Ba động từ dùng chung một chủ ngữ *We*: *talk, laugh and drink*."
     },
     {
       "id": "n7",
       "type": "message",
       "from": "ngo",
-      "text": "But she always leaves before the sun comes up."
+      "text": "But she always leaves before the sun comes up.",
+      "noteVi": "*before the sun comes up*: trước khi mặt trời mọc. *come up* = (mặt trời) mọc."
     },
     {
       "id": "n8",
       "type": "message",
       "from": "ngo",
-      "text": "She never says where her house is 🤔"
+      "text": "She never says where her house is 🤔",
+      "noteVi": "*says where her house is*: câu hỏi nằm trong câu, không đảo ngữ (không viết *where is her house*)."
     },
     {
       "id": "n9",
       "type": "narration",
       "text": "Weeks pass. Ngo's face is very [[pale]] now.",
-      "vi": "Nhiều tuần trôi qua. Mặt Ngộ giờ nhợt nhạt lắm."
+      "vi": "Nhiều tuần trôi qua. Mặt Ngộ giờ nhợt nhạt lắm.",
+      "noteVi": "*Weeks pass*: nhiều tuần trôi qua. *pale now*: bây giờ thì xanh xao (khác trước)."
     },
     {
       "id": "c2",
@@ -177,13 +187,15 @@
       "type": "message",
       "from": "ngo",
       "text": "Tonight, when she leaves, I will [[follow]] her.",
-      "vi": "Đêm nay, khi nàng về, mình sẽ bám theo nàng."
+      "vi": "Đêm nay, khi nàng về, mình sẽ bám theo nàng.",
+      "noteVi": "*when she leaves, I will follow*: nói về tương lai, nhưng sau *when* vẫn dùng hiện tại đơn (*leaves*)."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "text": "Late that night, Ngo quietly [[follows|follow]] Nhi Khanh into the dark.",
-      "vi": "Đêm khuya, Ngộ lặng lẽ bám theo Nhị Khanh vào bóng tối."
+      "vi": "Đêm khuya, Ngộ lặng lẽ bám theo Nhị Khanh vào bóng tối.",
+      "noteVi": "*Late that night*: khuya đêm đó. *into the dark*: đi vào bóng tối (*into* = chuyển động vào bên trong)."
     }
   ]
 }
