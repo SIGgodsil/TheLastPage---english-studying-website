@@ -70,15 +70,16 @@ Notes:
 - [x] Notes for pages 3–4 (237 notes). In total 461 of 645 character and
       narration lines have a note; the rest are plain enough on their own.
 
-### Phase 3: a friendlier word sheet and page start
+### Phase 3: listening and a page start
 
-- [ ] 🔊 button in the word sheet (browser speech synthesis, free; hidden when
-      unsupported).
-- [ ] The word sheet shows the line where the word appeared, with its
-      translation.
-- [ ] Before page 1 and 2 of each story: a short "Từ cần biết" card with the
-      page's key words, so learners meet them before the chat starts
-      (skippable).
+- [x] 🔊 button in the word popover and on every key word (browser speech
+      synthesis, free; hidden when unsupported).
+- [x] ~~The word sheet shows the line where the word appeared.~~ Dropped: the
+      popover now opens right on the line, so the context is already in view.
+- [x] Pages 1 and 2 of each story open with a "Từ cần biết" card: the page's
+      key words with IPA, meaning and 🔊. It is a `<details>` element: open on
+      a page not started yet, folded when the learner comes back mid-page,
+      and one tap folds it away.
 
 ## Out of scope
 

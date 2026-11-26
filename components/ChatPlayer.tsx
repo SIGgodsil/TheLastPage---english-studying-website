@@ -19,6 +19,7 @@ import type { Glossary } from "@/lib/vocab";
 import { completePage, markWordTipSeen, savePlay, storyProgress, wordTipSeen } from "@/lib/storage";
 import ChatBubble from "./ChatBubble";
 import ChoiceButtons from "./ChoiceButtons";
+import KeyWordsCard from "./KeyWordsCard";
 import NarrationLine from "./NarrationLine";
 import PageEnd from "./PageEnd";
 import ShadowPractice from "./ShadowPractice";
@@ -38,6 +39,9 @@ type Props = {
 };
 
 const noSubscribe = () => () => {};
+
+/** Pages that open with the "Từ cần biết" card. */
+const KEY_WORDS_PAGES = 2;
 
 /**
  * Plays one page as a chat. Renders only in the browser, because the saved
@@ -79,6 +83,9 @@ function ChatSession({ storyId, page, totalPages, glossary, words, nextTitle }: 
   const [play, setPlay] = useState(() => initialState(storyId, page));
   const [showTip, setShowTip] = useState(() => !wordTipSeen());
   const hideTip = useCallback(() => setShowTip(false), []);
+  // The key words open on a page not started yet; pages 1–2 only, where learners need them most.
+  const [freshPage] = useState(() => play.path.length === 1);
+  const showKeyWords = page.page <= KEY_WORDS_PAGES;
   const [typing, setTyping] = useState(false);
   const timer = useRef<number | null>(null);
 
@@ -132,6 +139,7 @@ function ChatSession({ storyId, page, totalPages, glossary, words, nextTitle }: 
           }}
         />
       )}
+      {showKeyWords && <KeyWordsCard vocab={page.vocab} defaultOpen={freshPage} />}
       <div role="log" aria-live="polite" className="flex flex-1 flex-col gap-2.5 px-3 pt-5 pb-8">
         {steps.map((step, i) => {
           const isLast = i === steps.length - 1;

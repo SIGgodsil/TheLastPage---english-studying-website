@@ -3,6 +3,7 @@
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import type { WordInfo } from "@/lib/dictionary";
+import SpeakButton from "./SpeakButton";
 
 type Props = {
   /** The word as it appears in the text, e.g. "buries". */
@@ -109,6 +110,7 @@ export default function WordPopover({ shown, wordKey, entry, anchor, pageNumber,
               {headword}
             </span>
             {entry?.ipa && <span className="text-muted">{entry.ipa}</span>}
+            <SpeakButton text={headword} className="self-center" />
           </p>
           {!sameWord && (
             <p className="text-sm text-muted">
