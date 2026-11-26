@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useSyncExternalStore } from "react";
-import { pageHref } from "@/lib/links";
+import { introHref } from "@/lib/links";
 import type { StoryMeta } from "@/lib/schema";
 import { decodeShare } from "@/lib/share";
 import { EndingCard } from "./EndingParts";
@@ -57,7 +57,7 @@ export default function SharedEndingView({ stories }: { stories: SharedStory[] }
               của riêng bạn. Miễn phí, không cần đăng ký.
             </p>
             <Link
-              href={pageHref(story.id, 1)}
+              href={introHref(story.id)}
               className="btn-primary mt-5 w-full"
             >
               Đọc truyện này <span aria-hidden>→</span>

@@ -10,7 +10,13 @@
     "fearLevel": 3,
     "level": "A2",
     "pages": 4,
-    "order": 1
+    "order": 1,
+    "intro": {
+      "settingVi": "Nước Anh, thời nay. Một đêm mưa lạnh.",
+      "summaryVi": "Thượng sĩ Morris, bạn cũ của gia đình White, vừa từ Ấn Độ trở về. Ông mang theo một bàn tay khỉ khô quắt. Người ta nói nó có thể ban ba điều ước. Ông White rất tò mò, còn Morris thì chỉ nói một câu: hãy cẩn thận với điều mình ước.",
+      "roleVi": "Bạn là bạn thân của Herbert, cậu con trai vui tính nhà White.",
+      "viewVi": "Bạn không có mặt trong nhà White. Lúc đầu, Herbert nhắn riêng cho bạn. Sau đó bạn được thêm vào nhóm chat của cả nhà. Bạn chỉ biết những gì họ nhắn, và chỉ có thể trả lời từ xa."
+    }
   },
   {
     "id": "nam-xuong",
@@ -23,7 +29,13 @@
     "fearLevel": 2,
     "level": "A2",
     "pages": 4,
-    "order": 2
+    "order": 2,
+    "intro": {
+      "settingVi": "Làng Nam Xương, Việt Nam, ngày xưa.",
+      "summaryVi": "Vũ Nương hiền hậu và xinh đẹp vừa lấy Trương Sinh, một người giàu có nhưng hay ghen. Chiến tranh nổ ra, Trương Sinh phải đi lính. Ở nhà, Vũ Nương một mình nuôi đứa con nhỏ, và đêm nào cũng chỉ lên cái bóng của mình trên vách để dỗ con.",
+      "roleVi": "Bạn là bạn thân của Vũ Nương.",
+      "viewVi": "Phần lớn câu chuyện, Vũ Nương nhắn tin tâm sự với bạn. Có lúc bạn sẽ nói chuyện với Trương Sinh, và ở trang cuối là cả làng Nam Xương. Bạn nghe được nhiều phía, nhưng không thể có mặt để can thiệp."
+    }
   },
   {
     "id": "upper-berth",
@@ -36,7 +48,13 @@
     "fearLevel": 3,
     "level": "A2",
     "pages": 4,
-    "order": 3
+    "order": 3,
+    "intro": {
+      "settingVi": "Năm 1886, trên con tàu Kamtschatka đang vượt đại dương.",
+      "summaryVi": "Brisbane là một chàng trai giàu có, thích phiêu lưu. Anh được xếp vào cabin 105. Vừa nghe con số ấy, người phục vụ tàu tái mặt và không nói thêm lời nào. Rồi ban đêm, trong cabin bắt đầu có những chuyện không thể giải thích.",
+      "roleVi": "Bạn là bạn của Brisbane, đang ở trên đất liền.",
+      "viewVi": "Bạn không ở trên tàu. Brisbane nhắn tin kể cho bạn từng chuyện lạ trong cabin 105, đôi khi kèm lời của thuyền trưởng và người phục vụ. Bạn chỉ có thể khuyên anh qua tin nhắn."
+    }
   },
   {
     "id": "ma-da",
@@ -49,7 +67,13 @@
     "fearLevel": 3,
     "level": "A2",
     "pages": 4,
-    "order": 4
+    "order": 4,
+    "intro": {
+      "settingVi": "Một làng quê bên dòng sông lớn, Việt Nam. Mùa hè.",
+      "summaryVi": "Nam rủ bạn đi bơi sông, dù bà nội luôn dặn: không bơi buổi trưa, không bơi một mình. Bà kể về ma da, hồn người chết đuối ở dưới nước, luôn chờ người khác thế chỗ. Nam cho đó chỉ là chuyện người già. Nhưng cả làng vẫn nhớ Hùng, bạn thân của Nam.",
+      "roleVi": "Bạn là bạn thân cùng làng của Nam.",
+      "viewVi": "Nam nhắn tin cho bạn, kể cả những lúc cậu đang ở bên sông. Thỉnh thoảng bạn đọc được cả lời của bà nội. Bạn không ở cạnh Nam, nên chỉ có thể khuyên cậu qua tin nhắn."
+    }
   },
   {
     "id": "sleepy-hollow",
@@ -62,7 +86,13 @@
     "fearLevel": 2,
     "level": "A2",
     "pages": 4,
-    "order": 5
+    "order": 5,
+    "intro": {
+      "settingVi": "Thung lũng Sleepy Hollow, nước Mỹ, cuối thế kỷ 18.",
+      "summaryVi": "Ichabod Crane là thầy giáo mới của làng. Anh mê chuyện ma nhưng lại rất sợ bóng tối. Chuyện nổi tiếng nhất vùng là về Kỵ sĩ không đầu, hồn ma người lính đêm nào cũng phi ngựa đi tìm cái đầu đã mất. Rồi một đêm, sau bữa tiệc, Ichabod phải một mình cưỡi ngựa về nhà.",
+      "roleVi": "Bạn là bạn của Ichabod, sống ở nơi khác.",
+      "viewVi": "Ichabod nhắn tin kể cho bạn mọi chuyện ở Sleepy Hollow, kể cả về Brom Bones, đối thủ của anh. Bạn chỉ biết những gì Ichabod kể, và anh không phải lúc nào cũng nhìn rõ trong bóng tối."
+    }
   },
   {
     "id": "kapok-tree",
@@ -75,7 +105,13 @@
     "fearLevel": 2,
     "level": "A2",
     "pages": 4,
-    "order": 6
+    "order": 6,
+    "intro": {
+      "settingVi": "Gần kinh thành, Việt Nam, ngày xưa.",
+      "summaryVi": "Trình Trung Ngộ là một thương nhân trẻ, làm ăn phát đạt. Một tối, anh gặp một cô gái xinh đẹp mặc áo trắng đi trên đường, theo sau là một cô hầu nhỏ. Cô tên Nhị Khanh và nói mình sống một mình gần đó. Ngộ say mê cô ngay từ đầu.",
+      "roleVi": "Bạn là bạn của Ngộ.",
+      "viewVi": "Ngộ nhắn tin kể cho bạn về cô gái. Về sau, bạn ở trong nhóm chat của bạn bè Ngộ, rồi cả nhóm chat của làng. Bạn nghe nhiều người kể lại, mỗi người biết một phần."
+    }
   },
   {
     "id": "bluebeard",
@@ -88,7 +124,13 @@
     "fearLevel": 2,
     "level": "A2",
     "pages": 4,
-    "order": 7
+    "order": 7,
+    "intro": {
+      "settingVi": "Một tòa lâu đài lớn, ngày xưa.",
+      "summaryVi": "Một người đàn ông rất giàu, có bộ râu màu xanh, muốn cưới Anna. Ông ta đã lấy vợ nhiều lần, và không ai biết những người vợ trước giờ ở đâu. Ông đối xử tử tế với Anna, nên cô nhận lời. Trong lâu đài có rất nhiều phòng, và một chiếc chìa khóa nhỏ.",
+      "roleVi": "Bạn là bạn thân của Anna.",
+      "viewVi": "Anna nhắn tin tâm sự với bạn về người chồng giàu có và tòa lâu đài. Về sau, bạn ở trong nhóm chat với Anna và chị gái của cô, chị Anne. Bạn không ở trong lâu đài, nên chỉ có thể khuyên qua tin nhắn."
+    }
   },
   {
     "id": "mosquito",
@@ -101,7 +143,13 @@
     "fearLevel": 2,
     "level": "A2",
     "pages": 4,
-    "order": 8
+    "order": 8,
+    "intro": {
+      "settingVi": "Một vùng quê Việt Nam, ngày xưa.",
+      "summaryVi": "Ngọc Tâm là một nông dân nghèo, chăm chỉ và rất thương vợ. Vợ anh, Nhan Diệp, xinh đẹp nhưng lười làm, chỉ muốn quần áo đẹp và đồ ăn ngon. Một ngày, Nhan Diệp đột ngột qua đời. Ngọc Tâm không chịu chôn vợ mà chở quan tài lên thuyền, đi tìm cách cứu nàng.",
+      "roleVi": "Bạn là bạn thân của Ngọc Tâm.",
+      "viewVi": "Ngọc Tâm nhắn tin kể cho bạn mọi chuyện trên đường đi. Có lúc bạn đọc được cả lời của một ông lão bí ẩn, và của chính Nhan Diệp. Bạn chỉ có thể khuyên anh qua tin nhắn."
+    }
   },
   {
     "id": "toll-house",
@@ -114,7 +162,13 @@
     "fearLevel": 3,
     "level": "A2",
     "pages": 4,
-    "order": 9
+    "order": 9,
+    "intro": {
+      "settingVi": "Nước Anh, đầu thế kỷ 20. Một đêm trong ngôi nhà trạm thu phí bỏ hoang.",
+      "summaryVi": "Người ta đồn chưa ai ở trong ngôi nhà trạm thu phí cũ được trọn một đêm. Bốn người bạn, Jack, Lester, White và Meagar, đánh cược sẽ ở lại đến sáng. Mỗi trang là một mốc giờ: 10 giờ tối, nửa đêm, 2 giờ sáng và lúc trời sắp sáng.",
+      "roleVi": "Bạn là một người bạn trong nhóm, nhưng bạn ở nhà.",
+      "viewVi": "Bạn ở trong nhóm chat “Toll-house night”. Cả đêm, bốn người bạn nhắn tin từ trong ngôi nhà. Bạn đọc, hỏi han và khuyên họ từ xa, và chỉ biết những gì họ kể."
+    }
   },
   {
     "id": "temple-judge",
@@ -127,6 +181,12 @@
     "fearLevel": 2,
     "level": "A2",
     "pages": 4,
-    "order": 10
+    "order": 10,
+    "intro": {
+      "settingVi": "Một làng quê Việt Nam, ngày xưa.",
+      "summaryVi": "Ngô Tử Văn là chàng trai thẳng thắn, can đảm, không sợ điều gì. Hồn ma một viên tướng giặc đã chiếm ngôi đền của làng, đuổi Thổ thần hiền lành đi và làm hại dân lành. Văn quyết định ra tay, nhưng hồn ma kia không dễ để yên.",
+      "roleVi": "Bạn là bạn thân của Ngô Tử Văn.",
+      "viewVi": "Văn nhắn tin kể cho bạn từng bước, kể cả khi chàng gặp những chuyện mà người sống hiếm khi được thấy. Bạn chỉ biết những gì Văn kể, và chỉ có thể động viên chàng qua tin nhắn."
+    }
   }
 ]

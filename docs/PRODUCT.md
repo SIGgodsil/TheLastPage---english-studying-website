@@ -49,6 +49,7 @@ An array, one entry per story:
 | `fearLevel` | 1–3 | |
 | `level` | `"A2"` \| `"B1"` | |
 | `pages` | number | number of chat pages (not counting the Last Page) |
+| `intro` | object | Vietnamese, shown on the story's intro screen (`/story/<id>`) before page 1, with no spoilers: `settingVi` (where and when), `summaryVi` (the set-up, 2–4 sentences), `roleVi` (who the learner is), `viewVi` (whose messages the learner reads, and what they cannot see) |
 | `order` | number | position on the map |
 
 ### 6.2 Page files (`page-N.json`)

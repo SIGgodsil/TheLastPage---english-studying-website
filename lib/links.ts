@@ -1,5 +1,10 @@
 // URLs for story pages, kept in one place.
 
+/** The story's introduction (setting, set-up, the learner's role), before page 1. */
+export function introHref(storyId: string): string {
+  return `/story/${storyId}`;
+}
+
 export function pageHref(storyId: string, page: number): string {
   return `/story/${storyId}/${page}`;
 }

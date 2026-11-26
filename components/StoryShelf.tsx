@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { resumeHref } from "@/lib/links";
+import { introHref, resumeHref } from "@/lib/links";
 import type { StoryMeta } from "@/lib/schema";
 import { endingFinished, resumePage, type Progress } from "@/lib/storage";
 import { useProgress } from "./useProgress";
@@ -28,7 +28,9 @@ function statusOf(progress: Progress | null, story: StoryMeta): Status {
       : done > 0 || saved.play
         ? "reading"
         : "new";
-  return { next, done, state, href: resumeHref(story.id, next, story.pages) };
+  // A story not started yet opens on its introduction, so the learner knows who they are in it.
+  const href = state === "new" ? introHref(story.id) : resumeHref(story.id, next, story.pages);
+  return { next, done, state, href };
 }
 
 /** The story to offer first: the last one read if unfinished, else the first unfinished one. */

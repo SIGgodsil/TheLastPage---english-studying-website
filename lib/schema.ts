@@ -289,6 +289,17 @@ export const StoryMetaSchema = z.object({
   level: Level,
   pages: z.number().int().min(1),
   order: z.number().int().min(1),
+  /** Shown before page 1, in Vietnamese, without spoiling the ending. */
+  intro: z.object({
+    /** Where and when, in one line. */
+    settingVi: ViText,
+    /** The set-up of the story, 2–4 sentences. */
+    summaryVi: ViText,
+    /** Who the learner is in the story. */
+    roleVi: ViText,
+    /** How the learner experiences it: whose messages they read, and what they cannot see. */
+    viewVi: ViText,
+  }),
 });
 
 export const StoriesManifestSchema = z

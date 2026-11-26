@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { introHref } from "@/lib/links";
 import type { Page } from "@/lib/schema";
 import Avatar from "./Avatar";
 
@@ -30,6 +31,14 @@ export default function ChatHeader({ page, totalPages }: Props) {
             <span className="italic">{page.title}</span>
           </p>
         </div>
+        <Link
+          href={introHref(page.storyId)}
+          aria-label="Giới thiệu truyện và vai của bạn"
+          title="Giới thiệu truyện"
+          className="flex size-10 shrink-0 items-center justify-center rounded-full border border-line bg-card text-lg text-muted italic transition-colors hover:border-ink/30 hover:text-ink"
+        >
+          <span aria-hidden>i</span>
+        </Link>
       </div>
       <div className="flex gap-1 px-3 pb-2" aria-hidden>
         {Array.from({ length: totalPages }, (_, i) => (
