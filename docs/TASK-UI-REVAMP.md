@@ -20,8 +20,13 @@ Each phase runs the skill's loop: Build → Review (Mode C, `references/review-c
   - Bottom sheet: 2 rem top corners, a soft warm shadow, a lightly blurred backdrop, `overscroll-contain`, and always left-aligned (it used to inherit centring from the page end). The close button is a round outlined chip.
   - Word sheet: "TỪ MỚI" eyebrow, the word large in wine, the IPA, then one soft card with "NGHĨA" and the English explanation, a wine-wash reminder for words met earlier, and an ink "Đã hiểu" pill.
   - Shadowing sheet: wine eyebrow, the line at 1.75 rem in regular weight, the Vietnamese in italics, outlined "Nghe" pills, a softer glow on the microphone, the result as a soft card, and `btn-primary`/`btn-secondary` for "Thử lại" and "Xong".
-- [ ] **4. The Last Page and the shared page.** Prompt card, mood cards, starters, writer, word bank, feedback, done view, sharing, shared ending.
+- [x] **4. The Last Page and the shared page.** Prompt card, mood cards, starters, writer, word bank, feedback, done view, sharing, shared ending.
+  - Header like the home masthead ("TRANG CUỐI · VIẾT ĐOẠN KẾT", the title, the dot ornament); pill links for "← Trang N" and "Trang chủ"; the prompt as one soft card with "CÂU HỎI" and "MẪU CÂU".
+  - Numbered steps with a wine italic number; soft mood cards; italic starter chips; the text box with a soft shadow and a wine focus ring; word-bank chips that turn a light wine wash when used.
+  - "✨ Nhận xét bài viết" is now `btn-secondary`, so the only wine button on the writing screen is "Hoàn thành". The feedback panel and each suggestion are soft cards with wine eyebrows.
+  - Done view, sharing and the shared page: eyebrows instead of big emoji, `rounded-3xl` cards, `btn-primary`/`btn-secondary` everywhere.
+  - Review: the broken-link button wrapped onto two lines at 360 px; now it fits. The share-link field keeps `autoFocus` on purpose: it only appears when copying failed, so the learner can copy by hand.
 
 ## Notes
 
-- Mode D in the skill uses `playwright-cli`, which is not installed. Phase 1 was checked in the built-in browser pane instead (360 px and desktop, font resolved to Times New Roman, no horizontal overflow).
+- Mode D in the skill uses `playwright-cli`, which is not installed. Every phase was checked in the built-in browser pane instead (360 px and desktop).

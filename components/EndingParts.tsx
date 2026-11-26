@@ -35,8 +35,8 @@ export function MoodPicker({
               role="radio"
               aria-checked={checked}
               onClick={() => onChange(checked ? undefined : id)}
-              className={`flex flex-col items-center gap-1 rounded-2xl border px-2 py-3 text-sm font-medium transition active:scale-[0.97] ${
-                checked ? "border-wine bg-wine/5 text-wine" : "border-line bg-card"
+              className={`flex flex-col items-center gap-1 rounded-2xl border px-2 py-3.5 transition-[border-color,background-color,box-shadow] active:scale-[0.98] ${
+                checked ? "shadow-paper border-wine/60 bg-wine/[0.05] text-wine" : "border-line bg-card hover:border-ink/25"
               }`}
             >
               <span className="text-2xl" aria-hidden>
@@ -47,7 +47,7 @@ export function MoodPicker({
           );
         })}
       </div>
-      <p className="mt-2 min-h-12 text-sm leading-relaxed text-muted italic" aria-live="polite">
+      <p className="mt-2.5 min-h-12 leading-relaxed text-muted italic" aria-live="polite">
         {picked ? picked.hintVi : "Chọn một kiểu nếu bạn cần ý tưởng, hoặc cứ viết theo ý mình."}
       </p>
     </div>
@@ -64,7 +64,7 @@ export function StarterChips({ starters, onPick }: { starters: string[]; onPick:
           type="button"
           lang="en"
           onClick={() => onPick(starter)}
-          className="shrink-0 snap-start rounded-full border border-line bg-card px-3 py-1.5 font-serif text-sm italic transition hover:border-wine/40 active:scale-[0.97]"
+          className="shrink-0 snap-start rounded-full border border-line bg-card px-3.5 py-1.5 italic transition-[border-color,color] hover:border-wine/40 hover:text-wine"
         >
           {starter}
         </button>
@@ -87,9 +87,9 @@ export function WordCounter({ count }: { count: number }) {
           ? `Mục tiêu: ${min}–${max} từ`
           : `Còn khoảng ${min - count} từ nữa`;
   return (
-    <div className="text-sm">
+    <div>
       <div className="flex items-center gap-3">
-        <span className="shrink-0 font-medium tabular-nums">{count} từ</span>
+        <span className="shrink-0 font-bold tabular-nums">{count} từ</span>
         <span className="h-1.5 flex-1 overflow-hidden rounded-full bg-line" aria-hidden>
           <span
             className={`block h-full rounded-full transition-[width] ${count >= min ? "bg-wine" : "bg-wine/50"}`}
@@ -97,7 +97,7 @@ export function WordCounter({ count }: { count: number }) {
           />
         </span>
       </div>
-      <p className="mt-1 text-muted" aria-live="polite">
+      <p className="mt-1 text-sm text-muted italic" aria-live="polite">
         {status}
       </p>
     </div>
@@ -118,13 +118,13 @@ export function WordBank({
   const entry = words.find((w) => w.word === selected);
   return (
     <div>
-      <p className="text-sm font-medium">
+      <p className="eyebrow text-wine">
         Dùng từ bạn đã học{" "}
         <span className="text-muted">
           · {used.size}/{words.length}
         </span>
       </p>
-      <ul className="mt-2 flex flex-wrap gap-2">
+      <ul className="mt-3 flex flex-wrap gap-2">
         {words.map(({ word }) => {
           const isUsed = used.has(word);
           return (
@@ -134,9 +134,9 @@ export function WordBank({
                 lang="en"
                 aria-pressed={word === selected}
                 onClick={() => setSelected(word === selected ? null : word)}
-                className={`rounded-full border px-3 py-1 text-sm transition active:scale-[0.97] ${
-                  isUsed ? "border-wine bg-wine text-paper" : "border-line bg-card"
-                } ${word === selected ? "ring-2 ring-wine/40 ring-offset-2 ring-offset-paper" : ""}`}
+                className={`min-h-9 rounded-full border px-3.5 py-1 transition-[border-color,background-color] ${
+                  isUsed ? "border-wine/50 bg-wine/[0.08] text-wine" : "border-line bg-card hover:border-ink/25"
+                } ${word === selected ? "ring-2 ring-wine/30 ring-offset-2 ring-offset-paper" : ""}`}
               >
                 {isUsed && <span aria-label="đã dùng">✓ </span>}
                 {word}
@@ -146,17 +146,17 @@ export function WordBank({
         })}
       </ul>
       {entry && (
-        <div className="mt-3 flex items-center justify-between gap-3 rounded-2xl bg-card px-4 py-3">
+        <div className="shadow-paper mt-3 flex items-center justify-between gap-3 rounded-2xl border border-line bg-card px-4 py-3">
           <p>
-            <span lang="en" className="font-serif text-lg font-semibold text-wine">
+            <span lang="en" className="text-lg text-wine">
               {entry.word}
             </span>{" "}
-            <span className="text-muted">· {entry.vi}</span>
+            <span className="text-muted italic">· {entry.vi}</span>
           </p>
           <button
             type="button"
             onClick={() => onInsert(entry.word)}
-            className="shrink-0 rounded-full border border-wine/40 px-3 py-1 text-sm font-medium text-wine transition active:scale-[0.97]"
+            className="min-h-9 shrink-0 rounded-full border border-wine/30 px-3.5 py-1 text-wine transition-colors hover:border-wine/60"
           >
             Chèn vào bài
           </button>
@@ -170,20 +170,20 @@ export function WordBank({
 export function EndingCard({ mood, text, label }: { mood?: Mood; text: string; label: string }) {
   const count = wordCount(text);
   return (
-    <figure className="rounded-2xl border border-line bg-card p-5 shadow-sm">
-      <figcaption className="flex items-center justify-between gap-3 text-xs font-medium tracking-wide text-muted uppercase">
-        <span>{label}</span>
+    <figure className="shadow-paper rounded-3xl border border-line bg-card px-5 py-5">
+      <figcaption className="flex items-center justify-between gap-3">
+        <span className="eyebrow text-muted">{label}</span>
         {mood && (
-          <span className="rounded-full bg-wine/5 px-2.5 py-1 tracking-normal text-wine normal-case">
+          <span className="rounded-full bg-wine/[0.07] px-3 py-1 text-sm text-wine italic">
             <span aria-hidden>{MOOD_LABEL[mood].emoji} </span>
             {MOOD_LABEL[mood].label}
           </span>
         )}
       </figcaption>
-      <blockquote lang="en" className="mt-3 font-serif text-lg leading-relaxed break-words whitespace-pre-wrap">
+      <blockquote lang="en" className="mt-4 text-[1.15rem] leading-relaxed break-words whitespace-pre-wrap">
         {text}
       </blockquote>
-      <p className="mt-3 text-right text-xs text-muted">{count} từ</p>
+      <p className="mt-3 text-right text-sm text-muted italic">{count} từ</p>
     </figure>
   );
 }

@@ -81,11 +81,11 @@ export default function EndingFeedback({ text, pattern, bank, knownWords, onChan
           type="button"
           onClick={check}
           disabled={tooShort || review.status === "checking"}
-          className="w-full rounded-full bg-wine px-6 py-3 font-medium text-paper transition active:scale-[0.98] disabled:opacity-50"
+          className="btn-secondary w-full"
         >
           {review.status === "checking" ? "Đang đọc bài của bạn…" : "✨ Nhận xét bài viết"}
         </button>
-        <p className="text-xs leading-relaxed text-muted">
+        <p className="text-sm leading-relaxed text-muted italic">
           {tooShort ? `Viết ít nhất ${MIN_WORDS} từ để nhận nhận xét nhé.` : CHECK_NOTE}
         </p>
       </div>
@@ -99,19 +99,19 @@ export default function EndingFeedback({ text, pattern, bank, knownWords, onChan
   const edited = text !== review.checked;
 
   return (
-    <section aria-label="Nhận xét" className="flex flex-col gap-3 rounded-2xl border border-line bg-card p-4" aria-live="polite">
+    <section aria-label="Nhận xét" className="shadow-paper flex flex-col gap-3 rounded-3xl border border-line bg-card p-5" aria-live="polite">
       <ul className="flex flex-col gap-1.5">
         {praiseLines(review.strengths, fixes.length).map((line, i) => (
-          <li key={i} className={i === 0 ? "text-lg font-medium" : "leading-relaxed"}>
+          <li key={i} className={i === 0 ? "text-xl" : "leading-relaxed"}>
             {line}
           </li>
         ))}
       </ul>
-      {review.offline && <p className="text-sm text-muted">{OFFLINE_NOTE}</p>}
+      {review.offline && <p className="text-sm text-muted italic">{OFFLINE_NOTE}</p>}
 
       {index < total && (
-        <div className="rounded-xl bg-paper px-4 py-3">
-          <p className="text-xs font-medium tracking-wide text-muted uppercase">
+        <div className="rounded-2xl border border-line bg-paper/70 px-4 py-3.5">
+          <p className="eyebrow text-wine">
             Gợi ý {index + 1}/{total}
           </p>
           {index < fixes.length ? (
@@ -147,12 +147,12 @@ export default function EndingFeedback({ text, pattern, bank, knownWords, onChan
       )}
 
       <div className="flex items-center justify-between gap-3">
-        <p className="text-xs text-muted">{edited ? "Bài đã thay đổi sau lần nhận xét này." : ""}</p>
+        <p className="text-sm text-muted italic">{edited ? "Bài đã thay đổi sau lần nhận xét này." : ""}</p>
         <button
           type="button"
           onClick={check}
           disabled={s.count < MIN_WORDS}
-          className="shrink-0 rounded-full border border-wine/40 px-4 py-1.5 text-sm font-medium text-wine transition active:scale-[0.97] disabled:opacity-50"
+          className="min-h-9 shrink-0 rounded-full border border-wine/30 px-4 py-1.5 text-wine transition-colors hover:border-wine/60 disabled:opacity-50"
         >
           Nhận xét lại
         </button>
@@ -186,7 +186,7 @@ function FixCard({
       <p className="leading-relaxed">{fixMessage(fix.kind, fix.flagged)}</p>
       <Context text={text} offset={at} length={fix.length} />
       {fix.detail && (
-        <p lang="en" className="text-xs text-muted italic">
+        <p lang="en" className="text-sm text-muted italic">
           {fix.detail}
         </p>
       )}
@@ -196,7 +196,7 @@ function FixCard({
             key={r}
             type="button"
             onClick={() => onAccept(r)}
-            className="rounded-full bg-wine px-4 py-1.5 text-sm font-medium text-paper transition active:scale-[0.97]"
+            className="min-h-9 rounded-full bg-wine px-4 py-1.5 font-bold text-paper transition-colors hover:bg-wine-deep"
           >
             Sửa thành “<span lang="en">{r.trim() || "(xoá)"}</span>”
           </button>
@@ -228,7 +228,7 @@ function NoteCard({
           <button
             type="button"
             onClick={onInsertPattern}
-            className="rounded-full bg-wine px-4 py-1.5 text-sm font-medium text-paper transition active:scale-[0.97]"
+            className="min-h-9 rounded-full bg-wine px-4 py-1.5 font-bold text-paper transition-colors hover:bg-wine-deep"
           >
             Chèn mẫu câu
           </button>
@@ -245,7 +245,7 @@ function Context({ text, offset, length }: { text: string; offset: number; lengt
   const endSpace = text.indexOf(" ", offset + length + 30);
   const end = endSpace === -1 ? text.length : endSpace;
   return (
-    <p lang="en" className="font-serif text-lg leading-relaxed">
+    <p lang="en" className="text-lg leading-relaxed">
       {start > 0 && "…"}
       {text.slice(start, offset)}
       <mark className="rounded bg-wine/10 px-0.5 text-wine underline decoration-wine/60 decoration-dotted decoration-2 underline-offset-4">
@@ -262,7 +262,7 @@ function SmallButton({ onClick, children }: { onClick: () => void; children: str
     <button
       type="button"
       onClick={onClick}
-      className="rounded-full border border-line px-4 py-1.5 text-sm font-medium transition active:scale-[0.97]"
+      className="min-h-9 rounded-full border border-line px-4 py-1.5 transition-colors hover:border-ink/30"
     >
       {children}
     </button>

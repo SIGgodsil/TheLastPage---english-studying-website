@@ -29,59 +29,60 @@ export default function SharedEndingView({ stories }: { stories: SharedStory[] }
 
   return (
     <div className="flex flex-1 flex-col gap-6">
-      <nav className="text-sm text-muted">
-        <Link href="/" className="font-serif font-semibold text-ink underline-offset-4 hover:underline">
-          <span aria-hidden>📖 </span>The Last Page
+      <nav className="text-center">
+        <Link href="/" translate="no" className="text-xl text-ink underline-offset-4 hover:text-wine">
+          The Last Page
         </Link>
       </nav>
 
       {shared && story ? (
         <>
           <header className="text-center">
-            <p className="text-4xl" aria-hidden>
-              ✍️
-            </p>
-            <p className="mt-3 text-muted">Một người bạn đã viết đoạn kết mới cho</p>
-            <h1 className="mt-1 font-serif text-3xl font-semibold">{story.title}</h1>
-            <p className="font-serif text-muted italic">{story.titleVi}</p>
+            <p className="eyebrow text-wine">Một đoạn kết mới</p>
+            <p className="mt-3 text-muted italic">Một người bạn đã viết lại đoạn kết của</p>
+            <h1 className="mt-1 text-[2.2rem] leading-tight">{story.title}</h1>
+            <p className="text-lg text-muted italic">{story.titleVi}</p>
+            <div aria-hidden className="mx-auto mt-4 flex w-32 items-center gap-3">
+              <span className="h-px flex-1 bg-line" />
+              <span className="size-1.5 rounded-full bg-wine/70" />
+              <span className="h-px flex-1 bg-line" />
+            </div>
           </header>
 
           <EndingCard mood={shared.mood} text={shared.text} label="Đoạn kết được chia sẻ" />
 
-          <section className="rounded-2xl bg-ink p-5 text-paper">
+          <section className="shadow-paper rounded-3xl bg-ink px-6 py-6 text-paper">
             <p className="leading-relaxed text-paper/80">
               Bạn muốn biết câu chuyện gốc? Đọc truyện bằng tin nhắn, chọn hướng đi cho nhân vật, rồi tự viết đoạn kết
               của riêng bạn. Miễn phí, không cần đăng ký.
             </p>
             <Link
               href={pageHref(story.id, 1)}
-              className="mt-4 block w-full rounded-full bg-wine px-6 py-3 text-center font-medium text-paper transition active:scale-[0.98]"
+              className="btn-primary mt-5 w-full"
             >
-              Đọc truyện này →
+              Đọc truyện này <span aria-hidden>→</span>
             </Link>
-            <p className="mt-2 text-center text-xs text-paper/60">
+            <p className="mt-3 text-center text-sm text-paper/65 italic">
               {story.origin === "vn" ? "Truyện Việt Nam" : "Truyện phương Tây"} · Tiếng Anh {story.level}
             </p>
           </section>
 
-          <Link href="/" className="text-center text-sm text-muted underline underline-offset-4 hover:text-wine">
+          <Link href="/" className="py-1 text-center text-muted italic underline underline-offset-4 hover:text-wine">
             Xem tất cả truyện
           </Link>
         </>
       ) : (
-        <section className="mt-6 rounded-2xl border border-line bg-card p-6 text-center">
-          <p className="text-4xl" aria-hidden>
-            🕯️
-          </p>
-          <h1 className="mt-3 font-serif text-2xl font-semibold">Liên kết này chưa mở được</h1>
-          <p className="mt-2 leading-relaxed text-muted">
+        <section className="shadow-paper mt-6 rounded-3xl border border-line bg-card px-5 py-8 text-center">
+          <p className="eyebrow text-wine">Liên kết bị hỏng</p>
+          <h1 className="mt-3 text-[1.8rem] leading-tight">Liên kết này chưa mở được</h1>
+          <p className="mt-3 leading-relaxed text-muted italic">
             Có thể liên kết bị thiếu một đoạn khi sao chép. Bạn hãy nhờ người gửi chép lại toàn bộ liên kết nhé.
           </p>
           <Link
             href="/"
-            className="mt-5 inline-block rounded-full bg-wine px-6 py-3 font-medium text-paper transition active:scale-[0.98]"
+            className="btn-primary mt-6 w-full px-4 whitespace-nowrap"
           >
-            Khám phá The Last Page →
+            Khám phá The Last Page <span aria-hidden>→</span>
           </Link>
         </section>
       )}

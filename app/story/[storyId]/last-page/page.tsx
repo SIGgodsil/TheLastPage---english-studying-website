@@ -50,29 +50,42 @@ async function LastPageScreen({ params }: Pick<Props, "params">) {
 
   return (
     <div className="flex flex-1 flex-col gap-6">
-      <nav className="flex items-center justify-between text-sm text-muted">
-        <Link href={pageHref(story.id, story.pages)} className="underline-offset-4 hover:underline">
+      <nav className="flex items-center justify-between text-muted">
+        <Link
+          href={pageHref(story.id, story.pages)}
+          className="rounded-full border border-line bg-card px-3.5 py-1.5 text-sm transition-colors hover:border-ink/30 hover:text-ink"
+        >
           ← Trang {story.pages}
         </Link>
-        <Link href="/" className="underline-offset-4 hover:underline">
+        <Link
+          href="/"
+          className="rounded-full border border-line bg-card px-3.5 py-1.5 text-sm transition-colors hover:border-ink/30 hover:text-ink"
+        >
           Trang chủ
         </Link>
       </nav>
 
       <header className="text-center">
-        <p className="text-4xl" aria-hidden>
-          ✍️
-        </p>
-        <h1 className="mt-3 font-serif text-3xl font-semibold">The Last Page</h1>
-        <p className="mt-1 font-serif text-muted italic">
+        <p className="eyebrow text-wine">Trang cuối · Viết đoạn kết</p>
+        <h1 translate="no" className="mt-2 text-[2.4rem] leading-none tracking-tight">
+          The Last Page
+        </h1>
+        <p className="mt-2 text-lg text-muted italic">
           {story.title} · {story.titleVi}
         </p>
+        <div aria-hidden className="mx-auto mt-4 flex w-32 items-center gap-3">
+          <span className="h-px flex-1 bg-line" />
+          <span className="size-1.5 rounded-full bg-wine/70" />
+          <span className="h-px flex-1 bg-line" />
+        </div>
       </header>
 
-      <section className="rounded-2xl border border-line bg-card p-5">
-        <p className="text-lg leading-relaxed">{lastPage.promptVi}</p>
-        <p className="mt-3 text-xs font-medium tracking-wide text-muted uppercase">Mẫu câu</p>
-        <p lang="en" className="mt-1 font-serif text-lg text-wine italic">
+      <section className="shadow-paper rounded-3xl border border-line bg-card px-5 py-5">
+        <p className="eyebrow text-muted">Câu hỏi</p>
+        <p className="mt-1.5 text-xl leading-relaxed">{lastPage.promptVi}</p>
+        <div aria-hidden className="my-4 h-px bg-line" />
+        <p className="eyebrow text-wine">Mẫu câu</p>
+        <p lang="en" className="mt-1.5 text-lg text-wine italic">
           {lastPage.pattern}
         </p>
       </section>

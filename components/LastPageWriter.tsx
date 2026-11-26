@@ -140,7 +140,7 @@ function Writer({ storyId, storyTitle, pattern, moods, starters, wordBank, model
           onEdit={() => switchView(false)}
         />
         {saveState === "failed" && (
-          <p className="mt-6 text-center text-xs text-muted" aria-live="polite">
+          <p className="mt-6 text-center text-sm text-muted italic" aria-live="polite">
             Trình duyệt này không cho lưu, nên đoạn kết sẽ mất khi bạn đóng trang. Bạn hãy chia sẻ hoặc chép lại nhé.
           </p>
         )}
@@ -151,8 +151,9 @@ function Writer({ storyId, storyTitle, pattern, moods, starters, wordBank, model
   return (
     <div ref={top} className="flex scroll-mt-4 flex-col gap-8">
       <section aria-labelledby="mood-title">
-        <h2 id="mood-title" className="mb-3 font-serif text-xl font-semibold">
-          1. Bạn muốn câu chuyện kết thúc thế nào?
+        <h2 id="mood-title" className="mb-3 text-[1.35rem] leading-snug">
+          <span className="mr-2 text-wine italic">1.</span>
+          Bạn muốn câu chuyện kết thúc thế nào?
         </h2>
         <MoodPicker
           moods={moods}
@@ -166,10 +167,11 @@ function Writer({ storyId, storyTitle, pattern, moods, starters, wordBank, model
       </section>
 
       <section aria-labelledby="write-title" className="flex flex-col gap-3">
-        <h2 id="write-title" className="font-serif text-xl font-semibold">
-          2. Viết đoạn kết của bạn
+        <h2 id="write-title" className="text-[1.35rem] leading-snug">
+          <span className="mr-2 text-wine italic">2.</span>
+          Viết đoạn kết của bạn
         </h2>
-        <p className="text-sm text-muted">Bấm một câu gợi ý để bắt đầu, hoặc thử dùng mẫu câu ở trên.</p>
+        <p className="-mt-1 text-muted italic">Bấm một câu gợi ý để bắt đầu, hoặc thử dùng mẫu câu ở trên.</p>
         <StarterChips starters={starters} onPick={insert} />
         <label htmlFor="ending-text" className="sr-only">
           Đoạn kết của bạn (bằng tiếng Anh)
@@ -186,7 +188,7 @@ function Writer({ storyId, storyTitle, pattern, moods, starters, wordBank, model
           spellCheck={false}
           autoCapitalize="sentences"
           placeholder={pattern}
-          className="w-full resize-y rounded-2xl border border-line bg-card px-4 py-3 font-serif text-lg leading-relaxed outline-none placeholder:text-muted/60 placeholder:italic focus:border-wine/60"
+          className="shadow-paper w-full resize-y rounded-2xl border border-line bg-card px-4 py-3.5 text-lg leading-relaxed outline-none transition-[border-color,box-shadow] placeholder:text-muted/60 placeholder:italic focus:border-wine/50 focus:ring-4 focus:ring-wine/10"
         />
         <WordCounter count={count} />
       </section>
@@ -199,7 +201,7 @@ function Writer({ storyId, storyTitle, pattern, moods, starters, wordBank, model
 
       <FinishButton count={count} onFinish={finish} />
 
-      <p className="text-center text-xs text-muted" aria-live="polite">
+      <p className="text-center text-sm text-muted italic" aria-live="polite">
         {saveState === "failed"
           ? "Trình duyệt này không cho lưu bản nháp. Bạn nhớ đừng đóng trang nhé."
           : saveState === "saved"
@@ -215,18 +217,19 @@ function FinishButton({ count, onFinish }: { count: number; onFinish: () => void
   const ready = count >= ENDING_TARGET.least;
   return (
     <section aria-labelledby="finish-title" className="flex flex-col gap-2">
-      <h2 id="finish-title" className="font-serif text-xl font-semibold">
-        3. Hoàn thành
+      <h2 id="finish-title" className="text-[1.35rem] leading-snug">
+        <span className="mr-2 text-wine italic">3.</span>
+        Hoàn thành
       </h2>
       <button
         type="button"
         onClick={onFinish}
         disabled={!ready}
-        className="rounded-full bg-wine px-6 py-3 font-medium text-paper transition active:scale-[0.98] disabled:bg-line disabled:text-muted"
+        className="btn-primary w-full"
       >
         ✓ Hoàn thành đoạn kết
       </button>
-      <p className="text-center text-sm text-muted">
+      <p className="text-center text-muted italic">
         {!ready
           ? `Viết ít nhất ${ENDING_TARGET.least} từ để hoàn thành nhé.`
           : count < ENDING_TARGET.min

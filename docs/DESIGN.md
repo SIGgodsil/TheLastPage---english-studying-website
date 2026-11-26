@@ -31,6 +31,7 @@ The look of The Last Page: a printed literary magazine on warm paper. Built with
 | `line` | Hairline rules and dividers |
 | `eyebrow` | 0.7 rem bold capitals, 0.14 em tracking: section labels and metadata |
 | `btn-primary` | Wine pill, at least 44 px tall: the one decisive action of a view |
+| `btn-ink` | Ink pill for the neutral forward step ("Tiếp", "Đã hiểu"), so wine stays for decisions |
 | `btn-secondary` | Ink-outline pill that fills with ink on hover: quieter actions |
 | `shadow-paper` | A faint, warm two-layer shadow for cards on the paper |
 

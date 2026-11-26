@@ -7,7 +7,7 @@ import { ENDING_TARGET } from "@/lib/ending";
 import type { FixKind, Strengths } from "@/lib/feedback";
 
 const En = ({ children }: { children: ReactNode }) => (
-  <strong lang="en" className="font-semibold text-wine">
+  <strong lang="en" className="font-bold text-wine">
     {children}
   </strong>
 );
