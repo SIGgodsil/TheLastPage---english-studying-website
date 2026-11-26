@@ -38,4 +38,17 @@ Built in **phases**, each ending with `npm run lint` and `npm run build` passing
   - It writes `public/audio/<story-id>/<node-id>.mp3` and skips files that already exist, so a rerun costs nothing.
   - The shadow sheet plays the mp3 when there is one: "Nghe" at normal speed, "Nghe chậm" at a slower rate. When there is no mp3 it falls back to `speechSynthesis`.
   - **Licence:** the free plan (10,000 credits a month) allows non-commercial use with attribution, so the app credits ElevenLabs (for example in the shadow sheet or an About line). Commercial use would need a paid plan.
-  - Open choices: one voice for every line, or a female and a male voice by character.
+  - Voices: a female and a male voice, chosen by character in `scripts/voices.json`. To use one voice for every line, give every character the same kind there.
+  - **Code done (2026-11-26):**
+    - `scripts/generate-audio.mjs` (`npm run audio -- --dry-run`) makes `public/audio/<story-id>/p<page>-<node-id>.mp3` and lists the files in `lib/audio-manifest.json`, so the app only requests files that exist.
+    - `lib/audio.ts` (`shadowAudio()`) looks a line up. `playRecording()` in `lib/speech.ts` plays it; "Nghe chậm" uses rate 0.65 and keeps the pitch. If a file fails to play, the app uses the browser's voice. When a recording is used, the sheet shows "Giọng đọc tạo bằng ElevenLabs".
+    - Tested against a fake ElevenLabs server (wrong key, voice list, making files, skipping existing files) and in the browser (recording at normal and slow speed, the credit line, and the fallback when a file is missing). No real audio is committed yet.
+  - **Still open:** the user runs the script with their own key, listens to a few files, and commits `public/audio/` with `lib/audio-manifest.json`. Then tick this phase.
+  - How to run, in PowerShell:
+    ```
+    $env:ELEVENLABS_API_KEY = "<key from elevenlabs.io → Profile → API keys>"
+    npm run audio -- --dry-run      # see the 40 lines and voices; no credits used
+    npm run audio                   # make the files (about 1,230 characters)
+    npm run audio -- --list-voices  # voice ids for scripts/voices.json
+    npm run audio -- --only nam-xuong --force   # remake one story after changing a voice
+    ```

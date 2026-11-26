@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { AUDIO_CREDIT, shadowAudio } from "@/lib/audio";
 import { plainText } from "@/lib/schema";
 import { checkShadow, GREAT, type ShadowResult, type ShadowWord } from "@/lib/shadow";
 import {
   isRecognitionSupported,
   isSynthesisSupported,
   listen,
+  playRecording,
   speak,
   stopSpeaking,
   type ListenStage,
@@ -64,7 +66,7 @@ export default function ShadowPractice({ storyId, page, nodeId, variant = "chip"
         {mark && <span aria-hidden>{mark}</span>}
       </button>
       <BottomSheet open={open} onClose={close} labelledBy="shadow-sheet-title">
-        <ShadowPanel {...line} onClose={close} onResult={onResult} />
+        <ShadowPanel {...line} audio={shadowAudio(storyId, page, nodeId)} onClose={close} onResult={onResult} />
       </BottomSheet>
     </>
   );
@@ -78,20 +80,24 @@ type Phase =
 
 type Speed = "normal" | "slow";
 
+/** "Nghe chậm" for a recording: slowed with the pitch kept (lower sounds smeared). */
+const RECORDING_SLOW = 0.65;
+
 /** The sheet's content. Unmounted when the sheet closes, which cancels listening and speech. */
 function ShadowPanel({
   text,
   vi,
   names,
+  audio,
   onClose,
   onResult,
-}: Line & { onClose: () => void; onResult: (result: ShadowResult) => void }) {
+}: Line & { audio: string | null; onClose: () => void; onResult: (result: ShadowResult) => void }) {
   const [phase, setPhase] = useState<Phase>({ kind: "ready" });
   const [speaking, setSpeaking] = useState<Speed | null>(null);
   const session = useRef<RecognitionSession | null>(null);
   const line = plainText(text);
   const canListen = isRecognitionSupported();
-  const canSpeak = isSynthesisSupported();
+  const canSpeak = audio !== null || isSynthesisSupported();
 
   useEffect(
     () => () => {
@@ -103,7 +109,9 @@ function ShadowPanel({
 
   const play = async (speed: Speed) => {
     setSpeaking(speed);
-    await speak(line, { rate: speed === "slow" ? 0.5 : 0.9 });
+    // The recording when there is one; the browser's own voice otherwise (or if it fails to play).
+    const played = audio !== null && (await playRecording(audio, { rate: speed === "slow" ? RECORDING_SLOW : 1 }));
+    if (!played) await speak(line, { rate: speed === "slow" ? 0.5 : 0.9 });
     setSpeaking((current) => (current === speed ? null : current));
   };
 
@@ -152,6 +160,14 @@ function ShadowPanel({
             🐢 Nghe chậm
           </ListenButton>
         </div>
+      )}
+      {audio && (
+        <p className="mt-2 text-xs text-muted/70">
+          Giọng đọc tạo bằng{" "}
+          <a href={AUDIO_CREDIT.href} target="_blank" rel="noopener" className="underline underline-offset-2">
+            {AUDIO_CREDIT.label}
+          </a>
+        </p>
       )}
 
       <div className="mt-6" aria-live="polite">

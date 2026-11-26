@@ -1,0 +1,35 @@
+{
+  "$comment": "Voices for scripts/generate-audio.mjs. Change a voice id here (see: node scripts/generate-audio.mjs --list-voices), or give every character the same kind to use one voice for all lines.",
+  "model": "eleven_multilingual_v2",
+  "voices": {
+    "female": "EXAVITQu4vr4xnSDxMaL",
+    "male": "JBFqnCBsd6RMkjVDRZzb"
+  },
+  "characters": {
+    "bluebeard/bluebeard": "male",
+    "bluebeard/anna": "female",
+    "kapok-tree/nhiKhanh": "female",
+    "kapok-tree/ngo": "male",
+    "kapok-tree/mrsTu": "female",
+    "ma-da/grandma": "female",
+    "ma-da/nam": "male",
+    "ma-da/hung": "male",
+    "monkeys-paw/morris": "male",
+    "monkeys-paw/mrWhite": "male",
+    "monkeys-paw/mrsWhite": "female",
+    "mosquito/ngocTam": "male",
+    "mosquito/oldMan": "male",
+    "mosquito/nhanDiep": "female",
+    "nam-xuong/vuNuong": "female",
+    "nam-xuong/dan": "male",
+    "sleepy-hollow/ichabod": "male",
+    "sleepy-hollow/brom": "male",
+    "temple-judge/van": "male",
+    "temple-judge/oldMan": "male",
+    "temple-judge/general": "male",
+    "toll-house/jack": "male",
+    "toll-house/lester": "male",
+    "toll-house/meagar": "male",
+    "upper-berth/brisbane": "male"
+  }
+}

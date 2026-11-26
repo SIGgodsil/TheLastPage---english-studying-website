@@ -311,9 +311,43 @@ export function speak(text: string, { rate = 0.9, lang = "en-US" }: { rate?: num
   });
 }
 
-/** Stop any line being read aloud. */
+/** The recording playing now, so stopSpeaking() can stop it too. */
+let playing: HTMLAudioElement | null = null;
+
+/**
+ * Play a recorded line. `rate` below 1 is slower, keeping the pitch.
+ * Resolves true when it played to the end (or was stopped), false if it
+ * could not play, so the caller can fall back to speak().
+ */
+export function playRecording(src: string, { rate = 1 }: { rate?: number } = {}): Promise<boolean> {
+  if (typeof Audio === "undefined") return Promise.resolve(false);
+  stopSpeaking();
+  return new Promise((resolve) => {
+    try {
+      const audio = new Audio(src);
+      audio.preservesPitch = true;
+      audio.playbackRate = rate;
+      playing = audio;
+      const done = (ok: boolean) => {
+        if (playing === audio) playing = null;
+        audio.onended = audio.onerror = audio.onpause = null;
+        resolve(ok);
+      };
+      audio.onended = () => done(true);
+      audio.onpause = () => done(true); // stopped by stopSpeaking()
+      audio.onerror = () => done(false);
+      audio.play().catch(() => done(false));
+    } catch {
+      resolve(false);
+    }
+  });
+}
+
+/** Stop any line being read aloud or played. */
 export function stopSpeaking(): void {
   try {
+    playing?.pause();
+    playing = null;
     if (isSynthesisSupported()) window.speechSynthesis.cancel();
   } catch {
     // Nothing to stop.
