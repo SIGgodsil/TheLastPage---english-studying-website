@@ -36,7 +36,8 @@
       "id": "n1",
       "type": "narration",
       "text": "After that, strange things happen near the [[kapok tree]].",
-      "vi": "Từ đó, những chuyện lạ xảy ra quanh cây gạo."
+      "vi": "Từ đó, những chuyện lạ xảy ra quanh cây gạo.",
+      "noteVi": "*strange things happen*: nhiều chuyện lạ xảy ra. *happen* không dùng ở bị động."
     },
     {
       "id": "n2",
@@ -49,26 +50,30 @@
       "id": "n3",
       "type": "message",
       "from": "mrsTu",
-      "text": "A young man and a girl in white."
+      "text": "A young man and a girl in white.",
+      "noteVi": "*a girl in white*: cô gái mặc đồ trắng. *in + màu/quần áo* = mặc…"
     },
     {
       "id": "s1",
       "type": "shadow",
       "from": "mrsTu",
       "text": "They hold hands and laugh.",
-      "vi": "Họ nắm tay nhau và cười."
+      "vi": "Họ nắm tay nhau và cười.",
+      "noteVi": "*hold hands*: nắm tay nhau."
     },
     {
       "id": "n4",
       "type": "message",
       "from": "minh",
-      "text": "Sometimes they sing sad songs. I heard them too."
+      "text": "Sometimes they sing sad songs. I heard them too.",
+      "noteVi": "*Sometimes* + hiện tại đơn: thỉnh thoảng. *I heard them too*: mình cũng đã nghe thấy."
     },
     {
       "id": "n5",
       "type": "message",
       "from": "mrsTu",
-      "text": "Anyone who sees them gets very sick 🤒"
+      "text": "Anyone who sees them gets very sick 🤒",
+      "noteVi": "*Anyone who + động từ*: bất kỳ ai… *Anyone who sees them gets very sick* = ai thấy họ cũng bị ốm nặng."
     },
     {
       "id": "c1",
@@ -108,20 +113,23 @@
       "type": "message",
       "from": "minh",
       "text": "He has magic papers and a long [[sword]].",
-      "vi": "Ông ấy có bùa phép và một thanh gươm dài."
+      "vi": "Ông ấy có bùa phép và một thanh gươm dài.",
+      "noteVi": "*has magic papers*: có bùa giấy. *and a long sword*: và một thanh kiếm dài."
     },
     {
       "id": "n6",
       "type": "narration",
       "text": "Full moon. The [[priest]] walks to the [[kapok tree]].",
-      "vi": "Đêm trăng tròn. Vị đạo sĩ đi đến cây gạo."
+      "vi": "Đêm trăng tròn. Vị đạo sĩ đi đến cây gạo.",
+      "noteVi": "*Full moon*: đêm trăng tròn. Câu chỉ thời gian đứng riêng."
     },
     {
       "id": "n7",
       "type": "message",
       "from": "priest",
       "voice": true,
-      "text": "Stay back. Do not come closer."
+      "text": "Stay back. Do not come closer.",
+      "noteVi": "*Stay back*: lùi lại, đứng yên ở đó. *Do not come closer*: đừng lại gần hơn."
     },
     {
       "id": "n8",
@@ -132,7 +140,8 @@
       "id": "n9",
       "type": "narration",
       "text": "The two ghosts appear and scream at him.",
-      "vi": "Hai hồn ma hiện ra và gào thét vào ông."
+      "vi": "Hai hồn ma hiện ra và gào thét vào ông.",
+      "noteVi": "*scream at + ai*: hét vào mặt ai."
     },
     {
       "id": "c2",
@@ -177,7 +186,8 @@
       "id": "end",
       "type": "cliffhanger",
       "text": "The [[kapok tree]] begins to shake…",
-      "vi": "Cây gạo bắt đầu rung chuyển…"
+      "vi": "Cây gạo bắt đầu rung chuyển…",
+      "noteVi": "*begin to + động từ*: bắt đầu làm gì."
     }
   ]
 }

@@ -21,24 +21,28 @@
       "id": "n1",
       "type": "narration",
       "text": "Under the water, it is black and very cold.",
-      "vi": "Dưới nước tối đen và lạnh buốt."
+      "vi": "Dưới nước tối đen và lạnh buốt.",
+      "noteVi": "*Under the water*: dưới nước. *it is black*: (ở đó) tối đen."
     },
     {
       "id": "n2",
       "type": "narration",
-      "text": "Nam finds Lan's hand. He pulls hard."
+      "text": "Nam finds Lan's hand. He pulls hard.",
+      "noteVi": "*pulls hard*: kéo thật mạnh. *hard* ở đây là trạng từ: mạnh."
     },
     {
       "id": "n3",
       "type": "narration",
       "text": "But another hand holds her. It is Hung's hand.",
-      "vi": "Nhưng có một bàn tay khác giữ em lại. Đó là tay Hùng."
+      "vi": "Nhưng có một bàn tay khác giữ em lại. Đó là tay Hùng.",
+      "noteVi": "*another hand*: một bàn tay khác. *It is Hung's hand*: đó là tay của Hùng."
     },
     {
       "id": "n4",
       "type": "narration",
       "text": "You run to the [[bank]] with Grandma. The water is dark and still.",
-      "vi": "Bạn chạy ra bờ sông cùng bà. Mặt nước tối và lặng."
+      "vi": "Bạn chạy ra bờ sông cùng bà. Mặt nước tối và lặng.",
+      "noteVi": "*still*: tĩnh lặng, không gợn sóng (khác nghĩa *vẫn*)."
     },
     {
       "id": "n5",
@@ -73,7 +77,8 @@
     {
       "id": "c1b",
       "type": "narration",
-      "text": "Under the water, Hung's hand does not let go."
+      "text": "Under the water, Hung's hand does not let go.",
+      "noteVi": "*let go*: buông ra. *does not let go* = không chịu buông."
     },
     {
       "id": "j1",
@@ -89,7 +94,8 @@
       "from": "hung",
       "voice": true,
       "text": "Nobody remembers me.",
-      "vi": "Không ai còn nhớ đến tớ."
+      "vi": "Không ai còn nhớ đến tớ.",
+      "noteVi": "*Nobody remembers me*: không ai nhớ đến tôi. Có *Nobody* thì không thêm *not*."
     },
     {
       "id": "s1",
@@ -97,30 +103,35 @@
       "from": "hung",
       "voice": true,
       "text": "One of you must stay with me.",
-      "vi": "Một trong hai người phải ở lại với tớ."
+      "vi": "Một trong hai người phải ở lại với tớ.",
+      "noteVi": "*One of you*: một trong hai đứa. *must + động từ*: phải."
     },
     {
       "id": "n7",
       "type": "narration",
       "text": "Nam needs air. Lan is not moving.",
-      "vi": "Nam cần thở. Lan không cử động."
+      "vi": "Nam cần thở. Lan không cử động.",
+      "noteVi": "*needs air*: cần không khí (để thở). *is not moving*: không cử động."
     },
     {
       "id": "n8",
       "type": "narration",
       "text": "Nam remembers Grandma's words: “He is cold and [[lonely]].”",
-      "vi": "Nam nhớ lời bà: “Nó lạnh lẽo và cô đơn.”"
+      "vi": "Nam nhớ lời bà: “Nó lạnh lẽo và cô đơn.”",
+      "noteVi": "*Grandma's words*: lời của bà. Lời nói trong ngoặc kép."
     },
     {
       "id": "n9",
       "type": "narration",
-      "text": "He looks into Hung's empty eyes. He is not angry anymore."
+      "text": "He looks into Hung's empty eyes. He is not angry anymore.",
+      "noteVi": "*not … anymore*: không… nữa. *He is not angry anymore* = cậu không còn giận nữa."
     },
     {
       "id": "n10",
       "type": "narration",
       "text": "He feels sad for his friend.",
-      "vi": "Cậu thấy thương bạn mình."
+      "vi": "Cậu thấy thương bạn mình.",
+      "noteVi": "*feel sad for + ai*: thấy thương, buồn cho ai."
     },
     {
       "id": "c2",
@@ -149,13 +160,15 @@
     {
       "id": "c2b",
       "type": "narration",
-      "text": "Nam does not give up. He holds Lan's hand tight."
+      "text": "Nam does not give up. He holds Lan's hand tight.",
+      "noteVi": "*give up*: bỏ cuộc. *holds Lan's hand tight*: nắm chặt tay Lan."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "text": "Then Nam makes a choice. He opens his mouth and speaks to his friend…",
-      "vi": "Rồi Nam đưa ra lựa chọn. Cậu mở miệng và nói với bạn mình…"
+      "vi": "Rồi Nam đưa ra lựa chọn. Cậu mở miệng và nói với bạn mình…",
+      "noteVi": "*make a choice*: đưa ra một lựa chọn. *speaks to his friend*: nói với bạn mình."
     }
   ]
 }

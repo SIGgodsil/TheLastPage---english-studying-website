@@ -23,27 +23,31 @@
       "from": "nhanDiep",
       "voice": true,
       "text": "Is that all? Fine.",
-      "vi": "Chỉ thế thôi à? Được thôi."
+      "vi": "Chỉ thế thôi à? Được thôi.",
+      "noteVi": "*Is that all?*: chỉ thế thôi à? *Fine*: được thôi (giọng coi thường)."
     },
     {
       "id": "n2",
       "type": "narration",
       "text": "She takes a small knife from the table. She cuts her [[finger]].",
-      "vi": "Nàng cầm con dao nhỏ trên bàn. Nàng cắt ngón tay."
+      "vi": "Nàng cầm con dao nhỏ trên bàn. Nàng cắt ngón tay.",
+      "noteVi": "*takes … from the table*: lấy … từ trên bàn."
     },
     {
       "id": "n3",
       "type": "message",
       "from": "ngocTam",
       "text": "One [[drop]] falls to the floor.",
-      "vi": "Một giọt rơi xuống sàn."
+      "vi": "Một giọt rơi xuống sàn.",
+      "noteVi": "*falls to the floor*: rơi xuống sàn."
     },
     {
       "id": "n4",
       "type": "message",
       "from": "ngocTam",
       "text": "Her face is turning white.",
-      "vi": "Mặt cô ấy đang trắng bệch đi."
+      "vi": "Mặt cô ấy đang trắng bệch đi.",
+      "noteVi": "*is turning white*: đang tái đi. *turn + màu* = chuyển sang màu…"
     },
     {
       "id": "c1",
@@ -80,7 +84,8 @@
       "id": "j1",
       "type": "narration",
       "text": "Two [[drops|drop]]. Her hands begin to shake.",
-      "vi": "Hai giọt. Tay nàng bắt đầu run."
+      "vi": "Hai giọt. Tay nàng bắt đầu run.",
+      "noteVi": "*begin to + động từ*: bắt đầu làm gì."
     },
     {
       "id": "s1",
@@ -88,12 +93,14 @@
       "from": "nhanDiep",
       "voice": true,
       "text": "What… what is happening?",
-      "vi": "Chuyện… chuyện gì thế này?"
+      "vi": "Chuyện… chuyện gì thế này?",
+      "noteVi": "*What is happening?*: chuyện gì đang xảy ra vậy? Ngập ngừng *What… what* vì sợ."
     },
     {
       "id": "n5",
       "type": "narration",
-      "text": "Ngoc Tam does not answer. He only watches."
+      "text": "Ngoc Tam does not answer. He only watches.",
+      "noteVi": "*only*: chỉ. *He only watches* = anh chỉ đứng nhìn."
     },
     {
       "id": "n6",
@@ -101,7 +108,8 @@
       "from": "nhanDiep",
       "voice": true,
       "text": "Please help me! I'm [[sorry]]!",
-      "vi": "Làm ơn cứu tôi! Tôi hối hận rồi!"
+      "vi": "Làm ơn cứu tôi! Tôi hối hận rồi!",
+      "noteVi": "*help me*: giúp tôi với. *I'm sorry*: tôi xin lỗi."
     },
     {
       "id": "c2",
@@ -138,13 +146,15 @@
       "id": "j2",
       "type": "narration",
       "text": "She holds her [[finger]] tight, but the [[blood]] doesn't stop.",
-      "vi": "Nàng siết chặt ngón tay, nhưng máu không ngừng chảy."
+      "vi": "Nàng siết chặt ngón tay, nhưng máu không ngừng chảy.",
+      "noteVi": "*holds … tight*: giữ chặt. *doesn't stop*: không ngừng chảy."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "text": "The third [[drop]] slowly grows at the end of her [[finger]]…",
-      "vi": "Giọt thứ ba từ từ lớn dần nơi đầu ngón tay nàng…"
+      "vi": "Giọt thứ ba từ từ lớn dần nơi đầu ngón tay nàng…",
+      "noteVi": "*The third drop*: giọt thứ ba. *grows*: to dần ra."
     }
   ]
 }

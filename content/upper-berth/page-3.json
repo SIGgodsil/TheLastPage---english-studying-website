@@ -27,45 +27,52 @@
       "id": "n1",
       "type": "narration",
       "text": "Brisbane stands up. He puts his hand into the [[upper]] bed.",
-      "vi": "Brisbane đứng dậy, thò tay vào giường trên."
+      "vi": "Brisbane đứng dậy, thò tay vào giường trên.",
+      "noteVi": "*puts his hand into*: thò tay vào…"
     },
     {
       "id": "n2",
       "type": "message",
       "from": "brisbane",
       "text": "I touched something. It was an arm.",
-      "vi": "Mình chạm vào một thứ. Đó là một cánh tay."
+      "vi": "Mình chạm vào một thứ. Đó là một cánh tay.",
+      "noteVi": "*touched something*: chạm vào cái gì đó. *It was an arm*: đó là một cánh tay."
     },
     {
       "id": "s1",
       "type": "shadow",
       "from": "brisbane",
       "text": "It was [[wet]], cold and soft.",
-      "vi": "Nó ướt, lạnh và mềm."
+      "vi": "Nó ướt, lạnh và mềm.",
+      "noteVi": "Ba tính từ liệt kê: *wet, cold and soft*."
     },
     {
       "id": "n3",
       "type": "message",
       "from": "brisbane",
-      "text": "Like a dead man's arm 😰"
+      "text": "Like a dead man's arm 😰",
+      "noteVi": "*Like a dead man's arm*: như cánh tay người chết. Câu rút gọn."
     },
     {
       "id": "n4",
       "type": "narration",
-      "text": "The thing pushes him hard. Brisbane falls to the floor."
+      "text": "The thing pushes him hard. Brisbane falls to the floor.",
+      "noteVi": "*pushes him hard*: đẩy anh thật mạnh. *falls to the floor*: ngã xuống sàn."
     },
     {
       "id": "n5",
       "type": "narration",
       "text": "A dark [[shape]] runs out of the [[cabin]].",
-      "vi": "Một bóng đen chạy vụt ra khỏi buồng."
+      "vi": "Một bóng đen chạy vụt ra khỏi buồng.",
+      "noteVi": "*runs out of*: chạy ra khỏi…"
     },
     {
       "id": "n6",
       "type": "message",
       "from": "brisbane",
       "text": "I ran after the [[shape]], but it was gone.",
-      "vi": "Mình đuổi theo cái bóng, nhưng nó biến mất rồi."
+      "vi": "Mình đuổi theo cái bóng, nhưng nó biến mất rồi.",
+      "noteVi": "*run after*: đuổi theo. *it was gone*: nó đã biến mất."
     },
     {
       "id": "c1",
@@ -90,38 +97,44 @@
       "type": "message",
       "from": "brisbane",
       "text": "Not badly. But my hand is still cold.",
-      "next": "n7"
+      "next": "n7",
+      "noteVi": "*Not badly*: không nặng lắm. *still*: vẫn còn."
     },
     {
       "id": "c1b",
       "type": "message",
       "from": "brisbane",
-      "text": "I don't know. It wasn't a man, I think."
+      "text": "I don't know. It wasn't a man, I think.",
+      "noteVi": "*I think* đặt cuối câu: mình nghĩ vậy (không chắc lắm)."
     },
     {
       "id": "n7",
       "type": "message",
       "from": "brisbane",
-      "text": "I went back and touched the [[upper]] bed."
+      "text": "I went back and touched the [[upper]] bed.",
+      "noteVi": "*went back*: quay lại."
     },
     {
       "id": "n8",
       "type": "message",
       "from": "brisbane",
       "text": "It was [[wet]] with sea water.",
-      "vi": "Nó ướt đẫm nước biển."
+      "vi": "Nó ướt đẫm nước biển.",
+      "noteVi": "*wet with + chất lỏng*: ướt vì… *wet with sea water* = ướt nước biển."
     },
     {
       "id": "n9",
       "type": "narration",
-      "text": "In the morning, Brisbane tells the [[captain]] everything."
+      "text": "In the morning, Brisbane tells the [[captain]] everything.",
+      "noteVi": "*tell + ai + mọi chuyện*: *tells the captain everything*."
     },
     {
       "id": "n10",
       "type": "message",
       "from": "brisbane",
       "text": "This time, the [[captain]] didn't laugh.",
-      "vi": "Lần này, thuyền trưởng không cười."
+      "vi": "Lần này, thuyền trưởng không cười.",
+      "noteVi": "*This time*: lần này. *didn't laugh*: không cười (lần trước thì có)."
     },
     {
       "id": "c2",
@@ -160,7 +173,8 @@
       "from": "captain",
       "voice": true,
       "text": "I want to see it.",
-      "vi": "Tôi muốn tận mắt thấy nó."
+      "vi": "Tôi muốn tận mắt thấy nó.",
+      "noteVi": "*I want to see it*: tôi muốn tận mắt thấy nó."
     },
     {
       "id": "end",
@@ -168,7 +182,8 @@
       "from": "captain",
       "voice": true,
       "text": "Tonight, we will wait in 105 together.",
-      "vi": "Đêm nay, chúng ta sẽ cùng chờ trong buồng 105."
+      "vi": "Đêm nay, chúng ta sẽ cùng chờ trong buồng 105.",
+      "noteVi": "*we will wait*: chúng ta sẽ chờ. *in 105*: trong cabin 105."
     }
   ]
 }

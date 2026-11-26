@@ -37,20 +37,23 @@
       "id": "n1",
       "type": "narration",
       "text": "Months later, Phan Lang has an accident at sea.",
-      "vi": "Vài tháng sau, Phan Lang trong làng gặp nạn trên biển."
+      "vi": "Vài tháng sau, Phan Lang trong làng gặp nạn trên biển.",
+      "noteVi": "*Months later*: nhiều tháng sau. *has an accident at sea*: gặp nạn trên biển."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "phanLang",
-      "text": "Friends, I have strange news! I nearly died at sea."
+      "text": "Friends, I have strange news! I nearly died at sea.",
+      "noteVi": "*nearly died*: suýt chết. *nearly* + động từ = suýt…"
     },
     {
       "id": "n3",
       "type": "message",
       "from": "phanLang",
       "text": "I woke up in a [[palace]] under the water. The Water Queen saved me!",
-      "vi": "Tôi tỉnh dậy trong một cung điện dưới nước. Linh Phi đã cứu tôi!"
+      "vi": "Tôi tỉnh dậy trong một cung điện dưới nước. Linh Phi đã cứu tôi!",
+      "noteVi": "*woke up*: quá khứ của *wake up*. *saved me*: đã cứu tôi."
     },
     {
       "id": "n4",
@@ -82,7 +85,8 @@
       "type": "message",
       "from": "phanLang",
       "text": "In a way. She lives with the [[river]] spirits now.",
-      "next": "n5"
+      "next": "n5",
+      "noteVi": "*In a way*: theo một cách nào đó. *lives with the river spirits*: sống với các vị thần sông."
     },
     {
       "id": "c1b",
@@ -95,33 +99,38 @@
       "type": "message",
       "from": "phanLang",
       "text": "I said, “Please come home. Your husband knows the [[truth]] now.”",
-      "vi": "Tôi nói: “Nàng về đi. Chồng nàng đã biết sự thật rồi.”"
+      "vi": "Tôi nói: “Nàng về đi. Chồng nàng đã biết sự thật rồi.”",
+      "noteVi": "*knows the truth now*: giờ đã biết sự thật."
     },
     {
       "id": "n6",
       "type": "narration",
-      "text": "Later, a message arrives. It is from Vu Nuong."
+      "text": "Later, a message arrives. It is from Vu Nuong.",
+      "noteVi": "*a message arrives*: một tin nhắn đến. *It is from…*: tin đó là của…"
     },
     {
       "id": "n7",
       "type": "message",
       "from": "vuNuong",
       "text": "My friend, I gave Phan Lang my golden hairpin. Give it to my husband.",
-      "vi": "Bạn ơi, mình đã gửi Phan Lang cây trâm vàng. Hãy đưa nó cho chồng mình."
+      "vi": "Bạn ơi, mình đã gửi Phan Lang cây trâm vàng. Hãy đưa nó cho chồng mình.",
+      "noteVi": "*give + ai + vật*: *gave Phan Lang my golden hairpin*. *Give it to my husband*: *give + vật + to + ai*."
     },
     {
       "id": "n8",
       "type": "message",
       "from": "vuNuong",
       "text": "Tell him to make an [[altar]] by the [[river]].",
-      "vi": "Hãy bảo chàng lập một bàn thờ bên sông."
+      "vi": "Hãy bảo chàng lập một bàn thờ bên sông.",
+      "noteVi": "*tell + ai + to + động từ*: bảo ai làm gì. *make an altar*: lập đàn."
     },
     {
       "id": "s1",
       "type": "shadow",
       "from": "vuNuong",
       "text": "Then I will come.",
-      "vi": "Rồi mình sẽ đến."
+      "vi": "Rồi mình sẽ đến.",
+      "noteVi": "*Then*: khi đó (sau khi lập đàn). *I will come*: tôi sẽ đến."
     },
     {
       "id": "c2",
@@ -159,25 +168,29 @@
       "type": "message",
       "from": "truongSinh",
       "text": "I made the [[altar]] by the [[river]]. I am waiting with Dan.",
-      "vi": "Tôi đã lập bàn thờ bên sông. Tôi đang chờ cùng bé Đản."
+      "vi": "Tôi đã lập bàn thờ bên sông. Tôi đang chờ cùng bé Đản.",
+      "noteVi": "*I am waiting*: tôi đang đợi."
     },
     {
       "id": "n10",
       "type": "narration",
       "text": "Suddenly, a beautiful boat appears on the water. Its flags are bright in the wind.",
-      "vi": "Bỗng một con thuyền lộng lẫy hiện ra trên mặt nước. Cờ bay rực rỡ trong gió."
+      "vi": "Bỗng một con thuyền lộng lẫy hiện ra trên mặt nước. Cờ bay rực rỡ trong gió.",
+      "noteVi": "*Its flags*: cờ của nó (của con thuyền). *in the wind*: trong gió."
     },
     {
       "id": "n11",
       "type": "message",
       "from": "truongSinh",
-      "text": "A lady is standing on the boat. It is her!"
+      "text": "A lady is standing on the boat. It is her!",
+      "noteVi": "*It is her!*: là nàng! Trong văn nói, sau *It is* dùng *her* chứ không dùng *she*."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "text": "She looks at her husband and her son. Then she opens her mouth to speak…",
-      "vi": "Nàng nhìn chồng và con. Rồi nàng mở lời…"
+      "vi": "Nàng nhìn chồng và con. Rồi nàng mở lời…",
+      "noteVi": "*open her mouth to speak*: mở miệng định nói. *to + động từ* chỉ mục đích."
     }
   ]
 }

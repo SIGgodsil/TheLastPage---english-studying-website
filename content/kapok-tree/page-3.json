@@ -25,33 +25,38 @@
       "id": "n1",
       "type": "narration",
       "text": "Ngo screams and pulls his [[sleeve]] away. He runs all the way home.",
-      "vi": "Ngộ hét lên, giật tay áo ra và chạy một mạch về nhà."
+      "vi": "Ngộ hét lên, giật tay áo ra và chạy một mạch về nhà.",
+      "noteVi": "*pull + vật + away*: giật ra. *all the way home*: (chạy) suốt đường về nhà."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "ngo",
-      "text": "I'm home now. But I can't stop shaking 😰"
+      "text": "I'm home now. But I can't stop shaking 😰",
+      "noteVi": "*can't stop + V-ing*: không thể ngừng làm gì. *can't stop shaking* = run mãi không thôi."
     },
     {
       "id": "n3",
       "type": "narration",
       "text": "After that day, Ngo is very sick. He does not eat or sleep.",
-      "vi": "Từ hôm đó, Ngộ ốm nặng. Chàng không ăn, không ngủ."
+      "vi": "Từ hôm đó, Ngộ ốm nặng. Chàng không ăn, không ngủ.",
+      "noteVi": "*does not eat or sleep*: không ăn cũng không ngủ. Câu phủ định dùng *or* (không dùng *and*)."
     },
     {
       "id": "n4",
       "type": "message",
       "from": "minh",
       "text": "Ngo is so [[pale]] now. I'm worried about him.",
-      "vi": "Ngộ giờ xanh xao lắm. Mình lo cho cậu ấy."
+      "vi": "Ngộ giờ xanh xao lắm. Mình lo cho cậu ấy.",
+      "noteVi": "*worried about + ai*: lo lắng cho ai."
     },
     {
       "id": "n5",
       "type": "message",
       "from": "ngo",
       "text": "Every night, I hear a soft voice outside my door.",
-      "vi": "Đêm nào mình cũng nghe một giọng nói khẽ ngoài cửa."
+      "vi": "Đêm nào mình cũng nghe một giọng nói khẽ ngoài cửa.",
+      "noteVi": "Hiện tại đơn + *Every night*: chuyện lặp lại mỗi đêm."
     },
     {
       "id": "s1",
@@ -59,7 +64,8 @@
       "from": "nhiKhanh",
       "voice": true,
       "text": "Ngo… why did you leave me?",
-      "vi": "Ngộ ơi… sao chàng bỏ thiếp?"
+      "vi": "Ngộ ơi… sao chàng bỏ thiếp?",
+      "noteVi": "Câu hỏi quá khứ: *why did you + động từ nguyên mẫu?* (*leave*, không viết *left*)."
     },
     {
       "id": "n6",
@@ -67,7 +73,8 @@
       "from": "nhiKhanh",
       "voice": true,
       "text": "Come to me…",
-      "vi": "Đến với thiếp đi…"
+      "vi": "Đến với thiếp đi…",
+      "noteVi": "*Come to me*: hãy đến với em. Câu mệnh lệnh, giọng ma mời gọi."
     },
     {
       "id": "c1",
@@ -103,19 +110,22 @@
     {
       "id": "j1",
       "type": "narration",
-      "text": "The friends lock the door. They stay with Ngo day and night."
+      "text": "The friends lock the door. They stay with Ngo day and night.",
+      "noteVi": "*day and night*: cả ngày lẫn đêm."
     },
     {
       "id": "n7",
       "type": "narration",
       "text": "But one night, the friends fall asleep.",
-      "vi": "Nhưng một đêm, đám bạn ngủ thiếp đi."
+      "vi": "Nhưng một đêm, đám bạn ngủ thiếp đi.",
+      "noteVi": "*fall asleep*: ngủ thiếp đi."
     },
     {
       "id": "n8",
       "type": "narration",
       "text": "You wake up. The door is open, and Ngo's bed is empty.",
-      "vi": "Bạn tỉnh dậy. Cửa mở toang. Giường của Ngộ trống trơn."
+      "vi": "Bạn tỉnh dậy. Cửa mở toang. Giường của Ngộ trống trơn.",
+      "noteVi": "*You wake up*: bạn (người học) cũng ở trong truyện. *is empty*: trống không."
     },
     {
       "id": "c2",
@@ -152,7 +162,8 @@
       "id": "j2",
       "type": "narration",
       "text": "At first light, the friends reach the [[kapok tree]].",
-      "vi": "Lúc trời hửng sáng, đám bạn đến được cây gạo."
+      "vi": "Lúc trời hửng sáng, đám bạn đến được cây gạo.",
+      "noteVi": "*At first light*: lúc trời vừa hửng sáng. *reach + nơi*: đến được nơi nào (không cần *to*)."
     },
     {
       "id": "n9",
@@ -166,7 +177,8 @@
       "type": "cliffhanger",
       "from": "minh",
       "text": "And he is… dead.",
-      "vi": "Và cậu ấy… đã chết rồi."
+      "vi": "Và cậu ấy… đã chết rồi.",
+      "noteVi": "Dấu ba chấm làm câu ngập ngừng trước tin dữ."
     }
   ]
 }

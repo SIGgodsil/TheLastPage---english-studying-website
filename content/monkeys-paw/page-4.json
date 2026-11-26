@@ -19,18 +19,21 @@
       "type": "message",
       "from": "mrsWhite",
       "text": "He said it! “I [[wish]] my son was [[alive]] again.”",
-      "vi": "Ông ấy nói rồi! “Tôi ước con trai tôi sống lại.”"
+      "vi": "Ông ấy nói rồi! “Tôi ước con trai tôi sống lại.”",
+      "noteVi": "*I wish + quá khứ*: ước điều không có thật. *I wish my son was alive* = ước gì con tôi còn sống."
     },
     {
       "id": "n2",
       "type": "narration",
-      "text": "They wait. Nothing happens."
+      "text": "They wait. Nothing happens.",
+      "noteVi": "*Nothing happens*: không có gì xảy ra. *Nothing* đi với động từ số ít."
     },
     {
       "id": "n3",
       "type": "narration",
       "text": "The [[candle]] goes out. The house is dark and very cold.",
-      "vi": "Ngọn nến tắt. Căn nhà tối om và lạnh buốt."
+      "vi": "Ngọn nến tắt. Căn nhà tối om và lạnh buốt.",
+      "noteVi": "*goes out*: (nến) tắt."
     },
     {
       "id": "c1",
@@ -59,7 +62,8 @@
       "id": "n4",
       "type": "narration",
       "text": "Then they hear it. A soft [[knock]] at the front door.",
-      "vi": "Rồi họ nghe thấy. Một tiếng gõ khẽ ở cửa trước."
+      "vi": "Rồi họ nghe thấy. Một tiếng gõ khẽ ở cửa trước.",
+      "noteVi": "*Then they hear it*: rồi họ nghe thấy *nó*: tiếng gõ cửa, được nói ngay sau dấu chấm."
     },
     {
       "id": "n5",
@@ -76,27 +80,31 @@
     {
       "id": "n7",
       "type": "narration",
-      "text": "Mrs. White runs down the stairs."
+      "text": "Mrs. White runs down the stairs.",
+      "noteVi": "*runs down the stairs*: chạy xuống cầu thang."
     },
     {
       "id": "s1",
       "type": "shadow",
       "from": "mrWhite",
       "text": "Wait! Don't open the door!",
-      "vi": "Khoan đã! Đừng mở cửa!"
+      "vi": "Khoan đã! Đừng mở cửa!",
+      "noteVi": "*Don't + động từ*: đừng… Câu mệnh lệnh gấp gáp."
     },
     {
       "id": "n8",
       "type": "narration",
       "text": "The [[knocking|knock]] gets louder and louder.",
-      "vi": "Tiếng gõ cửa mỗi lúc một to hơn."
+      "vi": "Tiếng gõ cửa mỗi lúc một to hơn.",
+      "noteVi": "*gets louder and louder*: ngày càng to hơn. *get + so sánh hơn* = trở nên…"
     },
     {
       "id": "n9",
       "type": "message",
       "from": "mrsWhite",
       "text": "I can't reach the top [[lock]]! I need a chair.",
-      "vi": "Tôi không với tới cái khóa trên cùng! Tôi cần một cái ghế."
+      "vi": "Tôi không với tới cái khóa trên cùng! Tôi cần một cái ghế.",
+      "noteVi": "*can't reach*: không với tới. *the top lock*: cái khóa trên cùng."
     },
     {
       "id": "c2",
@@ -131,13 +139,15 @@
       "type": "message",
       "from": "mrWhite",
       "text": "My fingers touched something small and dry. The [[paw]].",
-      "vi": "Ngón tay bác chạm vào một thứ nhỏ và khô. Bàn chân khỉ."
+      "vi": "Ngón tay bác chạm vào một thứ nhỏ và khô. Bàn chân khỉ.",
+      "noteVi": "*touched something small and dry*: chạm vào cái gì đó nhỏ và khô. Tính từ đứng sau *something*."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "text": "Then he hears the top [[lock]] open…",
-      "vi": "Rồi ông nghe thấy chiếc khóa trên cùng bật mở…"
+      "vi": "Rồi ông nghe thấy chiếc khóa trên cùng bật mở…",
+      "noteVi": "*hear + vật + động từ nguyên mẫu*: nghe thấy cái gì làm gì. *hears the top lock open* = nghe khóa trên bật mở."
     }
   ]
 }

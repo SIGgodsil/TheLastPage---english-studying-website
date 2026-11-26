@@ -67,7 +67,8 @@ Notes:
 - [x] A small "Cấu trúc" button under the line (next to "Dịch" when there is
       one) shows the note inside the bubble.
 - [x] Notes for pages 1–2 of every story (224 notes), where learners give up.
-- [ ] Notes for pages 3–4.
+- [x] Notes for pages 3–4 (237 notes). In total 461 of 645 character and
+      narration lines have a note; the rest are plain enough on their own.
 
 ### Phase 3: a friendlier word sheet and page start
 

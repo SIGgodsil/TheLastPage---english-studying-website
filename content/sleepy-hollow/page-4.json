@@ -23,13 +23,15 @@
       "id": "n1",
       "type": "narration",
       "text": "Ichabod stops on the other side of the [[bridge]]. He breathes hard.",
-      "vi": "Ichabod dừng lại ở bên kia cầu, thở hồng hộc."
+      "vi": "Ichabod dừng lại ở bên kia cầu, thở hồng hộc.",
+      "noteVi": "*on the other side of*: ở phía bên kia của… *breathes hard*: thở hổn hển."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "ichabod",
-      "text": "I'm safe. I'm safe! 😅"
+      "text": "I'm safe. I'm safe! 😅",
+      "noteVi": "Lặp lại *I'm safe* vì nhẹ nhõm."
     },
     {
       "id": "c1",
@@ -54,7 +56,8 @@
       "type": "message",
       "from": "ichabod",
       "text": "Wait… something is wrong.",
-      "next": "j1"
+      "next": "j1",
+      "noteVi": "*something is wrong*: có gì đó không ổn."
     },
     {
       "id": "c1b",
@@ -66,39 +69,45 @@
       "id": "j1",
       "type": "narration",
       "text": "But the [[headless]] [[rider]] does not disappear.",
-      "vi": "Nhưng kỵ sĩ không đầu không biến mất."
+      "vi": "Nhưng kỵ sĩ không đầu không biến mất.",
+      "noteVi": "*does not disappear*: không biến mất (trái với lời Brom kể)."
     },
     {
       "id": "n3",
       "type": "narration",
       "text": "He stops at the end of the [[bridge]].",
-      "vi": "Hắn dừng lại ở đầu cầu."
+      "vi": "Hắn dừng lại ở đầu cầu.",
+      "noteVi": "*at the end of the bridge*: ở đầu cầu bên kia."
     },
     {
       "id": "n4",
       "type": "message",
       "from": "ichabod",
       "text": "His black horse is kicking the ground. Fire is coming out of its nose! 🔥",
-      "vi": "Con ngựa đen đang giậm chân. Lửa phụt ra từ mũi nó! 🔥"
+      "vi": "Con ngựa đen đang giậm chân. Lửa phụt ra từ mũi nó! 🔥",
+      "noteVi": "*is kicking the ground*: đang đá đất. *coming out of its nose*: phun ra từ mũi nó."
     },
     {
       "id": "n5",
       "type": "narration",
       "text": "Slowly, the [[rider]] stands up in the [[saddle]].",
-      "vi": "Từ từ, kỵ sĩ đứng thẳng lên trên yên ngựa."
+      "vi": "Từ từ, kỵ sĩ đứng thẳng lên trên yên ngựa.",
+      "noteVi": "*stands up in the saddle*: đứng dậy trên yên ngựa."
     },
     {
       "id": "n6",
       "type": "message",
       "from": "ichabod",
-      "text": "He's holding his head high in the air…"
+      "text": "He's holding his head high in the air…",
+      "noteVi": "*high in the air*: cao trên không."
     },
     {
       "id": "s1",
       "type": "shadow",
       "from": "ichabod",
       "text": "No… please… don't do it.",
-      "vi": "Không… làm ơn… đừng mà."
+      "vi": "Không… làm ơn… đừng mà.",
+      "noteVi": "*don't do it*: đừng làm thế. Dấu ba chấm: nói ngắt quãng vì sợ."
     },
     {
       "id": "c2",
@@ -123,7 +132,8 @@
       "type": "message",
       "from": "ichabod",
       "text": "I can't! Gunpowder won't move!",
-      "next": "j2"
+      "next": "j2",
+      "noteVi": "*won't move*: không chịu đi. *won't* ở đây = nhất định không."
     },
     {
       "id": "c2b",
@@ -135,20 +145,23 @@
       "id": "j2",
       "type": "narration",
       "text": "The [[rider]] [[throws|throw]] his head, hard, straight at Ichabod.",
-      "vi": "Kỵ sĩ ném mạnh cái đầu thẳng về phía Ichabod."
+      "vi": "Kỵ sĩ ném mạnh cái đầu thẳng về phía Ichabod.",
+      "noteVi": "*throw + vật + at + ai*: ném vào ai. *straight at*: thẳng vào."
     },
     {
       "id": "n7",
       "type": "message",
       "from": "ichabod",
       "text": "Something big and round is flying at me!",
-      "vi": "Có thứ gì to và tròn đang bay về phía mình!"
+      "vi": "Có thứ gì to và tròn đang bay về phía mình!",
+      "noteVi": "*something big and round*: cái gì đó to và tròn. *is flying at me*: đang bay về phía mình."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "text": "He cannot move…",
-      "vi": "Anh không thể nhúc nhích…"
+      "vi": "Anh không thể nhúc nhích…",
+      "noteVi": "*cannot move*: không thể cử động."
     }
   ]
 }

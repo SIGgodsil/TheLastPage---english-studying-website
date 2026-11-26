@@ -19,20 +19,23 @@
       "type": "message",
       "from": "mrWhite",
       "text": "I am sorry to write this. I cannot speak on the phone.",
-      "vi": "Bác xin lỗi vì phải nhắn điều này. Bác không thể nói qua điện thoại."
+      "vi": "Bác xin lỗi vì phải nhắn điều này. Bác không thể nói qua điện thoại.",
+      "noteVi": "*I am sorry to + động từ*: tôi rất tiếc phải… *cannot* = *can't*."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "mrWhite",
-      "text": "A man came from Herbert's factory today."
+      "text": "A man came from Herbert's factory today.",
+      "noteVi": "*came from*: đến từ (nhà máy). *came* là quá khứ của *come*."
     },
     {
       "id": "n3",
       "type": "message",
       "from": "mrWhite",
       "text": "There was an [[accident]]. Herbert was caught in the [[machine]].",
-      "vi": "Đã có một tai nạn. Herbert bị cuốn vào máy."
+      "vi": "Đã có một tai nạn. Herbert bị cuốn vào máy.",
+      "noteVi": "*There was*: đã có (quá khứ của *there is*). *was caught in*: bị kẹt vào (bị động)."
     },
     {
       "id": "c1",
@@ -63,60 +66,69 @@
       "id": "n4",
       "type": "message",
       "from": "mrWhite",
-      "text": "My wife screamed. Now she does not speak at all."
+      "text": "My wife screamed. Now she does not speak at all.",
+      "noteVi": "*not … at all*: hoàn toàn không. *does not speak at all* = không nói một lời nào."
     },
     {
       "id": "n5",
       "type": "message",
       "from": "mrWhite",
-      "text": "The company is very sorry. They gave us some money."
+      "text": "The company is very sorry. They gave us some money.",
+      "noteVi": "*The company is very sorry*: công ty rất lấy làm tiếc. *gave us*: đã đưa cho chúng tôi."
     },
     {
       "id": "n6",
       "type": "message",
       "from": "mrWhite",
       "text": "Two hundred pounds.",
-      "vi": "Hai trăm bảng."
+      "vi": "Hai trăm bảng.",
+      "noteVi": "Đúng bằng số tiền ông White đã ước. Câu ngắn để người đọc tự hiểu."
     },
     {
       "id": "n7",
       "type": "narration",
       "text": "They bury Herbert two miles from the house.",
-      "vi": "Họ chôn Herbert cách nhà hai dặm."
+      "vi": "Họ chôn Herbert cách nhà hai dặm.",
+      "noteVi": "*two miles from the house*: cách nhà hai dặm. *They* = người ta (không nói rõ ai)."
     },
     {
       "id": "n8",
       "type": "narration",
       "text": "Ten days later. The middle of the night.",
-      "vi": "Mười ngày sau. Giữa đêm."
+      "vi": "Mười ngày sau. Giữa đêm.",
+      "noteVi": "*Ten days later*: mười ngày sau. *The middle of the night*: nửa đêm."
     },
     {
       "id": "n9",
       "type": "message",
       "from": "mrsWhite",
       "text": "Are you awake? I just remembered the [[paw]]!",
-      "vi": "Cháu còn thức không? Bác vừa nhớ ra cái bàn chân khỉ!"
+      "vi": "Cháu còn thức không? Bác vừa nhớ ra cái bàn chân khỉ!",
+      "noteVi": "*just* + quá khứ: vừa mới. *I just remembered* = mình vừa nhớ ra."
     },
     {
       "id": "s1",
       "type": "shadow",
       "from": "mrsWhite",
       "text": "We have two more [[wishes|wish]]!",
-      "vi": "Chúng ta còn hai điều ước nữa!"
+      "vi": "Chúng ta còn hai điều ước nữa!",
+      "noteVi": "*two more wishes*: thêm hai điều ước nữa. *số + more + danh từ* = thêm…"
     },
     {
       "id": "n10",
       "type": "message",
       "from": "mrsWhite",
       "text": "[[Wish|wish]] our boy back! I want him [[alive]]! 😭",
-      "vi": "Ông ước cho con mình trở về đi! Tôi muốn nó sống lại! 😭"
+      "vi": "Ông ước cho con mình trở về đi! Tôi muốn nó sống lại! 😭",
+      "noteVi": "*wish + ai + back*: ước cho ai trở về. *I want him alive* = tôi muốn con sống lại."
     },
     {
       "id": "n11",
       "type": "message",
       "from": "mrWhite",
       "text": "He was in the [[machine]], dear. You do not want to see him.",
-      "vi": "Nó đã bị cuốn vào máy, bà à. Bà không muốn nhìn thấy nó đâu."
+      "vi": "Nó đã bị cuốn vào máy, bà à. Bà không muốn nhìn thấy nó đâu.",
+      "noteVi": "*dear*: em (cách gọi vợ thân mật). *You do not want to see him*: em sẽ không muốn nhìn thấy con đâu."
     },
     {
       "id": "c2",
@@ -147,7 +159,8 @@
       "id": "end",
       "type": "cliffhanger",
       "text": "With shaking hands, Mr. White holds up the [[paw]].",
-      "vi": "Đôi tay run rẩy, ông White giơ bàn chân khỉ lên."
+      "vi": "Đôi tay run rẩy, ông White giơ bàn chân khỉ lên.",
+      "noteVi": "*With shaking hands*: với đôi tay run rẩy. *holds up*: giơ lên."
     }
   ]
 }

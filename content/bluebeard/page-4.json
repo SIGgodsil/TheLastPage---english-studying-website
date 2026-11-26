@@ -22,27 +22,31 @@
       "type": "message",
       "from": "anna",
       "text": "Sister Anne, do you see anyone coming?",
-      "vi": "Chị Anne, chị có thấy ai đến không?"
+      "vi": "Chị Anne, chị có thấy ai đến không?",
+      "noteVi": "*see + ai + V-ing*: thấy ai đang làm gì. *do you see anyone coming?* = chị có thấy ai đang đến không?"
     },
     {
       "id": "n2",
       "type": "message",
       "from": "anne",
       "text": "I see a cloud of [[dust]]!",
-      "vi": "Chị thấy một đám bụi!"
+      "vi": "Chị thấy một đám bụi!",
+      "noteVi": "*a cloud of dust*: một đám bụi. *A of B*: một … gồm B."
     },
     {
       "id": "n3",
       "type": "message",
       "from": "anne",
       "text": "But it's only a group of sheep 🐑",
-      "vi": "Nhưng đó chỉ là một đàn cừu 🐑"
+      "vi": "Nhưng đó chỉ là một đàn cừu 🐑",
+      "noteVi": "*only*: chỉ là. *a group of sheep*: một đàn cừu (*sheep* số nhiều vẫn là *sheep*)."
     },
     {
       "id": "n4",
       "type": "narration",
       "text": "Bluebeard's footsteps come closer and closer.",
-      "vi": "Tiếng bước chân Râu Xanh mỗi lúc một gần."
+      "vi": "Tiếng bước chân Râu Xanh mỗi lúc một gần.",
+      "noteVi": "*closer and closer*: ngày càng gần. *so sánh hơn + and + so sánh hơn* = càng ngày càng…"
     },
     {
       "id": "c1",
@@ -79,7 +83,8 @@
       "id": "j1",
       "type": "narration",
       "text": "The door opens. Bluebeard pulls Anna down the stairs.",
-      "vi": "Cánh cửa mở ra. Râu Xanh lôi Anna xuống cầu thang."
+      "vi": "Cánh cửa mở ra. Râu Xanh lôi Anna xuống cầu thang.",
+      "noteVi": "*pulls Anna down the stairs*: kéo Anna xuống cầu thang. *down* = xuống."
     },
     {
       "id": "n5",
@@ -91,20 +96,23 @@
       "type": "shadow",
       "from": "anna",
       "text": "Sister Anne! Please, look again!",
-      "vi": "Chị Anne ơi! Làm ơn nhìn lại đi!"
+      "vi": "Chị Anne ơi! Làm ơn nhìn lại đi!",
+      "noteVi": "*look again*: nhìn lại lần nữa. *Please* làm lời cầu xin tha thiết."
     },
     {
       "id": "n6",
       "type": "message",
       "from": "anne",
       "text": "Two riders! Two riders on the road!",
-      "vi": "Hai người cưỡi ngựa! Có hai người trên đường!"
+      "vi": "Hai người cưỡi ngựa! Có hai người trên đường!",
+      "noteVi": "Lặp lại *Two riders!* vì quá mừng. Câu rút gọn không có động từ."
     },
     {
       "id": "n7",
       "type": "message",
       "from": "anne",
-      "text": "They're coming fast!"
+      "text": "They're coming fast!",
+      "noteVi": "*They're coming fast*: họ đang đến rất nhanh."
     },
     {
       "id": "c2",
@@ -141,7 +149,8 @@
       "id": "j2",
       "type": "narration",
       "text": "At that moment, someone bangs hard on the castle gate.",
-      "vi": "Đúng lúc đó, có người đập mạnh vào cổng lâu đài."
+      "vi": "Đúng lúc đó, có người đập mạnh vào cổng lâu đài.",
+      "noteVi": "*At that moment*: đúng lúc đó. *bangs hard on*: đập mạnh vào."
     },
     {
       "id": "n8",
@@ -152,7 +161,8 @@
       "id": "end",
       "type": "cliffhanger",
       "text": "Then he looks at Anna, and he lifts his sword higher…",
-      "vi": "Rồi hắn nhìn Anna, và giơ thanh gươm cao hơn nữa…"
+      "vi": "Rồi hắn nhìn Anna, và giơ thanh gươm cao hơn nữa…",
+      "noteVi": "*higher*: cao hơn (so sánh hơn của *high*). *lifts his sword higher* = giơ kiếm cao hơn nữa."
     }
   ]
 }

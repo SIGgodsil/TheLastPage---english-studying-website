@@ -36,14 +36,16 @@
       "id": "n1",
       "type": "narration",
       "text": "Van wakes up in a big, dark hall. Ghosts and soldiers are everywhere.",
-      "vi": "Văn tỉnh dậy trong một đại sảnh tối om. Ma quỷ và binh lính ở khắp nơi."
+      "vi": "Văn tỉnh dậy trong một đại sảnh tối om. Ma quỷ và binh lính ở khắp nơi.",
+      "noteVi": "*wakes up in*: tỉnh dậy ở… *are everywhere*: ở khắp nơi."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "van",
       "text": "I'm in the [[underworld]]. The King sits on a high chair 😰",
-      "vi": "Mình đang ở âm phủ. Nhà vua ngồi trên một chiếc ghế cao 😰"
+      "vi": "Mình đang ở âm phủ. Nhà vua ngồi trên một chiếc ghế cao 😰",
+      "noteVi": "*sits on a high chair*: ngồi trên một chiếc ghế cao (ngai)."
     },
     {
       "id": "n3",
@@ -51,14 +53,16 @@
       "from": "general",
       "voice": true,
       "text": "This man [[burned|burn]] my [[temple]]! Punish him!",
-      "vi": "Kẻ này đã đốt đền của ta! Hãy trừng phạt hắn!"
+      "vi": "Kẻ này đã đốt đền của ta! Hãy trừng phạt hắn!",
+      "noteVi": "*Punish him!*: trừng phạt hắn đi! Câu mệnh lệnh."
     },
     {
       "id": "n4",
       "type": "message",
       "from": "king",
       "voice": true,
-      "text": "Is this true?"
+      "text": "Is this true?",
+      "noteVi": "*Is this true?*: có thật không? Câu hỏi với *be*: đảo *is* lên trước."
     },
     {
       "id": "c1",
@@ -95,14 +99,16 @@
       "id": "j1",
       "type": "message",
       "from": "van",
-      "text": "“Yes, I [[burned|burn]] the [[temple]],” I said."
+      "text": "“Yes, I [[burned|burn]] the [[temple]],” I said.",
+      "noteVi": "*“Yes, I burned the temple,” I said*: lời nói trong ngoặc kép, *I said* đứng sau."
     },
     {
       "id": "n5",
       "type": "message",
       "from": "van",
       "text": "“But this ghost is [[evil]]. He hurt many people.”",
-      "vi": "“Nhưng hồn ma này độc ác. Hắn đã hại rất nhiều người.”"
+      "vi": "“Nhưng hồn ma này độc ác. Hắn đã hại rất nhiều người.”",
+      "noteVi": "*hurt*: quá khứ giống hiện tại. *He hurt many people* = hắn đã hại nhiều người."
     },
     {
       "id": "s1",
@@ -110,14 +116,16 @@
       "from": "general",
       "voice": true,
       "text": "[[Liar|liar]]! Don't listen to him!",
-      "vi": "Đồ dối trá! Đừng nghe hắn!"
+      "vi": "Đồ dối trá! Đừng nghe hắn!",
+      "noteVi": "*Liar!*: đồ dối trá! *Don't listen to him!*: đừng nghe hắn!"
     },
     {
       "id": "n6",
       "type": "message",
       "from": "king",
       "voice": true,
-      "text": "Who is telling the truth?"
+      "text": "Who is telling the truth?",
+      "noteVi": "*Who* làm chủ ngữ: *Who is telling the truth?* = ai đang nói thật?"
     },
     {
       "id": "c2",
@@ -142,7 +150,8 @@
       "type": "message",
       "from": "van",
       "text": "Yes! I almost forgot.",
-      "next": "j2"
+      "next": "j2",
+      "noteVi": "*almost forgot*: suýt quên. *almost* + động từ = suýt…"
     },
     {
       "id": "c2b",
@@ -155,19 +164,22 @@
       "type": "message",
       "from": "van",
       "text": "“Please, ask the Tan Vien [[temple]]. They know everything.”",
-      "vi": "“Xin hãy hỏi đền Tản Viên. Họ biết mọi chuyện.”"
+      "vi": "“Xin hãy hỏi đền Tản Viên. Họ biết mọi chuyện.”",
+      "noteVi": "*They know everything*: họ biết mọi chuyện. *They* = những người ở đền Tản Viên."
     },
     {
       "id": "n7",
       "type": "narration",
       "text": "The king sends a [[messenger]] to Tan Vien.",
-      "vi": "Nhà vua sai một người đưa tin đến Tản Viên."
+      "vi": "Nhà vua sai một người đưa tin đến Tản Viên.",
+      "noteVi": "*send + ai + to + nơi*: phái ai đến đâu."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "text": "The ghost general's face turns white.",
-      "vi": "Mặt viên tướng ma trắng bệch."
+      "vi": "Mặt viên tướng ma trắng bệch.",
+      "noteVi": "*turns white*: trắng bệch. *turn + màu* = chuyển sang màu…"
     }
   ]
 }

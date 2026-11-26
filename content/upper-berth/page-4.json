@@ -27,31 +27,36 @@
       "id": "n1",
       "type": "narration",
       "text": "Night. Brisbane and the [[captain]] wait in the dark [[cabin]].",
-      "vi": "Đêm. Brisbane và thuyền trưởng chờ trong căn buồng tối."
+      "vi": "Đêm. Brisbane và thuyền trưởng chờ trong căn buồng tối.",
+      "noteVi": "*Night*: câu chỉ thời gian đứng riêng. *in the dark cabin*: trong cabin tối."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "brisbane",
-      "text": "The [[captain]] is holding a lamp. We're waiting."
+      "text": "The [[captain]] is holding a lamp. We're waiting.",
+      "noteVi": "*is holding a lamp*: đang cầm một cây đèn."
     },
     {
       "id": "n3",
       "type": "narration",
       "text": "Two o'clock. The room gets very cold.",
-      "vi": "Hai giờ sáng. Căn phòng bỗng lạnh buốt."
+      "vi": "Hai giờ sáng. Căn phòng bỗng lạnh buốt.",
+      "noteVi": "*gets very cold*: trở nên rất lạnh. *get + tính từ* = trở nên."
     },
     {
       "id": "n4",
       "type": "message",
       "from": "brisbane",
-      "text": "I can [[smell]] the sea again 😨"
+      "text": "I can [[smell]] the sea again 😨",
+      "noteVi": "*I can smell*: mình ngửi thấy. *again*: lại nữa."
     },
     {
       "id": "n5",
       "type": "narration",
       "text": "Slowly, the round window opens by itself.",
-      "vi": "Từ từ, ô cửa tròn tự mở ra."
+      "vi": "Từ từ, ô cửa tròn tự mở ra.",
+      "noteVi": "*by itself*: tự nó (không ai mở)."
     },
     {
       "id": "c1",
@@ -87,40 +92,46 @@
     {
       "id": "n6",
       "type": "narration",
-      "text": "The [[captain]] holds up the lamp."
+      "text": "The [[captain]] holds up the lamp.",
+      "noteVi": "*hold up*: giơ lên."
     },
     {
       "id": "n7",
       "type": "message",
       "from": "brisbane",
       "text": "There's a face in the [[upper]] bed. White and [[wet]].",
-      "vi": "Có một khuôn mặt ở giường trên. Trắng bệch và ướt sũng."
+      "vi": "Có một khuôn mặt ở giường trên. Trắng bệch và ướt sũng.",
+      "noteVi": "*There's a face*: có một khuôn mặt. *White and wet*: trắng và ướt (câu rút gọn)."
     },
     {
       "id": "n8",
       "type": "message",
       "from": "brisbane",
       "text": "Its eyes are open, but they don't move.",
-      "vi": "Mắt nó mở, nhưng không hề động đậy."
+      "vi": "Mắt nó mở, nhưng không hề động đậy.",
+      "noteVi": "*Its eyes*: mắt nó. *but they don't move*: nhưng không hề động đậy."
     },
     {
       "id": "n9",
       "type": "narration",
       "text": "Brisbane jumps up and [[grabs|grab]] it.",
-      "vi": "Brisbane bật dậy và chộp lấy nó."
+      "vi": "Brisbane bật dậy và chộp lấy nó.",
+      "noteVi": "*jumps up*: bật dậy. *grabs it*: túm lấy nó."
     },
     {
       "id": "n10",
       "type": "message",
       "from": "brisbane",
-      "text": "It's so strong and so cold!"
+      "text": "It's so strong and so cold!",
+      "noteVi": "*so strong and so cold*: khỏe quá và lạnh quá. *so* + tính từ = quá, rất."
     },
     {
       "id": "s1",
       "type": "shadow",
       "from": "brisbane",
       "text": "Help me! It's pulling me to the window!",
-      "vi": "Cứu tôi với! Nó đang kéo tôi ra cửa sổ!"
+      "vi": "Cứu tôi với! Nó đang kéo tôi ra cửa sổ!",
+      "noteVi": "*pull + ai + to + nơi*: kéo ai về phía… *It's pulling me* = nó đang kéo mình."
     },
     {
       "id": "c2",
@@ -145,7 +156,8 @@
       "type": "message",
       "from": "brisbane",
       "text": "I'm trying! It's too strong!",
-      "next": "n11"
+      "next": "n11",
+      "noteVi": "*too strong*: quá khỏe (không chống lại được). *too* + tính từ = quá mức."
     },
     {
       "id": "c2b",
@@ -158,13 +170,15 @@
       "id": "n11",
       "type": "narration",
       "text": "The [[captain]] runs toward them.",
-      "vi": "Thuyền trưởng lao về phía họ."
+      "vi": "Thuyền trưởng lao về phía họ.",
+      "noteVi": "*runs toward*: chạy về phía…"
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "text": "Then the lamp falls to the floor, and everything goes black…",
-      "vi": "Rồi chiếc đèn rơi xuống sàn, và mọi thứ tối đen…"
+      "vi": "Rồi chiếc đèn rơi xuống sàn, và mọi thứ tối đen…",
+      "noteVi": "*everything goes black*: mọi thứ tối sầm. *go + tính từ* = trở nên."
     }
   ]
 }

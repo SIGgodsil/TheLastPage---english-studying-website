@@ -29,13 +29,15 @@
       "type": "message",
       "from": "nam",
       "text": "Help! My little sister Lan is [[missing]]!",
-      "vi": "Cứu với! Em gái Lan của mình mất tích rồi!"
+      "vi": "Cứu với! Em gái Lan của mình mất tích rồi!",
+      "noteVi": "*is missing*: mất tích, không biết ở đâu."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "nam",
-      "text": "Everyone is looking for her. I'm going to the [[river]]."
+      "text": "Everyone is looking for her. I'm going to the [[river]].",
+      "noteVi": "*Everyone is looking for her*: *everyone* đi với động từ số ít (*is*)."
     },
     {
       "id": "c1",
@@ -60,7 +62,8 @@
       "type": "message",
       "from": "nam",
       "text": "No time! I'm going now with a lamp.",
-      "next": "j1"
+      "next": "j1",
+      "noteVi": "*No time!*: không còn thời gian! Câu rút gọn của *There's no time!*"
     },
     {
       "id": "c1b",
@@ -79,37 +82,43 @@
       "type": "message",
       "from": "nam",
       "text": "Lan's [[slippers|slipper]]! LAN!!",
-      "vi": "Dép của Lan! LAN ƠI!!"
+      "vi": "Dép của Lan! LAN ƠI!!",
+      "noteVi": "*Lan's slippers*: dép của Lan. Chữ in hoa *LAN!!* là đang hét gọi."
     },
     {
       "id": "n4",
       "type": "narration",
       "text": "Then he sees her. She is standing in the [[river]].",
-      "vi": "Rồi cậu thấy em. Em đang đứng giữa sông."
+      "vi": "Rồi cậu thấy em. Em đang đứng giữa sông.",
+      "noteVi": "*Then he sees her*: rồi cậu thấy em. *is standing*: đang đứng."
     },
     {
       "id": "n5",
       "type": "message",
       "from": "nam",
-      "text": "The water is up to her waist."
+      "text": "The water is up to her waist.",
+      "noteVi": "*up to her waist*: (nước) ngập đến eo."
     },
     {
       "id": "s1",
       "type": "shadow",
       "from": "nam",
       "text": "She's smiling, but her eyes are closed.",
-      "vi": "Em đang cười, nhưng mắt nhắm nghiền."
+      "vi": "Em đang cười, nhưng mắt nhắm nghiền.",
+      "noteVi": "*but* nối hai ý trái ngược: đang cười, nhưng mắt nhắm."
     },
     {
       "id": "n6",
       "type": "narration",
-      "text": "She walks slowly into deeper water."
+      "text": "She walks slowly into deeper water.",
+      "noteVi": "*into deeper water*: vào chỗ nước sâu hơn. *deeper* là so sánh hơn của *deep*."
     },
     {
       "id": "n7",
       "type": "narration",
       "text": "Next to her, there is a dark shadow. A boy in a red shirt.",
-      "vi": "Bên cạnh em có một cái bóng đen. Một cậu bé mặc áo đỏ."
+      "vi": "Bên cạnh em có một cái bóng đen. Một cậu bé mặc áo đỏ.",
+      "noteVi": "*Next to her*: bên cạnh em. *A boy in a red shirt*: một cậu bé mặc áo đỏ."
     },
     {
       "id": "c2",
@@ -146,13 +155,15 @@
       "id": "j2",
       "type": "narration",
       "text": "The shadow turns and looks at Nam. Then it pulls Lan under.",
-      "vi": "Cái bóng quay lại nhìn Nam. Rồi nó kéo Lan xuống nước."
+      "vi": "Cái bóng quay lại nhìn Nam. Rồi nó kéo Lan xuống nước.",
+      "noteVi": "*pulls Lan under*: kéo Lan xuống (dưới nước)."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "text": "Nam drops the lamp and jumps into the dark [[river]].",
-      "vi": "Nam buông rơi ngọn đèn và nhảy xuống dòng sông tối."
+      "vi": "Nam buông rơi ngọn đèn và nhảy xuống dòng sông tối.",
+      "noteVi": "*jumps into*: nhảy xuống (vào trong)."
     }
   ]
 }

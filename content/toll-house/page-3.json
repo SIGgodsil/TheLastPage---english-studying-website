@@ -41,20 +41,23 @@
       "id": "n1",
       "type": "message",
       "from": "jack",
-      "text": "Let's sit together and hold hands."
+      "text": "Let's sit together and hold hands.",
+      "noteVi": "*Let's + động từ*: chúng ta hãy… *hold hands*: nắm tay nhau."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "jack",
       "text": "Nobody goes anywhere alone.",
-      "vi": "Không ai được đi đâu một mình."
+      "vi": "Không ai được đi đâu một mình.",
+      "noteVi": "*Nobody goes anywhere alone*: không ai được đi đâu một mình. Có *Nobody* thì dùng *anywhere*."
     },
     {
       "id": "n3",
       "type": "narration",
       "text": "They sit in a [[circle]] in the kitchen. Nobody talks.",
-      "vi": "Họ ngồi thành vòng tròn trong bếp. Không ai nói gì."
+      "vi": "Họ ngồi thành vòng tròn trong bếp. Không ai nói gì.",
+      "noteVi": "*in a circle*: thành một vòng tròn. *Nobody talks*: không ai nói gì."
     },
     {
       "id": "c1",
@@ -91,32 +94,37 @@
       "id": "j1",
       "type": "narration",
       "text": "Two o'clock. The kitchen door opens slowly by itself.",
-      "vi": "Hai giờ sáng. Cửa bếp từ từ tự mở ra."
+      "vi": "Hai giờ sáng. Cửa bếp từ từ tự mở ra.",
+      "noteVi": "*by itself*: tự nó (không ai mở). *opens slowly*: mở từ từ."
     },
     {
       "id": "n4",
       "type": "message",
       "from": "lester",
-      "text": "Guys… the door just opened. By itself 😰"
+      "text": "Guys… the door just opened. By itself 😰",
+      "noteVi": "*Guys*: các cậu ơi. *just* + quá khứ: vừa mới."
     },
     {
       "id": "n5",
       "type": "narration",
       "text": "Suddenly, Jack stands up. His eyes look strange and [[empty]].",
-      "vi": "Bỗng Jack đứng dậy. Mắt cậu ấy trông lạ lùng và trống rỗng."
+      "vi": "Bỗng Jack đứng dậy. Mắt cậu ấy trông lạ lùng và trống rỗng.",
+      "noteVi": "*look + tính từ*: trông… *His eyes look strange and empty* = mắt cậu trông lạ và trống rỗng."
     },
     {
       "id": "s1",
       "type": "shadow",
       "from": "meagar",
       "text": "Jack! Sit down! Stay with us!",
-      "vi": "Jack! Ngồi xuống! Ở lại với bọn mình!"
+      "vi": "Jack! Ngồi xuống! Ở lại với bọn mình!",
+      "noteVi": "*Sit down!*: ngồi xuống! *Stay with us!*: ở lại với bọn mình!"
     },
     {
       "id": "n6",
       "type": "narration",
       "text": "But Jack does not hear. He walks to the door like a [[sleepwalker]].",
-      "vi": "Nhưng Jack không nghe thấy. Cậu đi về phía cửa như người mộng du."
+      "vi": "Nhưng Jack không nghe thấy. Cậu đi về phía cửa như người mộng du.",
+      "noteVi": "*like a sleepwalker*: như người mộng du. *like + danh từ* = giống như."
     },
     {
       "id": "c2",
@@ -141,7 +149,8 @@
       "type": "message",
       "from": "white",
       "text": "We're holding him! He's so strong!",
-      "next": "j2"
+      "next": "j2",
+      "noteVi": "*We're holding him*: bọn mình đang giữ cậu ấy."
     },
     {
       "id": "c2b",
@@ -153,19 +162,22 @@
       "id": "j2",
       "type": "message",
       "from": "lester",
-      "text": "He's pulling and pulling…"
+      "text": "He's pulling and pulling…",
+      "noteVi": "*pulling and pulling*: cứ kéo mãi. Lặp động từ để nói việc kéo dài."
     },
     {
       "id": "n7",
       "type": "narration",
       "text": "A cold wind blows, and all the candles go out.",
-      "vi": "Rồi một cơn gió lạnh thổi qua, và tất cả nến đều tắt."
+      "vi": "Rồi một cơn gió lạnh thổi qua, và tất cả nến đều tắt.",
+      "noteVi": "*go out*: (nến) tắt. *all the candles*: tất cả các cây nến."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "text": "In the dark, Jack's hand slips away.",
-      "vi": "Trong bóng tối, bàn tay Jack tuột mất."
+      "vi": "Trong bóng tối, bàn tay Jack tuột mất.",
+      "noteVi": "*slips away*: tuột ra khỏi (tay)."
     }
   ]
 }

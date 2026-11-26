@@ -24,13 +24,15 @@
       "type": "message",
       "from": "ichabod",
       "text": "I looked back. There's a huge [[rider]] on a black horse!",
-      "vi": "Mình nhìn lại. Có một kỵ sĩ to lớn trên con ngựa đen!"
+      "vi": "Mình nhìn lại. Có một kỵ sĩ to lớn trên con ngựa đen!",
+      "noteVi": "*looked back*: ngoái lại nhìn. *There's a huge rider*: có một kỵ sĩ to lớn."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "ichabod",
-      "text": "He's big and dark. He doesn't speak 😰"
+      "text": "He's big and dark. He doesn't speak 😰",
+      "noteVi": "*doesn't speak*: không nói một lời."
     },
     {
       "id": "c1",
@@ -54,7 +56,8 @@
       "id": "c1a",
       "type": "narration",
       "text": "Ichabod rides faster. The [[rider]] rides faster too.",
-      "next": "j1"
+      "next": "j1",
+      "noteVi": "*faster*: nhanh hơn. *The rider rides faster too*: kỵ sĩ cũng phi nhanh hơn."
     },
     {
       "id": "c1b",
@@ -66,34 +69,39 @@
       "type": "message",
       "from": "ichabod",
       "text": "He's following me! He does everything I do!",
-      "vi": "Hắn đang bám theo mình! Mình làm gì hắn cũng làm theo!"
+      "vi": "Hắn đang bám theo mình! Mình làm gì hắn cũng làm theo!",
+      "noteVi": "*He does everything I do*: hắn làm mọi thứ mình làm. *everything (that) I do*."
     },
     {
       "id": "n3",
       "type": "narration",
       "text": "Then the moon comes out. Ichabod sees the [[rider]] clearly.",
-      "vi": "Rồi trăng ló ra. Ichabod nhìn rõ kỵ sĩ."
+      "vi": "Rồi trăng ló ra. Ichabod nhìn rõ kỵ sĩ.",
+      "noteVi": "*comes out*: (mặt trăng) ló ra. *clearly*: rõ ràng."
     },
     {
       "id": "n4",
       "type": "message",
       "from": "ichabod",
       "text": "He has NO HEAD 😱",
-      "vi": "Hắn KHÔNG CÓ ĐẦU 😱"
+      "vi": "Hắn KHÔNG CÓ ĐẦU 😱",
+      "noteVi": "Chữ in hoa *NO HEAD*: nhấn mạnh như đang hét lên."
     },
     {
       "id": "n5",
       "type": "message",
       "from": "ichabod",
       "text": "His head is on the [[saddle]] in front of him!",
-      "vi": "Đầu hắn nằm trên yên ngựa, ngay trước mặt hắn!"
+      "vi": "Đầu hắn nằm trên yên ngựa, ngay trước mặt hắn!",
+      "noteVi": "*on the saddle in front of him*: trên yên ngựa, phía trước hắn."
     },
     {
       "id": "s1",
       "type": "shadow",
       "from": "ichabod",
       "text": "Go, Gunpowder, go! Run faster!",
-      "vi": "Chạy đi Gunpowder! Chạy nhanh lên!"
+      "vi": "Chạy đi Gunpowder! Chạy nhanh lên!",
+      "noteVi": "*Go, Gunpowder, go!*: gọi tên con ngựa để giục. *Run faster!*: chạy nhanh hơn nữa!"
     },
     {
       "id": "c2",
@@ -130,19 +138,22 @@
       "id": "j2",
       "type": "narration",
       "text": "He sees the old [[bridge]] by the church.",
-      "vi": "Anh thấy cây cầu cũ cạnh nhà thờ."
+      "vi": "Anh thấy cây cầu cũ cạnh nhà thờ.",
+      "noteVi": "*by the church*: cạnh nhà thờ."
     },
     {
       "id": "n6",
       "type": "narration",
-      "text": "He rides over it as fast as he can."
+      "text": "He rides over it as fast as he can.",
+      "noteVi": "*as fast as he can*: nhanh hết mức có thể. *as + tính từ + as + ai + can*."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "from": "ichabod",
       "text": "I made it! Now I'm turning around to look…",
-      "vi": "Mình qua được rồi! Giờ mình quay lại nhìn…"
+      "vi": "Mình qua được rồi! Giờ mình quay lại nhìn…",
+      "noteVi": "*I made it!*: mình làm được rồi! *I'm turning around to look*: mình đang quay lại để nhìn."
     }
   ]
 }

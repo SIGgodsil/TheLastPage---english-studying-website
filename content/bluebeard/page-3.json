@@ -37,13 +37,15 @@
       "type": "message",
       "from": "bluebeard",
       "voice": true,
-      "text": "Give me my [[keys|key]]."
+      "text": "Give me my [[keys|key]].",
+      "noteVi": "*Give me + vật*: đưa cho tôi cái gì. Câu mệnh lệnh, không có *please*: rất lạnh lùng."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "anna",
-      "text": "I gave him the [[keys|key]]. My hands are so cold."
+      "text": "I gave him the [[keys|key]]. My hands are so cold.",
+      "noteVi": "*gave him the keys*: *give + người + vật*. *so cold*: lạnh quá."
     },
     {
       "id": "n3",
@@ -56,7 +58,8 @@
       "from": "bluebeard",
       "voice": true,
       "text": "You opened the door, my dear.",
-      "vi": "Nàng đã mở cánh cửa đó."
+      "vi": "Nàng đã mở cánh cửa đó.",
+      "noteVi": "*my dear*: em yêu. Lời ngọt ngào nhưng ở đây nghe rất đáng sợ."
     },
     {
       "id": "n4",
@@ -64,33 +67,38 @@
       "from": "bluebeard",
       "voice": true,
       "text": "Now you will join them.",
-      "vi": "Giờ nàng sẽ ở cùng với họ."
+      "vi": "Giờ nàng sẽ ở cùng với họ.",
+      "noteVi": "*join + người*: nhập bọn với ai. *them* = những người vợ trước."
     },
     {
       "id": "n5",
       "type": "message",
       "from": "anna",
-      "text": "I asked for fifteen minutes to pray 🙏"
+      "text": "I asked for fifteen minutes to pray 🙏",
+      "noteVi": "*ask for + vật/thời gian*: xin cái gì. *to pray*: để cầu nguyện (mục đích)."
     },
     {
       "id": "n6",
       "type": "message",
       "from": "bluebeard",
       "voice": true,
-      "text": "Fifteen minutes. Not one more."
+      "text": "Fifteen minutes. Not one more.",
+      "noteVi": "*Not one more*: không thêm một (phút) nào. Câu rút gọn."
     },
     {
       "id": "n7",
       "type": "narration",
       "text": "Anna runs up to the high [[tower]]. Her sister Anne is there.",
-      "vi": "Anna chạy lên tòa tháp cao. Chị gái Anne đang ở đó."
+      "vi": "Anna chạy lên tòa tháp cao. Chị gái Anne đang ở đó.",
+      "noteVi": "*runs up to*: chạy lên tới… *Her sister Anne*: chị gái cô ấy, tên là Anne."
     },
     {
       "id": "n8",
       "type": "message",
       "from": "anna",
       "text": "Our brothers are coming to visit today!",
-      "vi": "Hôm nay các anh trai mình đến thăm!"
+      "vi": "Hôm nay các anh trai mình đến thăm!",
+      "noteVi": "*are coming to visit*: hiện tại tiếp diễn cho việc đã hẹn: các anh sẽ đến thăm hôm nay."
     },
     {
       "id": "c1",
@@ -130,7 +138,8 @@
       "type": "message",
       "from": "anne",
       "text": "I see only the sun and the [[dust]].",
-      "vi": "Chị chỉ thấy nắng và bụi."
+      "vi": "Chị chỉ thấy nắng và bụi.",
+      "noteVi": "*only*: chỉ. *I see only the sun and the dust*: chỉ thấy mặt trời và bụi."
     },
     {
       "id": "c2",
@@ -169,13 +178,15 @@
       "from": "bluebeard",
       "voice": true,
       "text": "Come down now!",
-      "vi": "Xuống đây ngay!"
+      "vi": "Xuống đây ngay!",
+      "noteVi": "*Come down*: đi xuống. Câu mệnh lệnh + *now*: ngay bây giờ."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "text": "He starts to climb the stairs with a long sword.",
-      "vi": "Hắn bắt đầu leo cầu thang với một thanh gươm dài."
+      "vi": "Hắn bắt đầu leo cầu thang với một thanh gươm dài.",
+      "noteVi": "*start to + động từ*: bắt đầu làm gì. *with a long sword*: cầm một thanh kiếm dài."
     }
   ]
 }

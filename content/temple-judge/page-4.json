@@ -17,20 +17,23 @@
       "id": "n1",
       "type": "narration",
       "text": "Everyone waits in the dark hall. Nobody speaks.",
-      "vi": "Mọi người chờ đợi trong đại sảnh tối. Không ai nói gì."
+      "vi": "Mọi người chờ đợi trong đại sảnh tối. Không ai nói gì.",
+      "noteVi": "*Nobody speaks*: không ai nói gì."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "van",
       "text": "The ghost general keeps looking at the door.",
-      "vi": "Viên tướng ma cứ nhìn ra cửa mãi."
+      "vi": "Viên tướng ma cứ nhìn ra cửa mãi.",
+      "noteVi": "*keep + V-ing*: cứ làm gì mãi. *keeps looking at the door* = cứ nhìn ra cửa mãi."
     },
     {
       "id": "n3",
       "type": "message",
       "from": "van",
-      "text": "His hands are shaking 😏"
+      "text": "His hands are shaking 😏",
+      "noteVi": "*are shaking*: đang run."
     },
     {
       "id": "c1",
@@ -55,7 +58,8 @@
       "type": "message",
       "from": "van",
       "text": "I think so too. But we must wait.",
-      "next": "j1"
+      "next": "j1",
+      "noteVi": "*I think so too*: mình cũng nghĩ vậy. *must*: phải."
     },
     {
       "id": "c1b",
@@ -67,32 +71,37 @@
       "id": "j1",
       "type": "narration",
       "text": "After a long time, the big doors open.",
-      "vi": "Một lúc lâu sau, cánh cửa lớn mở ra."
+      "vi": "Một lúc lâu sau, cánh cửa lớn mở ra.",
+      "noteVi": "*After a long time*: sau một hồi lâu."
     },
     {
       "id": "n4",
       "type": "narration",
       "text": "The [[messenger]] comes in with a letter from Tan Vien.",
-      "vi": "Người đưa tin bước vào với một lá thư từ Tản Viên."
+      "vi": "Người đưa tin bước vào với một lá thư từ Tản Viên.",
+      "noteVi": "*comes in with*: đi vào, mang theo…"
     },
     {
       "id": "s1",
       "type": "shadow",
       "from": "van",
       "text": "Here it is. The letter from Tan Vien!",
-      "vi": "Đây rồi. Lá thư từ Tản Viên!"
+      "vi": "Đây rồi. Lá thư từ Tản Viên!",
+      "noteVi": "*Here it is*: nó đây rồi (khi đưa đồ cho ai)."
     },
     {
       "id": "n5",
       "type": "narration",
-      "text": "The king opens the letter and reads it slowly."
+      "text": "The king opens the letter and reads it slowly.",
+      "noteVi": "*reads it slowly*: đọc chậm rãi. Với *it*, đặt *it* ngay sau động từ."
     },
     {
       "id": "n6",
       "type": "message",
       "from": "van",
       "text": "His face doesn't change. I can't tell what it says 😟",
-      "vi": "Mặt ngài không đổi sắc. Mình không đoán được thư viết gì 😟"
+      "vi": "Mặt ngài không đổi sắc. Mình không đoán được thư viết gì 😟",
+      "noteVi": "*can't tell*: không đoán được. *what it says*: lá thư viết gì (không đảo ngữ)."
     },
     {
       "id": "c2",
@@ -123,7 +132,8 @@
       "id": "c2b",
       "type": "message",
       "from": "van",
-      "text": "I hope you're right."
+      "text": "I hope you're right.",
+      "noteVi": "*I hope + câu*: tôi hy vọng… *you're right*: cậu nói đúng."
     },
     {
       "id": "j2",
@@ -134,13 +144,15 @@
     {
       "id": "n7",
       "type": "narration",
-      "text": "The hall is silent."
+      "text": "The hall is silent.",
+      "noteVi": "*is silent*: im phăng phắc."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "text": "The king stands up and raises his hand…",
-      "vi": "Nhà vua đứng dậy và giơ tay lên…"
+      "vi": "Nhà vua đứng dậy và giơ tay lên…",
+      "noteVi": "*stands up*: đứng dậy. *raises his hand*: giơ tay lên."
     }
   ]
 }

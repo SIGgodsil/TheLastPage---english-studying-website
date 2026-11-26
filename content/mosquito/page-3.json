@@ -27,20 +27,23 @@
       "id": "n1",
       "type": "message",
       "from": "ngocTam",
-      "text": "I looked for her everywhere. Town after town, for months."
+      "text": "I looked for her everywhere. Town after town, for months.",
+      "noteVi": "*look for*: tìm. *Town after town*: hết thị trấn này đến thị trấn khác. *for months*: suốt nhiều tháng."
     },
     {
       "id": "n2",
       "type": "message",
       "from": "ngocTam",
-      "text": "At last, I found her. She lives in the merchant's big house."
+      "text": "At last, I found her. She lives in the merchant's big house.",
+      "noteVi": "*At last*: cuối cùng. *the merchant's big house*: ngôi nhà lớn của tên lái buôn."
     },
     {
       "id": "n3",
       "type": "message",
       "from": "ngocTam",
       "text": "She wears [[silk]] clothes and gold rings 💍",
-      "vi": "Cô ấy mặc áo lụa và đeo nhẫn vàng 💍"
+      "vi": "Cô ấy mặc áo lụa và đeo nhẫn vàng 💍",
+      "noteVi": "*wears*: mặc, đeo (cả quần áo lẫn nhẫn)."
     },
     {
       "id": "c1",
@@ -71,19 +74,22 @@
       "id": "c1b",
       "type": "message",
       "from": "ngocTam",
-      "text": "I can't. I have to talk to her."
+      "text": "I can't. I have to talk to her.",
+      "noteVi": "*have to + động từ*: phải làm gì."
     },
     {
       "id": "j1",
       "type": "narration",
       "text": "Ngoc Tam stands in front of his wife.",
-      "vi": "Ngọc Tâm đứng trước mặt vợ."
+      "vi": "Ngọc Tâm đứng trước mặt vợ.",
+      "noteVi": "*in front of*: ở phía trước."
     },
     {
       "id": "n4",
       "type": "message",
       "from": "ngocTam",
-      "text": "I said, “Nhan Diep, please come home with me.”"
+      "text": "I said, “Nhan Diep, please come home with me.”",
+      "noteVi": "*come home with me*: về nhà với anh."
     },
     {
       "id": "n5",
@@ -91,7 +97,8 @@
       "from": "nhanDiep",
       "voice": true,
       "text": "Home? To your poor little house?",
-      "vi": "Về nhà ư? Về căn nhà nghèo nàn của anh à?"
+      "vi": "Về nhà ư? Về căn nhà nghèo nàn của anh à?",
+      "noteVi": "Câu hỏi rút gọn, giọng chế giễu: *Home? To your poor little house?*"
     },
     {
       "id": "n6",
@@ -106,7 +113,8 @@
       "type": "message",
       "from": "ngocTam",
       "text": "I told her, “I gave you my [[blood]]. I gave you everything.”",
-      "vi": "Mình nói: “Ta đã cho nàng máu của ta. Ta đã cho nàng tất cả.”"
+      "vi": "Mình nói: “Ta đã cho nàng máu của ta. Ta đã cho nàng tất cả.”",
+      "noteVi": "*gave you my blood*: *give + người + vật*. Lặp *I gave you* để nhấn mạnh."
     },
     {
       "id": "s1",
@@ -114,7 +122,8 @@
       "from": "nhanDiep",
       "voice": true,
       "text": "I didn't ask for it.",
-      "vi": "Tôi đâu có xin."
+      "vi": "Tôi đâu có xin.",
+      "noteVi": "*ask for + vật*: xin cái gì. *I didn't ask for it* = tôi đâu có xin."
     },
     {
       "id": "c2",
@@ -151,14 +160,16 @@
       "id": "j2",
       "type": "narration",
       "text": "Ngoc Tam looks at her for a long time. His heart is cold now.",
-      "vi": "Ngọc Tâm nhìn nàng thật lâu. Lòng anh giờ đã lạnh."
+      "vi": "Ngọc Tâm nhìn nàng thật lâu. Lòng anh giờ đã lạnh.",
+      "noteVi": "*for a long time*: rất lâu. *His heart is cold now*: lòng anh giờ đã nguội lạnh."
     },
     {
       "id": "end",
       "type": "cliffhanger",
       "from": "ngocTam",
       "text": "“Then give me back my three [[drops|drop]] of [[blood]].”",
-      "vi": "“Vậy thì trả lại ta ba giọt máu.”"
+      "vi": "“Vậy thì trả lại ta ba giọt máu.”",
+      "noteVi": "*give + ai + back + vật*: trả lại ai cái gì. *Then* ở đây = vậy thì."
     }
   ]
 }
