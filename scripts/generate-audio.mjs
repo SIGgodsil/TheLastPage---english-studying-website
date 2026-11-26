@@ -2,14 +2,15 @@
 // The app never calls ElevenLabs: it only plays the mp3 files this script
 // writes to public/audio/<story-id>/p<page>-<node-id>.mp3.
 //
-// Usage (PowerShell):
-//   $env:ELEVENLABS_API_KEY = "<your key>"     # set it in your own terminal only
-//   node scripts/generate-audio.mjs --dry-run  # list lines, voices and characters; no API calls
-//   node scripts/generate-audio.mjs            # make the missing files
-//   node scripts/generate-audio.mjs --only nam-xuong --force   # remake one story
-//   node scripts/generate-audio.mjs --list-voices
+// Usage:
+//   npm run audio -- --dry-run      # list lines, voices and characters; no API calls
+//   npm run audio                   # make the missing files
+//   npm run audio -- --only nam-xuong --force   # remake one story
+//   npm run audio -- --list-voices
 //
-// The key is read from the environment and never written anywhere.
+// The key comes from ELEVENLABS_API_KEY: `npm run audio` loads it from .env
+// (git-ignored, written by `npx @elevenlabs/cli onboard init`), or set it in
+// the terminal. It is never printed or written anywhere by this script.
 // Free ElevenLabs plan: non-commercial use, with attribution (the app credits ElevenLabs).
 // Needs Node 22.18+ (imports the TypeScript schema directly).
 
