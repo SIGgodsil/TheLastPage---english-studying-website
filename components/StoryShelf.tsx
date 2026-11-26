@@ -50,21 +50,20 @@ export default function StoryShelf({ stories }: Props) {
     <>
       <ContinueCard story={target} status={statusOf(progress, target)} />
 
-      <div className="mt-12 flex items-baseline justify-between gap-4 border-b border-ink pb-2">
+      <div className="mt-12 flex items-baseline justify-between gap-4">
         <h2 className="text-2xl">Tủ truyện</h2>
         <p className="eyebrow text-muted">{stories.length} truyện</p>
       </div>
-      <p className="mt-3 text-muted italic">Mỗi cặp một truyện Việt và một truyện phương Tây, cùng một đề tài.</p>
+      <p className="mt-1 text-muted italic">Mỗi cặp một truyện Việt và một truyện phương Tây, cùng một đề tài.</p>
 
       {pairs.map((pair) => {
         const inPair = stories.filter((s) => s.pair === pair);
         return (
           <section key={pair} className="mt-8" aria-labelledby={`pair-${pair}`}>
-            <h3 id={`pair-${pair}`} className="eyebrow flex items-center gap-3 text-wine">
+            <h3 id={`pair-${pair}`} className="eyebrow text-wine">
               {inPair[0].themeVi}
-              <span aria-hidden className="h-px flex-1 bg-line" />
             </h3>
-            <ul className="mt-1 divide-y divide-line">
+            <ul className="mt-3 flex flex-col gap-2.5">
               {inPair.map((story) => (
                 <li key={story.id}>
                   <StoryRow story={story} status={statusOf(progress, story)} />
@@ -89,13 +88,12 @@ function ContinueCard({ story, status }: { story: StoryMeta; status: Status }) {
   const reading = status.state === "reading";
   const copy = CONTINUE_COPY[status.state];
   return (
-    <section className="mt-8 bg-ink px-5 py-6 text-paper" aria-labelledby="continue-title">
+    <section className="shadow-paper mt-8 rounded-3xl bg-ink px-6 py-6 text-paper" aria-labelledby="continue-title">
       <p className="eyebrow text-paper/65">{copy.eyebrow}</p>
       <h2 id="continue-title" className="mt-3 text-[1.9rem] leading-tight">
         {story.title}
       </h2>
       <p className="mt-1 text-paper/75 italic">{story.titleVi}</p>
-      <div aria-hidden className="mt-4 border-t border-paper/20" />
       {reading ? (
         <div className="mt-4">
           <Bar done={status.done} total={story.pages} dark />
@@ -129,7 +127,10 @@ const STATUS_LABEL = (story: StoryMeta, status: Status): string =>
 function StoryRow({ story, status }: { story: StoryMeta; status: Status }) {
   const active = status.state !== "new";
   return (
-    <Link href={status.href} className="group block py-4 transition-colors hover:bg-card/70">
+    <Link
+      href={status.href}
+      className="group block rounded-2xl border border-line bg-card px-4 py-3.5 transition-[border-color,box-shadow] hover:border-wine/40 hover:shadow-paper"
+    >
       <div className="flex items-baseline justify-between gap-3">
         <p className="eyebrow text-muted">
           {story.origin === "vn" ? "Việt Nam" : "Phương Tây"} · {story.level}
@@ -155,7 +156,7 @@ function Fear({ level }: { level: number }) {
   return (
     <span className="flex items-center gap-1" role="img" aria-label={`Độ sợ ${level}/3`}>
       {[1, 2, 3].map((i) => (
-        <span key={i} className={`size-1.5 rotate-45 ${i <= level ? "bg-wine" : "bg-line"}`} />
+        <span key={i} className={`size-1.5 rounded-full ${i <= level ? "bg-wine" : "bg-line"}`} />
       ))}
     </span>
   );
@@ -167,7 +168,7 @@ function Bar({ done, total, dark }: { done: number; total: number; dark?: boolea
       {Array.from({ length: total }, (_, i) => (
         <span
           key={i}
-          className={`h-1 flex-1 ${i < done ? (dark ? "bg-paper" : "bg-wine") : dark ? "bg-paper/20" : "bg-line"}`}
+          className={`h-1 flex-1 rounded-full ${i < done ? (dark ? "bg-paper" : "bg-wine") : dark ? "bg-paper/20" : "bg-line"}`}
         />
       ))}
     </div>

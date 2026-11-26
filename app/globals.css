@@ -3,7 +3,8 @@
 /*
  * Design tokens (see CLAUDE.md and docs/DESIGN.md). The app is always light:
  * paper and ink. One typeface, Times New Roman, carries every role; hierarchy
- * comes from size, italics, small tracked capitals and hairline rules.
+ * comes from size, italics and small tracked capitals. Shapes are soft:
+ * pill buttons, rounded cards, a faint warm shadow at most.
  */
 @theme {
   --color-paper: #f7f3ea;
@@ -45,6 +46,13 @@ body {
   outline-offset: 2px;
 }
 
+/* A soft, warm lift for cards that sit on the paper. */
+@utility shadow-paper {
+  box-shadow:
+    0 1px 2px rgb(43 36 32 / 0.04),
+    0 8px 24px -12px rgb(43 36 32 / 0.18);
+}
+
 /* Small tracked capitals: section labels, metadata. */
 @utility eyebrow {
   font-size: 0.7rem;
@@ -62,7 +70,7 @@ body {
   gap: 0.5rem;
   min-height: 2.75rem;
   padding: 0.7rem 1.5rem;
-  border-radius: 2px;
+  border-radius: 9999px;
   background: var(--color-wine);
   color: var(--color-paper);
   font-weight: 700;
@@ -92,7 +100,7 @@ body {
   min-height: 2.75rem;
   padding: 0.7rem 1.5rem;
   border: 1px solid var(--color-ink);
-  border-radius: 2px;
+  border-radius: 9999px;
   background: transparent;
   color: var(--color-ink);
   font-weight: 700;
