@@ -19,12 +19,12 @@ export default function ChoiceButtons({ node, onChoose }: Props) {
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-start justify-between gap-3 px-1">
-        <p className="text-sm text-muted">{node.prompt}</p>
+        <p className="text-muted italic">{node.prompt}</p>
         {nextTier && (
           <button
             type="button"
             onClick={() => setTier(tier === 0 ? 1 : 2)}
-            className="shrink-0 rounded-full border border-line bg-card px-3 py-1 text-xs font-medium text-wine"
+            className="min-h-8 shrink-0 rounded-full border border-wine/30 bg-card px-3 py-1 text-sm text-wine transition-colors hover:border-wine/60"
           >
             {nextTier}
           </button>
@@ -32,7 +32,7 @@ export default function ChoiceButtons({ node, onChoose }: Props) {
       </div>
 
       {tier >= 1 && (
-        <p role="status" className="rounded-xl bg-card px-3 py-2 text-sm leading-relaxed">
+        <p role="status" className="rounded-2xl bg-wine/[0.06] px-4 py-2.5 leading-relaxed text-ink/90 italic">
           {node.hint}
         </p>
       )}
@@ -42,10 +42,17 @@ export default function ChoiceButtons({ node, onChoose }: Props) {
           key={i}
           type="button"
           onClick={() => onChoose(i)}
-          className="w-full rounded-2xl border border-wine/40 bg-card px-4 py-3 text-left leading-snug transition hover:border-wine active:scale-[0.98]"
+          className="group flex w-full items-center gap-3 rounded-2xl border border-line bg-card px-4 py-3 text-left transition-[border-color,box-shadow,transform] hover:border-wine/50 hover:shadow-paper active:scale-[0.99]"
         >
-          <span className="block">{plainText(option.text)}</span>
-          {tier === 2 && option.vi && <span className="mt-1 block text-sm text-muted">{option.vi}</span>}
+          <span className="min-w-0 flex-1">
+            <span lang="en" className="block text-[1.05rem] leading-snug">
+              {plainText(option.text)}
+            </span>
+            {tier === 2 && option.vi && <span className="mt-1 block text-sm text-muted italic">{option.vi}</span>}
+          </span>
+          <span aria-hidden className="text-lg text-wine/60 transition-transform group-hover:translate-x-0.5">
+            ›
+          </span>
         </button>
       ))}
     </div>

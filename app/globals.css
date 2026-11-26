@@ -25,6 +25,8 @@
   color-scheme: light;
   /* Times New Roman has a small x-height: a slightly larger root keeps it readable on phones. */
   font-size: 17px;
+  /* The chat's sticky header and footer must not cover a focused element. */
+  scroll-padding-block: 5.5rem 8rem;
 }
 
 body {
@@ -88,6 +90,30 @@ body {
     background: var(--color-line);
     color: var(--color-muted);
     cursor: not-allowed;
+  }
+}
+
+/* The neutral forward action in the chat ("Tiếp"): ink, so wine stays for decisions. */
+@utility btn-ink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 9999px;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition:
+    background-color 150ms,
+    transform 150ms;
+  &:hover {
+    background: #3d332d;
+  }
+  &:active {
+    transform: scale(0.99);
   }
 }
 

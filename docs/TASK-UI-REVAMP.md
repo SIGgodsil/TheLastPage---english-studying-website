@@ -10,7 +10,12 @@ Each phase runs the skill's loop: Build → Review (Mode C, `references/review-c
   - Times New Roman for the whole app, with Tinos as the fallback; tokens and the `eyebrow`, `btn-primary` and `btn-secondary` utilities; focus, tap and reduced-motion rules.
   - Home: a masthead with a small dotted rule, the "continue" card as a rounded ink band, and the shelf as soft rounded story cards. Restyled the 404 page.
   - The user found the first pass too boxy (square corners, heavy double rule), so shapes were softened: pill buttons, rounded cards, a faint warm shadow.
-- [ ] **2. Chat screen.** Header, bubbles, narration, choices, typing indicator, "Dịch", page end.
+- [x] **2. Chat screen.** Header, bubbles, narration, choices, typing indicator, "Dịch", page end.
+  - Header: frosted paper bar with a round back button, the character in regular-weight type, "TRANG 1/4" as a wine eyebrow plus the page title in italics, and a thin progress line per page.
+  - Bubbles: softer corners (1.25 rem), a faint shadow, 1.05 rem text; speaker names as eyebrows; the cliffhanger bubble gets a light wine wash.
+  - Choices: each option a soft card with a "›" mark that lifts on hover; the hint is a light wine wash in italics, the prompt is italic.
+  - "Tiếp" is an ink pill (`btn-ink`) so wine stays for decisions; the page end uses an eyebrow "HẾT TRANG 1/4", an italic teaser and `btn-primary`.
+  - Review: added `scroll-padding-block` so the sticky header and footer never hide a focused word.
 - [ ] **3. Sheets.** Bottom sheet, word sheet, shadowing sheet.
 - [ ] **4. The Last Page and the shared page.** Prompt card, mood cards, starters, writer, word bank, feedback, done view, sharing, shared ending.
 

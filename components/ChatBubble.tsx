@@ -32,7 +32,7 @@ export default function ChatBubble(props: Props) {
   if (props.side === "learner") {
     return (
       <div className="flex justify-end pl-12">
-        <p className="rounded-2xl rounded-br-md bg-wine px-4 py-2.5 leading-relaxed text-paper [&_button]:decoration-paper/60">
+        <p className="rounded-[1.25rem] rounded-br-md bg-wine px-4 py-2.5 text-[1.05rem] leading-relaxed text-paper [&_button]:decoration-paper/60">
           <StoryText text={props.text} />
         </p>
       </div>
@@ -46,23 +46,23 @@ function CharacterBubble({ name, emoji, showName, showAvatar, text, vi, voice, a
   const [showVi, setShowVi] = useState(false);
   return (
     <div className="pr-10">
-      {showName && <p className="mb-1 ml-11 text-xs font-medium text-muted">{name}</p>}
+      {showName && <p className="eyebrow mb-1.5 ml-11 text-muted">{name}</p>}
       <div className="flex items-end gap-2">
         <div className="w-8 shrink-0">{showAvatar && <Avatar emoji={emoji} name={name} size="sm" />}</div>
         <div
-          className={`min-w-0 rounded-2xl rounded-bl-md border bg-card px-4 py-2.5 leading-relaxed shadow-sm ${
-            accent ? "border-wine/60" : "border-line"
+          className={`min-w-0 rounded-[1.25rem] rounded-bl-md border px-4 py-2.5 text-[1.05rem] leading-relaxed shadow-[0_1px_2px_rgb(43_36_32/0.05)] ${
+            accent ? "border-wine/50 bg-wine/[0.04]" : "border-line bg-card"
           }`}
         >
           {voice && <VoiceNote />}
           <p className={voice ? "text-[0.95rem] italic" : undefined}>
             <StoryText text={text} />
           </p>
-          {vi && showVi && <p className="mt-2 border-t border-line pt-2 text-[0.95rem] text-muted">{vi}</p>}
+          {vi && showVi && <p className="mt-2 border-t border-line pt-2 text-[0.95rem] text-muted italic">{vi}</p>}
         </div>
       </div>
       {(vi || footer) && (
-        <div className="mt-1 ml-10 flex flex-wrap items-center gap-2">
+        <div className="mt-1 ml-10 flex flex-wrap items-center gap-1.5">
           {vi && <TranslateButton shown={showVi} onToggle={() => setShowVi(!showVi)} />}
           {footer}
         </div>

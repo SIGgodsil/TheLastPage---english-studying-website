@@ -9,11 +9,11 @@ export default function TypingIndicator({ name, emoji }: Props) {
       <div className="w-8 shrink-0">
         <Avatar emoji={emoji} name={name} size="sm" />
       </div>
-      <div className="flex items-center gap-1 rounded-2xl rounded-bl-md border border-line bg-card px-4 py-3.5">
+      <div className="flex items-center gap-1 rounded-[1.25rem] rounded-bl-md border border-line bg-card px-4 py-4 shadow-[0_1px_2px_rgb(43_36_32/0.05)]">
         {[0, 150, 300].map((delay) => (
           <span
             key={delay}
-            className="size-1.5 animate-bounce rounded-full bg-muted motion-reduce:animate-none"
+            className="size-1.5 animate-bounce rounded-full bg-muted/70 motion-reduce:animate-none"
             style={{ animationDelay: `${delay}ms` }}
           />
         ))}

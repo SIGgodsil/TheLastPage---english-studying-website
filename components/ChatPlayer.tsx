@@ -119,7 +119,7 @@ function ChatSession({ storyId, page, totalPages, glossary, nextTitle }: Props) 
 
   return (
     <WordProvider glossary={glossary} pageNumber={page.page}>
-      <div role="log" aria-live="polite" className="flex flex-1 flex-col gap-2 px-3 pt-4 pb-6">
+      <div role="log" aria-live="polite" className="flex flex-1 flex-col gap-2.5 px-3 pt-5 pb-8">
         {steps.map((step, i) => {
           const isLast = i === steps.length - 1;
           if (isLast && typing) {
@@ -139,7 +139,7 @@ function ChatSession({ storyId, page, totalPages, glossary, nextTitle }: Props) 
         })}
       </div>
 
-      <footer className="sticky bottom-0 border-t border-line bg-paper/95 px-3 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur">
+      <footer className="sticky bottom-0 border-t border-line/80 bg-paper/90 px-3 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-md">
         {!typing && isAwaitingChoice(page, play) && node.type === "choice" ? (
           <ChoiceButtons key={node.id} node={node} onChoose={(i) => goTo(choose(page, play, i))} />
         ) : !typing && isPageEnd(page, play) ? (
@@ -154,7 +154,7 @@ function ChatSession({ storyId, page, totalPages, glossary, nextTitle }: Props) 
           <button
             type="button"
             onClick={onContinue}
-            className="w-full rounded-full bg-ink px-6 py-3 font-medium text-paper transition active:scale-[0.98]"
+            className="btn-ink w-full"
           >
             {typing ? "Xem ngay" : "Tiếp"}
           </button>

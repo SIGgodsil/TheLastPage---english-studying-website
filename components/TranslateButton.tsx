@@ -7,7 +7,7 @@ export default function TranslateButton({ shown, onToggle }: Props) {
       type="button"
       onClick={onToggle}
       aria-pressed={shown}
-      className="inline-flex items-center rounded-full px-2 py-1 text-xs font-medium text-muted hover:bg-line/60 hover:text-ink"
+      className="inline-flex min-h-7 items-center rounded-full px-2.5 py-1 text-[0.8rem] text-muted italic transition-colors hover:bg-card hover:text-wine aria-pressed:text-wine"
     >
       {shown ? "Ẩn bản dịch" : "Dịch"}
     </button>

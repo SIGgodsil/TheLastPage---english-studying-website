@@ -10,8 +10,9 @@ type Props = { text: string; vi?: string; accent?: boolean };
 export default function NarrationLine({ text, vi, accent }: Props) {
   const [showVi, setShowVi] = useState(false);
   return (
-    <div className="mx-auto flex max-w-[85%] flex-col items-center py-1 text-center">
-      <p className={`font-serif italic leading-relaxed ${accent ? "text-lg text-wine" : "text-muted"}`}>
+    <div className="mx-auto flex max-w-[85%] flex-col items-center py-2 text-center">
+      {accent && <span aria-hidden className="mb-2 h-px w-10 bg-wine/40" />}
+      <p className={`leading-relaxed italic ${accent ? "text-xl text-wine" : "text-[1.02rem] text-muted"}`}>
         <StoryText text={text} />
       </p>
       {vi && showVi && <p className="mt-1 text-sm text-muted">{vi}</p>}

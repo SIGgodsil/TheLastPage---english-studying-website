@@ -6,9 +6,9 @@ export default function Avatar({ emoji, name, size = "md" }: Props) {
   return (
     <span
       aria-hidden
-      className={`flex shrink-0 items-center justify-center rounded-full border border-line bg-card ${box}`}
+      className={`shadow-paper flex shrink-0 items-center justify-center rounded-full border border-line bg-card ${box}`}
     >
-      {emoji ?? <span className="font-serif text-sm font-semibold text-wine">{name.charAt(0)}</span>}
+      {emoji ?? <span className="text-base text-wine italic">{name.charAt(0)}</span>}
     </span>
   );
 }
