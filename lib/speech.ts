@@ -63,7 +63,12 @@ export type ListenStage = "starting" | "recording" | "sound";
 
 export type RecognitionOutcome =
   | { ok: true; alternatives: string[] }
-  | { ok: false; reason: RecognitionFailure };
+  | {
+      ok: false;
+      reason: RecognitionFailure;
+      /** What the browser reported, in order, e.g. "audiostart 0.3s · soundstart 1.2s · error:no-speech 6.0s". */
+      trace?: string;
+    };
 
 export type RecognitionSession = {
   /** Stop listening and use what was heard so far. */
@@ -115,6 +120,9 @@ export function listen({ lang = "en-US", maxSeconds = 8, onInterim, onStage }: L
   let failure: RecognitionFailure | null = null;
   let stage: ListenStage = "starting";
   let settled = false;
+  const startedAt = Date.now();
+  const events: string[] = [];
+  const note = (event: string) => events.push(`${event} ${((Date.now() - startedAt) / 1000).toFixed(1)}s`);
   let timer: ReturnType<typeof setTimeout> | undefined;
   let grace: ReturnType<typeof setTimeout> | undefined;
   let resolveResult: (outcome: RecognitionOutcome) => void = () => {};
@@ -136,17 +144,20 @@ export function listen({ lang = "en-US", maxSeconds = 8, onInterim, onStage }: L
     ).filter(Boolean);
     if (alternatives.length > 0) return { ok: true, alternatives: [...new Set(alternatives)] };
     if (heard) return { ok: true, alternatives: [heard] };
-    if (failure) return { ok: false, reason: failure };
-    return { ok: false, reason: stage === "starting" ? "no-audio" : stage === "recording" ? "quiet" : "unclear" };
+    const trace = events.join(" · ");
+    if (failure) return { ok: false, reason: failure, trace };
+    return { ok: false, reason: stage === "starting" ? "no-audio" : stage === "recording" ? "quiet" : "unclear", trace };
   };
 
   recognition.onresult = (event) => {
+    note("result");
     const results = Array.from({ length: event.results.length }, (_, i) => event.results[i]);
     finals = results.filter((r) => r.isFinal);
     heard = results.map((r) => r[0]?.transcript ?? "").join(" ").trim();
     onInterim?.(heard);
   };
   recognition.onerror = (event) => {
+    note(`error:${event.error}`);
     // "no-speech" is explained by how far listening got (see outcomeSoFar).
     if (event.error !== "no-speech") failure = ERROR_REASONS[event.error] ?? "error";
   };
@@ -155,10 +166,22 @@ export function listen({ lang = "en-US", maxSeconds = 8, onInterim, onStage }: L
     stage = next;
     onStage?.(next);
   };
-  recognition.onaudiostart = () => reach("recording");
-  recognition.onsoundstart = () => reach("sound");
-  recognition.onspeechstart = () => reach("sound");
-  recognition.onend = () => settle(outcomeSoFar());
+  recognition.onaudiostart = () => {
+    note("audiostart");
+    reach("recording");
+  };
+  recognition.onsoundstart = () => {
+    note("soundstart");
+    reach("sound");
+  };
+  recognition.onspeechstart = () => {
+    note("speechstart");
+    reach("sound");
+  };
+  recognition.onend = () => {
+    note("end");
+    settle(outcomeSoFar());
+  };
 
   const abort = () => {
     try {
@@ -173,12 +196,14 @@ export function listen({ lang = "en-US", maxSeconds = 8, onInterim, onStage }: L
   // so after a short grace period use what was heard so far.
   const stop = () => {
     if (settled || grace !== undefined) return;
+    note("stop");
     try {
       recognition.stop();
     } catch {
       // Already stopped.
     }
     grace = setTimeout(() => {
+      note("no-end");
       settle(outcomeSoFar());
       abort();
     }, STOP_GRACE_MS);

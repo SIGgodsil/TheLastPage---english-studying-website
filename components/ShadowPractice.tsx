@@ -74,7 +74,7 @@ type Phase =
   | { kind: "ready" }
   | { kind: "listening"; interim: string; stage: ListenStage }
   | { kind: "result"; result: ShadowResult }
-  | { kind: "failed"; reason: keyof typeof FAILURE };
+  | { kind: "failed"; reason: keyof typeof FAILURE; trace?: string };
 
 type Speed = "normal" | "slow";
 
@@ -126,7 +126,7 @@ function ShadowPanel({
       setPhase({ kind: "result", result });
     }
     else if (outcome.reason === "aborted") setPhase({ kind: "ready" });
-    else setPhase({ kind: "failed", reason: outcome.reason });
+    else setPhase({ kind: "failed", reason: outcome.reason, trace: outcome.trace });
   };
 
   const result = phase.kind === "result" ? phase.result : null;
@@ -162,7 +162,12 @@ function ShadowPanel({
         ) : phase.kind === "listening" ? (
           <Listening interim={phase.interim} stage={phase.stage} onStop={() => session.current?.stop()} />
         ) : phase.kind === "failed" ? (
-          <Message>{FAILURE[phase.reason]}</Message>
+          <>
+            <Message>{FAILURE[phase.reason]}</Message>
+            {phase.trace && (
+              <p className="mt-2 text-xs break-words text-muted/70">Chi tiết kỹ thuật: {phase.trace}</p>
+            )}
+          </>
         ) : (
           <Feedback result={phase.result} />
         )}
