@@ -62,10 +62,12 @@ Notes:
 
 ### Phase 2: count what the learner does
 
-- [ ] Call `recordActivity` from the word popover, "Cấu trúc", 🔊, choices,
-      shadowing and page completion.
-- [ ] A small toast in the chat when a mission is done
-      ("✓ Xong nhiệm vụ: Tra nghĩa 5 từ").
+- [x] `track()` is called when a word opens, a "Cấu trúc" note opens (not
+      when it closes), 🔊 plays, a choice is made, a shadowing attempt is
+      scored (silence does not count) and a page is finished.
+- [x] A toast when a mission is done ("✓ Xong nhiệm vụ: Tra nghĩa 5 từ", or
+      "⭐ Xong cả 3 nhiệm vụ hôm nay!"). It lives in the root layout and is a
+      manual popover, so it shows above the shadowing sheet too.
 
 ### Phase 3: show it
 

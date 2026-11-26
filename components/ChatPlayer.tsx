@@ -14,6 +14,7 @@ import {
   type Step,
 } from "@/lib/engine";
 import type { Page, StoryNode } from "@/lib/schema";
+import { track } from "@/lib/daily";
 import type { PageWords } from "@/lib/dictionary";
 import type { Glossary } from "@/lib/vocab";
 import { completePage, markWordTipSeen, savePlay, storyProgress, wordTipSeen } from "@/lib/storage";
@@ -104,7 +105,10 @@ function ChatSession({ storyId, page, totalPages, glossary, words, nextTitle }: 
 
   const goTo = (next: PlayState) => {
     setPlay(next);
-    if (isPageEnd(page, next)) completePage(storyId, page.page);
+    if (isPageEnd(page, next)) {
+      completePage(storyId, page.page);
+      track("page");
+    }
     else savePlay(storyId, page.page, next);
 
     const node = currentNode(page, next);
@@ -162,7 +166,14 @@ function ChatSession({ storyId, page, totalPages, glossary, words, nextTitle }: 
 
       <footer className="sticky bottom-0 border-t border-line/80 bg-paper/90 px-3 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-md">
         {!typing && isAwaitingChoice(page, play) && node.type === "choice" ? (
-          <ChoiceButtons key={node.id} node={node} onChoose={(i) => goTo(choose(page, play, i))} />
+          <ChoiceButtons
+            key={node.id}
+            node={node}
+            onChoose={(i) => {
+              track("choice");
+              goTo(choose(page, play, i));
+            }}
+          />
         ) : !typing && isPageEnd(page, play) ? (
           <PageEnd
             storyId={storyId}

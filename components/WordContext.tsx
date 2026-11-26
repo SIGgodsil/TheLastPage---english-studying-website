@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from "react";
+import { track } from "@/lib/daily";
 import type { PageWords, WordInfo } from "@/lib/dictionary";
 import type { Glossary } from "@/lib/vocab";
 import { markWordTipSeen } from "@/lib/storage";
@@ -38,6 +39,7 @@ export function WordProvider({ glossary, words, pageNumber, onFirstWord, childre
   const openWord = useCallback(
     (shown: string, key: string, anchor: HTMLElement) => {
       setOpen({ shown, key, anchor });
+      track("word");
       markWordTipSeen();
       onFirstWord?.();
     },

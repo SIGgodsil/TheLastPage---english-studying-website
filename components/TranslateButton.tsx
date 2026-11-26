@@ -1,3 +1,5 @@
+import { track } from "@/lib/daily";
+
 type Props = {
   shown: boolean;
   onToggle: () => void;
@@ -22,5 +24,10 @@ export default function TranslateButton({ shown, onToggle, label = "Dịch", hid
 
 /** The "Cấu trúc" toggle. */
 export function NoteButton({ shown, onToggle }: Pick<Props, "shown" | "onToggle">) {
-  return <TranslateButton shown={shown} onToggle={onToggle} label="Cấu trúc" hideLabel="Ẩn cấu trúc" />;
+  // Opening a note counts towards the "Xem 3 ghi chú" mission; closing it does not.
+  const toggle = () => {
+    if (!shown) track("note");
+    onToggle();
+  };
+  return <TranslateButton shown={shown} onToggle={toggle} label="Cấu trúc" hideLabel="Ẩn cấu trúc" />;
 }

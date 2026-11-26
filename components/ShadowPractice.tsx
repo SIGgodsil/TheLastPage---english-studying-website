@@ -14,6 +14,7 @@ import {
   type ListenStage,
   type RecognitionSession,
 } from "@/lib/speech";
+import { track } from "@/lib/daily";
 import { saveShadow, shadowKey } from "@/lib/storage";
 import BottomSheet, { CloseButton } from "./BottomSheet";
 import { FAILURE, PRAISE, tipMessage } from "./shadowCopy";
@@ -42,7 +43,10 @@ export default function ShadowPractice({ storyId, page, nodeId, variant = "chip"
   const best = progress?.stories[storyId]?.shadow?.[shadowKey(page, nodeId)];
   const close = () => setOpen(false);
   const onResult = (result: ShadowResult) => {
-    if (result.tier !== "silent") saveShadow(storyId, page, nodeId, result.score);
+    if (result.tier !== "silent") {
+      saveShadow(storyId, page, nodeId, result.score);
+      track("shadow");
+    }
   };
 
   const practised = best !== undefined;
