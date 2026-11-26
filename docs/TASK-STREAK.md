@@ -87,9 +87,16 @@ Notes:
 
 ### Phase 4: finishing touches
 
-- [ ] "Đổi nhiệm vụ" (once a day) on each mission except "Đọc xong 1 trang".
-- [ ] Celebration when all three missions are done (respects reduced motion).
-- [ ] Check at 360px, lint, build; tick the roadmap box in `docs/PRODUCT.md`.
+- [x] "Đổi" (once a day) on each unfinished mission except "Đọc xong 1 trang",
+      with a one-line hint; after one swap the buttons go away until tomorrow.
+- [x] Celebration when all three missions are done: a wine-red toast
+      ("⭐ Xong cả 3 nhiệm vụ hôm nay!") with a small burst of rising stars,
+      shown for 5 s; the stars are left out under reduced motion. The home
+      card says the day is done and the week strip shows ⭐.
+- [x] Days before the learner's very first study day show as empty, not as
+      missed, so a new learner never starts with grey "missed" days.
+- [x] Checked at 360px: card, swap, toast, end-of-page line. Lint and build
+      pass; roadmap box ticked in `docs/PRODUCT.md`.
 
 ## Out of scope
 

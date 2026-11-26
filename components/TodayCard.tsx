@@ -1,10 +1,13 @@
 "use client";
 
 import {
+  allDone,
   browserEnv,
+  canSwap,
   dayKey,
   missionProgress,
   streakInfo,
+  swapToday,
   weekStrip,
   type StreakInfo,
   type WeekDayStatus,
@@ -32,6 +35,8 @@ export default function TodayCard() {
   const info = streakInfo(daily, today);
   const missions = missionProgress(daily, today, env);
   const doneCount = missions.filter((m) => m.done).length;
+  const perfect = allDone(daily, today, env);
+  const swappable = missions.filter((m) => canSwap(daily, today, m.id, env)).map((m) => m.id);
 
   return (
     <section
@@ -63,6 +68,13 @@ export default function TodayCard() {
           {doneCount}/{missions.length}
         </p>
       </div>
+      {perfect ? (
+        <p className="mt-1 text-wine italic">⭐ Bạn đã xong cả 3 nhiệm vụ hôm nay. Tuyệt vời!</p>
+      ) : (
+        swappable.length > 0 && (
+          <p className="mt-1 text-sm text-muted italic">Nhiệm vụ nào khó làm, bạn được đổi 1 lần mỗi ngày.</p>
+        )
+      )}
       <ul className="mt-2 flex flex-col gap-2">
         {missions.map((m) => (
           <li
@@ -86,6 +98,16 @@ export default function TodayCard() {
               <span className="sr-only">{m.done ? "Đã xong" : "Tiến độ"} </span>
               {m.count}/{m.target}
             </span>
+            {swappable.includes(m.id) && (
+              <button
+                type="button"
+                onClick={() => swapToday(m.id)}
+                aria-label={`Đổi nhiệm vụ “${m.titleVi}” sang nhiệm vụ khác`}
+                className="-my-1 -mr-1.5 min-h-8 shrink-0 rounded-full px-2.5 text-sm text-wine italic transition-colors hover:bg-wine/10"
+              >
+                Đổi
+              </button>
+            )}
           </li>
         ))}
       </ul>
@@ -99,6 +121,7 @@ const STATUS_LABEL: Record<WeekDayStatus, string> = {
   rest: "ngày nghỉ",
   today: "hôm nay",
   missed: "không học",
+  before: "chưa bắt đầu",
   future: "chưa tới",
 };
 
@@ -108,6 +131,7 @@ const STATUS_STYLE: Record<WeekDayStatus, string> = {
   rest: "border border-dashed border-muted/60 text-[0.65rem] text-muted italic",
   today: "border-2 border-wine/60 text-wine",
   missed: "bg-line/50",
+  before: "border border-line/70",
   future: "border border-line/70",
 };
 

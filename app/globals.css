@@ -146,6 +146,21 @@ body {
   }
 }
 
+/* Stars that float up and fade when all of today's missions are done. */
+@keyframes star-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.6);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-2.75rem) scale(1.1);
+  }
+}
+
 /* The word popover appears with a short lift. */
 @keyframes pop-in {
   from {

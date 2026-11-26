@@ -119,6 +119,7 @@ Per page: 12–15 `message` + `narration` nodes in total, 1–2 `choice` nodes w
 - [x] **MVP:** *The Monkey's Paw* with chat, branching and tap-to-understand (all 10 stories play; see `docs/TASK-MVP.md`)
 - [x] Shadowing with pronunciation feedback via the Web Speech API (see `docs/TASK-SHADOWING.md`; voices pre-made with ElevenLabs)
 - [x] **The Last Page** screen: write an ending, get feedback, share it by link (see `docs/TASK-LAST-PAGE.md`)
-- [ ] Daily streaks and in-app waiting messages
+- [x] Daily streaks and daily missions (see `docs/TASK-STREAK.md`)
+- [ ] In-app waiting messages from characters
 - [x] Content: 10 A2 ghost stories converted to chat JSON, plus `content/stories.json`
 - [ ] Community page to read and vote on endings

@@ -260,11 +260,15 @@ export function streakInfo(state: Daily, today: DayKey): StreakInfo {
   };
 }
 
-export type WeekDayStatus = "star" | "done" | "rest" | "today" | "missed" | "future";
+export type WeekDayStatus = "star" | "done" | "rest" | "today" | "missed" | "before" | "future";
 
 /** Monday … Sunday of today's week, for the week strip. */
 export function weekStrip(state: Daily, today: DayKey, env: DailyEnv): { day: DayKey; status: WeekDayStatus }[] {
   const { restDays } = streakInfo(state, today);
+  // Days before the learner's first study day are not "missed": they had not started yet.
+  const first = Object.keys(state.days)
+    .filter((d) => studied(state, d))
+    .reduce<DayKey | null>((a, b) => (a === null || b < a ? b : a), null);
   return weekDays(today).map((day) => {
     let status: WeekDayStatus;
     if (day > today) status = "future";
@@ -272,6 +276,7 @@ export function weekStrip(state: Daily, today: DayKey, env: DailyEnv): { day: Da
     else if (studied(state, day)) status = "done";
     else if (day === today) status = "today";
     else if (restDays.includes(day)) status = "rest";
+    else if (first === null || day < first) status = "before";
     else status = "missed";
     return { day, status };
   });
