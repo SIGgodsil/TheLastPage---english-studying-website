@@ -1,18 +1,21 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
-import { insertSnippet, usedWords, wordCount } from "@/lib/ending";
+import { ENDING_TARGET, insertSnippet, usedWords, wordCount } from "@/lib/ending";
 import type { LastPage } from "@/lib/schema";
-import { saveEnding, storyProgress } from "@/lib/storage";
+import { finishEnding, saveEnding, storyProgress } from "@/lib/storage";
+import EndingDone from "./EndingDone";
 import EndingFeedback from "./EndingFeedback";
 import { MoodPicker, StarterChips, WordBank, WordCounter, type Mood } from "./EndingParts";
 
 type Props = {
   storyId: string;
+  storyTitle: string;
   pattern: string;
   moods: LastPage["moods"];
   starters: string[];
   wordBank: LastPage["wordBank"];
+  modelEndings: LastPage["modelEndings"];
   /** Character names from the story, so they are not flagged as spelling mistakes. */
   names: string[];
 };
@@ -36,11 +39,14 @@ export default function LastPageWriter(props: Props) {
 
 type SaveState = "idle" | "saved" | "failed";
 
-function Writer({ storyId, pattern, moods, starters, wordBank, names }: Props) {
+function Writer({ storyId, storyTitle, pattern, moods, starters, wordBank, modelEndings, names }: Props) {
   const [initial] = useState(() => storyProgress(storyId).ending);
   const [mood, setMood] = useState<Mood | undefined>(initial?.mood);
   const [text, setText] = useState(initial?.text ?? "");
   const [saveState, setSaveState] = useState<SaveState>("idle");
+  // A finished ending opens on the "done" view; "Sửa lại" goes back to writing.
+  const [done, setDone] = useState(() => initial?.finished === true && wordCount(initial.text) > 0);
+  const top = useRef<HTMLDivElement>(null);
   const box = useRef<HTMLTextAreaElement>(null);
   const touched = useRef(false); // has the learner placed the cursor yet?
   const pendingCursor = useRef<number | null>(null);
@@ -110,8 +116,40 @@ function Writer({ storyId, pattern, moods, starters, wordBank, names }: Props) {
     edit(result.text);
   };
 
+  /** Show the start of the view the learner just switched to. */
+  const switchView = (next: boolean) => {
+    setDone(next);
+    requestAnimationFrame(() => top.current?.scrollIntoView({ block: "start" }));
+  };
+
+  const finish = () => {
+    dirty.current = false;
+    setSaveState(finishEnding(storyId, { mood, text }) ? "saved" : "failed");
+    switchView(true);
+  };
+
+  if (done) {
+    return (
+      <div ref={top} className="scroll-mt-4">
+        <EndingDone
+          storyId={storyId}
+          storyTitle={storyTitle}
+          mood={mood}
+          text={text.trim()}
+          modelEndings={modelEndings}
+          onEdit={() => switchView(false)}
+        />
+        {saveState === "failed" && (
+          <p className="mt-6 text-center text-xs text-muted" aria-live="polite">
+            Trình duyệt này không cho lưu, nên đoạn kết sẽ mất khi bạn đóng trang. Bạn hãy chia sẻ hoặc chép lại nhé.
+          </p>
+        )}
+      </div>
+    );
+  }
+
   return (
-    <div className="flex flex-col gap-8">
+    <div ref={top} className="flex scroll-mt-4 flex-col gap-8">
       <section aria-labelledby="mood-title">
         <h2 id="mood-title" className="mb-3 font-serif text-xl font-semibold">
           1. Bạn muốn câu chuyện kết thúc thế nào?
@@ -159,6 +197,8 @@ function Writer({ storyId, pattern, moods, starters, wordBank, names }: Props) {
         <WordBank words={wordBank} used={used} onInsert={insert} />
       </section>
 
+      <FinishButton count={count} onFinish={finish} />
+
       <p className="text-center text-xs text-muted" aria-live="polite">
         {saveState === "failed"
           ? "Trình duyệt này không cho lưu bản nháp. Bạn nhớ đừng đóng trang nhé."
@@ -167,5 +207,32 @@ function Writer({ storyId, pattern, moods, starters, wordBank, names }: Props) {
             : "Bản nháp được tự động lưu trên máy này."}
       </p>
     </div>
+  );
+}
+
+/** "Hoàn thành": open once there is something to keep; a short ending is fine, just said kindly. */
+function FinishButton({ count, onFinish }: { count: number; onFinish: () => void }) {
+  const ready = count >= ENDING_TARGET.least;
+  return (
+    <section aria-labelledby="finish-title" className="flex flex-col gap-2">
+      <h2 id="finish-title" className="font-serif text-xl font-semibold">
+        3. Hoàn thành
+      </h2>
+      <button
+        type="button"
+        onClick={onFinish}
+        disabled={!ready}
+        className="rounded-full bg-wine px-6 py-3 font-medium text-paper transition active:scale-[0.98] disabled:bg-line disabled:text-muted"
+      >
+        ✓ Hoàn thành đoạn kết
+      </button>
+      <p className="text-center text-sm text-muted">
+        {!ready
+          ? `Viết ít nhất ${ENDING_TARGET.least} từ để hoàn thành nhé.`
+          : count < ENDING_TARGET.min
+            ? "Đoạn kết còn hơi ngắn, nhưng bạn vẫn có thể hoàn thành và sửa lại sau."
+            : "Đoạn kết sẽ được lưu, rồi bạn có thể chia sẻ và so sánh với đoạn kết mẫu."}
+      </p>
+    </section>
   );
 }

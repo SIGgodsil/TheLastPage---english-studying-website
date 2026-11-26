@@ -79,10 +79,12 @@ async function LastPageScreen({ params }: Pick<Props, "params">) {
 
       <LastPageWriter
         storyId={story.id}
+        storyTitle={story.title}
         pattern={lastPage.pattern}
         moods={lastPage.moods}
         starters={lastPage.starters}
         wordBank={lastPage.wordBank}
+        modelEndings={lastPage.modelEndings}
         names={names}
       />
     </div>

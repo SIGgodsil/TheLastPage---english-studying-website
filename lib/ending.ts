@@ -2,7 +2,8 @@
 // (in any common form) and inserting sentence starters at the cursor.
 
 /** Word-count goal for an A2 ending, and the optional B1 challenge. */
-export const ENDING_TARGET = { min: 50, max: 80, challenge: 100 } as const;
+/** Word goals: `least` to get feedback or finish, `min`–`max` as the target, `challenge` for B1. */
+export const ENDING_TARGET = { least: 8, min: 50, max: 80, challenge: 100 } as const;
 
 /** The words of a text, lowercased, without punctuation or a possessive 's. */
 export function tokens(text: string): string[] {

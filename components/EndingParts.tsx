@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { ENDING_TARGET } from "@/lib/ending";
+import { ENDING_TARGET, wordCount } from "@/lib/ending";
 import type { LastPage } from "@/lib/schema";
 
 export type Mood = LastPage["moods"][number]["id"];
 
-const MOOD_LABEL: Record<Mood, { emoji: string; label: string }> = {
+export const MOOD_LABEL: Record<Mood, { emoji: string; label: string }> = {
   happy: { emoji: "🌅", label: "Có hậu" },
   sad: { emoji: "🥀", label: "Buồn" },
   twist: { emoji: "🌀", label: "Bất ngờ" },
@@ -163,5 +163,27 @@ export function WordBank({
         </div>
       )}
     </div>
+  );
+}
+
+/** An ending shown as a finished card: the mood, the text, and its length. */
+export function EndingCard({ mood, text, label }: { mood?: Mood; text: string; label: string }) {
+  const count = wordCount(text);
+  return (
+    <figure className="rounded-2xl border border-line bg-card p-5 shadow-sm">
+      <figcaption className="flex items-center justify-between gap-3 text-xs font-medium tracking-wide text-muted uppercase">
+        <span>{label}</span>
+        {mood && (
+          <span className="rounded-full bg-wine/5 px-2.5 py-1 tracking-normal text-wine normal-case">
+            <span aria-hidden>{MOOD_LABEL[mood].emoji} </span>
+            {MOOD_LABEL[mood].label}
+          </span>
+        )}
+      </figcaption>
+      <blockquote lang="en" className="mt-3 font-serif text-lg leading-relaxed break-words whitespace-pre-wrap">
+        {text}
+      </blockquote>
+      <p className="mt-3 text-right text-xs text-muted">{count} từ</p>
+    </figure>
   );
 }

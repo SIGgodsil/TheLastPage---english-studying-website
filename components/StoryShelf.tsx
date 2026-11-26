@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { resumeHref } from "@/lib/links";
 import type { StoryMeta } from "@/lib/schema";
-import { resumePage, type Progress } from "@/lib/storage";
+import { endingFinished, resumePage, type Progress } from "@/lib/storage";
 import { useProgress } from "./useProgress";
 
 type Status = {
@@ -11,7 +11,8 @@ type Status = {
   next: number;
   /** Chat pages finished. */
   done: number;
-  state: "new" | "reading" | "finished";
+  /** "writing": every chat page read, the ending not finished yet. */
+  state: "new" | "reading" | "writing" | "finished";
   href: string;
 };
 
@@ -19,7 +20,14 @@ function statusOf(progress: Progress | null, story: StoryMeta): Status {
   const saved = progress?.stories[story.id] ?? { completedPages: [] };
   const next = resumePage(saved, story.pages);
   const done = saved.completedPages.filter((p) => p <= story.pages).length;
-  const state = next > story.pages ? "finished" : done > 0 || saved.play ? "reading" : "new";
+  const state =
+    next > story.pages
+      ? endingFinished(saved)
+        ? "finished"
+        : "writing"
+      : done > 0 || saved.play
+        ? "reading"
+        : "new";
   return { next, done, state, href: resumeHref(story.id, next, story.pages) };
 }
 
@@ -68,13 +76,19 @@ export default function StoryShelf({ stories }: Props) {
   );
 }
 
+const CONTINUE_COPY: Record<Status["state"], { eyebrow: string; button: (next: number) => string }> = {
+  new: { eyebrow: "Bắt đầu từ đây", button: () => "Bắt đầu đọc" },
+  reading: { eyebrow: "Đọc tiếp", button: (next) => `Đọc tiếp trang ${next}` },
+  writing: { eyebrow: "Trang cuối đang chờ bạn", button: () => "Viết The Last Page" },
+  finished: { eyebrow: "Bạn đã hoàn thành", button: () => "Xem đoạn kết của bạn" },
+};
+
 function ContinueCard({ story, status }: { story: StoryMeta; status: Status }) {
   const reading = status.state === "reading";
+  const copy = CONTINUE_COPY[status.state];
   return (
     <section className="rounded-3xl bg-ink p-5 text-paper shadow-lg">
-      <p className="text-xs font-medium tracking-wide text-paper/70 uppercase">
-        {reading ? "Đọc tiếp" : "Bắt đầu từ đây"}
-      </p>
+      <p className="text-xs font-medium tracking-wide text-paper/70 uppercase">{copy.eyebrow}</p>
       <h2 className="mt-2 font-serif text-2xl font-semibold">{story.title}</h2>
       <p className="font-serif text-paper/80 italic">{story.titleVi}</p>
       {reading ? (
@@ -84,6 +98,10 @@ function ContinueCard({ story, status }: { story: StoryMeta; status: Status }) {
             Đã đọc {status.done}/{story.pages} trang
           </p>
         </div>
+      ) : status.state === "writing" ? (
+        <p className="mt-3 text-sm text-paper/70">
+          Bạn đã đọc hết {story.pages} trang. Giờ hãy viết đoạn kết của riêng bạn.
+        </p>
       ) : (
         <p className="mt-3 text-sm text-paper/70">
           {story.themeVi} · {story.source}
@@ -93,19 +111,19 @@ function ContinueCard({ story, status }: { story: StoryMeta; status: Status }) {
         href={status.href}
         className="mt-5 block w-full rounded-full bg-wine px-6 py-3 text-center font-medium text-paper transition active:scale-[0.98]"
       >
-        {reading ? `Đọc tiếp trang ${status.next}` : "Bắt đầu đọc"} →
+        {copy.button(status.next)} →
       </Link>
     </section>
   );
 }
 
 function StoryCard({ story, status }: { story: StoryMeta; status: Status }) {
-  const label =
-    status.state === "finished"
-      ? "Đã đọc xong ✓"
-      : status.state === "reading"
-        ? `Đang đọc · trang ${status.next}/${story.pages}`
-        : "Chưa đọc";
+  const label = {
+    new: "Chưa đọc",
+    reading: `Đang đọc · trang ${status.next}/${story.pages}`,
+    writing: "Chờ viết đoạn kết ✍️",
+    finished: "Hoàn thành ✓",
+  }[status.state];
 
   return (
     <Link

@@ -42,13 +42,21 @@ Built in **phases**, each ending with `npm run lint` and `npm run build` passing
       - the route: OK, wrong origin 403, empty, bad and too-long requests 400, GET 405;
       - the screen at 360px: a full pass through 8 suggestions, offline fallback, a fix made by hand, and the too-short state.
     - The free API misses some grammar (it caught *eyes was* in one run but not *It were*), so feedback stays gentle and never claims a text is error-free beyond "Mình không thấy lỗi nào cả!".
-- [ ] **3. Finish and share.**
+- [x] **3. Finish and share.**
   - "Hoàn thành" saves the ending and marks the story finished on the home shelf.
   - The two model endings (A2, B1) are shown to compare.
   - A share link carries the story id, mood and text, compressed into the URL fragment (it is not sent to the server).
   - A read-only page shows a shared ending as a card, with a button to read the story.
   - Uses the Web Share API, with "Sao chép liên kết" as the fallback.
   - Tick the roadmap box in `docs/PRODUCT.md`.
+  - **Done:**
+    - `finishEnding()` and `endingFinished()` in `lib/storage.ts`: the ending gets a `finished` flag, which stays set if the learner edits again.
+    - The writer has a "3. Hoàn thành" step (open from 8 words, with a kind note under 50). `components/EndingDone.tsx` shows the ending as a card, sharing, the two model endings (folded), "Sửa lại đoạn kết" and the way home. A finished ending reopens on this view.
+    - The home shelf has two new states: "Chờ viết đoạn kết ✍️" (every page read) and "Hoàn thành ✓"; the continue card offers "Viết The Last Page".
+    - `lib/share.ts`: `lz-string` packs `{v, s, m, t}` into `/shared#…`; decoding is zod-checked, and damaged or foreign links are refused. A model ending makes a link of about 450–650 characters; 5,000 characters, about 2,500.
+    - `/shared` (`components/SharedEndingView.tsx`) is one static page; the browser decodes the fragment. It shows the ending card and "Đọc truyện này", or a kind message for a broken link. It is not indexed.
+    - `components/ShareEnding.tsx`: the share sheet where the browser has one, "Sao chép liên kết" always, and a link to select by hand if the clipboard is blocked.
+    - Tested: encode and decode (Vietnamese, quotes, new lines, missing mood, truncated, foreign, too long), the finished flag and old saved data; at 360px the shelf states, finishing, the done view after reload, editing again, the share sheet (success, cancel, failure falls back to copy), the copy fallback, the shared page and a broken link. `authorNote` is still not in the build output.
 
 ## Notes
 

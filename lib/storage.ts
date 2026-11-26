@@ -21,6 +21,8 @@ const SavedPlaySchema = z.object({
 const EndingSchema = z.object({
   mood: z.enum(MOODS).optional(),
   text: z.string().max(5000),
+  /** Set when the learner pressed "Hoàn thành"; stays set if they edit again. */
+  finished: z.boolean().optional(),
 });
 
 const StoryProgressSchema = z.object({
@@ -140,9 +142,29 @@ export function saveShadow(storyId: string, page: number, nodeId: string, score:
   }));
 }
 
-/** Save the ending draft (mood and text) for a story. */
-export function saveEnding(storyId: string, ending: Ending): boolean {
-  return updateStory(storyId, (story) => ({ ...story, ending: { mood: ending.mood, text: ending.text.slice(0, 5000) } }));
+/** Save the ending draft (mood and text) for a story. A finished story stays finished. */
+export function saveEnding(storyId: string, ending: Pick<Ending, "mood" | "text">): boolean {
+  return updateStory(storyId, (story) => ({
+    ...story,
+    ending: {
+      mood: ending.mood,
+      text: ending.text.slice(0, 5000),
+      ...(story.ending?.finished ? { finished: true } : {}),
+    },
+  }));
+}
+
+/** Save the ending and mark the story finished ("Hoàn thành"). */
+export function finishEnding(storyId: string, ending: Pick<Ending, "mood" | "text">): boolean {
+  return updateStory(storyId, (story) => ({
+    ...story,
+    ending: { mood: ending.mood, text: ending.text.slice(0, 5000), finished: true },
+  }));
+}
+
+/** True once the learner has finished their ending on The Last Page. */
+export function endingFinished(story: StoryProgress): boolean {
+  return story.ending?.finished === true;
 }
 
 /**

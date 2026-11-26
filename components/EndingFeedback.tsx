@@ -30,7 +30,7 @@ type Props = {
 /** Fewer suggestions at once keeps feedback encouraging; checking again shows the rest. */
 const MAX_FIXES = 6;
 /** Below this, there is not enough to give feedback on. */
-const MIN_WORDS = 8;
+const MIN_WORDS = ENDING_TARGET.least;
 
 type Review =
   | { status: "idle" }
