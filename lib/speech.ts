@@ -81,7 +81,7 @@ export type RecognitionSession = {
 
 type ListenOptions = {
   lang?: string;
-  /** Stop on its own after this many seconds. */
+  /** A safety limit only: listening normally runs until stop() (the learner presses "Đọc xong"). */
   maxSeconds?: number;
   /** Called with the words heard so far, while the learner speaks. */
   onInterim?: (text: string) => void;
@@ -97,8 +97,16 @@ const ERROR_REASONS: Record<string, RecognitionFailure> = {
   aborted: "aborted",
 };
 
-/** Listen for one utterance. Resolves with up to 5 alternatives (best first), or a reason. */
-export function listen({ lang = "en-US", maxSeconds = 8, onInterim, onStage }: ListenOptions = {}): RecognitionSession {
+/** Browsers end a session on their own (after a pause, or a time limit); it is restarted at most this often. */
+const MAX_RESTARTS = 20;
+
+/**
+ * Listen until stop() is called: the learner decides when they have finished
+ * reading. If the browser ends the session on its own (a pause, its own time
+ * limit), listening restarts and the words heard so far are kept. Resolves
+ * with up to 5 alternatives (best first), or a reason.
+ */
+export function listen({ lang = "en-US", maxSeconds = 60, onInterim, onStage }: ListenOptions = {}): RecognitionSession {
   const Ctor = recognitionConstructor();
   if (!Ctor) {
     return { stop() {}, cancel() {}, result: Promise.resolve({ ok: false, reason: "unsupported" }) };
@@ -111,20 +119,25 @@ export function listen({ lang = "en-US", maxSeconds = 8, onInterim, onStage }: L
     return { stop() {}, cancel() {}, result: Promise.resolve({ ok: false, reason: "error" }) };
   }
   recognition.lang = lang;
-  recognition.continuous = false;
+  recognition.continuous = true;
   recognition.interimResults = true;
   recognition.maxAlternatives = 5;
 
+  /** Best words from sessions the browser ended on its own, before a restart. */
+  let earlier = "";
   let finals: RecognitionResult[] = [];
-  /** Everything heard so far, final or not: used if the service never finalises. */
+  /** Everything heard in this session, final or not: used if the service never finalises. */
   let heard = "";
   let failure: RecognitionFailure | null = null;
   let stage: ListenStage = "starting";
+  let running = false;
+  let stopping = false;
+  let restarts = 0;
   let settled = false;
   const startedAt = Date.now();
   const events: string[] = [];
   const note = (event: string) => events.push(`${event} ${((Date.now() - startedAt) / 1000).toFixed(1)}s`);
-  let timer: ReturnType<typeof setTimeout> | undefined;
+  let timer: ReturnType<typeof setTimeout> | undefined = undefined;
   let grace: ReturnType<typeof setTimeout> | undefined;
   let resolveResult: (outcome: RecognitionOutcome) => void = () => {};
   const result = new Promise<RecognitionOutcome>((resolve) => (resolveResult = resolve));
@@ -137,15 +150,18 @@ export function listen({ lang = "en-US", maxSeconds = 8, onInterim, onStage }: L
     resolveResult(outcome);
   };
 
+  const join = (...parts: string[]) => parts.filter(Boolean).join(" ").trim();
+
   /** `timedOut`: the browser never ended the session after stop(), so its service never answered. */
   const outcomeSoFar = (timedOut = false): RecognitionOutcome => {
     // Build each alternative across all final results ("first part" + "second part").
     const count = Math.max(0, ...finals.map((r) => r.length));
     const alternatives = Array.from({ length: count }, (_, i) =>
-      finals.map((r) => (r[i] ?? r[0])?.transcript ?? "").join(" ").trim(),
+      join(earlier, ...finals.map((r) => (r[i] ?? r[0])?.transcript ?? "")),
     ).filter(Boolean);
     if (alternatives.length > 0) return { ok: true, alternatives: [...new Set(alternatives)] };
-    if (heard) return { ok: true, alternatives: [heard] };
+    const words = join(earlier, heard);
+    if (words) return { ok: true, alternatives: [words] };
     const trace = events.join(" · ");
     if (failure) return { ok: false, reason: failure, trace };
     if (timedOut && stage === "sound") return { ok: false, reason: "no-reply", trace };
@@ -157,11 +173,11 @@ export function listen({ lang = "en-US", maxSeconds = 8, onInterim, onStage }: L
     const results = Array.from({ length: event.results.length }, (_, i) => event.results[i]);
     finals = results.filter((r) => r.isFinal);
     heard = results.map((r) => r[0]?.transcript ?? "").join(" ").trim();
-    onInterim?.(heard);
+    onInterim?.(join(earlier, heard));
   };
   recognition.onerror = (event) => {
     note(`error:${event.error}`);
-    // "no-speech" is explained by how far listening got (see outcomeSoFar).
+    // "no-speech" (a pause) is not a failure: listening goes on until the learner stops.
     if (event.error !== "no-speech") failure = ERROR_REASONS[event.error] ?? "error";
   };
   const reach = (next: ListenStage) => {
@@ -181,9 +197,34 @@ export function listen({ lang = "en-US", maxSeconds = 8, onInterim, onStage }: L
     note("speechstart");
     reach("sound");
   };
+
+  const begin = (): boolean => {
+    try {
+      recognition.start();
+      running = true;
+      return true;
+    } catch {
+      return false;
+    }
+  };
+
   recognition.onend = () => {
     note("end");
-    settle(outcomeSoFar());
+    running = false;
+    if (stopping || failure || settled) {
+      settle(outcomeSoFar());
+      return;
+    }
+    // The browser ended on its own while the learner may still be reading: keep listening.
+    earlier = join(earlier, heard);
+    finals = [];
+    heard = "";
+    if (restarts >= MAX_RESTARTS || !begin()) {
+      settle(outcomeSoFar());
+      return;
+    }
+    restarts++;
+    note("restart");
   };
 
   const abort = () => {
@@ -198,8 +239,13 @@ export function listen({ lang = "en-US", maxSeconds = 8, onInterim, onStage }: L
   // When that is slow, or nothing was heard, "end" can come late or never,
   // so after a short grace period use what was heard so far.
   const stop = () => {
-    if (settled || grace !== undefined) return;
+    if (settled || stopping) return;
+    stopping = true;
     note("stop");
+    if (!running) {
+      settle(outcomeSoFar());
+      return;
+    }
     try {
       recognition.stop();
     } catch {
@@ -212,16 +258,15 @@ export function listen({ lang = "en-US", maxSeconds = 8, onInterim, onStage }: L
     }, STOP_GRACE_MS);
   };
 
-  try {
-    recognition.start();
-    timer = setTimeout(stop, maxSeconds * 1000);
-  } catch {
+  if (!begin()) {
     return { stop() {}, cancel() {}, result: Promise.resolve({ ok: false, reason: "error" }) };
   }
+  timer = setTimeout(stop, maxSeconds * 1000);
 
   return {
     stop,
     cancel: () => {
+      stopping = true;
       settle({ ok: false, reason: "aborted" });
       abort();
     },

@@ -280,7 +280,7 @@ function Listening({ interim, stage, onStop }: { interim: string; stage: ListenS
           🎙️
         </span>
       </span>
-      <p className="font-medium">{stopping ? "Đang chấm câu bạn vừa đọc…" : "Đang nghe… Bạn đọc to câu trên nhé."}</p>
+      <p className="font-medium">{stopping ? "Đang chấm câu bạn vừa đọc…" : "Đang nghe… Đọc xong thì bấm nút bên dưới nhé."}</p>
       <p className="flex items-center gap-1.5 text-xs text-muted">
         <span
           aria-hidden
@@ -298,9 +298,9 @@ function Listening({ interim, stage, onStop }: { interim: string; stage: ListenS
           onStop();
         }}
         disabled={stopping}
-        className="rounded-full border border-line px-5 py-2 text-sm font-medium transition active:scale-[0.98] disabled:opacity-50"
+        className="rounded-full bg-wine px-6 py-3 font-medium text-paper transition active:scale-[0.98] disabled:opacity-50"
       >
-        {stopping ? "Đang dừng…" : "Xong, dừng lại"}
+        {stopping ? "Đang dừng…" : "✓ Đọc xong"}
       </button>
     </div>
   );
