@@ -32,7 +32,7 @@ Built in **phases**, each ending with `npm run lint` and `npm run build` passing
     - Listening no longer stops on its own. Recognition runs in continuous mode until the learner presses "✓ Đọc xong".
     - If the browser ends a session by itself (a pause, its own time limit), listening restarts, and the words heard so far are kept. It restarts at most 20 times.
     - A 60-second safety limit remains.
-- [ ] **4. Pre-generated audio with ElevenLabs (asked for by the user on 2026-11-26).**
+- [x] **4. Pre-generated audio with ElevenLabs (asked for by the user on 2026-11-26).**
   - The voice is made **once, offline**, never while the app runs. The app calls no paid API and needs no key.
   - `scripts/generate-audio.mjs` reads the 40 shadow lines (about 1,250 characters in total) and calls the ElevenLabs text-to-speech API with the key from the `ELEVENLABS_API_KEY` environment variable. The user sets that variable in their own terminal; it is never written to a file or committed.
   - It writes `public/audio/<story-id>/<node-id>.mp3` and skips files that already exist, so a rerun costs nothing.
@@ -43,10 +43,13 @@ Built in **phases**, each ending with `npm run lint` and `npm run build` passing
     - `scripts/generate-audio.mjs` (`npm run audio -- --dry-run`) makes `public/audio/<story-id>/p<page>-<node-id>.mp3` and lists the files in `lib/audio-manifest.json`, so the app only requests files that exist.
     - `lib/audio.ts` (`shadowAudio()`) looks a line up. `playRecording()` in `lib/speech.ts` plays it; "Nghe chậm" uses rate 0.65 and keeps the pitch. If a file fails to play, the app uses the browser's voice. When a recording is used, the sheet shows "Giọng đọc tạo bằng ElevenLabs".
     - Tested against a fake ElevenLabs server (wrong key, voice list, making files, skipping existing files) and in the browser (recording at normal and slow speed, the credit line, and the fallback when a file is missing). No real audio is committed yet.
-  - **Still open:** the user runs the script with their own key, listens to a few files, and commits `public/audio/` with `lib/audio-manifest.json`. Then tick this phase.
+  - **Done (2026-11-26):**
+    - The key was made with `npx @elevenlabs/cli onboard init` and sits in the git-ignored `.env`; `npm run audio` loads it from there.
+    - The user approved the voices on *Nam Xuong* first. Then all 40 lines were made (about 1,230 credits, 1.4 MB in all, 1.1–2.9 s each), and every file loads in the browser.
+    - The credit line stays in the shadow sheet, as the free plan requires.
   - How to run, in PowerShell:
     ```
-    $env:ELEVENLABS_API_KEY = "<key from elevenlabs.io → Profile → API keys>"
+    # the key is read from .env (or set $env:ELEVENLABS_API_KEY in the terminal)
     npm run audio -- --dry-run      # see the 40 lines and voices; no credits used
     npm run audio                   # make the files (about 1,230 characters)
     npm run audio -- --list-voices  # voice ids for scripts/voices.json
