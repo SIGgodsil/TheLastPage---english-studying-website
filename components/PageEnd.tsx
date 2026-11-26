@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { lastPageHref, pageHref } from "@/lib/links";
 import ShadowPractice from "./ShadowPractice";
+import StreakLine from "./StreakLine";
 
 type Props = {
   storyId: string;
@@ -23,6 +24,7 @@ export default function PageEnd({ storyId, pageNumber, totalPages, nextTitle, sh
       <p className="-mt-1 text-lg text-muted italic">
         {isLast ? "Câu chuyện chưa kết thúc đâu…" : "Chuyện gì sẽ xảy ra tiếp theo?"}
       </p>
+      <StreakLine />
 
       {shadow && <ShadowPractice storyId={storyId} page={pageNumber} variant="wide" {...shadow} />}
 

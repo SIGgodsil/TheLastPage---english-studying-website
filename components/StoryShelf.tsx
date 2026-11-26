@@ -4,6 +4,7 @@ import Link from "next/link";
 import { introHref, resumeHref } from "@/lib/links";
 import type { StoryMeta } from "@/lib/schema";
 import { endingFinished, resumePage, type Progress } from "@/lib/storage";
+import TodayCard from "./TodayCard";
 import { useProgress } from "./useProgress";
 
 type Status = {
@@ -51,6 +52,7 @@ export default function StoryShelf({ stories }: Props) {
   return (
     <>
       <ContinueCard story={target} status={statusOf(progress, target)} />
+      <TodayCard />
 
       <div className="mt-12 flex items-baseline justify-between gap-4">
         <h2 className="text-2xl">Tủ truyện</h2>

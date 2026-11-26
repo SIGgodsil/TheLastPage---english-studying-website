@@ -6,7 +6,8 @@ import { onMissionDone } from "@/lib/daily";
 const SHOW_MS = 3500;
 
 /**
- * A short note at the bottom of the screen when a daily mission is done.
+ * A short note near the top of the screen (below the chat header, clear of
+ * the chat's buttons) when a daily mission is done.
  * It is a manual popover, so it sits in the top layer and stays visible even
  * above an open sheet (the shadowing sheet is a modal <dialog>).
  */
@@ -48,7 +49,7 @@ export default function MissionToast() {
       popover="manual"
       role="status"
       aria-live="polite"
-      className={`fixed inset-x-0 top-auto bottom-[calc(6rem+env(safe-area-inset-bottom))] mx-auto my-0 w-fit max-w-[calc(100vw-2rem)] overflow-visible border-0 bg-transparent p-0 ${message ? "" : "hidden"}`}
+      className={`fixed inset-x-0 top-[calc(4.75rem+env(safe-area-inset-top))] bottom-auto mx-auto my-0 w-fit max-w-[calc(100vw-2rem)] overflow-visible border-0 bg-transparent p-0 ${message ? "" : "hidden"}`}
     >
       {message && (
         <p className="flex items-center gap-2 rounded-full bg-ink px-4 py-2.5 text-[0.95rem] text-paper shadow-[0_12px_32px_-12px_rgb(43_36_32/0.6)] motion-safe:animate-[pop-in_160ms_ease-out]">

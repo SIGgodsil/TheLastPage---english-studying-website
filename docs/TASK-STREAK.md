@@ -71,11 +71,19 @@ Notes:
 
 ### Phase 3: show it
 
-- [ ] Home page: a "Hôm nay" card above the shelf: 🔥 streak, a Monday–Sunday
-      strip (done ✓ / rest / ⭐ / today), the three missions with progress, and
-      a "Đọc tiếp" button to the story last read.
-- [ ] End of a page: one line on the streak ("🔥 3 ngày liên tiếp!").
-- [ ] Kind return message after a broken streak; best streak shown.
+- [x] Home page: a "Hôm nay" card under the "continue" card: 🔥 streak, best
+      streak, a Monday–Sunday strip (⭐ / ✓ / nghỉ / today / missed / future,
+      each with a spoken label) and the three missions with progress. The
+      "Đọc tiếp" button stays on the continue card right above it, so the card
+      has none of its own (the first button on the home page is still one tap
+      from reading).
+- [x] End of a page: one line on the streak ("🔥 3 ngày học liên tiếp!" or
+      "Ngày học đầu tiên của chuỗi!") and how many missions are left today.
+- [x] Kind lines for each case: a new learner, a streak to keep today, a
+      streak kept, and a welcome back after a broken streak; the best streak
+      stays visible.
+- [x] The mission toast moved to the top of the screen (under the chat header)
+      so it never covers the buttons at the end of a page.
 
 ### Phase 4: finishing touches
 
