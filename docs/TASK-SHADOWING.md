@@ -28,4 +28,14 @@ Built in **phases**, each ending with `npm run lint` and `npm run build` passing
     - The same page works in **Edge** (Microsoft's speech service), so the app is fine. On that computer, Chrome's link to Google's service is blocked or missing (a VPN, a firewall, or the browser build).
     - The app now explains this case (`no-reply`) and shows a "Chi tiết kỹ thuật" trace on any failed attempt.
     - Phone browsers (Android Chrome, iOS Safari) are not yet tested: they need an https deploy.
-- [ ] **4. Pre-generated audio (needs a decision first).** Generate mp3s for the 40 shadow lines offline with Kokoro or Piper (`public/audio/<story-id>/<node-id>.mp3`), and play them instead of `speechSynthesis` when present. Needs large local model downloads, so ask before starting.
+  - **Change asked for by the user (2026-11-26):**
+    - Listening no longer stops on its own. Recognition runs in continuous mode until the learner presses "✓ Đọc xong".
+    - If the browser ends a session by itself (a pause, its own time limit), listening restarts, and the words heard so far are kept. It restarts at most 20 times.
+    - A 60-second safety limit remains.
+- [ ] **4. Pre-generated audio with ElevenLabs (asked for by the user on 2026-11-26).**
+  - The voice is made **once, offline**, never while the app runs. The app calls no paid API and needs no key.
+  - `scripts/generate-audio.mjs` reads the 40 shadow lines (about 1,250 characters in total) and calls the ElevenLabs text-to-speech API with the key from the `ELEVENLABS_API_KEY` environment variable. The user sets that variable in their own terminal; it is never written to a file or committed.
+  - It writes `public/audio/<story-id>/<node-id>.mp3` and skips files that already exist, so a rerun costs nothing.
+  - The shadow sheet plays the mp3 when there is one: "Nghe" at normal speed, "Nghe chậm" at a slower rate. When there is no mp3 it falls back to `speechSynthesis`.
+  - **Licence:** the free plan (10,000 credits a month) allows non-commercial use with attribution, so the app credits ElevenLabs (for example in the shadow sheet or an About line). Commercial use would need a paid plan.
+  - Open choices: one voice for every line, or a female and a male voice by character.
