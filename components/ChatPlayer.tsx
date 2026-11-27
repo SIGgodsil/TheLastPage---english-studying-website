@@ -84,9 +84,17 @@ function ChatSession({ storyId, page, totalPages, glossary, words, nextTitle }: 
   const [play, setPlay] = useState(() => initialState(storyId, page));
   const [showTip, setShowTip] = useState(() => !wordTipSeen());
   const hideTip = useCallback(() => setShowTip(false), []);
-  // The key words open on a page not started yet; pages 1–2 only, where learners need them most.
-  const [freshPage] = useState(() => play.path.length === 1);
-  const showKeyWords = page.page <= KEY_WORDS_PAGES;
+  // Pages 1–2 (where learners need it most) start with a "Từ cần biết" stage
+  // before the chat, but only on a page not started yet. Afterwards the words
+  // stay one tap away above the chat.
+  const showKeyWords = page.page <= KEY_WORDS_PAGES && Object.keys(page.vocab).length > 0;
+  const [stage, setStage] = useState<"words" | "chat">(() =>
+    showKeyWords && play.path.length === 1 ? "words" : "chat",
+  );
+  const startReading = () => {
+    setStage("chat");
+    window.scrollTo({ top: 0 });
+  };
   const [typing, setTyping] = useState(false);
   const timer = useRef<number | null>(null);
 
@@ -108,8 +116,9 @@ function ChatSession({ storyId, page, totalPages, glossary, words, nextTitle }: 
     if (isPageEnd(page, next)) {
       completePage(storyId, page.page);
       track("page");
+    } else {
+      savePlay(storyId, page.page, next);
     }
-    else savePlay(storyId, page.page, next);
 
     const node = currentNode(page, next);
     if (speakerOf(node) && "text" in node) {
@@ -133,6 +142,19 @@ function ChatSession({ storyId, page, totalPages, glossary, words, nextTitle }: 
   const node = currentNode(page, play);
   const groupChat = Object.keys(page.characters).length > 1;
 
+  if (stage === "words") {
+    return (
+      <>
+        <KeyWordsCard vocab={page.vocab} pageNumber={page.page} variant="stage" />
+        <footer className="sticky bottom-0 mt-auto border-t border-line/80 bg-paper/90 px-3 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-md">
+          <button type="button" onClick={startReading} className="btn-primary w-full text-lg">
+            Bắt đầu đọc <span aria-hidden>→</span>
+          </button>
+        </footer>
+      </>
+    );
+  }
+
   return (
     <WordProvider glossary={glossary} words={words} pageNumber={page.page} onFirstWord={hideTip}>
       {showTip && (
@@ -143,7 +165,7 @@ function ChatSession({ storyId, page, totalPages, glossary, words, nextTitle }: 
           }}
         />
       )}
-      {showKeyWords && <KeyWordsCard vocab={page.vocab} defaultOpen={freshPage} />}
+      {showKeyWords && <KeyWordsCard vocab={page.vocab} pageNumber={page.page} variant="review" />}
       <div role="log" aria-live="polite" className="flex flex-1 flex-col gap-2.5 px-3 pt-5 pb-8">
         {steps.map((step, i) => {
           const isLast = i === steps.length - 1;

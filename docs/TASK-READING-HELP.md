@@ -76,10 +76,11 @@ Notes:
       synthesis, free; hidden when unsupported).
 - [x] ~~The word sheet shows the line where the word appeared.~~ Dropped: the
       popover now opens right on the line, so the context is already in view.
-- [x] Pages 1 and 2 of each story open with a "Từ cần biết" card: the page's
-      key words with IPA, meaning and 🔊. It is a `<details>` element: open on
-      a page not started yet, folded when the learner comes back mid-page,
-      and one tap folds it away.
+- [x] Pages 1 and 2 of each story start with a separate "Từ cần biết" stage:
+      the page's key words with IPA, meaning and 🔊, and a "Bắt đầu đọc"
+      button that opens the chat (the user asked for two stages, not a card
+      above the first message). It shows only on a page not started yet; in
+      the chat the words stay one tap away in a folded "Xem lại 5 từ" card.
 
 ## Out of scope
 
